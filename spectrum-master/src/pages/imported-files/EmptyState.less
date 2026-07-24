@@ -1,0 +1,44 @@
+@import '~styles/index.less';
+
+@icon-size: 65px;
+@text-color: #637079;
+
+.empty-state {
+  display: grid;
+  width: 320px;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+  justify-items: center;
+
+  &__icon {
+    width: @icon-size;
+    height: @icon-size;
+  }
+
+  &__title {
+    color: @text-color;
+    font-weight: 700;
+    padding: @spacings[sm] 0px;
+    padding-bottom: @spacings[xxs];
+    font-size: 1rem;
+    margin-bottom: 0px;
+  }
+
+  &__description {
+    color: @text-color;
+    font-weight: 400;
+    font-size: 0.85rem;
+    padding: 0px @spacings[xl];
+    text-align: center;
+  }
+
+  &__button {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+
+    span {
+      // overwrite ant
+      margin-left: 2px !important;
+    }
+  }
+}

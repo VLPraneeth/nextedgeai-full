@@ -1,0 +1,57 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import 'styles/color.scss';
+@import 'styles/variables.scss';
+
+.editor canvas {
+  display: block;
+}
+
+.editor {
+  width: 100%;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.testpanel {
+  left: 500px;
+}
+
+.editor-container,
+.synri-connector-editor-container {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100%;
+  position: relative;
+
+  .editor-page {
+    // editor-page is the container for the main page content
+    // spanning the full width between the left nav and the right sidebar
+
+    // Allow container to shrink/grow when the left nav is expanded/collapsed
+    flex: 1;
+    height: 100%;
+    // prevents nodes on canvas overlapping sidebar when nav opens
+    overflow: hidden;
+
+    .canvas-container {
+      height: 100%;
+      // min-width of window width - sidebar width - collapsed left nav width
+      // ensures that even when the page loads with the nav expanded, the canvas will
+      // be drawn at the width needed when the nav is closed so the right edge isn't cropped
+      min-width: calc(100vw - 350px - 60px);
+    }
+  }
+
+  .synri-bottom-group-container {
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+}

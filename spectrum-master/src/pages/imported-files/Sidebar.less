@@ -1,0 +1,97 @@
+@import '~styles/index.less';
+
+@side-nav-width: 300px;
+@top-height-including-upload-button: 120px;
+@item-left-spacing: @spacings[xxs];
+
+.sidebar {
+  width: @side-nav-width;
+  background-color: @white;
+  border-right: @sidebar-right-border;
+
+  &__file-icon {
+    margin-left: @item-left-spacing;
+    margin-right: @spacings[xxs];
+  }
+
+  &__upload-button {
+    margin: @spacings[md] @spacings[sm];
+    width: calc(100% - (@spacings[sm] * 2));
+    box-shadow: @boxShadows[sm];
+
+    &.ant-btn {
+      text-align: left;
+    }
+  }
+
+  &__folder-list {
+    height: calc(100vh - @top-height-including-upload-button);
+    overflow-y: auto;
+    padding: 0 0 @spacings[xxl] @spacings[xs];
+  }
+
+  &__folder-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: @spacings[xxs];
+    padding-left: @item-left-spacing;
+    flex: 1;
+    transition: all 200ms @easings[easeInOut];
+    cursor: pointer;
+    width: calc(@side-nav-width - 60px);
+
+    // Add some padding to the left of the text and the background color
+    // without moving the text out of alignment with the file list.
+    position: relative;
+    padding-left: @spacings[xxs];
+
+    &--selected {
+      background-color: @gray-300;
+    }
+
+    &:hover {
+      background-color: @gray-300;
+    }
+
+    &--kebab {
+      transform: scale(0.8);
+    }
+  }
+
+  &__file-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: @spacings[xxs];
+    flex: 1;
+    margin-left: @spacings[md];
+    transition: all 200ms @easings[easeInOut];
+    cursor: pointer;
+    width: calc(@side-nav-width - 60px);
+
+    // Add some padding to the left of the text and the background color
+    // without moving the text out of alignment with the file list.
+    position: relative;
+    left: -@spacings[xxs];
+
+    &--selected,
+    &:hover {
+      background-color: @gray-300;
+    }
+  }
+
+  &__file-header-text {
+    width: 90%;
+    .ellipsis-text();
+
+    &--no-data {
+      margin-left: @spacings[md];
+    }
+  }
+
+  &__folder-header-text {
+    width: 90%;
+    .ellipsis-text();
+  }
+}

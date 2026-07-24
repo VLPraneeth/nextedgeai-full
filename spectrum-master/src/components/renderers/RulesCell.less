@@ -1,0 +1,19 @@
+@import '~styles/index.less';
+
+.rules-list-cell {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.rules-badge {
+  border: 1px solid @gray-400;
+  color: @gray-1000;
+  font-size: @fontSizes[xs];
+  line-height: 1;
+  padding: @spacings[xxs] @spacings[xs];
+  cursor: pointer;
+  transition: all 200ms @easings[easeInOut];
+  &:hover {
+    background-color: @gray-500 !important;
+  }
+}

@@ -1,0 +1,755 @@
+{
+  "maxResults": 8,
+  "totalResults": 8,
+  "currentPage": 1,
+  "data": [
+    {
+      "id": "3e706b1e-97ab-42cc-95f6-1a8d5176c6c7",
+      "category": "Mobile Devices",
+      "topic": "Mobile / Wireless",
+      "signalScore": 82,
+      "audienceStrength": "A",
+      "newSignal": true,
+      "signalDate": "5/3/2020 12:00 AM",
+      "trend": 23,
+      "recommendedContacts": [
+        {
+          "id": 2988050694,
+          "firstName": "Nir",
+          "lastName": "Keren",
+          "jobTitle": "Chief Technology Officer",
+          "jobFunction": [
+            {
+              "name": "Engineering & Technical Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Engineering & Technical",
+              "department": "Engineering & Technical"
+            }
+          ]
+        },
+        {
+          "id": 39841971,
+          "firstName": "Cameron",
+          "lastName": "Hyzer",
+          "jobTitle": "Chief Financial Officer",
+          "jobFunction": [
+            {
+              "name": "Finance Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Finance",
+              "department": "Finance"
+            }
+          ]
+        },
+        {
+          "id": 1645938489,
+          "firstName": "Hila",
+          "lastName": "Nir",
+          "jobTitle": "Chief Marketing Officer",
+          "jobFunction": [
+            {
+              "name": "Marketing Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Marketing",
+              "department": "Marketing"
+            }
+          ]
+        },
+        {
+          "id": 2827525345,
+          "firstName": "Chris",
+          "lastName": "Hays",
+          "jobTitle": "Chief Revenue Officer",
+          "jobFunction": [
+            {
+              "name": "Sales Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Sales",
+              "department": "Sales"
+            }
+          ]
+        },
+        {
+          "id": 1260398587,
+          "firstName": "Henry",
+          "lastName": "Schuck",
+          "jobTitle": "Founder & Chief Executive Officer",
+          "jobFunction": [
+            {
+              "name": "Executive",
+              "department": "C-Suite"
+            }
+          ]
+        }
+      ],
+      "company": {
+        "id": 344589814,
+        "name": "Zoom Information, Inc.",
+        "website": "www.zoominfo.com",
+        "hasOtherTopicConsumption": true
+      }
+    },
+    {
+      "id": "1675ee1c-1c38-41e3-9c7c-430d43d6e0ab",
+      "category": "Banking",
+      "topic": "Credit Card Fraud",
+      "signalScore": 81,
+      "audienceStrength": "A",
+      "newSignal": false,
+      "signalDate": "5/3/2020 12:00 AM",
+      "trend": 7,
+      "recommendedContacts": [
+        {
+          "id": 2988050694,
+          "firstName": "Nir",
+          "lastName": "Keren",
+          "jobTitle": "Chief Technology Officer",
+          "jobFunction": [
+            {
+              "name": "Engineering & Technical Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Engineering & Technical",
+              "department": "Engineering & Technical"
+            }
+          ]
+        },
+        {
+          "id": 39841971,
+          "firstName": "Cameron",
+          "lastName": "Hyzer",
+          "jobTitle": "Chief Financial Officer",
+          "jobFunction": [
+            {
+              "name": "Finance Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Finance",
+              "department": "Finance"
+            }
+          ]
+        },
+        {
+          "id": 1645938489,
+          "firstName": "Hila",
+          "lastName": "Nir",
+          "jobTitle": "Chief Marketing Officer",
+          "jobFunction": [
+            {
+              "name": "Marketing Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Marketing",
+              "department": "Marketing"
+            }
+          ]
+        },
+        {
+          "id": 2827525345,
+          "firstName": "Chris",
+          "lastName": "Hays",
+          "jobTitle": "Chief Revenue Officer",
+          "jobFunction": [
+            {
+              "name": "Sales Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Sales",
+              "department": "Sales"
+            }
+          ]
+        },
+        {
+          "id": 1260398587,
+          "firstName": "Henry",
+          "lastName": "Schuck",
+          "jobTitle": "Founder & Chief Executive Officer",
+          "jobFunction": [
+            {
+              "name": "Executive",
+              "department": "C-Suite"
+            }
+          ]
+        }
+      ],
+      "company": {
+        "id": 344589814,
+        "name": "Zoom Information, Inc.",
+        "website": "www.zoominfo.com",
+        "hasOtherTopicConsumption": true
+      }
+    },
+    {
+      "id": "c6a931ca-3082-40f0-b7af-628b801cdc89",
+      "category": "Compensation & Benefits",
+      "topic": "Incentive Compensation",
+      "signalScore": 84,
+      "audienceStrength": "C",
+      "newSignal": false,
+      "signalDate": "5/3/2020 12:00 AM",
+      "trend": 1,
+      "recommendedContacts": [
+        {
+          "id": 2988050694,
+          "firstName": "Nir",
+          "lastName": "Keren",
+          "jobTitle": "Chief Technology Officer",
+          "jobFunction": [
+            {
+              "name": "Engineering & Technical Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Engineering & Technical",
+              "department": "Engineering & Technical"
+            }
+          ]
+        },
+        {
+          "id": 39841971,
+          "firstName": "Cameron",
+          "lastName": "Hyzer",
+          "jobTitle": "Chief Financial Officer",
+          "jobFunction": [
+            {
+              "name": "Finance Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Finance",
+              "department": "Finance"
+            }
+          ]
+        },
+        {
+          "id": 1645938489,
+          "firstName": "Hila",
+          "lastName": "Nir",
+          "jobTitle": "Chief Marketing Officer",
+          "jobFunction": [
+            {
+              "name": "Marketing Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Marketing",
+              "department": "Marketing"
+            }
+          ]
+        },
+        {
+          "id": 2827525345,
+          "firstName": "Chris",
+          "lastName": "Hays",
+          "jobTitle": "Chief Revenue Officer",
+          "jobFunction": [
+            {
+              "name": "Sales Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Sales",
+              "department": "Sales"
+            }
+          ]
+        },
+        {
+          "id": 1260398587,
+          "firstName": "Henry",
+          "lastName": "Schuck",
+          "jobTitle": "Founder & Chief Executive Officer",
+          "jobFunction": [
+            {
+              "name": "Executive",
+              "department": "C-Suite"
+            }
+          ]
+        }
+      ],
+      "company": {
+        "id": 344589814,
+        "name": "Zoom Information, Inc.",
+        "website": "www.zoominfo.com",
+        "hasOtherTopicConsumption": true
+      }
+    },
+    {
+      "id": "b628a3f6-64fc-4636-85d9-044306079b3a",
+      "category": "Collaboration/Web Apps",
+      "topic": "Video Conferencing",
+      "signalScore": 80,
+      "audienceStrength": "A",
+      "newSignal": false,
+      "signalDate": "4/19/2020 12:00 AM",
+      "trend": -9,
+      "recommendedContacts": [
+        {
+          "id": 2988050694,
+          "firstName": "Nir",
+          "lastName": "Keren",
+          "jobTitle": "Chief Technology Officer",
+          "jobFunction": [
+            {
+              "name": "Engineering & Technical Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Engineering & Technical",
+              "department": "Engineering & Technical"
+            }
+          ]
+        },
+        {
+          "id": 39841971,
+          "firstName": "Cameron",
+          "lastName": "Hyzer",
+          "jobTitle": "Chief Financial Officer",
+          "jobFunction": [
+            {
+              "name": "Finance Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Finance",
+              "department": "Finance"
+            }
+          ]
+        },
+        {
+          "id": 1645938489,
+          "firstName": "Hila",
+          "lastName": "Nir",
+          "jobTitle": "Chief Marketing Officer",
+          "jobFunction": [
+            {
+              "name": "Marketing Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Marketing",
+              "department": "Marketing"
+            }
+          ]
+        },
+        {
+          "id": 2827525345,
+          "firstName": "Chris",
+          "lastName": "Hays",
+          "jobTitle": "Chief Revenue Officer",
+          "jobFunction": [
+            {
+              "name": "Sales Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Sales",
+              "department": "Sales"
+            }
+          ]
+        },
+        {
+          "id": 1260398587,
+          "firstName": "Henry",
+          "lastName": "Schuck",
+          "jobTitle": "Founder & Chief Executive Officer",
+          "jobFunction": [
+            {
+              "name": "Executive",
+              "department": "C-Suite"
+            }
+          ]
+        }
+      ],
+      "company": {
+        "id": 344589814,
+        "name": "Zoom Information, Inc.",
+        "website": "www.zoominfo.com",
+        "hasOtherTopicConsumption": true
+      }
+    },
+    {
+      "id": "7c771ec1-b307-4fcb-b5b7-d65a88436942",
+      "category": "Cyber Security",
+      "topic": "Mobile Security",
+      "signalScore": 80,
+      "audienceStrength": "A",
+      "newSignal": true,
+      "signalDate": "4/19/2020 12:00 AM",
+      "trend": 21,
+      "recommendedContacts": [
+        {
+          "id": 3459093549,
+          "firstName": "David",
+          "lastName": "Lewis",
+          "jobTitle": "Chief Security Officer",
+          "jobFunction": [
+            {
+              "name": "Information Security",
+              "department": "Information Technology"
+            }
+          ]
+        },
+        {
+          "id": -1862126495,
+          "firstName": "Anna",
+          "lastName": "Orlove",
+          "jobTitle": "Security Solution Specialist",
+          "jobFunction": [
+            {
+              "name": "Information Security",
+              "department": "Information Technology"
+            }
+          ]
+        },
+        {
+          "id": 2549968949,
+          "firstName": "Tal",
+          "lastName": "Drory",
+          "jobTitle": "Security Analyst",
+          "jobFunction": [
+            {
+              "name": "Information Security",
+              "department": "Information Technology"
+            }
+          ]
+        },
+        {
+          "id": 2988050694,
+          "firstName": "Nir",
+          "lastName": "Keren",
+          "jobTitle": "Chief Technology Officer",
+          "jobFunction": [
+            {
+              "name": "Engineering & Technical Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Engineering & Technical",
+              "department": "Engineering & Technical"
+            }
+          ]
+        },
+        {
+          "id": 39841971,
+          "firstName": "Cameron",
+          "lastName": "Hyzer",
+          "jobTitle": "Chief Financial Officer",
+          "jobFunction": [
+            {
+              "name": "Finance Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Finance",
+              "department": "Finance"
+            }
+          ]
+        }
+      ],
+      "company": {
+        "id": 344589814,
+        "name": "Zoom Information, Inc.",
+        "website": "www.zoominfo.com",
+        "hasOtherTopicConsumption": true
+      }
+    },
+    {
+      "id": "7c75266b-b293-4110-ba77-b5f73b90d42c",
+      "category": "Application Development",
+      "topic": "Node.js",
+      "signalScore": 82,
+      "audienceStrength": "A",
+      "newSignal": true,
+      "signalDate": "4/19/2020 12:00 AM",
+      "trend": 23,
+      "recommendedContacts": [
+        {
+          "id": 1780573066,
+          "firstName": "Justin",
+          "lastName": "Sweeney",
+          "jobTitle": "Senior Software Development Manager, Data",
+          "jobFunction": [
+            {
+              "name": "Software Development",
+              "department": "Engineering & Technical"
+            },
+            {
+              "name": "Data Science",
+              "department": "Engineering & Technical"
+            }
+          ]
+        },
+        {
+          "id": 2047851825,
+          "firstName": "Brian",
+          "lastName": "Thomas",
+          "jobTitle": "Software Development Manager, Data",
+          "jobFunction": [
+            {
+              "name": "Software Development",
+              "department": "Engineering & Technical"
+            },
+            {
+              "name": "Data Science",
+              "department": "Engineering & Technical"
+            }
+          ]
+        },
+        {
+          "id": -1120287554,
+          "firstName": "Kristen",
+          "lastName": "Patten",
+          "jobTitle": "Software Development Manager, Data",
+          "jobFunction": [
+            {
+              "name": "Software Development",
+              "department": "Engineering & Technical"
+            },
+            {
+              "name": "Data Science",
+              "department": "Engineering & Technical"
+            }
+          ]
+        },
+        {
+          "id": 1995022052,
+          "firstName": "Chris",
+          "lastName": "Baker",
+          "jobTitle": "Manager of Engineering, Data",
+          "jobFunction": [
+            {
+              "name": "Software Development",
+              "department": "Engineering & Technical"
+            },
+            {
+              "name": "Data Science",
+              "department": "Engineering & Technical"
+            }
+          ]
+        },
+        {
+          "id": 1868007106,
+          "firstName": "Imesh",
+          "lastName": "Wijewardena",
+          "jobTitle": "Senior Software Development Manager, Data",
+          "jobFunction": [
+            {
+              "name": "Software Development",
+              "department": "Engineering & Technical"
+            },
+            {
+              "name": "Data Science",
+              "department": "Engineering & Technical"
+            }
+          ]
+        }
+      ],
+      "company": {
+        "id": 344589814,
+        "name": "Zoom Information, Inc.",
+        "website": "www.zoominfo.com",
+        "hasOtherTopicConsumption": true
+      }
+    },
+    {
+      "id": "e15d87cd-ffa1-4771-9da2-bac3bcb2022f",
+      "category": "Collaboration/Web Apps",
+      "topic": "Video Conferencing",
+      "signalScore": 89,
+      "audienceStrength": "A",
+      "newSignal": false,
+      "signalDate": "4/12/2020 12:00 AM",
+      "trend": 11,
+      "recommendedContacts": [
+        {
+          "id": 2988050694,
+          "firstName": "Nir",
+          "lastName": "Keren",
+          "jobTitle": "Chief Technology Officer",
+          "jobFunction": [
+            {
+              "name": "Engineering & Technical Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Engineering & Technical",
+              "department": "Engineering & Technical"
+            }
+          ]
+        },
+        {
+          "id": 39841971,
+          "firstName": "Cameron",
+          "lastName": "Hyzer",
+          "jobTitle": "Chief Financial Officer",
+          "jobFunction": [
+            {
+              "name": "Finance Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Finance",
+              "department": "Finance"
+            }
+          ]
+        },
+        {
+          "id": 1645938489,
+          "firstName": "Hila",
+          "lastName": "Nir",
+          "jobTitle": "Chief Marketing Officer",
+          "jobFunction": [
+            {
+              "name": "Marketing Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Marketing",
+              "department": "Marketing"
+            }
+          ]
+        },
+        {
+          "id": 2827525345,
+          "firstName": "Chris",
+          "lastName": "Hays",
+          "jobTitle": "Chief Revenue Officer",
+          "jobFunction": [
+            {
+              "name": "Sales Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Sales",
+              "department": "Sales"
+            }
+          ]
+        },
+        {
+          "id": 1260398587,
+          "firstName": "Henry",
+          "lastName": "Schuck",
+          "jobTitle": "Founder & Chief Executive Officer",
+          "jobFunction": [
+            {
+              "name": "Executive",
+              "department": "C-Suite"
+            }
+          ]
+        }
+      ],
+      "company": {
+        "id": 344589814,
+        "name": "Zoom Information, Inc.",
+        "website": "www.zoominfo.com",
+        "hasOtherTopicConsumption": true
+      }
+    },
+    {
+      "id": "d922c989-0f82-40b2-aea8-394304c55724",
+      "category": "Compensation & Benefits",
+      "topic": "Incentive Compensation",
+      "signalScore": 90,
+      "audienceStrength": "A",
+      "newSignal": true,
+      "signalDate": "4/5/2020 12:00 AM",
+      "trend": 31,
+      "recommendedContacts": [
+        {
+          "id": 2988050694,
+          "firstName": "Nir",
+          "lastName": "Keren",
+          "jobTitle": "Chief Technology Officer",
+          "jobFunction": [
+            {
+              "name": "Engineering & Technical Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Engineering & Technical",
+              "department": "Engineering & Technical"
+            }
+          ]
+        },
+        {
+          "id": 39841971,
+          "firstName": "Cameron",
+          "lastName": "Hyzer",
+          "jobTitle": "Chief Financial Officer",
+          "jobFunction": [
+            {
+              "name": "Finance Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Finance",
+              "department": "Finance"
+            }
+          ]
+        },
+        {
+          "id": 1645938489,
+          "firstName": "Hila",
+          "lastName": "Nir",
+          "jobTitle": "Chief Marketing Officer",
+          "jobFunction": [
+            {
+              "name": "Marketing Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Marketing",
+              "department": "Marketing"
+            }
+          ]
+        },
+        {
+          "id": 2827525345,
+          "firstName": "Chris",
+          "lastName": "Hays",
+          "jobTitle": "Chief Revenue Officer",
+          "jobFunction": [
+            {
+              "name": "Sales Executive",
+              "department": "C-Suite"
+            },
+            {
+              "name": "Sales",
+              "department": "Sales"
+            }
+          ]
+        },
+        {
+          "id": 1260398587,
+          "firstName": "Henry",
+          "lastName": "Schuck",
+          "jobTitle": "Founder & Chief Executive Officer",
+          "jobFunction": [
+            {
+              "name": "Executive",
+              "department": "C-Suite"
+            }
+          ]
+        }
+      ],
+      "company": {
+        "id": 344589814,
+        "name": "Zoom Information, Inc.",
+        "website": "www.zoominfo.com",
+        "hasOtherTopicConsumption": true
+      }
+    }
+  ]
+}

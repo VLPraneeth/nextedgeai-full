@@ -1,0 +1,43 @@
+@import '~styles/index.less';
+
+.ant-btn-group.filter-button-group {
+  display: flex;
+}
+
+.filter-button {
+  display: inline-flex;
+  align-items: center;
+
+  // this is set to match the SearchBox
+  height: 32px;
+}
+
+.ant-input-search.filter-search-input {
+  height: 32px;
+  max-width: 20rem;
+
+  input.ant-input {
+    height: 32px;
+  }
+}
+
+.filters-toolbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.filters-toolbar-primary-items {
+  flex-grow: 1;
+}
+
+.schema-studio-table-filter {
+  display: flex;
+  flex-flow: column nowrap;
+
+  .schema-studio-table-filter-name {
+    font-weight: @fontWeights[bold];
+    color: @gray-900;
+    margin-bottom: @spacings[xs];
+  }
+}

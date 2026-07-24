@@ -1,0 +1,68 @@
+package com.syncari.core.event;
+
+public interface EventTypes {
+	public static final String API_CALL = "API_CALL";
+	public static final String LOGIN = "LOGIN";
+	public static final String ERROR = "ERROR";
+	public static final String LOGOUT = "LOGOUT";
+	public static final String ADD_CONNECTOR = "ADD_CONNECTOR";
+	public static final String ACTIVATE_CONNECTOR = "ACTIVATE_CONNECTOR";
+	public static final String CONNECTOR_ACTIVATED = "CONNECTOR_ACTIVATED";
+	public static final String CONNECTOR_ACTIVATION_FAILED = "CONNECTOR_ACTIVATION_FAILED";
+	public static final String DEACTIVATE_CONNECTOR = "DEACTIVATE_CONNECTOR";
+	public static final String ACTIVATE_ENTITY = "ACTIVATE_ENTITY";
+	public static final String DEACTIVATE_ENTITY = "DEACTIVATE_ENTITY";
+	public static final String EDIT_PIPELINE = "EDIT_PIPELINE";
+	public static final String EDIT_CONNECTOR = "EDIT_CONNECTOR";
+	public static final String PIPELINE_STAGE = "PIPELINE_STAGE";
+	public static final String ADD_USER = "ADD_USER";
+	public static final String EDIT_USER = "EDIT_USER";
+	public static final String ADD_ROLE = "ADD_ROLE";
+	public static final String DELETE_ROLE = "DELETE_ROLE";
+	public static final String ASSIGN_ROLE = "ASSIGN_ROLE";
+	public static final String UNASSIGN_ROLE = "UNASSIGN_ROLE";
+	public static final String ADD_PRIV_TO_ROLE = "ADD_PRIV_TO_ROLE";
+	public static final String REMOVE_PRIV_FROM_ROLE = "REMOVE_PRIV_FROM_ROLE";
+	public static final String ADD_ROLE_TO_USR = "ADD_ROLE_TO_USR";
+	public static final String REMOVE_ROLE_FROM_USR = "REMOVE_ROLE_FROM_USR";
+	public static final String PIPELINE_RUNTIME = "PIPELINE_RUNTIME";
+	public static final String IMPORT_REFERENCE_DATA = "IMPORT_REFERENCE_DATA";
+	public static final String DELETE_REFERENCE_DATA = "DELETE_REFERENCE_DATA";
+	public static final String TEST_PIPELINE = "TEST_PIPELINE";
+	public static final String PIPELINE_APPROVED = "PIPELINE_APPROVED";
+	public static final String TEST_PIPELINE_DONE = "TEST_PIPELINE_DONE";
+	public static final String SYNC_SUCCESS = "SYNC_SUCCESS";
+	public static final String PIPELINE_EVENT = "PIPELINE_EVENT";
+	public static final String SIMULATE_PIPELINE = "SIMULATE_PIPELINE";
+	public static final String SIMULATE_PIPELINE_COMPLETED = "SIMULATE_PIPELINE_COMPLETED";
+	public static final String REFRESH_SCHEMA = "REFRESH_SCHEMA";
+	public static final String EXPORT_DATASET = "EXPORT_DATASET";
+	public static final String PROCESS_DATASTORE_INITIAL_LOAD = "PROCESS_DATASTORE_INITIAL_LOAD";
+	public static final String DS_BATCH = "DS_BATCH";
+	public static final String REFRESH_SCHEMA_COMPLETED = "REFRESH_SCHEMA_COMPLETED";
+	public static final String REFRESH_SCHEMA_FAILED = "REFRESH_SCHEMA_FAILED";
+	public static final String RECALCULATE_DFI_SCORES = "RECALCULATE_DFI_SCORES";
+	public static final String DFI_RECALCULATION_UPDATE = "DFI_RECALCULATION_UPDATE";
+	public static final String RESYNC_ENTITY_STATUS_UPDATE = "RESYNC_ENTITY_STATUS_UPDATE";
+	public static final String EXECUTE_QUICK_START = "EXECUTE_QUICK_START";
+	public static final String EXECUTE_QUICK_START_DONE = "EXECUTE_QUICK_START_DONE";
+	public static final String ACCEPT_WEBHOOK = "ACCEPT_WEBHOOK";
+	public static final String INSTALL_QUICK_START = "INSTALL_QUICK_START";
+	public static final String INSTALL_QUICK_START_SUCCESS = "INSTALL_QUICK_START_SUCCESS";
+	public static final String ERROR_NOTIFICATION = "ERROR_NOTIFICATION";
+	public static final String DFI_RESULT_NOTIFICATION = "DFI_RESULT_NOTIFICATION";
+	public static final String ENABLE_DFI = "ENABLE_DFI";
+	public static final String COPY_INSTANCE = "COPY_INSTANCE";
+	public static final String TRIAL_PROVISION = "TRIAL_PROVISION";
+	public static final String ENABLE_INSIGHTS = "ENABLE_INSIGHTS";
+	public static final String ENABLE_INSIGHTS_PROVIDER = "ENABLE_INSIGHTS_PROVIDER";
+	public static final String CREATE_INSTANCE = "CREATE_INSTANCE";
+	public static final String UPDATE_FK_REFERENCES = "UPDATE_FK_REFERENCES";
+	public static final String MOVE_TRANSACTIONS = "MOVE_TRANSACTIONS";
+
+	public static final String PROVISION_DFI = "PROVISION_DFI";
+	public static final String DFI_RULE_DELETED = "DFI_RULE_DELETED";
+
+	public static final String POPULATE_CREATION_TIME = "POPULATE_CREATION_TIME";
+	public static final String MIGRATE_FIELD_TYPE = "MIGRATE_FIELD_TYPE";
+}

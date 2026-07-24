@@ -1,0 +1,100 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+@login-screen-break-width: 875px;
+@half-screen-width: 50vw;
+
+@media screen and (max-width: @login-screen-break-width) {
+  .marketing-content {
+    width: 0px;
+  }
+
+  .login-content-with-marketing-content {
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: @login-screen-break-width) {
+  .marketing-content {
+    width: @half-screen-width;
+  }
+
+  .login-content-with-marketing-content {
+    width: @half-screen-width;
+  }
+}
+
+.login-container {
+  display: flex;
+}
+
+.marketing-content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+
+  .marketing-iframe {
+    height: 100%;
+  }
+
+  iframe:focus {
+    outline: none;
+  }
+}
+
+.login-content-full-width {
+  width: 100vw;
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+
+  .input-password {
+    margin-top: 24px;
+  }
+
+  .action-container {
+    margin-top: 30px;
+  }
+
+  .input-layout-container {
+    input {
+      height: 40px;
+    }
+  }
+
+  .remember-container {
+    margin-top: 16px;
+  }
+
+  .action-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .login-button {
+      width: 100%;
+      font-size: @font-size-authentication-action;
+      font-weight: @font-size-label;
+      height: 40px;
+    }
+  }
+
+  .remember-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ant-btn-primary {
+    background-color: @syncari-blue-v2;
+  }
+  .privacy-policy-agreement {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+}

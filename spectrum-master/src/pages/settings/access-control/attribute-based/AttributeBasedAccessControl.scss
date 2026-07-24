@@ -1,0 +1,40 @@
+@import 'styles';
+
+.attribute-based-access-control {
+  .search {
+    height: $search-input-height;
+    max-width: $search-input-width;
+
+    input.ant-input {
+      height: $search-input-height !important;
+    }
+  }
+  .table-container {
+    flex-grow: 1;
+    height: 100%;
+    overflow-y: auto;
+  }
+  .table {
+    height: 100%;
+    .ag-root-wrapper {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .actions {
+      .ag-header-cell-label {
+        justify-content: center;
+      }
+    }
+    &-actions {
+      margin: 0 auto;
+    }
+    &.empty {
+      .ag-layout-auto-height,
+      .ag-center-cols-clipper,
+      .ag-center-cols-viewport,
+      .ag-center-cols-container {
+        min-height: $ag-table-empty-min-height !important;
+      }
+    }
+  }
+}

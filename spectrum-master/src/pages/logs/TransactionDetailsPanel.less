@@ -1,0 +1,75 @@
+@import '~styles/index.less';
+
+.transaction-details-panel {
+  .ant-drawer-content-wrapper {
+    display: flex;
+  }
+
+  .ant-drawer-content {
+    display: flex;
+  }
+
+  .ant-drawer-wrapper-body {
+    display: flex;
+    flex-flow: column;
+    flex: 1 1 auto;
+  }
+
+  .ant-drawer-body {
+    display: flex;
+    flex: 1 1 auto;
+    padding: 0;
+  }
+
+  .synri-transaction-detail-table-container {
+    padding: @spacings[mlg];
+  }
+
+  .transaction-merge-table-container {
+    padding-top: 0;
+  }
+
+  .synri-filter-condition-readonly {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+
+    .synri-condition-readonly {
+      color: @gray-1000;
+    }
+  }
+
+  .merge-detail-header {
+    & > .synri-stack {
+      flex-basis: 25%;
+    }
+  }
+}
+
+.connector-field-popover {
+  .ant-popover-inner-content {
+    .synri-divider {
+      margin-left: -@spacings[md];
+      margin-right: -@spacings[md];
+    }
+  }
+}
+
+.field-name-renderer-wrapper {
+  margin-top: 0.15rem;
+  margin-bottom: auto;
+}
+
+.external-value-renderer,
+.transaction-merge-predicate-cell {
+  margin-top: 0.15rem;
+  min-height: 2rem;
+}
+
+.error-message-cell {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}

@@ -1,0 +1,70 @@
+@import '~styles/index.less';
+
+// badges
+@default-badge-color: #F6F6F6;
+@default-text-color: @gray-700;
+
+@info-badge-color: #FFEFD4;
+@info-text-color: #DA8700;
+
+@success-badge-color: #E3FFEE;
+@success-text-color: #3EC675;
+
+@warning-badge-color: orange;
+@warning-text-color: @black;
+
+@danger-badge-color: red;
+@danger-text-color: @white;
+
+@special-badge-color: @purple-200;
+@special-text-color: @purple-600;
+
+@error-badge-color: @red-150;
+@error-text-color: @red-800;
+
+.synri-badge {
+  display: inline-flex;
+  text-transform: capitalize;
+  line-height: @lineHeights[loose];
+  padding: 0 @spacings[md];
+  border-radius: @borderRadius[full];
+
+  background-color: @default-badge-color;
+  color: @default-text-color;
+
+  &.synri-status-badge-success {
+    background-color: @success-badge-color;
+    color: @success-text-color;
+  }
+
+  &.synri-status-badge-info {
+    background-color: @info-badge-color;
+    color: @info-text-color;
+  }
+
+  &.synri-status-badge-warning {
+    background-color: @warning-badge-color;
+    color: @warning-text-color;
+  }
+
+  &.synri-status-badge-danger {
+    background-color: @danger-badge-color;
+    color: @danger-text-color;
+  }
+
+  &.synri-status-badge-special {
+    background-color: @special-badge-color;
+    color: @special-text-color;
+  }
+
+  &.synri-status-badge-error {
+    background-color: @error-badge-color;
+    color: @error-text-color;
+  }
+
+  &.synri-status-badge-small {
+    font-size: @fontSizes[xs];
+    font-weight: @fontWeights[bold];
+    padding: 0 @spacings[sm];
+  }
+}

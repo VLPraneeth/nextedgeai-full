@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <g id="UI-Elements" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Iconography" transform="translate(-866.000000, -729.000000)">
+            <g id="Node-Sync" transform="translate(867.000000, 730.000000)">
+                <circle id="Oval" fill="#3EC675" cx="11" cy="11" r="11"></circle>
+                <g id="refresh-02" transform="translate(5.000000, 5.000000)" fill="#FFFFFF">
+                    <path d="M6,2.25 C6.88425,2.25 7.73325,2.56725 8.40375,3.1275 L6.66225,4.869 L11.3205,5.27325 L10.91625,0.615 L9.46875,2.0625 C8.51475,1.224 7.2825,0.75 6,0.75 C3.42525,0.75 1.248,2.5905 0.82275,5.1255 L2.3025,5.37375 C2.6055,3.564 4.161,2.25 6,2.25 Z" id="Path"></path>
+                    <path d="M6,9.75 C5.11575,9.75 4.26675,9.43275 3.59625,8.8725 L5.33775,7.131 L0.6795,6.72675 L1.08375,11.385 L2.53125,9.9375 C3.48525,10.776 4.7175,11.25 6,11.25 C8.57475,11.25 10.752,9.4095 11.17725,6.8745 L9.6975,6.62625 C9.3945,8.436 7.839,9.75 6,9.75 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

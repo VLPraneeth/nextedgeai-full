@@ -1,0 +1,80 @@
+{
+  "id": "columnCard",
+  "displayName": "Column Card",
+  "description": "A card showing a column graph",
+  "layout": {
+    "h": 2
+  },
+  "contents": {
+    "configuration": {
+      "vizType": "COLUMN",
+      "stacking": "percent",
+      "series": [{ "name": "priority" }],
+      "xaxis": {
+        "name": "month",
+        "displayName": "Month",
+        "displayFormat": "text"
+      },
+      "yaxis": [
+        {
+          "name": "issueCount",
+          "displayName": "Issue Count",
+          "displayFormat": "number"
+        }
+      ]
+    },
+    "data": {
+      "series": [{ "displayName": "High" }, { "displayName": "Medium" }, { "displayName": "Low" }],
+      "rows": [
+        { "issueCount": 30, "priority": "Low", "month": "July 2021" },
+        { "issueCount": 22, "priority": "Medium", "month": "July 2021" },
+        { "issueCount": 7, "priority": "High", "month": "July 2021" },
+
+        { "issueCount": 28, "priority": "Low", "month": "August 2021" },
+        { "issueCount": 18, "priority": "Medium", "month": "August 2021" },
+        { "issueCount": 3, "priority": "High", "month": "August 2021" },
+
+        { "issueCount": 30, "priority": "Low", "month": "September 2021" },
+        { "issueCount": 23, "priority": "Medium", "month": "September 2021" },
+        { "issueCount": 8, "priority": "High", "month": "September 2021" },
+
+        { "issueCount": 40, "priority": "Low", "month": "October 2021" },
+        { "issueCount": 26, "priority": "Medium", "month": "October 2021" },
+        { "issueCount": 12, "priority": "High", "month": "October 2021" },
+
+        { "issueCount": 38, "priority": "Low", "month": "November 2021" },
+        { "issueCount": 37, "priority": "Medium", "month": "November 2021" },
+        { "issueCount": 15, "priority": "High", "month": "November 2021" },
+
+        { "issueCount": 45, "priority": "Low", "month": "December 2021" },
+        { "issueCount": 31, "priority": "Medium", "month": "December 2021" },
+        { "issueCount": 12, "priority": "High", "month": "December 2021" },
+
+        { "issueCount": 50, "priority": "Low", "month": "January 2022" },
+        { "issueCount": 38, "priority": "Medium", "month": "January 2022" },
+        { "issueCount": 10, "priority": "High", "month": "January 2022" },
+
+        { "issueCount": 60, "priority": "Low", "month": "February 2022" },
+        { "issueCount": 40, "priority": "Medium", "month": "February 2022" },
+        { "issueCount": 9, "priority": "High", "month": "February 2022" },
+
+        { "issueCount": 50, "priority": "Low", "month": "March 2022" },
+        { "issueCount": 30, "priority": "Medium", "month": "March 2022" },
+        { "issueCount": 14, "priority": "High", "month": "March 2022" },
+
+        { "issueCount": 30, "priority": "Low", "month": "April 2022" },
+        { "issueCount": 25, "priority": "Medium", "month": "April 2022" },
+        { "issueCount": 19, "priority": "High", "month": "April 2022" },
+
+        { "issueCount": 30, "priority": "Low", "month": "May 2022" },
+        { "issueCount": 20, "priority": "Medium", "month": "May 2022" },
+        { "issueCount": 13, "priority": "High", "month": "May 2022" },
+
+        { "issueCount": 22, "priority": "Low", "month": "June 2022" },
+        { "issueCount": 15, "priority": "Medium", "month": "June 2022" },
+        { "issueCount": 10, "priority": "High", "month": "June 2022" }
+      ]
+    },
+    "contents": null
+  }
+}

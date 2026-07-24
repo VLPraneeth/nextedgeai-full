@@ -1,0 +1,86 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+@action-icon-size: 18px;
+
+.synri-property-panel-actions {
+  margin-top: @spacings[sm];
+  margin-bottom: @spacings[md];
+
+  .synri-fieldset {
+    margin-top: 0px;
+  }
+}
+
+.synri-action-button {
+  .box-bordered();
+  display: flex;
+  align-items: center;
+  height: 42px;
+  padding: 0 @spacings[md];
+  width: 100%;
+  cursor: pointer;
+  .transition();
+
+  .synri-action-button-text {
+    .unselectable-text();
+    .ellipsis-text();
+    align-items: center;
+    color: @font-color-action;
+    font-size: @font-size-action;
+    font-weight: @fontWeights[semibold];
+    .transition();
+    max-width: 220px;
+  }
+
+  .full-width {
+    flex: 1;
+  }
+
+  &.synri-active:hover {
+    background-color: @blue-200;
+    border-color: @syncari-blue;
+    color: @syncari-blue;
+
+    .synri-action-text {
+      color: @syncari-blue;
+    }
+  }
+
+  &.synri-action-disabled {
+    .disabled();
+    background-color: @gray-200;
+    box-shadow: none;
+    color: @light-gray;
+    cursor: not-allowed;
+
+    .synri-action-text {
+      color: inherit;
+    }
+  }
+
+  .synri-action-icon {
+    font-size: @action-icon-size;
+  }
+
+  .synri-inline-svg {
+    display: inline-flex;
+    align-items: center;
+
+    height: @action-icon-size;
+    width: @action-icon-size;
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      path {
+        fill: currentColor;
+        .transition();
+      }
+    }
+  }
+}

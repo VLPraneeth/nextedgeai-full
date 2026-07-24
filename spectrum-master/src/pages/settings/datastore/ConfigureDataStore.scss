@@ -1,0 +1,105 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import 'styles';
+@import 'styles/variables.scss';
+
+.synri-config-data-store-container {
+  max-width: 440px;
+
+  &__connection-item-span {
+    margin-right: $spacings-sm;
+  }
+
+  .synri-fieldset {
+    margin: $spacings-md 0px;
+  }
+
+  &__active-summary {
+    width: 240px;
+    padding: $spacings-sm;
+    border-radius: $border-radius-xl;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.4);
+
+    > div {
+      display: flex;
+    }
+
+    &--label-left {
+      margin-right: $spacings-xs;
+    }
+  }
+
+  .ant-form-item {
+    margin-bottom: 0;
+  }
+  .synri-select {
+    width: 100%;
+  }
+
+  &__active-connector-name {
+    display: flex;
+    margin-left: $spacings-xs;
+    margin-bottom: $spacings-xs;
+
+    &--svg-container {
+      width: 20px;
+      height: 20px;
+      margin-right: $spacings-xs;
+
+      &.scale-large {
+        svg {
+          transform: scale(1.5);
+        }
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.synri-create-ds-connection-modal {
+  .ant-modal-body {
+    overflow-y: auto;
+    max-height: 600px;
+  }
+
+  .ds-modal-content {
+    .synri-select {
+      width: 100%;
+    }
+
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.synri-oauth-container {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  .ant-form-item {
+    width: 100%;
+  }
+
+  .ant-btn {
+    position: relative;
+    bottom: 4px;
+  }
+}
+
+.ant-modal-content {
+  p.alert-note {
+    color: red;
+    font-weight: 700;
+    padding-top: $spacings-md;
+    font-size: 14px;
+  }
+}

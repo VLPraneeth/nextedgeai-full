@@ -1,0 +1,75 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+.group-filter-container {
+  display: flex;
+  width: 100%;
+  padding: @spacings[md];
+  margin-top: @spacings[xs];
+  margin-bottom: @spacings[xs];
+  .box-bordered-no-shadow();
+
+  .filter-operator-container {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    margin-top: 34px;
+    margin-right: @spacings[md];
+    width: 64px;
+
+    .ant-dropdown-link {
+      color: @content-background-color;
+      background-color: @light-gray;
+      padding: 5px;
+      border-radius: 6px;
+    }
+  }
+
+  .filter-group-groups {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-right: @spacings[xl];
+    width: 100%;
+  }
+
+  &.root-group {
+    border: none;
+    padding: 8px;
+  }
+
+  &.synri-filter-readonly {
+    .box-bordered-no-shadow();
+    padding: 16px;
+    margin: 0;
+
+    .synri-readonly-operator {
+      .unselectable-text();
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 12px;
+    }
+  }
+}
+
+.synri-filter-condition-group {
+  width: 100%;
+}
+
+.synri-filter-readonly {
+  .synri-filter-condition-group {
+    &.node-field-value {
+      margin-top: 0;
+    }
+  }
+
+  .filter-group-groups {
+    padding-right: 0;
+  }
+}
+
+.btn-add-condition {
+  margin-top: 8px;
+}

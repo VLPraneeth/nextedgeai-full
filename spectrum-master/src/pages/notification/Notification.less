@@ -1,0 +1,122 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+@import '~styles/index.less';
+
+.notifications-inner-content {
+  padding: @spacings[xl];
+}
+
+.sycr-input-group {
+  margin-bottom: 10px;
+}
+
+.copied-visible {
+  padding-left: 16px;
+}
+
+.ant-calendar-range-picker-input {
+  text-align: left;
+}
+.ant-calendar-range-picker-separator {
+  margin-right: 0.5rem;
+}
+
+.notifications-table {
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    padding: 20px;
+  }
+
+  .ant-table-row-level-0 {
+    .notification-action {
+      margin-left: 15px;
+
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+
+    &:hover {
+      .notification-action {
+        opacity: 1;
+      }
+    }
+
+    & > td:last-child {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row-reverse;
+      padding: 25px;
+
+      .notification-action {
+        .clear-button-styles();
+
+        display: inline-block;
+      }
+
+      .notification-action {
+        margin-left: 15px;
+      }
+
+      .table-row-expand-arrow {
+        margin-left: 20px;
+      }
+
+      .synri-inline-svg {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+  .ant-table-expanded-row.ant-table-expanded-row-level-1 > td {
+    padding: 0;
+  }
+}
+
+.notifications-table-row {
+  &.is-read {
+    background-color: #ffffff;
+
+    &:hover {
+      background-color: #f8fafd;
+    }
+
+    .notification-read-label {
+      &.is-read {
+        background-color: #f6f6f6;
+      }
+    }
+  }
+
+  &.is-unread {
+    background-color: #f1f8ff;
+
+    &:hover {
+      background-color: #e9f3fe;
+    }
+  }
+}
+
+.notifications-table-expanded-row {
+  position: relative;
+  top: -2px; /* slide up to make it a tighter association to it's parent */
+  padding: 25px 30px;
+  border: 1px solid #aab6be;
+  background-color: #f8fafd;
+
+  & > i {
+    position: absolute;
+    left: 10%;
+    top: -10px; /* svg is using the top half of a 20px x 20px box */
+
+    .expanded-row-triangle {
+      height: 20px;
+      width: 20px;
+      stroke-width: 1.1; /* just a slight size bump to get closer to the rest of the frame */
+      stroke: #aab6be;
+      fill: #f8fafd;
+    }
+  }
+}

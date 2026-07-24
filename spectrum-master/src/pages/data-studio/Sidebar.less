@@ -1,0 +1,122 @@
+@import '~styles/index.less';
+
+@sidebar-width: 260px;
+
+.data-studio-sidebar {
+  width: @sidebar-width;
+  background-color: @white;
+
+  padding: @spacings[xl] @spacings[sm];
+  border-right: 1px solid @gray-300;
+
+  display: flex;
+  flex-flow: column nowrap;
+  overflow-y: auto;
+}
+
+.data-studio-sidebar-section {
+  color: @gray-900;
+  font-size: @fontSizes[md];
+  font-weight: @fontWeights[bold];
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.data-studio-sidebar-section-header {
+  margin: 0 @spacings[sm];
+}
+
+.data-studio-sidebar-section-title {
+  color: @light-gray;
+  font-size: @fontSizes[sm];
+  font-weight: @fontWeights[bold];
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.reference-data-create-call-to-action-btn {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  color: @light-gray;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: @fontSizes[xl];
+  margin-right: -@spacings[xs];
+
+  &:hover {
+    color: @syncari-blue;
+  }
+}
+
+.data-studio-sidebar-section-content {
+  display: flex;
+  flex-flow: column nowrap;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.data-studio-sidebar-filters-section {
+  max-height: 20rem;
+
+  &__spacer {
+    margin: @spacings[xxs];
+    border-top: 1px solid @gray-400;
+  }
+}
+
+.data-studio-sidebar-section-item {
+  color: @gray-900;
+  border-radius: @borderRadius[md];
+  padding: @spacings[xxs] @spacings[sm];
+
+  transition: all 0.25s @easings[easeInOut];
+
+  .data-studio-sidebar-item-badge {
+    background-color: @light-gray;
+  }
+
+  &:hover {
+    background-color: @gray-100;
+  }
+
+  &.is-current {
+    background-color: @gray-300;
+
+    .data-studio-sidebar-item-badge {
+      background-color: @gray-700;
+    }
+  }
+}
+
+.data-studio-sidebar-section-item-link {
+  display: block;
+  color: @gray-900;
+  cursor: pointer;
+  flex: 1 1 auto;
+
+  &:hover {
+    color: @syncari-blue;
+  }
+}
+
+.data-studio-item-title-truncated {
+  .ellipsis-text();
+}
+
+.data-studio-item-count-error {
+  color: @orange-600;
+  font-size: @fontSizes[xl];
+}
+
+.data-studio-sidebar-item-badge {
+  border-radius: @borderRadius[full];
+  color: @white;
+  font-size: @fontSizes[sm];
+  padding: 0 @spacings[sm];
+}
+
+.sidebar-expansion-arrow {
+  display: flex;
+}

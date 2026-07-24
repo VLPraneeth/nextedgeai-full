@@ -1,0 +1,22 @@
+@import '~styles/index.less';
+
+.schema-studio-field-name-cell {
+  font-weight: @fontWeights[bold];
+
+  .field-badge {
+    font-weight: @fontWeights[regular];
+    padding-top: @spacings[xxs];
+    padding-bottom: @spacings[xxs];
+
+    // this will keep our line heights the same for items with a badge as those without
+    margin-top: -@spacings[xs];
+    margin-bottom: -@spacings[xs];
+
+    &.type-badge {
+    }
+    &.draft-badge {
+      color: @white;
+      background-color: @orange-600;
+    }
+  }
+}

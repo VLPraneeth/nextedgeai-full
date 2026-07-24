@@ -1,0 +1,107 @@
+/**
+* Copyright (c) 2019-Present Syncari - All rights reserved.
+*/
+// The absolute max z-index value
+@max-z-index: 2147483648;
+
+// Font Sizes
+@fontSizes: {
+  xxs: 0.5rem;
+  xs: 0.75rem; // 10.5px
+  sm: 0.875rem;
+  md: 1rem; // 14px
+  lg: 1.125rem; // 15.75px
+  lgr: 1.25rem; // 17.5px
+  xl: 1.5rem; // 21px
+  xxl: 1.875rem; // 26.25
+  3xl: 2.25rem;
+  4xl: 3rem;
+  5xl: 4rem;
+};
+
+// Font Weights
+@fontWeights: {
+  thin: 100;
+  light: 300;
+  regular: 400;
+  medium: 500;
+  semibold: 600;
+  bold: 700;
+};
+
+@fontWeights-500: 500;
+
+// Line heights
+@lineHeights: {
+  single: 1;
+  tight: 1.125;
+  snug: 1.25;
+  regular: 1.5;
+  regloose: 1.75;
+  loose: 2;
+};
+
+// Spacings
+@spacings: {
+  z: 0;
+  xxxs: 0.15rem; // 2.1px
+  xxs: 0.25rem; // 3.5px
+  xxsm: 0.375rem; // 5.250px
+  xs: 0.5rem; // 7px
+  sm: 0.75rem; // 10.5px
+  md: 1rem; // 14px
+  mmlg: 1.15rem; // 16.1px
+  mlg: 1.25rem; // 17.5px
+  lg: 1.5rem; // 21px
+  xl: 2rem; // 28px
+  xxl: 3rem; // 42px
+  3xl: 4rem; // 56px
+  4xl: 5rem; // 70px
+  5xl: 8rem; // 112px
+  6xl: 12rem; // 168px
+  7xl: 18rem;
+};
+
+// Border Radii
+@borderRadius: {
+  z: 0;
+  sm: 2px;
+  md: 4px;
+  lg: 6px;
+  full: 50rem;
+  circle: 50%;
+};
+
+// Box Shadows
+@boxShadows: {
+  sm: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  md: 0 1px 6px 2px rgba(0, 0, 0, 0.15);
+  lg: 0 0px 10px 2px rgba(0, 0, 0, 0.15);
+};
+
+// Transition Easings
+// prettier-ignore
+@easings: {
+  easeInOut: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+// Element Sizes
+
+// these need to match the Sider JS component
+@syncari-sidebar-collapse-width: 70px;
+@syncari-sidebar-full-width: 200px;
+
+@bannerHeight: 36px;
+@mainNavHeight: 52px;
+@toolbarHeight: 52px;
+
+// Panel Sizes
+@panelHeaderHeight: 52px;
+@panelBodyHeight: calc(100% - @panelHeaderHeight);
+@panelFooterHeight: 52px;
+@panelWidth: 350px;
+@panelWidthLarge: 550px;
+
+// Sidebar - ex: imported files nav, data studio nav
+@gray-300: #e7e7e7;
+@sidebar-right-border: 1px solid @gray-300;

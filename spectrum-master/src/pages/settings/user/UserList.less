@@ -1,0 +1,30 @@
+@import '~styles/index.less';
+
+.status-badge-cell {
+  display: flex;
+  align-items: baseline;
+
+  &__additional-badge {
+    margin-left: @spacings[xxs];
+  }
+
+  &__reinvite-button {
+    margin-left: @spacings[xxs];
+  }
+}
+
+.user-instances {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  .instance-count {
+    margin-right: @spacings[sm];
+  }
+}
+
+.actions-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

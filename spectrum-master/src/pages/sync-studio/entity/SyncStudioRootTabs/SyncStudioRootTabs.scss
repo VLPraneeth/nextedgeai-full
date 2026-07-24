@@ -1,0 +1,11 @@
+@import 'styles';
+
+.sync-studio-root-tabs {
+  background-color: white;
+
+  &__tab {
+    :first-child {
+      margin-right: $spacings-xxs;
+    }
+  }
+}

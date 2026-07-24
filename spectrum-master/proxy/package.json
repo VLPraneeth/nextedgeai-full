@@ -1,0 +1,62 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "description": "spectrum-proxy",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist --copy-files",
+    "start": "npm run build && DISABLE_XSRF=true SECURE_COOKIES=false ARCADE_LOG_LEVEL=debug node dist/index.js",
+    "devStart": "npm run build && echo 'Sleeping for 4 seconds for the cleanup subscription to finish.... It may need longer than 4 seconds and need to restart it manually.' && sleep 4 && DISABLE_XSRF=true SECURE_COOKIES=false ARCADE_LOG_LEVEL=debug node dist/index.js",
+    "dev": "nodemon --exec 'npm run devStart'",
+    "restart": "npm run start",
+    "debug": "echo 'open chrome chrome://inspect to start debugging'; DISABLE_XSRF=true SECURE_COOKIES=false ARCADE_LOG_LEVEL=debug node --inspect --inspect-brk dist/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "eslint": "eslint src",
+    "eslint:fix": "eslint src --fix"
+  },
+  "keywords": [
+    "spectrum",
+    "gateway",
+    "proxy"
+  ],
+  "author": "francis@syncari.com",
+  "license": "Syncari",
+  "dependencies": {
+    "@google-cloud/pubsub": "^5.2.0",
+    "@google-cloud/storage": "^7.17.2",
+    "axios": "^1.18.1",
+    "body-parser": "^1.19.0",
+    "cookie": "^0.7.2",
+    "csrf": "^3.1.0",
+    "express": "^4.17.1",
+    "form-data": "^3.0.0",
+    "helmet": "^3.19.0",
+    "http-proxy-middleware": "^3.0.5",
+    "lodash": "^4.17.15",
+    "log-timestamp": "^0.3.0",
+    "morgan": "^1.10.0",
+    "querystring": "^0.2.0",
+    "response-time": "^2.3.2",
+    "shortid": "^2.2.15",
+    "socket.io": "^4.8.1",
+    "source-map": "^0.7.3",
+    "winston": "^3.2.1",
+    "yazl": "^2.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/eslint-parser": "^7.28.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/preset-env": "^7.5.5",
+    "babel-jest": "^30.2.0",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "eslint": "^9.38.0",
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.10",
+    "rimraf": "^3.0.0",
+    "supertest": "^4.0.2"
+  }
+}

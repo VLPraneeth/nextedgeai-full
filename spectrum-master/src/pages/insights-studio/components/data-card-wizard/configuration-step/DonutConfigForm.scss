@@ -1,0 +1,8 @@
+@import 'styles';
+
+.donut-config-form {
+  &__radio {
+    display: block !important;
+    margin-bottom: $spacings-xs !important;
+  }
+}

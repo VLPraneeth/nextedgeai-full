@@ -1,0 +1,76 @@
+@import '~styles/index.less';
+
+.synri-text-tag-container {
+  display: inline-block;
+  padding: @spacings[xxxs] 6px;
+  border-radius: @borderRadius[md];
+  margin-right: @spacings[xs];
+  border-style: solid;
+  border-color: @white;
+  border-width: 1px;
+  text-align: center;
+  white-space: nowrap;
+
+  &.tag-inside-pill {
+    border-radius: 0px 3px 3px 0px;
+    margin: 0;
+    border-width: 0px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+  }
+
+  &.tag-skip-margin {
+    margin: 0;
+  }
+
+  span.syncari-text {
+    display: block;
+    cursor: text;
+  }
+}
+
+.synri-text-tag-blue {
+  background-color: @text-tag-blue-bg;
+  span {
+    color: @text-tag-blue-text;
+  }
+}
+.synri-text-tag-green {
+  background-color: @text-tag-green-bg;
+  span {
+    color: @text-tag-green-text;
+  }
+}
+.synri-text-tag-orange {
+  background-color: @text-tag-orange-bg;
+  span {
+    color: @text-tag-orange-text;
+  }
+}
+.synri-text-tag-purple {
+  background-color: @text-tag-purple-bg;
+  span {
+    color: @text-tag-purple-text;
+  }
+}
+.synri-text-tag-red {
+  background-color: @text-tag-red-bg;
+  span {
+    color: @text-tag-red-text;
+  }
+}
+.synri-text-tag-gray {
+  background-color: @text-tag-gray-bg;
+  span {
+    color: @text-tag-gray-text;
+  }
+  span.synri-text-tag-gray-faded {
+    color: @gray-500;
+  }
+}
+
+.synri-text-tag-dark-gray {
+  background-color: @light-gray;
+  color: white;
+}

@@ -1,0 +1,39 @@
+#TODO  Split service and Deployment files and place them in a folder
+apiVersion: v1
+kind: "Service"
+metadata:
+  name: "syncari-api-service"
+  namespace: "kube-system"
+spec:
+  ports:
+  - protocol: "TCP"
+    port: 80
+    targetPort: 8080
+  selector:
+    app: "syncari-api"
+  type: "LoadBalancer"
+  loadBalancerIP: ""
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: syncari-api
+  namespace: kube-system
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: syncari-api
+  template:
+    metadata:
+      labels:
+        app: syncari-api
+    spec:
+      containers:
+      - name: syncari-api
+        image: registry.gitlab.com/syncari1/product/api:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+        - name: registry.gitlab.com

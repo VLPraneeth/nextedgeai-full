@@ -1,0 +1,28 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %X{streamManagerRunId} %X{subscription}:%X{syncariId} %X{syncCycleId} %X{runMode} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+    <turboFilter class="ch.qos.logback.classic.turbo.DynamicThresholdFilter">
+        <Key>debugMode</Key>
+        <DefaultThreshold>INFO</DefaultThreshold>
+        <MDCValueLevelPair>
+            <value>true</value>
+            <level>DEBUG</level>
+        </MDCValueLevelPair>
+        <MDCValueLevelPair>
+            <value>false</value>
+            <level>INFO</level>
+        </MDCValueLevelPair>
+    </turboFilter>
+<!--    <logger name="org.mongodb.driver.protocol" level="DEBUG" additivity="true"/>-->
+    <logger name="com.syncari" level="DEBUG"/>
+    <logger name="org.apache.olingo" level="DEBUG"/>
+    <!--Log error or above for Netsuite -->
+    <logger name="com.netsuite.suitetalk.client" level="ERROR"/>
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

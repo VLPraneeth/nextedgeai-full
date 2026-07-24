@@ -1,0 +1,11 @@
+@import 'styles';
+
+.pipeline-logs {
+  padding: 18px 18px 0 18px;
+  background-color: white;
+
+  &__filter-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

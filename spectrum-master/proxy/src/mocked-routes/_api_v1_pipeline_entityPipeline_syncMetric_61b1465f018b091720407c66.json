@@ -1,0 +1,111 @@
+{
+  "entityName": "Account",
+  "apiName": "",
+  "syncariEntityId": "61afcdba39c3453a55a5a71d",
+  "lastProcessingTime": "2021-12-07T21:11:04.490Z",
+  "totalDuration": 40,
+  "durationUnit": "ms",
+  "title": "Synced 2021-12-07T21:11:04.491Z",
+  "allStages": [
+    {
+      "title": "Reading Sources",
+      "subtitle": "Completed 10 records",
+      "totalRecordsProcessed": 10,
+      "recordCountSuffix": " records",
+      "lastProcessedTime": "2021-12-07T21:11:03.771Z",
+      "totalDuration": 10,
+      "durationUnit": "ms",
+      "status": "COMPLETED",
+      "details": [
+        {
+          "connectorName": "testSynapse",
+          "connectorEntityName": "account",
+          "lastProcessed": "2021-12-07T21:11:03.771Z",
+          "duration": 10,
+          "totalProcessedRecordsCount": 10,
+          "skippedCount": 2,
+          "readCount": 8,
+          "deletedCount": null,
+          "createdCount": null,
+          "mergedCount": null,
+          "updatedCount": null
+        }
+      ]
+    },
+    {
+      "title": "Executing Sources side EP",
+      "subtitle": "Completed 10 records",
+      "totalRecordsProcessed": 10,
+      "recordCountSuffix": " records",
+      "lastProcessedTime": "2021-12-07T21:11:04.484Z",
+      "totalDuration": 10,
+      "durationUnit": "ms",
+      "status": "COMPLETED",
+      "details": [
+        {
+          "connectorName": "testSynapse",
+          "connectorEntityName": "account",
+          "lastProcessed": "2021-12-07T21:11:04.484Z",
+          "duration": 10,
+          "totalProcessedRecordsCount": 10,
+          "skippedCount": 10,
+          "readCount": 0,
+          "deletedCount": null,
+          "createdCount": null,
+          "mergedCount": null,
+          "updatedCount": null
+        }
+      ]
+    },
+    {
+      "title": "Executing Sources side FP",
+      "subtitle": "Completed 10 records",
+      "totalRecordsProcessed": 10,
+      "recordCountSuffix": " records",
+      "lastProcessedTime": "2021-12-07T21:11:04.488Z",
+      "totalDuration": 10,
+      "durationUnit": "ms",
+      "status": "NOT_STARTED",
+      "details": [
+        {
+          "connectorName": "testSynapse",
+          "connectorEntityName": "account",
+          "lastProcessed": "2021-12-07T21:11:04.488Z",
+          "duration": 10,
+          "totalProcessedRecordsCount": 10,
+          "skippedCount": 0,
+          "readCount": 0,
+          "deletedCount": 2,
+          "createdCount": 3,
+          "mergedCount": 0,
+          "updatedCount": 0
+        }
+      ]
+    },
+    {
+      "title": "Executing destination side pipeline",
+      "subtitle": "Completed 10 records",
+      "totalRecordsProcessed": 10,
+      "recordCountSuffix": " records",
+      "lastProcessedTime": "2021-12-07T21:11:04.490Z",
+      "totalDuration": 10,
+      "durationUnit": "ms",
+      "status": "NOT_STARTED",
+      "details": [
+        {
+          "connectorName": "testSynapse",
+          "connectorEntityName": "account",
+          "lastProcessed": "2021-12-07T21:11:04.490Z",
+          "duration": 10,
+          "totalProcessedRecordsCount": 10,
+          "skippedCount": 0,
+          "readCount": 0,
+          "deletedCount": 2,
+          "createdCount": 3,
+          "mergedCount": 0,
+          "updatedCount": 0
+        }
+      ]
+    }
+  ]
+}

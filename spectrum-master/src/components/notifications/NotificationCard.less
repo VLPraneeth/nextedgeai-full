@@ -1,0 +1,73 @@
+@import (reference) '~styles/index.less';
+
+.flex {
+  display: flex;
+}
+.notification-card {
+  display: flex;
+  padding: @spacings[sm];
+  border-radius: @borderRadius[md];
+  background-color: @blue-200;
+  color: @gray-800;
+
+  .transition();
+
+  &:not(:last-child) {
+    margin-bottom: @spacings[xxs];
+  }
+
+  &:hover {
+    background-color: @blue-300;
+
+    .notification-card__actions {
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    margin-right: @spacings[md];
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__subject {
+    display: flex;
+    margin: @spacings[xs] 0;
+  }
+
+  &__subject-text {
+    flex: 1 0;
+    color: @gray-900;
+    font-size: @fontSizes[lg];
+    line-height: @lineHeights[regular];
+    max-width: 180px;
+    word-wrap: break-word;
+  }
+
+  &__actions {
+    .transition();
+    margin: @spacings[xxs] 0;
+    opacity: 0;
+  }
+
+  &__body {
+    margin-bottom: @spacings[sm];
+
+    span span {
+      max-width: 224px;
+      word-wrap: break-word;
+      display: inline-block;
+    }
+  }
+
+  &__more-button {
+    display: block;
+    margin-bottom: @spacings[sm];
+  }
+
+  &__time {
+    font-size: @fontSizes[sm];
+  }
+}

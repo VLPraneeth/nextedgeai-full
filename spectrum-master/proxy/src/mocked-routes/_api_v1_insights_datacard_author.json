@@ -1,0 +1,22 @@
+[
+  {
+    "id": 111,
+    "apiName": "dataCard1",
+    "displayName": "Data Card 1",
+    "createdAt": "2022-07-01T00:00:00.000Z",
+    "lastModified": "2022-07-02T00:00:00.000Z",
+    "createdBy": "",
+    "draftStatus": "NEW",
+    "vizType": "column"
+  },
+  {
+    "id": 222,
+    "apiName": "dataCard2",
+    "displayName": "Data Card 2",
+    "createdAt": "2022-07-05T00:00:00.000Z",
+    "lastModified": "2022-07-06T00:00:00.000Z",
+    "createdBy": "",
+    "draftStatus": "APPROVED",
+    "vizType": "line"
+  }
+]

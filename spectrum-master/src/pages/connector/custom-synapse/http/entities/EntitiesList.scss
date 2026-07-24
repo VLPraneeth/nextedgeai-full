@@ -1,0 +1,18 @@
+@import 'styles';
+
+$toolbar-space: 24px;
+
+.entites-list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .entities-toolbar {
+    margin: (-$toolbar-space) (-$toolbar-space) $toolbar-space (-$toolbar-space);
+    padding-right: $toolbar-space;
+
+    .delete-button {
+      color: $red-300;
+      padding: 0;
+    }
+  }
+}

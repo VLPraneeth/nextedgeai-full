@@ -1,0 +1,42 @@
+{
+  "id": "topTenCustomers",
+  "displayName": "Top 10 Accounts by Sales",
+  "description": "Top 10 accounts by account name and closed won opportunity",
+  "layout": { "h": 2 },
+  "hidden": false,
+  "contents": {
+    "configuration": {
+      "vizType": "TABLE",
+      "series": null,
+      "columns": [
+        { "column": "amount", "name": "amount", "displayName": "Amount", "color": null, "displayFormat": "currency" },
+        {
+          "column": "name",
+          "name": "company",
+          "displayName": "Company",
+          "color": null,
+          "displayFormat": "text"
+        }
+      ],
+      "dateFilter": null,
+      "yaxis": null,
+      "xaxis": null
+    },
+    "data": {
+      "series": null,
+      "rows": [
+        { "amount": "125000", "company": "Jaxworks" },
+        { "amount": "95000", "company": "Brainlounge" },
+        { "amount": "63000", "company": "LiveZ" },
+        { "amount": "42000", "company": "Viva" },
+        { "amount": "37000", "company": "Zava" },
+        { "amount": "36000", "company": "Youtags" },
+        { "amount": "35000", "company": "Voonder" },
+        { "amount": "34000", "company": "Wikibox" },
+        { "amount": "33330", "company": "Mita" },
+        { "amount": "29000", "company": "Lazzy" }
+      ]
+    },
+    "contents": null
+  }
+}

@@ -1,0 +1,92 @@
+{
+    "company": {
+        "city": "Cupertino",
+        "companyId": 724468,
+        "companyStatus": "Operating",
+        "companyType": "Public",
+        "country": "United States",
+        "employees": "147000",
+        "equifaxId": "19571340",
+        "financialYearEnd": "9",
+        "industry": "Consumer Product Manufacturing",
+        "naics": "334310",
+        "naicsDescription": "Audio and Video Equipment Manufacturing",
+        "name": "Apple Inc",
+        "phone": "+1 408 996 1010",
+        "revenue": "325406.0",
+        "sic": "3571",
+        "sicDescription": "Electronic Computers",
+        "state": "CA",
+        "street": "1 Apple Park Way",
+        "subIndustry": "Consumer Electronics",
+        "tickers": [
+            {
+                "tickerName": "AAPL",
+                "exchange": "NASD"
+            }
+        ],
+        "zip": "95014-0642",
+        "mostRecentQuarter": "Mar, 2021",
+        "revenueCurrency": "USD",
+        "industryCode": "10",
+        "subIndustryCode": "10_8",
+        "britishSics": [
+            {
+                "britishSic": "47430",
+                "description": "Retail sale of audio and video equipment in specialised stores"
+            },
+            {
+                "britishSic": "26400",
+                "description": "Manufacture of consumer electronics"
+            }
+        ],
+        "fortuneRanking": "4",
+        "foundationDate": "1977",
+        "companyTwitterProfile": "https://twitter.com/Apple",
+        "companyBlogProfile": "http://images.apple.com/main/rss/hotnews/hotnews.rss",
+        "websites": [
+            "https://www.apple.com/"
+        ],
+        "sources": [
+            "User Generated",
+            "Web References",
+            "Reuters",
+            "InsideView",
+            "S&P Global",
+            "Community",
+            "Equifax"
+        ]
+    },
+    "contact": {
+        "contactId": "127988655",
+        "email": "mcook@apple.com",
+        "firstName": "Marlene",
+        "lastName": "Cook",
+        "fullName": "Marlene Cook",
+        "linkedInProfile": "https://www.linkedin.com/in/marleneberner",
+        "peopleId": "qAUi5iwciiUaeJpyu-V4F4gZ0GwRQ7Qa0VTKyWxuxfxEiNhJZlzvnsui_dioxWh0",
+        "jobLevels": [
+            "Other"
+        ],
+        "jobFunctions": [
+            "Operations and Administration"
+        ],
+        "active": true,
+        "titles": [
+            "Executive Assistant"
+        ],
+        "education": [
+            {
+                "degree": "Performance Certificate, Musical Theatre",
+                "major": "",
+                "university": "American Musical and Dramatic Academy"
+            },
+            {
+                "degree": "Bachelor, Music",
+                "major": "",
+                "university": "Washington State University"
+            }
+        ]
+    },
+    "confidenceScore": "70.0"
+}

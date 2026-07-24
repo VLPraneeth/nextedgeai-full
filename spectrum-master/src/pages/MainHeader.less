@@ -1,0 +1,128 @@
+/**
+ * Copyright (c) 2019-Present Syncari - All rights reserved.
+ */
+
+@import '~styles/index.less';
+
+.main-header {
+  background-color: @white;
+
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0;
+  padding-left: @spacings[xl];
+  height: @mainNavHeight;
+  line-height: @mainNavHeight;
+  border-bottom-color: @border-color;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  position: relative;
+  width: 100%;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: width;
+
+  &[data-drawer-visible='true'] {
+    width: calc(100% - 400px);
+    margin-right: 400px;
+  }
+}
+.global-icon-container {
+  margin-right: 10px;
+}
+
+.header-item,
+.global-icon-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+
+  .anticon,
+  .profile-picture {
+    font-size: 24px;
+    margin-right: 12px;
+  }
+
+  .anticon {
+    margin-right: 14px;
+  }
+}
+
+.header-item .menu {
+  flex-grow: 0;
+}
+
+.main-header .menu {
+  flex-grow: 0;
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+.bread-crumb {
+  display: flex;
+  color: #23365b !important;
+  align-items: center;
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 18px;
+
+  // Aligns breadcrumb item and divider in a flex container
+  & > span {
+    display: flex;
+  }
+}
+
+.ant-dropdown-link {
+  color: #292e33;
+}
+
+.menu.header-item {
+  border-left-color: #eceff2;
+  border-left-style: solid;
+  border-left-width: 1px;
+  padding-left: 22px;
+}
+
+.header-menu {
+  .clear-fix();
+
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+
+  .header-menu-item {
+    padding: 0 @spacings[md];
+
+    .anticon {
+      &.ant-dropdown-open svg {
+        color: @gray-900;
+      }
+      svg {
+        color: @gray-700;
+        .transition();
+
+        &:hover {
+          color: @syncari-blue;
+        }
+      }
+    }
+  }
+}
+
+.header-icon {
+  font-size: 24px;
+}
+
+.header-help-profile-items-container {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.header-dropdown-controls-container {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}

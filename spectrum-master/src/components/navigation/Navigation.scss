@@ -1,0 +1,129 @@
+@use "./SideMenuItem.scss" as SideMenuVars;
+@import 'styles';
+
+// approximate width of the NextEdge AI mark
+$nextedge-logo-mark-width: 30px;
+
+// widths
+$nav-bar-width-collapsed: 60px;
+$nav-bar-width-expanded: 220px;
+$separator-width-collapsed: 40px;
+$separator-width-expanded: 200px;
+$trigger-container-height: 114px;
+
+//heights
+$logo-height: 22px;
+$separator-height: 1px;
+
+//misc
+$nav-box-shadow: inset -1px 0px 4px rgba(0, 0, 0, 0.1);
+$offset: 5px;
+$width-transition: width 0.5s ease;
+$default-margin: 10px;
+
+.main-nav {
+  &__container {
+    height: 100%;
+    background-color: $s-white;
+  }
+
+  &__logo-container {
+    $logo-container-height: $toolbarHeight - $separator-height;
+    cursor: pointer;
+    // height: $logo-container-height;
+    display: flex;
+    align-items: center;
+
+    .logo-custom {
+      overflow: hidden;
+      // height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .img-custom--expanded {
+      // width: 100%;
+      max-width: 200%;
+      max-height: 51px;
+    }
+
+    .img-custom--collapsed {
+      // height: 100%;
+      width: 100%;
+    }
+
+    .logo {
+      height: $logo-height;
+      overflow: hidden;
+      svg {
+        height: fit-content;
+        opacity: 1;
+        padding-left: 5px;
+
+        .nextedge-text {
+          opacity: 0;
+        }
+      }
+    }
+
+    &--expanded {
+      .logo {
+        svg {
+          .nextedge-text {
+            opacity: 1;
+            transition: SideMenuVars.$opacity-transition-text-expand;
+          }
+        }
+      }
+    }
+
+    &--collapsed {
+      .logo {
+        svg {
+          .nextedge-text {
+            opacity: 0;
+            transition: SideMenuVars.$opacity-transition-text-collapse;
+          }
+        }
+      }
+    }
+
+    &--branding-enabled {
+      height: 60px;
+    }
+
+    &--branding-disabled {
+      height: $logo-container-height;
+    }
+  }
+
+  &__separator {
+    height: $separator-height;
+    background-color: $s-light-gray;
+    align-self: center;
+  }
+
+  &__sidebar {
+    height: 100%;
+    background-color: $s-white;
+    box-shadow: $nav-box-shadow;
+    padding: 0px 10px;
+  }
+
+  &__menu-items {
+    margin-top: 14px;
+    width: 100%;
+    overflow-x: hidden;
+    border-right: none;
+    background-color: $s-white;
+    height: calc(100% - ($trigger-container-height + $toolbarHeight));
+    overflow: hidden;
+  }
+
+  &__trigger-icons-container {
+    margin-top: $default-margin;
+    align-self: flex-end;
+    cursor: pointer;
+    color: $s-med-gray;
+  }
+}

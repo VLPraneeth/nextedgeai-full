@@ -1,0 +1,78 @@
+name: Deploy private demo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: nextedge-ai-demo
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out sanitized source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Configure short-lived AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ap-south-1
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+
+      - name: Package and upload release
+        env:
+          ARTIFACT_BUCKET: ${{ vars.AWS_ARTIFACT_BUCKET }}
+        run: |
+          git archive --format=tar.gz --output=nextedge-source.tar.gz HEAD
+          aws s3 cp nextedge-source.tar.gz "s3://${ARTIFACT_BUCKET}/releases/${GITHUB_SHA}.tar.gz" --only-show-errors
+
+      - name: Build, deploy, and smoke test on EC2
+        env:
+          ARTIFACT_BUCKET: ${{ vars.AWS_ARTIFACT_BUCKET }}
+          INSTANCE_ID: ${{ vars.AWS_INSTANCE_ID }}
+        run: |
+          parameters="$(jq -n \
+            --arg bucket "$ARTIFACT_BUCKET" \
+            --arg sha "$GITHUB_SHA" \
+            '{commands: [
+              "set -eu",
+              ("release=/opt/nextedge-ai/releases/" + $sha),
+              "mkdir -p $release",
+              ("aws s3 cp s3://" + $bucket + "/releases/" + $sha + ".tar.gz /tmp/nextedge-release.tar.gz --region ap-south-1 --only-show-errors"),
+              "tar -xzf /tmp/nextedge-release.tar.gz -C $release",
+              "rm -f /tmp/nextedge-release.tar.gz",
+              "cd $release/backend-master",
+              ("mvn clean package -DskipTests > /opt/nextedge-ai/logs/backend-" + $sha + ".log 2>&1"),
+              "cd $release",
+              ("docker build --file backend-master/Dockerfile.runtime --tag nextedge-ai/backend:" + $sha + " backend-master >> /opt/nextedge-ai/logs/backend-" + $sha + ".log 2>&1"),
+              ("docker build --build-arg NEXTEDGE_BUILD_SHA=" + $sha + " --build-arg NEXTEDGE_BUILD_BRANCH=main --tag nextedge-ai/web:" + $sha + " --file spectrum-master/Dockerfile.production spectrum-master > /opt/nextedge-ai/logs/web-" + $sha + ".log 2>&1"),
+              ("bash infrastructure/aws/scripts/deploy-demo.sh $release " + $sha)
+            ]}')"
+          command_id="$(aws ssm send-command \
+            --instance-ids "$INSTANCE_ID" \
+            --document-name AWS-RunShellScript \
+            --comment "Deploy NextEdge AI ${GITHUB_SHA}" \
+            --parameters "$parameters" \
+            --timeout-seconds 2400 \
+            --query Command.CommandId --output text)"
+          status="InProgress"
+          for _ in $(seq 1 180); do
+            status="$(aws ssm get-command-invocation --command-id "$command_id" --instance-id "$INSTANCE_ID" --query Status --output text)"
+            case "$status" in
+              Success|Cancelled|Failed|TimedOut|Cancelling) break ;;
+            esac
+            sleep 15
+          done
+          aws ssm get-command-invocation --command-id "$command_id" --instance-id "$INSTANCE_ID" --query StandardOutputContent --output text
+          if [ "$status" != "Success" ]; then
+            aws ssm get-command-invocation --command-id "$command_id" --instance-id "$INSTANCE_ID" --query StandardErrorContent --output text
+            exit 1
+          fi

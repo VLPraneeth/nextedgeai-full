@@ -1,0 +1,47 @@
+@import '~styles/index.less';
+
+.synri-inline-tabs-container {
+  position: relative;
+
+  :after {
+    display: flex;
+    content: '';
+    border-bottom: 1px solid @gray-400;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .synri-inline-tab {
+    color: @gray-700;
+    padding: @spacings[md] @spacings[xl];
+    margin: 0;
+    margin-left: @spacings[mlg];
+    position: relative;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-bottom: 0px solid @syncari-blue;
+      transition: border 0.25s @easings[easeInOut];
+    }
+
+    &:hover {
+      color: @syncari-blue;
+    }
+
+    &.is-current {
+      color: @gray-1000;
+      font-weight: @fontWeights[bold];
+
+      &:after {
+        border-width: 4px;
+      }
+    }
+  }
+}

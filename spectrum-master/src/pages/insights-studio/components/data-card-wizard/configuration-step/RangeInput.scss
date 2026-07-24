@@ -1,0 +1,25 @@
+@import 'styles';
+
+.range-input {
+  &__container {
+    width: 100%;
+    border-right: 1px solid $gray-300;
+    padding-right: $spacings-xl;
+  }
+  &__error-message {
+    color: $validation-error;
+  }
+
+  hr {
+    border: 1px solid $border-color;
+    margin-top: $spacings-mmlg;
+    margin-bottom: $spacings-mxl;
+  }
+  hr.last {
+    margin-bottom: $spacings-xs;
+  }
+}
+
+.range-input.first {
+  margin-top: $spacings-xl;
+}

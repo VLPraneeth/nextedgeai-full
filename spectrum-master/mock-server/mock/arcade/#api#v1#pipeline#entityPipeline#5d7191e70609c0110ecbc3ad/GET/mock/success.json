@@ -1,0 +1,123 @@
+{
+  "updatedBy" : null,
+  "draft" : null,
+  "draftStatus" : "NEW",
+  "name" : "Account",
+  "parentId" : null,
+  "createdAt" : null,
+  "createdBy" : null,
+  "scope" : "ENTITY",
+  "updatedAt" : null,
+  "id" : "5d896a7a35638b8b7ff15c45",
+  "targetId" : "5d7191e70609c0110ecbc3ad",
+  "nodes" : [
+     {
+        "location" : {"x":"300","y":"800"},
+        "outputPorts" : [
+           {
+              "portType" : "OUTPUT",
+              "maxConnections" : 2147483647,
+              "datatype" : "id"
+           }
+        ],
+        "nodeType" : "CORE_ENTITY",
+        "configuration" : {
+           "attributeDefinition" : "5d7191e70609c0110ecbc3ad",
+           "customDescription" : "id of syncari account",
+           "dataAuthority" : {
+              "dataAuthorityConfiguration" : {},
+              "datAuthorityStrategy" : "LATEST_RECORD"
+           }
+        },
+        "inputPorts" : [
+           {
+              "datatype" : "id",
+              "maxConnections" : 1,
+              "portType" : "INPUT"
+           }
+        ],
+        "name" : "Account",
+        "id" : "5d896a7a35638b8b7ff15c46"
+     },
+     {
+        "name" : "Account",
+        "id" : "5d896a7a35638b8b7ff15c47",
+        "inputPorts" : [],
+        "configuration" : {
+           "attributeDefinition" : "5d7191d00609c010fda6f636",
+           "customDescription": "id of sfdc10 account entity"
+        },
+        "nodeType" : "ENTITY_SOURCE",
+        "location" : {"x":"450","y":"700"},
+        "outputPorts" : [
+           {
+              "portType" : "OUTPUT",
+              "maxConnections" : 1,
+              "datatype" : "id"
+           }
+        ]
+     },
+     {
+        "inputPorts" : [
+           {
+              "datatype" : "id",
+              "maxConnections" : 1,
+              "portType" : "INPUT"
+           }
+        ],
+        "id" : "5d896a7a35638b8b7ff15c48",
+        "name" : "Account",
+        "nodeType" : "ENTITY_SINK",
+        "outputPorts" : [],
+        "location" : {},
+        "configuration" : {
+           "attributeDefinition" : "5d8ad17ea974a859b9c04a09",
+           "customDescription": "id of sfdc11 account entity"
+        }
+     }
+  ],
+  "edges" : [
+     {
+        "destination" : {
+           "anchor" : "0",
+           "nodeId" : "5d896a7a35638b8b7ff15c46",
+           "port" : {
+              "portType" : "INPUT",
+              "datatype" : "id",
+              "maxConnections" : 1
+           }
+        },
+        "id" : "5d896a7a35638b8b7ff15c50",
+        "source" : {
+           "anchor" : "0",
+           "port" : {
+              "maxConnections" : 1,
+              "datatype" : "id",
+              "portType" : "OUTPUT"
+           },
+           "nodeId" : "5d896a7a35638b8b7ff15c47"
+        }
+     },
+     {
+        "destination" : {
+           "port" : {
+              "portType" : "INPUT",
+              "maxConnections" : 1,
+              "datatype" : "id"
+           },
+           "nodeId" : "5d896a7a35638b8b7ff15c48",
+           "anchor" : "0"
+        },
+        "id" : "5d896a7a35638b8b7ff15c51",
+        "source" : {
+           "anchor" : "0",
+           "nodeId" : "5d896a7a35638b8b7ff15c46",
+           "port" : {
+              "datatype" : "id",
+              "maxConnections" : 2147483647,
+              "portType" : "OUTPUT"
+           }
+        }
+     }
+  ]
+}

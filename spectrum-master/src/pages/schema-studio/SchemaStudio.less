@@ -1,0 +1,53 @@
+@import '~styles/index.less';
+
+.schema-studio-inner-content {
+  background-color: @white;
+  padding: 0;
+
+  & > .main-page-layout-contents {
+    display: flex;
+
+    & > .main-page-layout-container {
+      flex: 1 0 0;
+      display: flex;
+    }
+  }
+}
+
+.schema-studio-container {
+  flex: 1 0 0;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.schema-studio-left-content {
+  flex: 1 0 0;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow-y: auto;
+
+  .schema-studio-content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: @spacings[xl];
+    overflow-y: auto;
+  }
+}
+
+.ant-table-header-column {
+  white-space: nowrap;
+}
+
+.synri-composite-key-overflow {
+  overflow-wrap: anywhere;
+}
+
+.entity-rules-input {
+  input:disabled {
+    border: none;
+    background-color: transparent;
+    color: @black;
+    padding: 0;
+  }
+}

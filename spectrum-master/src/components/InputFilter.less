@@ -1,0 +1,165 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+@import '~styles/index.less';
+
+.no-border-effect-input {
+  border-color: @gray-400;
+  box-shadow: none;
+}
+
+.synri-iput-filter-container-stack {
+  width: 100%;
+}
+
+.synri-iput-filter-container {
+  width: 100%;
+
+  .synri-input-filter {
+    &:hover,
+    &.ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
+      .no-border-effect-input();
+    }
+
+    &.ant-input-affix-wrapper .ant-input:not(:first-child) {
+      padding-left: 40px;
+    }
+
+    .synri-filter-collapse-toggle {
+      padding: 12.7px; // Specific padding to fit input size
+      cursor: pointer;
+      background-color: @white;
+      transition: background-color 300ms ease;
+
+      &:hover {
+        background-color: @gray-300;
+      }
+    }
+
+    .ant-input-group-addon {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .ant-input-prefix {
+      left: @spacings[md];
+    }
+
+    .ant-input-prefix svg,
+    .ant-input-group-addon svg {
+      fill: @gray-700;
+      transition: fill 0.5s ease;
+    }
+
+    .ant-input-suffix {
+      cursor: pointer;
+      padding-top: 2px;
+      transition: background-color 0.5s ease;
+      background-color: @white;
+
+      .synri-filter-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    input {
+      &.ant-input {
+        border: 1px solid @gray-400;
+        border-radius: @borderRadius[lg];
+        height: 42px;
+        width: 100%;
+        padding-left: 40px;
+      }
+
+      &.ant-input:focus,
+      &.ant-input:hover {
+        .no-border-effect-input();
+      }
+    }
+  }
+
+  .synri-input-filter-filters-container {
+    max-height: 0;
+    padding: 0 @spacings[md] 0 @spacings[md];
+    overflow: hidden;
+    border-left: 1px solid @white;
+    border-right: 1px solid @white;
+    border-bottom: 1px solid @white;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.synri-input-filters-expanded {
+    .synri-input-filter {
+      input.ant-input {
+        border-radius: 6px 0 0 0;
+      }
+    }
+
+    .ant-input-group-addon {
+      border-radius: 0 6px 0 0;
+    }
+
+    .ant-input-group-addon svg {
+      fill: @gray-700;
+    }
+
+    .ant-input-group-addon svg {
+      fill: @gray-800;
+    }
+
+    .synri-filter-collapse-toggle {
+      background-color: @gray-400;
+    }
+
+    .ant-input-suffix {
+      right: 0;
+      top: 21px;
+      width: 40px;
+      height: 42px;
+      background-color: @gray-400;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 2px;
+      border-radius: 0 6px 0 0;
+    }
+
+    .synri-input-filter-filters-container {
+      max-height: 300px;
+      border-radius: 0 0 6px 6px;
+      padding: 8px 14px 8px 14px;
+      border-left: 1px solid @gray-400;
+      border-right: 1px solid @gray-400;
+      border-bottom: 1px solid @gray-400;
+      background-color: @gray-200;
+    }
+  }
+}
+
+.synri-filter-clear-container {
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+  background-color: @gray-300;
+  border-radius: 5px;
+  padding: @spacings[sm];
+
+  span {
+    cursor: text;
+  }
+
+  .synri-filter-clear-container-text {
+    color: @gray-800;
+  }
+
+  a {
+    padding-left: 2px;
+    padding-right: 2px;
+    span {
+      cursor: pointer;
+    }
+  }
+}

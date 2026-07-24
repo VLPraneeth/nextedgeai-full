@@ -1,0 +1,145 @@
+{
+  "createdBy": null,
+  "updatedBy": "5e3b921952fb745409cf1431",
+  "createdAt": null,
+  "updatedAt": "2020-02-07T05:41:07.456+0000",
+  "id": "5e3b921952fb745409cf1433",
+  "userId": "5e3b921952fb745409cf1431",
+  "entityGraph": {
+    "nodes": {
+      "5e3b923a52fb74541a1be183": {
+        "x": "584",
+        "y": "100",
+        "id": "5e3b923a52fb74541a1be183"
+      },
+      "5e3b923a52fb74541a1be188": {
+        "x": "163",
+        "y": "333",
+        "id": "5e3b923a52fb74541a1be188"
+      },
+      "5e3b923a52fb74541a1be184": {
+        "x": "312",
+        "y": "465",
+        "id": "5e3b923a52fb74541a1be184"
+      },
+      "5e3b923a52fb74541a1be185": {
+        "x": "313",
+        "y": "211",
+        "id": "5e3b923a52fb74541a1be185"
+      },
+      "5e3b923a52fb74541a1be186": {
+        "x": "902",
+        "y": "211",
+        "id": "5e3b923a52fb74541a1be186"
+      },
+      "5e3b923a52fb74541a1be187": {
+        "x": "584",
+        "y": "575",
+        "id": "5e3b923a52fb74541a1be187"
+      },
+      "5e3b923a52fb74541a1be189": {
+        "x": "902",
+        "y": "397",
+        "id": "5e3b923a52fb74541a1be189"
+      }
+    },
+    "edges": {
+      "5e3b923a52fb74541a1be1855e3b923a52fb74541a1be183": {
+        "id": "5e3b923a52fb74541a1be1855e3b923a52fb74541a1be183",
+        "sourceAnchor": "0",
+        "targetAnchor": "3"
+      },
+      "5e3b923a52fb74541a1be1885e3b923a52fb74541a1be184": {
+        "id": "5e3b923a52fb74541a1be1885e3b923a52fb74541a1be184",
+        "sourceAnchor": "2",
+        "targetAnchor": "3"
+      },
+      "5e3b923a52fb74541a1be1875e3b923a52fb74541a1be184": {
+        "id": "5e3b923a52fb74541a1be1875e3b923a52fb74541a1be184",
+        "sourceAnchor": "3",
+        "targetAnchor": "2"
+      },
+      "5e3b923a52fb74541a1be1875e3b923a52fb74541a1be189": {
+        "id": "5e3b923a52fb74541a1be1875e3b923a52fb74541a1be189",
+        "sourceAnchor": "1",
+        "targetAnchor": "2"
+      },
+      "5e3b923a52fb74541a1be1865e3b923a52fb74541a1be189": {
+        "id": "5e3b923a52fb74541a1be1865e3b923a52fb74541a1be189",
+        "sourceAnchor": "2",
+        "targetAnchor": "0"
+      },
+      "5e3b923a52fb74541a1be1865e3b923a52fb74541a1be183": {
+        "id": "5e3b923a52fb74541a1be1865e3b923a52fb74541a1be183",
+        "sourceAnchor": "0",
+        "targetAnchor": "1"
+      },
+      "5e3b923a52fb74541a1be1855e3b923a52fb74541a1be184": {
+        "id": "5e3b923a52fb74541a1be1855e3b923a52fb74541a1be184",
+        "sourceAnchor": "2",
+        "targetAnchor": "0"
+      },
+      "5e3b923a52fb74541a1be1845e3b923a52fb74541a1be189": {
+        "id": "5e3b923a52fb74541a1be1845e3b923a52fb74541a1be189",
+        "sourceAnchor": "1",
+        "targetAnchor": "2"
+      },
+      "5e3b923a52fb74541a1be1855e3b923a52fb74541a1be186": {
+        "id": "5e3b923a52fb74541a1be1855e3b923a52fb74541a1be186",
+        "sourceAnchor": "1",
+        "targetAnchor": "3"
+      },
+      "5e3b923a52fb74541a1be1855e3b923a52fb74541a1be189": {
+        "id": "5e3b923a52fb74541a1be1855e3b923a52fb74541a1be189",
+        "sourceAnchor": "1",
+        "targetAnchor": "3"
+      },
+      "5e3b923a52fb74541a1be1885e3b923a52fb74541a1be183": {
+        "id": "5e3b923a52fb74541a1be1885e3b923a52fb74541a1be183",
+        "sourceAnchor": "1",
+        "targetAnchor": "2"
+      },
+      "5e3b923a52fb74541a1be1885e3b923a52fb74541a1be189": {
+        "id": "5e3b923a52fb74541a1be1885e3b923a52fb74541a1be189",
+        "sourceAnchor": "1",
+        "targetAnchor": "3"
+      },
+      "5e3b923a52fb74541a1be1845e3b923a52fb74541a1be183": {
+        "id": "5e3b923a52fb74541a1be1845e3b923a52fb74541a1be183",
+        "sourceAnchor": "1",
+        "targetAnchor": "2"
+      },
+      "5e3b923a52fb74541a1be1835e3b923a52fb74541a1be189": {
+        "id": "5e3b923a52fb74541a1be1835e3b923a52fb74541a1be189",
+        "sourceAnchor": "2",
+        "targetAnchor": "0"
+      },
+      "5e3b923a52fb74541a1be1875e3b923a52fb74541a1be183": {
+        "id": "5e3b923a52fb74541a1be1875e3b923a52fb74541a1be183",
+        "sourceAnchor": "0",
+        "targetAnchor": "2"
+      }
+    }
+  },
+  "connectorGraph": {
+    "nodes": {
+      "francis-syncari-entity": {
+        "x": "647",
+        "y": "259",
+        "id": "francis-syncari-entity"
+      },
+      "5e3baa3652fb74542ce4f451": {
+        "x": "672",
+        "y": "112",
+        "id": "5e3baa3652fb74542ce4f451"
+      }
+    },
+    "edges": {
+      "francis-syncari-entity-5e3baa3652fb74542ce4f451-edge": {
+        "id": "francis-syncari-entity-5e3baa3652fb74542ce4f451-edge",
+        "sourceAnchor": "0",
+        "targetAnchor": "2"
+      }
+    }
+  }
+}

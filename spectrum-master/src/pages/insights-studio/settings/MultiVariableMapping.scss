@@ -1,0 +1,28 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.scss';
+
+.multi-variable-mapping {
+  .synri-label-with-help {
+    margin-bottom: $spacings-xs;
+  }
+
+  &__map_variable {
+    margin: 0 0 $spacings-sm 0;
+  }
+
+  .synri-delete-container {
+    padding-left: $spacings-xxs;
+    padding-top: $spacings-xxs;
+  }
+
+  &__map-to {
+    width: 100%;
+  }
+
+  .ant-btn-link {
+    margin-left: -$spacings-sm;
+  }
+}

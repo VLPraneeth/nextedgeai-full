@@ -1,0 +1,32 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+.synri-subscription-action-toolbar {
+  padding-bottom: @spacings[sm];
+
+  .synri-search-box-input.ant-input-search input.ant-input {
+    height: 34px;
+  }
+}
+
+.synri-revoke-ghost-access-link {
+  color: @red-300;
+
+  &:focus {
+    color: @red-300;
+  }
+}
+
+.subscription-list {
+  &__status-cell {
+    display: flex;
+    align-items: center;
+
+    :nth-child(2) {
+      margin-left: @spacings[xs];
+    }
+  }
+}

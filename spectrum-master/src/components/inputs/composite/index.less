@@ -1,0 +1,150 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+@import '~styles/index.less';
+
+@transition-speed: 0.5s;
+
+.synri-composite {
+  .synri-container {
+    padding: 22px 14px 20px 12px;
+
+    .synri-condition {
+      align-items: center;
+    }
+  }
+
+  .synri-composite-group-drag-container {
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    .synri-composite-group {
+      display: flex;
+      width: 100%;
+      margin: 0;
+      border: 1px solid @gray-300;
+      border-radius: 6px;
+      background-color: @gray-200;
+      width: 100%;
+      transition: max-height @transition-speed ease-in;
+
+      .ant-form-item {
+        width: 100%;
+
+        .synri-select {
+          width: 100%;
+        }
+      }
+
+      &.synri-composite-row {
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        > div {
+          margin: 0 0 0 0;
+        }
+
+        .synri-delete-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          border-left: 1px solid @gray-300;
+          padding-left: 17px;
+
+          &:hover {
+            background-color: white;
+            cursor: default;
+          }
+
+          .synri-composite-delete {
+            margin-top: -2px;
+            margin-right: 14px;
+
+            svg {
+              fill: @gray-700;
+              cursor: pointer;
+            }
+
+            &:hover {
+              svg {
+                fill: @syncari-blue;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+
+      &.synri-composite-column {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.synri-composite-readonly {
+  cursor: default;
+
+  .synri-composite-group-readonly {
+    .synri-container {
+      cursor: default;
+    }
+
+    // Component styles that is specific when its inside the composite
+    .synri-filter-condition-readonly {
+      border: none;
+    }
+
+    .synri-picklist {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      .synri-select {
+        .ant-select-selection {
+          border: none;
+          background-color: transparent;
+
+          .ant-select-selection__rendered {
+            margin-right: 0;
+
+            .ant-select-selection-selected-value {
+              font-weight: @fontWeights[semibold];
+              color: @gray-700;
+              cursor: default;
+            }
+          }
+
+          .ant-select-arrow {
+            display: none;
+          }
+        }
+      }
+
+      &:first-child {
+        padding-top: 8px;
+      }
+
+      &:last-child {
+        padding-bottom: 8px;
+      }
+    }
+
+    .synri-condition-readonly {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.composite-input-left {
+  width: 50%;
+  margin: 0 @spacings[md];
+
+  .composite-input-left-label {
+    position: relative;
+    bottom: 6px;
+    padding-bottom: 2px 0;
+    color: black;
+    font-weight: @fontWeights[bold];
+  }
+}

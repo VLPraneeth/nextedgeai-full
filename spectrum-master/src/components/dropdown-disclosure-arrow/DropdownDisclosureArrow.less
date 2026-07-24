@@ -1,0 +1,27 @@
+@import '~styles/index.less';
+
+.dropdown-disclosure-arrow {
+  flex: 0 0 auto;
+  margin-left: @spacings[md];
+  color: @gray-700;
+  vertical-align: middle;
+
+  &--close-margin {
+    margin-left: @spacings[xxs];
+  }
+
+  svg {
+    vertical-align: middle;
+    color: @gray-700;
+    height: auto;
+    width: @spacings[sm];
+    transform: rotateX(0deg);
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  &--open {
+    svg {
+      transform: rotateX(180deg);
+    }
+  }
+}

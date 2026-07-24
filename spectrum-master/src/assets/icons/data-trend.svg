@@ -1,0 +1,20 @@
+<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(-4,2) scale(.95)">
+    <g transform="translate(53,-2)">
+      <rect x="2" width="24" rx="3" height="5" fill="currentColor" />
+      <rect transform="rotate(90,38,38)" width="24" y="50" rx="3" height="5" fill="currentColor" />
+    </g>
+
+    <g transform="translate(0,-17)">
+      <g transform="translate(-3,6)">
+        <rect transform="rotate(-45,64,8)" width="30" rx="3" height="5" fill="currentColor" />
+        <rect transform="rotate(45,-20.7,52) translate(0,-5)" width="24" rx="3" height="5" fill="currentColor" />
+      </g>
+      <rect transform="rotate(-45,80,-25)" width="44" rx="3" height="5" fill="currentColor" />
+    </g>
+  </g>
+
+  <rect fill="none" x="2" y="58" rx="1" width="15" height="20" stroke="currentColor" stroke-width="4" />
+  <rect fill="none" x="32.5" y="47" rx="1" width="15" height="31" stroke="currentColor" stroke-width="4" />
+  <rect fill="none" x="63" y="36" rx="1" width="15" height="42" stroke="currentColor" stroke-width="4" />
+</svg>

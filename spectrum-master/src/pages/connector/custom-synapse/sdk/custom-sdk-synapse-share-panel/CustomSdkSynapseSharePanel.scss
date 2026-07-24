@@ -1,0 +1,7 @@
+@import 'styles';
+
+.custom-sdk-synapse-share-panel {
+  &__help-text {
+    color: $validation-error;
+  }
+}

@@ -1,0 +1,23 @@
+# config.yaml
+# This file serves as the primary configuration file for the proxy.
+# To block DNS resolved IP addresses, kindly include the IP ranges within the "deny_ranges" list.
+# Should you need to specify a single IP instead of a range, please append "/32" to the end of the IP address.
+---
+allow_missing_role: true  # skip mTLS client validation
+statsd_address: 127.0.0.1:8200
+acl_file: /etc/smokescreen/acl.yaml
+deny_ranges:
+  - 10.148.0.0/20
+  - 10.16.0.0/14
+  - 10.20.0.0/20
+  - 10.52.0.0/14
+  - 10.56.0.0/20
+  - 10.4.0.0/14
+  - 10.8.0.0/20
+  - 169.254.169.254/32
+  - 10.158.0.0/20
+  - 10.48.0.0/14
+  - 10.178.0.0/20
+  - 10.40.0.0/14
+  - 10.170.0.0/20
+ 

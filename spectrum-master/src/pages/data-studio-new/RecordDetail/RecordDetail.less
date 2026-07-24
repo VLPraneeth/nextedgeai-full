@@ -1,0 +1,338 @@
+@import '~styles/index.less';
+
+@page-padding: 2rem;
+
+.ghost-danger {
+  background-color: white;
+  color: @red-300;
+  text-shadow: none;
+}
+
+.data-studio-record-detail {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow-y: hidden;
+  /* removes margin from old layouts -- this needs refactored */
+  margin: -@page-padding;
+}
+
+.data-studio-record-detail-content {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1;
+  overflow-y: auto;
+  padding: @page-padding @spacings[md];
+
+  form {
+    display: flex;
+    flex: 1;
+    overflow-y: hidden;
+    width: 100%;
+  }
+}
+
+.data-studio-record-detail-spin {
+  display: flex;
+
+  &.ant-spin-nested-loading {
+    width: 100%;
+  }
+
+  .ant-spin-container {
+    flex: 1 1;
+    display: flex;
+  }
+}
+
+.action-bar {
+  display: flex;
+  background-color: @white;
+  padding: @spacings[sm] @page-padding;
+  border-bottom: 1px solid @gray-300;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.05);
+}
+
+.errors-summary-link {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.error-text {
+  color: @red-500;
+}
+
+.errors-summary {
+  color: @red-500;
+  cursor: pointer;
+
+  .errors-summary-expansion-chevron {
+    display: inline-flex;
+    height: @fontSizes[md];
+    width: @fontSizes[md];
+
+    svg {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+.error-summary-modal {
+  min-width: 600px;
+  width: 60%;
+}
+
+.error-summary-field-name {
+  font-weight: @fontWeights[medium];
+}
+
+.record-fields-table-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: @spacings[md];
+  height: 50vh;
+}
+
+.record-detail-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 400px;
+  background-color: @white;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+
+  &[data-drawer-visible='true'] {
+    transform: translateX(0);
+  }
+}
+
+.record-detail-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.record-detail-body {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 50px; /* Space for the fixed footer */
+}
+
+.record-detail-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid @gray-400;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+  align-items: center;
+
+  h3 {
+    margin: 0;
+    font-size: @fontSizes[lgr];
+    font-weight: @fontWeights[medium];
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    font-size: @fontSizes[lgr];
+    color: @gray-600;
+
+    &:hover {
+      color: @gray-800;
+    }
+
+    .close-icon {
+      font-size: @fontSizes[lgr];
+    }
+  }
+}
+
+.record-detail-fields {
+  width: 100%;
+
+  .record-fields-list {
+    display: flex;
+    flex-flow: column;
+    overflow-y: auto;
+    gap: 24px;
+    padding-top: @spacings[lg];
+
+    .record-field {
+      display: flex;
+      flex-direction: column;
+
+      .field-label {
+        font-size: @fontSizes[md];
+        color: #757575;
+        font-weight: @fontWeights[medium];
+      }
+
+      .field-value {
+        flex: 1;
+        font-size: @fontSizes[md];
+        color: @gray-900;
+        word-break: break-word;
+
+        .ant-form-item {
+          margin-bottom: 0;
+        }
+
+        .ant-input-affix-wrapper {
+          width: 100%;
+
+          .ant-input {
+            padding-left: 45px;
+            height: 36px;
+            text-transform: capitalize;
+          }
+
+          .field-data-type-icon {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .field-value-view-mode {
+        .ant-input-affix-wrapper,
+        .ant-input,
+        .ant-input-number,
+        .ant-select-selector,
+        .tokens-textarea-container {
+          border: none !important;
+          background-color: transparent !important;
+          box-shadow: none !important;
+          cursor: default !important;
+          text-transform: capitalize;
+          padding-left: 0 !important;
+          height: 24px !important;
+          font-size: 16px !important;
+
+          &:hover,
+          &:focus,
+          &:active {
+            border: none !important;
+            box-shadow: none !important;
+            background-color: transparent !important;
+          }
+
+          &[disabled] {
+            color: @gray-900 !important;
+            cursor: default !important;
+          }
+        }
+
+        .ant-input-affix-wrapper {
+          padding-left: 0 !important;
+        }
+
+        .ant-form-item {
+          margin-bottom: @spacings[xxxs];
+        }
+
+        .ant-form-item-control {
+          line-height: 24px;
+        }
+      }
+    }
+
+    .record-field-row__api-name {
+      font-family: @font-family-mono;
+      color: #b3b3b3;
+      padding-left: 4px;
+      text-transform: lowercase;
+    }
+
+    .field-error-messages {
+      margin-top: @spacings[xxs];
+      display: flex;
+      flex-direction: column;
+      gap: @spacings[xxxs];
+
+      .field-error-message {
+        color: @red-500;
+        font-size: @fontSizes[sm];
+        line-height: 1.4;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.record-detail-footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  padding: 16px 24px;
+  background-color: @white;
+  border-top: 1px solid @gray-300;
+  z-index: 1001;
+  box-sizing: border-box;
+
+  .footer-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+
+    .ant-btn {
+      min-width: 100px;
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: @fontSizes[sm];
+      font-weight: @fontWeights[medium];
+      padding: 4px 16px;
+
+      .anticon {
+        font-size: 14px;
+      }
+    }
+
+    .reset-btn,
+    .delete-btn {
+      background-color: transparent;
+      color: @red-300;
+      min-width: max-content;
+
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.data-studio-lineage-header {
+  width: max-content;
+  margin: 0 @spacings[sm];
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  .link-text {
+    text-transform: capitalize;
+    color: @gray-800;
+  }
+
+  .lineage-id {
+    color: @gray-800;
+    font-weight: @fontWeights[medium];
+  }
+}

@@ -1,0 +1,27 @@
+@import '~styles/index.scss';
+
+.insights-studio {
+  display: flex;
+
+  &__main {
+    flex: 1;
+  }
+
+  &__enable-feature,
+  &__enable-feature-loading {
+    padding: $spacings-xs $spacings-xl;
+    color: $gray-900;
+    button {
+      margin-left: $spacings-md;
+    }
+  }
+
+  &__loading-alert {
+    display: flex;
+    .ant-alert-info {
+      background: transparent;
+      border: none;
+      margin: $spacings-xs auto;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "statuscategorychangedate",
+    "key": "statuscategorychangedate",
+    "name": "Status Category Changed",
+    "custom": false,
+    "orderable": false,
+    "navigable": true,
+    "searchable": true,
+    "clauseNames": [
+      "statusCategoryChangedDate"
+    ],
+    "schema": {
+      "type": "datetime",
+      "system": "statuscategorychangedate"
+    }
+  },
+  {
+    "id": "parent",
+    "key": "parent",
+    "name": "Parent",
+    "custom": false,
+    "orderable": false,
+    "navigable": true,
+    "searchable": false,
+    "clauseNames": [
+      "parent"
+    ]
+  },
+  {
+    "id": "customfield_10070",
+    "key": "customfield_10070",
+    "name": "Prospect/Customer",
+    "untranslatedName": "Prospect/Customer",
+    "custom": true,
+    "orderable": true,
+    "navigable": true,
+    "searchable": true,
+    "clauseNames": [
+      "cf[10070]",
+      "Prospect/Customer",
+      "Prospect/Customer[Short text]"
+    ],
+    "scope": {
+      "type": "PROJECT",
+      "project": {
+        "id": "10018"
+      }
+    },
+    "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+      "customId": 10070
+    }
+  },
+  {
+    "id": "created_at",
+    "key": "created_at",
+    "name": "Created at",
+    "custom": false,
+    "orderable": true,
+    "navigable": true,
+    "searchable": true,
+    "clauseNames": [
+      "createdAt"
+    ],
+    "schema": {
+      "type": "date",
+      "system": "createdAt"
+    }
+  }
+]

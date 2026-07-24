@@ -1,0 +1,309 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+@import './GraphItemPanel.less';
+
+@color-button-icon: #acbbc5;
+@color-border-draft: #ffbc4d;
+@color-background-draft: #ffdfaa;
+@color-icon-draft: #ad6c00;
+@color-text-draft: @color-icon-draft;
+@color-button-draft-disabled: #acb5bc;
+
+.graph-toolbar-container {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  width: 100%;
+  height: @toolbarHeight;
+  margin: 0;
+  z-index: 3;
+  border-bottom: 1px solid @border-color;
+  background-color: @white;
+  &:not(.no-shadow) {
+    box-shadow: 0px 5px 13px -14px rgba(0, 0, 0, 0.75);
+  }
+
+  .synri-label {
+    .unselectable-text();
+  }
+
+  .back-to-entities {
+    display: flex;
+    align-items: center;
+
+    .anticon-arrow-left {
+      margin-top: 2px;
+    }
+  }
+
+  .toolbar-button {
+    color: @gray-700;
+    width: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: @fontSizes[lgr];
+    height: 100%;
+    border-right: 1px solid @border-color;
+    cursor: pointer;
+
+    // TODO: Control the svg color from the parent
+    &:hover i,
+    &:hover svg #Draft-Delete[fill] {
+      fill: @syncari-blue;
+      color: @syncari-blue;
+    }
+  }
+
+  .synri-left-toolbar-content {
+    margin-left: @spacings[sm];
+    display: flex;
+    align-items: center;
+
+    button.synri-faded-icon-button,
+    span.synri-faded-icon-button button {
+      display: flex;
+      align-items: center;
+      border: none;
+      box-shadow: none;
+      color: @gray-800;
+      background-color: @white;
+
+      &:hover {
+        background-color: @gray-200;
+        color: @gray-800;
+      }
+    }
+
+    // When the button is disabled, ant nests it inside a span
+    span.synri-faded-icon-button button {
+      color: @gray-600;
+    }
+  }
+
+  .ant-btn .anticon-check-circle {
+    color: @green-400;
+  }
+
+  .ant-btn[disabled] .anticon-check-circle {
+    color: @color-button-draft-disabled;
+  }
+
+  &.graph-version-draft {
+    background-color: @color-background-draft;
+    border-bottom: 1px solid @color-border-draft;
+    transition: background-color 500ms ease-out 1s;
+    transition: border-color 500ms ease-out 1s;
+
+    .left-group .toolbar-button:first-child {
+      color: @color-icon-draft;
+      border-right: 1px solid @color-border-draft;
+    }
+    .toolbar-button {
+      &:last-child {
+        border-left: 1px solid @color-border-draft;
+        border-right: none;
+      }
+
+      svg #Draft-Delete[fill] {
+        fill: @color-icon-draft;
+      }
+
+      &:hover:not(.toolbar-button-disabled) svg #Draft-Delete[fill] {
+        fill: @syncari-blue;
+      }
+
+      &.toolbar-button-disabled {
+        cursor: not-allowed;
+      }
+    }
+
+    button {
+      border-color: @color-border-draft;
+
+      .anticon-edit {
+        color: @color-border-draft;
+      }
+
+      &[type='button'][disabled] .anticon {
+        color: @color-button-draft-disabled;
+      }
+
+      &[type='button'][disabled]:not(.ant-dropdown-trigger).ant-btn-primary {
+        background-color: @color-button-draft-disabled;
+        color: @white;
+        border-color: @color-button-draft-disabled;
+      }
+
+      &[type='button'][disabled]:not(.ant-dropdown-trigger) {
+        border-color: @color-border-draft;
+      }
+    }
+
+    .error-container {
+      span {
+        color: @red-500;
+      }
+    }
+
+    .synri-status-container,
+    .loading-message {
+      color: @color-text-draft;
+    }
+
+    .ant-spin svg {
+      fill: @color-icon-draft;
+    }
+  }
+
+  .last-successful-sync-message {
+    text-align: right;
+  }
+
+  .left-group {
+    display: flex;
+    align-items: center;
+
+    button {
+      margin-left: 13px;
+    }
+
+    .synri-ready-publish {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+
+      .synri-label-with-help {
+        margin-left: 6px;
+
+        .synri-label {
+          font-weight: @fontWeights[regular];
+        }
+      }
+      .ant-switch.ant-switch-checked {
+        border-color: @green-500;
+        background-color: @green-300;
+      }
+    }
+  }
+
+  .right-group .action-buttons {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    > span {
+      margin-left: 10px;
+    }
+
+    .synri-status-container,
+    .loading-message {
+      .unselectable-text();
+      display: flex;
+      align-items: center;
+      margin-right: 12px;
+
+      .anticon {
+        margin-right: 4px;
+      }
+    }
+
+    .error-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .error-title {
+        .unselectable-text();
+        margin-left: 4px;
+        margin-right: 8px;
+      }
+    }
+
+    .status-orange {
+      border: 1px solid @color-draft-status;
+      background-color: @color-draft-status;
+    }
+
+    .status-green {
+      border: 1px solid @color-approved-status;
+      background-color: @color-approved-status;
+    }
+
+    .status-button {
+      margin-right: 4px;
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-left: 6px;
+      }
+    }
+
+    .active-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .active-button-container {
+        display: flex;
+        align-items: center;
+      }
+
+      .anticon {
+        margin-top: 2px;
+        color: @color-button-icon;
+      }
+    }
+
+    .status {
+      width: 14px;
+      height: 14px;
+      align-items: center;
+      border-radius: 50%;
+    }
+
+    .loading-message {
+      margin-left: 4px;
+    }
+
+    .dropdown-status {
+      display: flex;
+      align-items: center;
+
+      > div,
+      > span,
+      > i {
+        margin-left: 6px;
+      }
+
+      > i {
+        margin-top: 3px;
+      }
+
+      .anticon {
+        color: @color-button-icon;
+      }
+    }
+  }
+
+  .right-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .toolbar-button:first-child {
+      border-left: 1px solid @border-color;
+    }
+
+    .action-buttons .ant-btn {
+      margin-right: 13px;
+    }
+  }
+}

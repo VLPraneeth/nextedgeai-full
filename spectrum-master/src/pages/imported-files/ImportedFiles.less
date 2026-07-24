@@ -1,0 +1,20 @@
+@import '~styles/index.less';
+
+.imported-files {
+  display: flex;
+  flex: 1;
+  height: 100%;
+
+  &__content-container {
+    display: grid;
+    width: 100%;
+    background-color: @white;
+  }
+
+  .file-icon {
+    margin-right: @spacings[xs];
+    // Slightly offset to match alignment with the text
+    position: relative;
+    top: 1px;
+  }
+}

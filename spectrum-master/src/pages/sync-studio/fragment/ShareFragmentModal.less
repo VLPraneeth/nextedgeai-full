@@ -1,0 +1,47 @@
+@import '~styles/index.less';
+
+.share-fragment-modal {
+  .description {
+    height: 17px;
+    width: 152px;
+    color: @gray-800;
+    font-size: 14px;
+    font-weight: @font-weight-bold-label;
+    letter-spacing: 0;
+    line-height: 17px;
+    margin-bottom: 14px;
+  }
+
+  .synri-share-fragment-container {
+    box-sizing: border-box;
+    height: 200px;
+    width: 475px;
+    border: 1px solid #d7e1e8;
+    border-radius: 4px;
+
+    min-height: 200px;
+    overflow: hidden;
+
+    .synri-share-fragment-scroll {
+      overflow: auto;
+      max-height: 200px;
+    }
+
+    .ant-row.ant-form-item {
+      margin-bottom: 0;
+    }
+
+    .synri-checkbox {
+      padding-left: 12px;
+    }
+
+    .instance-org-name {
+      color: @light-gray;
+      font-weight: @fontWeights[regular];
+    }
+  }
+
+  .synri-share-fragment-empty {
+    min-height: 200px;
+  }
+}

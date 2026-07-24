@@ -1,0 +1,36 @@
+@import 'styles/color.scss';
+@import 'styles/variables.scss';
+@import 'styles';
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  font-weight: $font-weights-bold;
+  font-size: $font-size-lgr;
+  min-width: 0;
+
+  a {
+    white-space: nowrap;
+    color: $s-blue;
+    overflow: hidden;
+    @include ellipsis-text;
+
+    &:hover {
+      color: $blue-750;
+    }
+  }
+
+  .breadcrumb {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    @include ellipsis-text;
+    margin-right: $spacings-sm;
+
+    .breadcrumb-link {
+      min-width: 0;
+    }
+  }
+}

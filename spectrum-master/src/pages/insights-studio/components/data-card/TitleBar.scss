@@ -1,0 +1,32 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import 'styles';
+
+.data-card-title-bar {
+  margin-bottom: $spacings-xxs;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__title {
+    color: $gray-1000;
+    font-size: $font-size-md;
+    font-weight: bold;
+    margin-right: $spacings-sm;
+    @include ellipsis-text;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+}

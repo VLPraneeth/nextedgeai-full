@@ -1,0 +1,268 @@
+id,company,domain,industry,employees,revenue,hqcity,hqstate,hqcountry,comment
+1,Gov,Gov.com,Major Pharmaceuticals,3783,24813025,Dallas,Texas,United States,Sample data generated on 06/16/2022
+2,Bandcamp,,Major Banks,13280,31010877,Houston,Texas,United States,Sample data generated on 06/16/2022
+3,Timesonline,Timesonline.com,Medical/Dental Instruments,27788,23417895,La Rochelle,Poitou-Charentes,France,Sample data generated on 06/16/2022
+4,Google,Google.com,Water Supply,11871,30240337,Avignon,Provence-Alpes-Côte d'Azur,France,Sample data generated on 06/16/2022
+5,Go,Go.com,Telecommunications Equipment,46019,2622232,Fort Worth,Texas,United States,Sample data generated on 06/16/2022
+6,Fastcompany,Fastcompany.com,Major Pharmaceuticals,13952,,,,Germany,Sample data generated on 06/16/2022
+7,Ca,Ca.com,Life Insurance,43819,31756720,Lakeland,Florida,United States,Sample data generated on 06/16/2022
+8,Nifty,Nifty.com,Industrial Machinery/Components,7865,32208256,Roubaix,Nord-Pas-de-Calais,France,Sample data generated on 06/16/2022
+9,Github,,Forest Products,49304,,,,United States,Sample data generated on 06/16/2022
+10,House,House.com,n/a,20493,5764238,Soisy-sous-Montmorency,Île-de-France,France,Sample data generated on 06/16/2022
+11,Paypal,Paypal.com,Electric Utilities: Central,35817,27177412,El Paso,Texas,United States,Sample data generated on 06/16/2022
+12,Feedburner,Feedburner.com,n/a,2240,,,,France,Sample data generated on 06/16/2022
+13,Zimbio,Zimbio.com,,,,,,Canada,Sample data generated on 06/16/2022
+14,Umn,,n/a,40771,,,,Canada,Sample data generated on 06/16/2022
+15,Mozilla,Mozilla.com,Major Pharmaceuticals,5494,,,,France,Sample data generated on 06/16/2022
+16,Hao123,Hao123.com,Biotechnology: Biological Products (No Diagnostic Substances),18023,,,,France,Sample data generated on 06/16/2022
+17,Com,Com.com,,,14646717,Wasquehal,Nord-Pas-de-Calais,France,Sample data generated on 06/16/2022
+18,Dailymail,Dailymail.com,Telecommunications Equipment,6625,22913735,La Gacilly,Bretagne,France,Sample data generated on 06/16/2022
+19,Dot,Dot.com,,,,,,Germany,Sample data generated on 06/16/2022
+20,Ow,Ow.com,Telecommunications Equipment,33163,15537509,San Bernardino,California,United States,Sample data generated on 06/16/2022
+21,Yale,,EDP Services,15658,28275976,Reston,Virginia,United States,Sample data generated on 06/16/2022
+22,Ovh,,Major Pharmaceuticals,6255,,,,France,Sample data generated on 06/16/2022
+23,Pbs,,Investment Bankers/Brokers/Service,29418,,,,Canada,Sample data generated on 06/16/2022
+24,Mail,Mail.com,,,6258879,Versailles,Île-de-France,France,Sample data generated on 06/16/2022
+25,Walmart,Walmart.com,Medical/Dental Instruments,48334,31473377,Paris 08,Île-de-France,France,Sample data generated on 06/16/2022
+26,Cmu,Cmu.com,Biotechnology: Biological Products (No Diagnostic Substances),29608,28587665,Charlotte,North Carolina,United States,Sample data generated on 06/16/2022
+27,Digg,,Engineering & Construction,1658,,,,France,Sample data generated on 06/16/2022
+28,Drupal,Drupal.com,Semiconductors,10467,,,,France,Sample data generated on 06/16/2022
+29,Alibaba,,Steel/Iron Ore,34204,21864683,Moncton,New Brunswick,Canada,Sample data generated on 06/16/2022
+30,Nature,Nature.com,Other Specialty Stores,20293,,,,United States,Sample data generated on 06/16/2022
+31,Youtu,Youtu.com,Metal Fabrications,33799,,,,United States,Sample data generated on 06/16/2022
+32,Freewebs,Freewebs.com,Biotechnology: Commercial Physical & Biological Resarch,19823,,,,France,Sample data generated on 06/16/2022
+33,Vinaora,Vinaora.com,,,,,,United States,Sample data generated on 06/16/2022
+34,Zdnet,Zdnet.com,,,,,,France,Sample data generated on 06/16/2022
+35,Eventbrite,,Major Banks,28194,17719824,Magrath,Alberta,Canada,Sample data generated on 06/16/2022
+36,Senate,,Biotechnology: Laboratory Analytical Instruments,9334,,,,France,Sample data generated on 06/16/2022
+37,Facebook,,,,19672798,Saint-Augustin-de-Desmaures,Québec,Canada,Sample data generated on 06/16/2022
+38,Imgur,,Major Chemicals,8603,27171949,Provo,Utah,United States,Sample data generated on 06/16/2022
+39,Creativecommons,Creativecommons.com,Electric Utilities: Central,10923,,,,France,Sample data generated on 06/16/2022
+40,Imageshack,,n/a,7761,,,,United States,Sample data generated on 06/16/2022
+41,Biglobe,,n/a,5114,,,,United States,Sample data generated on 06/16/2022
+42,Squarespace,Squarespace.com,Computer Software: Prepackaged Software,9597,31879710,Nantes,Pays de la Loire,France,Sample data generated on 06/16/2022
+43,Sciencedaily,,Computer Software: Prepackaged Software,43690,6615758,Mirabel,Québec,Canada,Sample data generated on 06/16/2022
+44,Printfriendly,Printfriendly.com,n/a,7853,6869981,Midland,Texas,United States,Sample data generated on 06/16/2022
+45,Gnu,Gnu.com,Natural Gas Distribution,18894,30164988,Peace River,Alberta,Canada,Sample data generated on 06/16/2022
+46,Webnode,,,,7485732,Springfield,Virginia,United States,Sample data generated on 06/16/2022
+47,About,About.com,Power Generation,39699,30805975,Tulsa,Oklahoma,United States,Sample data generated on 06/16/2022
+48,Census,Census.com,n/a,43466,13941422,Aubenas,Rhône-Alpes,France,Sample data generated on 06/16/2022
+49,Mysql,,,,6456812,Grenoble,Rhône-Alpes,France,Sample data generated on 06/16/2022
+50,Livejournal,Livejournal.com,Major Banks,40461,,,,France,Sample data generated on 06/16/2022
+51,Diigo,,Coal Mining,31401,,,,United States,Sample data generated on 06/16/2022
+52,Bloglines,Bloglines.com,Telecommunications Equipment,4043,15280114,Nanterre,Île-de-France,France,Sample data generated on 06/16/2022
+54,Twitter,Twitter.com,,,,,,France,Sample data generated on 06/16/2022
+55,Bing,,Home Furnishings,22484,26999187,Levallois-Perret,Île-de-France,France,Sample data generated on 06/16/2022
+56,Usatoday,Usatoday.com,Air Freight/Delivery Services,17114,18505678,Saint Paul,Minnesota,United States,Sample data generated on 06/16/2022
+58,Sfgate,Sfgate.com,n/a,20825,,,,United Kingdom,Sample data generated on 06/16/2022
+59,Earthlink,,n/a,12642,16021297,Montgomery,Alabama,United States,Sample data generated on 06/16/2022
+60,Dagondesign,,Medical Specialities,14931,22684036,Thorold,Ontario,Canada,Sample data generated on 06/16/2022
+61,Indiegogo,Indiegogo.com,Air Freight/Delivery Services,474,31086827,Beaverton,Oregon,United States,Sample data generated on 06/16/2022
+62,Acquirethisname,,n/a,35274,7849911,Paris 07,Île-de-France,France,Sample data generated on 06/16/2022
+63,Reddit,Reddit.com,Home Furnishings,30327,20641385,Annecy,Rhône-Alpes,France,Sample data generated on 06/16/2022
+66,Princeton,,Apparel,14860,3400221,Chandler,Arizona,United States,Sample data generated on 06/16/2022
+68,China,China.com,Agricultural Chemicals,45200,2175881,Ford,England,United Kingdom,Sample data generated on 06/16/2022
+70,Opensource,Opensource.com,Plastic Products,19781,20104972,Marystown,Newfoundland and Labrador,Canada,Sample data generated on 06/16/2022
+71,Mayoclinic,Mayoclinic.com,Advertising,31056,,,,Germany,Sample data generated on 06/16/2022
+72,Dion,Dion.com,Medical Specialities,16488,21086677,Vannes,Bretagne,France,Sample data generated on 06/16/2022
+73,Comcast,Comcast.com,Industrial Machinery/Components,31501,,,,Germany,Sample data generated on 06/16/2022
+75,Vistaprint,,Natural Gas Distribution,45350,,,,France,Sample data generated on 06/16/2022
+76,Utexas,Utexas.com,,,33556624,Angers,Pays de la Loire,France,Sample data generated on 06/16/2022
+77,Skype,,Computer Software: Prepackaged Software,24209,7710432,Anmore,British Columbia,Canada,Sample data generated on 06/16/2022
+78,Exblog,Exblog.com,Specialty Insurers,24185,,,,United States,Sample data generated on 06/16/2022
+79,Psu,,,,8604793,Philadelphia,Pennsylvania,United States,Sample data generated on 06/16/2022
+82,Nhs,,Major Pharmaceuticals,27752,12070220,La Rochelle,Poitou-Charentes,France,Sample data generated on 06/16/2022
+83,Instagram,,,,29869455,Pittsburgh,Pennsylvania,United States,Sample data generated on 06/16/2022
+85,Ucoz,,n/a,44478,,,,France,Sample data generated on 06/16/2022
+88,Themeforest,,Natural Gas Distribution,29026,19275210,Paris 17,Île-de-France,France,Sample data generated on 06/16/2022
+89,Sogou,Sogou.com,Semiconductors,49852,,,,Canada,Sample data generated on 06/16/2022
+90,Delicious,,Medical/Dental Instruments,10190,,,,France,Sample data generated on 06/16/2022
+91,Qq,Qq.com,n/a,35915,25613138,Mirecourt,Lorraine,France,Sample data generated on 06/16/2022
+94,Omniture,,EDP Services,37708,,,,Canada,Sample data generated on 06/16/2022
+95,Telegraph,,Real Estate Investment Trusts,3563,21013423,Santa Rosa,California,United States,Sample data generated on 06/16/2022
+96,Liveinternet,,Oil & Gas Production,46734,,,,United States,Sample data generated on 06/16/2022
+97,Elegantthemes,,Telecommunications Equipment,47741,29621383,Prince Rupert,British Columbia,Canada,Sample data generated on 06/16/2022
+98,Globo,Globo.com,EDP Services,38365,,,,France,Sample data generated on 06/16/2022
+99,Gmpg,Gmpg.com,Investment Managers,21561,12691149,Montauban,Midi-Pyrénées,France,Sample data generated on 06/16/2022
+100,Purevolume,Purevolume.com,Major Chemicals,21261,7303300,Aix-en-Provence,Provence-Alpes-Côte d'Azur,France,Sample data generated on 06/16/2022
+101,Technorati,Technorati.com,n/a,22144,31973485,New Haven,Connecticut,United States,Sample data generated on 06/16/2022
+105,Barnesandnoble,Barnesandnoble.com,Business Services,32273,21199975,Port-de-Bouc,Provence-Alpes-Côte d'Azur,France,Sample data generated on 06/16/2022
+106,Wikia,,Telecommunications Equipment,1062,27083325,Montbéliard,Franche-Comté,France,Sample data generated on 06/16/2022
+108,Usda,,Computer Software: Prepackaged Software,19841,13057004,Leipzig,Sachsen,Germany,Sample data generated on 06/16/2022
+109,Edublogs,Edublogs.com,Major Banks,48617,,,,Canada,Sample data generated on 06/16/2022
+110,Bloomberg,Bloomberg.com,Medical/Dental Instruments,20710,15622160,Pau,Aquitaine,France,Sample data generated on 06/16/2022
+114,Ox,Ox.com,,,27432964,San Diego,California,United States,Sample data generated on 06/16/2022
+115,Hostgator,Hostgator.com,Consumer Specialties,9555,21167908,Mâcon,Bourgogne,France,Sample data generated on 06/16/2022
+117,Cbsnews,,,,25863993,Rouen,Haute-Normandie,France,Sample data generated on 06/16/2022
+118,Sun,Sun.com,n/a,2185,,,,United States,Sample data generated on 06/16/2022
+121,Tripod,,Medical Specialities,45402,23632803,Belfort,Franche-Comté,France,Sample data generated on 06/16/2022
+122,Irs,,,,,,,France,Sample data generated on 06/16/2022
+123,Weibo,,Computer Software: Prepackaged Software,20718,,,,France,Sample data generated on 06/16/2022
+124,Ihg,Ihg.com,Finance: Consumer Services,37417,23607760,Villefranche-sur-Saône,Rhône-Alpes,France,Sample data generated on 06/16/2022
+125,Comsenz,Comsenz.com,Major Pharmaceuticals,41383,,,,France,Sample data generated on 06/16/2022
+128,Hc360,,Biotechnology: Biological Products (No Diagnostic Substances),29831,27770974,Villeurbanne,Rhône-Alpes,France,Sample data generated on 06/16/2022
+132,Scribd,Scribd.com,n/a,8458,3010914,Cergy-Pontoise,Île-de-France,France,Sample data generated on 06/16/2022
+134,Icio,Icio.com,Business Services,16956,11023404,Roblin,Manitoba,Canada,Sample data generated on 06/16/2022
+135,Artisteer,Artisteer.com,n/a,41246,5340442,Cergy-Pontoise,Île-de-France,France,Sample data generated on 06/16/2022
+138,State,State.com,n/a,35944,,,,Canada,Sample data generated on 06/16/2022
+139,Unicef,Unicef.com,Oil & Gas Production,41342,,,,United States,Sample data generated on 06/16/2022
+140,Xing,Xing.com,Telecommunications Equipment,16135,,,,Canada,Sample data generated on 06/16/2022
+141,Microsoft,Microsoft.com,Oil & Gas Production,32512,,,,United States,Sample data generated on 06/16/2022
+142,Ebay,Ebay.com,Electrical Products,49032,17332058,Caen,Basse-Normandie,France,Sample data generated on 06/16/2022
+143,So-net,,Aerospace,20727,,,,United States,Sample data generated on 06/16/2022
+145,Bigcartel,,n/a,2391,33966703,Mont-de-Marsan,Aquitaine,France,Sample data generated on 06/16/2022
+147,Unblog,Unblog.com,n/a,8742,24705929,Cournon-d'Auvergne,Auvergne,France,Sample data generated on 06/16/2022
+148,Netscape,Netscape.com,Major Banks,7795,14373275,Sens,Bourgogne,France,Sample data generated on 06/16/2022
+149,Msu,Msu.com,n/a,22259,7403300,Seaton,England,United Kingdom,Sample data generated on 06/16/2022
+154,51,,Metal Fabrications,8022,,,,France,Sample data generated on 06/16/2022
+155,Reuters,,Industrial Machinery/Components,8647,,,,Canada,Sample data generated on 06/16/2022
+157,Mapquest,Mapquest.com,"Computer Software: Programming, Data Processing",27468,21702305,Colorado Springs,Colorado,United States,Sample data generated on 06/16/2022
+158,Usnews,Usnews.com,Property-Casualty Insurers,14484,,,,France,Sample data generated on 06/16/2022
+159,Tinyurl,Tinyurl.com,Radio And Television Broadcasting And Communications Equipment,17113,,,,France,Sample data generated on 06/16/2022
+160,Tripadvisor,Tripadvisor.com,Advertising,21282,,,,France,Sample data generated on 06/16/2022
+162,Blogs,,Biotechnology: In Vitro & In Vivo Diagnostic Substances,32935,,,,France,Sample data generated on 06/16/2022
+164,Elpais,,Transportation Services,7094,26433485,Valenciennes,Nord-Pas-de-Calais,France,Sample data generated on 06/16/2022
+166,Disqus,Disqus.com,Biotechnology: Biological Products (No Diagnostic Substances),19995,5831945,Carcassonne,Languedoc-Roussillon,France,Sample data generated on 06/16/2022
+170,Wordpress,Wordpress.com,,,,,,United States,Sample data generated on 06/16/2022
+173,Privacy,Privacy.com,Major Pharmaceuticals,4670,,,,France,Sample data generated on 06/16/2022
+175,Bravesites,Bravesites.com,Precious Metals,17326,,,,United States,Sample data generated on 06/16/2022
+176,Angelfire,,n/a,25822,25706397,Nantes,Pays de la Loire,France,Sample data generated on 06/16/2022
+178,Theatlantic,,n/a,29352,20524451,Ferme-Neuve,Québec,Canada,Sample data generated on 06/16/2022
+180,Un,,n/a,48625,12004527,Dayton,Ohio,United States,Sample data generated on 06/16/2022
+181,Mlb,,Home Furnishings,30227,17649239,Decatur,Georgia,United States,Sample data generated on 06/16/2022
+182,Joomla,Joomla.com,Major Chemicals,3068,3378768,Paris 18,Île-de-France,France,Sample data generated on 06/16/2022
+184,Unc,Unc.com,Real Estate Investment Trusts,26777,14501537,Vienne,Rhône-Alpes,France,Sample data generated on 06/16/2022
+185,Businessweek,Businessweek.com,Major Chemicals,24643,,,,France,Sample data generated on 06/16/2022
+186,Youku,,Major Pharmaceuticals,16598,,,,United States,Sample data generated on 06/16/2022
+189,Amazon,Amazon.com,n/a,2008,,,,France,Sample data generated on 06/16/2022
+192,Japanpost,,,,,,,United States,Sample data generated on 06/16/2022
+193,Rediff,,Major Chemicals,12775,,,,United States,Sample data generated on 06/16/2022
+194,Si,Si.com,Accident &Health Insurance,10589,11360056,Marseille,Provence-Alpes-Côte d'Azur,France,Sample data generated on 06/16/2022
+195,T-online,,,,,,,Canada,Sample data generated on 06/16/2022
+196,Surveymonkey,Surveymonkey.com,,,16683044,Montluel,Rhône-Alpes,France,Sample data generated on 06/16/2022
+198,Geocities,,Property-Casualty Insurers,24355,26520040,New York City,New York,United States,Sample data generated on 06/16/2022
+200,Blinklist,Blinklist.com,Television Services,7635,14807733,Clearwater,Florida,United States,Sample data generated on 06/16/2022
+201,Whitehouse,Whitehouse.com,Other Consumer Services,49804,17523858,Évry,Île-de-France,France,Sample data generated on 06/16/2022
+202,Homestead,Homestead.com,Building Products,42144,,,,United States,Sample data generated on 06/16/2022
+203,Blogger,Blogger.com,,,30912001,Markham,Ontario,Canada,Sample data generated on 06/16/2022
+204,Infoseek,Infoseek.com,,,16204104,Las Vegas,Nevada,United States,Sample data generated on 06/16/2022
+205,Apache,Apache.com,Savings Institutions,24785,15619415,Chantilly,Picardie,France,Sample data generated on 06/16/2022
+207,360,,Industrial Machinery/Components,17110,,,,Canada,Sample data generated on 06/16/2022
+208,I2i,,Savings Institutions,34666,4083704,Richmond,Virginia,United States,Sample data generated on 06/16/2022
+209,A8,A8.com,Industrial Specialties,47153,27577155,Noyelles-sous-Lens,Nord-Pas-de-Calais,France,Sample data generated on 06/16/2022
+211,Washington,,Miscellaneous,19666,,,,Canada,Sample data generated on 06/16/2022
+213,Alexa,,Other Specialty Stores,18203,,,,Canada,Sample data generated on 06/16/2022
+214,Noaa,Noaa.com,n/a,31405,,,,France,Sample data generated on 06/16/2022
+216,Chicagotribune,Chicagotribune.com,Industrial Machinery/Components,15392,19147838,Besançon,Franche-Comté,France,Sample data generated on 06/16/2022
+224,Theglobeandmail,Theglobeandmail.com,Marine Transportation,36233,25431476,Saint-Julien-en-Genevois,Rhône-Alpes,France,Sample data generated on 06/16/2022
+225,Dropbox,Dropbox.com,,,,,,United States,Sample data generated on 06/16/2022
+228,Seattletimes,Seattletimes.com,Marine Transportation,3455,,,,Canada,Sample data generated on 06/16/2022
+233,Altervista,Altervista.com,,,,,,France,Sample data generated on 06/16/2022
+234,Oakley,,Major Pharmaceuticals,44106,20978628,Maple Creek,Saskatchewan,Canada,Sample data generated on 06/16/2022
+237,Etsy,,n/a,41620,32498872,Chicago,Illinois,United States,Sample data generated on 06/16/2022
+238,Pen,,Investment Managers,17715,22041922,Nackawic,New Brunswick,Canada,Sample data generated on 06/16/2022
+239,Independent,Independent.com,Major Pharmaceuticals,12702,3319764,Mississauga,Ontario,Canada,Sample data generated on 06/16/2022
+241,Trellian,,Medical Specialities,37162,,,,United States,Sample data generated on 06/16/2022
+243,Yahoo,,Semiconductors,26572,18708580,Créteil,Île-de-France,France,Sample data generated on 06/16/2022
+244,Addtoany,Addtoany.com,n/a,17469,13589213,Laval,Pays de la Loire,France,Sample data generated on 06/16/2022
+245,Posterous,,Plastic Products,40943,32847694,Paris 14,Île-de-France,France,Sample data generated on 06/16/2022
+246,Shop-pro,Shop-pro.com,,,23767113,Cincinnati,Ohio,United States,Sample data generated on 06/16/2022
+248,Naver,Naver.com,Semiconductors,1717,4477890,Nantes,Pays de la Loire,France,Sample data generated on 06/16/2022
+249,Taobao,Taobao.com,Major Pharmaceuticals,40154,,,,Canada,Sample data generated on 06/16/2022
+253,List-manage,List-manage.com,,,13539264,Montpellier,Languedoc-Roussillon,France,Sample data generated on 06/16/2022
+261,Msn,,Natural Gas Distribution,46308,26913846,London,England,United Kingdom,Sample data generated on 06/16/2022
+262,Lycos,Lycos.com,,,6957688,Louisville,Kentucky,United States,Sample data generated on 06/16/2022
+272,Discuz,Discuz.com,n/a,28271,,,,United States,Sample data generated on 06/16/2022
+274,Cbc,Cbc.com,,,33451083,Merritt,British Columbia,Canada,Sample data generated on 06/16/2022
+275,Ucla,Ucla.com,Auto Parts:O.E.M.,3568,16450785,Pittsburgh,Pennsylvania,United States,Sample data generated on 06/16/2022
+281,Issuu,,,,32352204,New Orleans,Louisiana,United States,Sample data generated on 06/16/2022
+283,Dell,,,,8213549,Jacksonville,Florida,United States,Sample data generated on 06/16/2022
+285,Baidu,Baidu.com,n/a,25318,,,,France,Sample data generated on 06/16/2022
+287,Abc,Abc.com,Industrial Machinery/Components,7546,29530272,New Haven,Connecticut,United States,Sample data generated on 06/16/2022
+292,Weebly,,Restaurants,40553,,,,Canada,Sample data generated on 06/16/2022
+293,Sitemeter,Sitemeter.com,Banks,23121,10334887,Mantes-la-Jolie,Île-de-France,France,Sample data generated on 06/16/2022
+299,De,De.com,Real Estate Investment Trusts,36016,,,,France,Sample data generated on 06/16/2022
+300,Miibeian,Miibeian.com,,,,,,France,Sample data generated on 06/16/2022
+315,Tumblr,,Major Pharmaceuticals,32469,23361283,Warwick,Québec,Canada,Sample data generated on 06/16/2022
+322,Vkontakte,Vkontakte.com,n/a,41299,12494732,Coaticook,Québec,Canada,Sample data generated on 06/16/2022
+323,Wired,Wired.com,Semiconductors,15752,,,,United States,Sample data generated on 06/16/2022
+330,Macromedia,Macromedia.com,Catalog/Specialty Distribution,28995,18870089,Brive-la-Gaillarde,Limousin,France,Sample data generated on 06/16/2022
+331,Bbb,,Biotechnology: In Vitro & In Vivo Diagnostic Substances,42232,31179877,Greenwood,Nova Scotia,Canada,Sample data generated on 06/16/2022
+333,Arstechnica,Arstechnica.com,Railroads,15845,,,,Canada,Sample data generated on 06/16/2022
+334,Cloudflare,,n/a,36773,,,,France,Sample data generated on 06/16/2022
+335,Ftc,Ftc.com,Metal Fabrications,6324,20783754,Sophia Antipolis,Provence-Alpes-Côte d'Azur,France,Sample data generated on 06/16/2022
+339,Ustream,Ustream.com,Radio And Television Broadcasting And Communications Equipment,37655,19901164,Vénissieux,Rhône-Alpes,France,Sample data generated on 06/16/2022
+341,Va,Va.com,Computer Communications Equipment,99,12806020,Mesquite,Texas,United States,Sample data generated on 06/16/2022
+342,Nytimes,Nytimes.com,,,6913141,Heilbronn,Baden-Württemberg,Germany,Sample data generated on 06/16/2022
+343,E-recht24,E-recht24.com,Hospital/Nursing Management,37369,,,,United Kingdom,Sample data generated on 06/16/2022
+344,Slashdot,,Other Consumer Services,10313,31491908,Waco,Texas,United States,Sample data generated on 06/16/2022
+357,Nsw,Nsw.com,,,31677136,Columbus,Ohio,United States,Sample data generated on 06/16/2022
+360,Examiner,,Oil & Gas Production,23756,,,,France,Sample data generated on 06/16/2022
+363,Toplist,Toplist.com,n/a,8509,,,,United States,Sample data generated on 06/16/2022
+367,Columbia,,n/a,14580,7926975,Topeka,Kansas,United States,Sample data generated on 06/16/2022
+369,Spiegel,,Coal Mining,47404,,,,United States,Sample data generated on 06/16/2022
+371,Behance,,Integrated oil Companies,40061,,,,France,Sample data generated on 06/16/2022
+373,Engadget,Engadget.com,n/a,49133,,,,United States,Sample data generated on 06/16/2022
+384,Nbcnews,Nbcnews.com,,,13463998,Paris 04,Île-de-France,France,Sample data generated on 06/16/2022
+389,Fotki,Fotki.com,Property-Casualty Insurers,29922,,,,France,Sample data generated on 06/16/2022
+396,Mtv,Mtv.com,n/a,5312,4444749,Buffalo,New York,United States,Sample data generated on 06/16/2022
+401,Odnoklassniki,,Major Banks,42213,,,,United States,Sample data generated on 06/16/2022
+402,Topsy,Topsy.com,Finance Companies,32923,11408373,Amiens,Picardie,France,Sample data generated on 06/16/2022
+407,Live,,Telecommunications Equipment,4960,,,,France,Sample data generated on 06/16/2022
+411,Washingtonpost,,n/a,46289,19647256,Düsseldorf,Nordrhein-Westfalen,Germany,Sample data generated on 06/16/2022
+416,Sbwire,,,,,,,Canada,Sample data generated on 06/16/2022
+417,Goodreads,,Advertising,19063,3051150,Muskegon,Michigan,United States,Sample data generated on 06/16/2022
+423,Patch,,,,18062421,Charleston,West Virginia,United States,Sample data generated on 06/16/2022
+425,Hexun,,Major Pharmaceuticals,42316,4717643,Washington,District of Columbia,United States,Sample data generated on 06/16/2022
+433,Cnet,Cnet.com,n/a,47399,4247805,Annecy,Rhône-Alpes,France,Sample data generated on 06/16/2022
+453,Who,Who.com,Major Banks,3279,,,,France,Sample data generated on 06/16/2022
+455,Booking,,n/a,3929,13225108,Chicago,Illinois,United States,Sample data generated on 06/16/2022
+459,Example,,Plastic Products,22456,,,,United States,Sample data generated on 06/16/2022
+460,Yellowpages,Yellowpages.com,Major Chemicals,29293,7517099,Des Moines,Iowa,United States,Sample data generated on 06/16/2022
+475,Stumbleupon,Stumbleupon.com,n/a,21597,13902913,Danbury,Connecticut,United States,Sample data generated on 06/16/2022
+482,Uiuc,Uiuc.com,Hotels/Resorts,27137,10920672,Paris La Défense,Île-de-France,France,Sample data generated on 06/16/2022
+490,Nymag,Nymag.com,Business Services,13209,,,,Canada,Sample data generated on 06/16/2022
+494,Oaic,Oaic.com,Air Freight/Delivery Services,17089,,,,Canada,Sample data generated on 06/16/2022
+497,Phoca,Phoca.com,Hotels/Resorts,12049,,,,France,Sample data generated on 06/16/2022
+505,Npr,Npr.com,Advertising,49808,,,,Canada,Sample data generated on 06/16/2022
+506,Discovery,Discovery.com,Other Consumer Services,18139,28718358,Tarbes,Midi-Pyrénées,France,Sample data generated on 06/16/2022
+514,Histats,Histats.com,Major Banks,32084,13936109,Thiais,Île-de-France,France,Sample data generated on 06/16/2022
+516,Newsvine,,Business Services,47971,7387462,Louisville,Kentucky,United States,Sample data generated on 06/16/2022
+517,Auda,Auda.com,Major Chemicals,13865,,,,France,Sample data generated on 06/16/2022
+522,Parallels,,Business Services,21125,23970778,Amiens,Picardie,France,Sample data generated on 06/16/2022
+525,Time,Time.com,Transportation Services,39128,,,,France,Sample data generated on 06/16/2022
+526,Accuweather,Accuweather.com,n/a,10493,7061071,Tassin-la-Demi-Lune,Rhône-Alpes,France,Sample data generated on 06/16/2022
+550,Quantcast,,Natural Gas Distribution,39929,,,,United States,Sample data generated on 06/16/2022
+556,Umich,Umich.com,Water Supply,14365,,,,France,Sample data generated on 06/16/2022
+563,Ifeng,,Property-Casualty Insurers,17741,17503000,Meylan,Rhône-Alpes,France,Sample data generated on 06/16/2022
+565,Godaddy,Godaddy.com,n/a,27943,6073209,Waco,Texas,United States,Sample data generated on 06/16/2022
+580,Bloglovin,Bloglovin.com,Coal Mining,41995,,,,France,Sample data generated on 06/16/2022
+585,Hatena,Hatena.com,,,,,,France,Sample data generated on 06/16/2022
+588,Paginegialle,,,,15730838,Orlando,Florida,United States,Sample data generated on 06/16/2022
+591,1688,1688.com,Containers/Packaging,41256,,,,United States,Sample data generated on 06/16/2022
+597,Java,Java.com,Industrial Machinery/Components,15872,,,,United States,Sample data generated on 06/16/2022
+601,G,G.com,,,,,,Canada,Sample data generated on 06/16/2022
+604,Cyberchimps,,,,9312054,Quimper,Bretagne,France,Sample data generated on 06/16/2022
+621,Shinystat,,Major Banks,39484,3569053,Vichy,Auvergne,France,Sample data generated on 06/16/2022
+630,Ucsd,,n/a,26090,6231015,Wilmington,Delaware,United States,Sample data generated on 06/16/2022
+641,Craigslist,Craigslist.com,Metal Fabrications,23889,10385523,Barrie,Ontario,Canada,Sample data generated on 06/16/2022
+643,Biblegateway,Biblegateway.com,Electronic Components,38156,,,,United States,Sample data generated on 06/16/2022
+665,Opera,,Trucking Freight/Courier Services,11580,,,,France,Sample data generated on 06/16/2022
+674,Flickr,,n/a,25463,31667903,Vesoul,Franche-Comté,France,Sample data generated on 06/16/2022
+686,Usa,,n/a,4972,,,,France,Sample data generated on 06/16/2022
+703,Flavors,Flavors.com,,,10135389,Mirecourt,Lorraine,France,Sample data generated on 06/16/2022
+713,Nasa,Nasa.com,n/a,405,,,,Canada,Sample data generated on 06/16/2022
+722,Slate,Slate.com,Real Estate Investment Trusts,33823,,,,Canada,Sample data generated on 06/16/2022
+731,Mac,Mac.com,Business Services,4854,33895694,Montbrison,Rhône-Alpes,France,Sample data generated on 06/16/2022
+760,Cargocollective,,Major Pharmaceuticals,42796,,,,Canada,Sample data generated on 06/16/2022
+777,Cdbaby,,Hospital/Nursing Management,44650,,,,France,Sample data generated on 06/16/2022
+797,W3,,Major Pharmaceuticals,17947,3403039,Nantes,Pays de la Loire,France,Sample data generated on 06/16/2022
+840,Buzzfeed,,Telecommunications Equipment,46319,14473049,Martigues,Provence-Alpes-Côte d'Azur,France,Sample data generated on 06/16/2022
+843,Networksolutions,Networksolutions.com,Movies/Entertainment,7222,15272765,Nantes,Pays de la Loire,France,Sample data generated on 06/16/2022
+876,Guardian,Guardian.com,n/a,31301,9637301,Calmar,Alberta,Canada,Sample data generated on 06/16/2022
+887,Shutterfly,,Apparel,33754,,,,Canada,Sample data generated on 06/16/2022
+903,Chron,Chron.com,Diversified Commercial Services,9567,21102945,Atlanta,Georgia,United States,Sample data generated on 06/16/2022
+925,Illinois,Illinois.com,Marine Transportation,16471,24946930,Kamloops,British Columbia,Canada,Sample data generated on 06/16/2022
+967,Intel,,Computer peripheral equipment,9389,8345584,Orléans,Centre,France,Sample data generated on 06/16/2022
+970,Wix,Wix.com,n/a,6166,,,,France,Sample data generated on 06/16/2022
+989,Vimeo,Vimeo.com,Investment Bankers/Brokers/Service,9293,12527650,München,Bayern,Germany,Sample data generated on 06/16/2022

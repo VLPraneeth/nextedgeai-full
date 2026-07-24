@@ -1,0 +1,33 @@
+@import 'styles';
+
+.copy-to-clipboard-tooltip {
+  button.synri-button.copy-to-clipboard {
+    &--white {
+      color: white;
+
+      &:hover {
+        color: $blue-700;
+      }
+    }
+  }
+
+  &.ant-tooltip-placement-top,
+  &.ant-tooltip-placement-bottom {
+    .copy-to-clipboard {
+      &--white {
+        position: absolute;
+        top: 2px;
+        right: 0;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &.ant-tooltip-placement-bottom {
+    .copy-to-clipboard {
+      &--white {
+        top: 11px;
+      }
+    }
+  }
+}

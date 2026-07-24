@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Empty PropertyPanelAction component renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="synri-property-panel-actions"
+  >
+    <fieldset
+      class="synri-fieldset"
+    >
+      <legend
+        class=""
+      >
+        Actions
+      </legend>
+      <div
+        style="opacity: 0; max-height: 0;"
+      >
+        <div
+          class="synri-stack"
+        />
+      </div>
+    </fieldset>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PropertyPanelAction component renders correctly with actions 1`] = `
+<DocumentFragment>
+  <div
+    class="synri-property-panel-actions"
+  >
+    <fieldset
+      class="synri-fieldset"
+    >
+      <legend
+        class=""
+      >
+        Actions
+      </legend>
+      <div
+        style="opacity: 0; max-height: 0;"
+      >
+        <div
+          class="synri-stack"
+        >
+          <button
+            class="synri-action-button synri-active"
+            data-testid="action-name-Create Pipeline"
+          >
+            <div
+              class="synri-h-stack justify-space-between align-center full-width"
+            >
+              <div
+                class="synri-h-stack justify-start align-center full-width"
+              >
+                <i
+                  aria-label="icon: tag"
+                  class="anticon anticon-tag synri-action-icon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class=""
+                    data-icon="tag"
+                    fill="currentColor"
+                    focusable="false"
+                    height="1em"
+                    viewBox="64 64 896 896"
+                    width="1em"
+                  >
+                    <path
+                      d="M938 458.8l-29.6-312.6c-1.5-16.2-14.4-29-30.6-30.6L565.2 86h-.4c-3.2 0-5.7 1-7.6 2.9L88.9 557.2a9.96 9.96 0 0 0 0 14.1l363.8 363.8c1.9 1.9 4.4 2.9 7.1 2.9s5.2-1 7.1-2.9l468.3-468.3c2-2.1 3-5 2.8-8zM459.7 834.7L189.3 564.3 589 164.6 836 188l23.4 247-399.7 399.7zM680 256c-48.5 0-88 39.5-88 88s39.5 88 88 88 88-39.5 88-88-39.5-88-88-88zm0 120c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"
+                    />
+                  </svg>
+                </i>
+                <div
+                  class="synri-spacer synri-spacer-x-md"
+                />
+                <div
+                  class="synri-action-button-text"
+                  title="Create Pipeline"
+                >
+                  Create Pipeline
+                </div>
+              </div>
+            </div>
+          </button>
+          <div
+            class="synri-spacer synri-spacer-y-sm"
+          />
+          <button
+            class="synri-action-button synri-active"
+            data-testid="action-name-Create Field Pipeline"
+          >
+            <div
+              class="synri-h-stack justify-space-between align-center full-width"
+            >
+              <div
+                class="synri-h-stack justify-start align-center full-width"
+              >
+                <i
+                  aria-label="icon: arrow"
+                  class="anticon anticon-arrow synri-action-icon"
+                />
+                <div
+                  class="synri-spacer synri-spacer-x-md"
+                />
+                <div
+                  class="synri-action-button-text"
+                  title="Create Field Pipeline"
+                >
+                  Create Field Pipeline
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</DocumentFragment>
+`;

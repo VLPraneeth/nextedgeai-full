@@ -1,0 +1,23 @@
+@import '~styles/index.less';
+
+.insights-toolbar {
+  &__spaced-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+
+    & > *:not(:last-child) {
+      margin-right: @spacings[md];
+    }
+  }
+
+  &__button-container {
+    position: relative;
+    height: 32px;
+  }
+
+  .reverse {
+    transform: rotate(180deg);
+  }
+}

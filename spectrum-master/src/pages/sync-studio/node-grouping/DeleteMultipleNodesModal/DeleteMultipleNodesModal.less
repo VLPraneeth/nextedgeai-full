@@ -1,0 +1,59 @@
+@import '~styles/index.less';
+
+@node-list-height: 250px;
+
+.delete-multiple-nodes-modal {
+  h1,
+  h2,
+  p {
+    font-size: @fontSizes[md];
+  }
+
+  &__info {
+    p,
+    h1 {
+      margin-bottom: @spacings[lg];
+    }
+
+    h1 {
+      font-weight: @fontWeights[semibold];
+    }
+  }
+
+  &__node-list {
+    border: 1px solid @light-gray;
+    display: flex;
+    flex-direction: column;
+    padding: @spacings[md];
+    overflow-y: scroll;
+    height: @node-list-height;
+    max-height: @node-list-height;
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__node {
+    display: flex;
+    margin-bottom: @spacings[md];
+    align-items: center;
+  }
+
+  &__node-icon {
+    width: @spacings[xl];
+    height: @spacings[xl];
+    margin-right: @spacings[md];
+  }
+
+  &__node-labels {
+    h2 {
+      margin-bottom: 0;
+      font-weight: @fontWeights[semibold];
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

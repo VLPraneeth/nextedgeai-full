@@ -1,0 +1,13 @@
+@import 'styles';
+
+.shortcuts-modal {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  &__labels {
+    font-weight: $font-weights-extrabold;
+  }
+  &__values {
+    text-align: right;
+  }
+}

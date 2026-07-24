@@ -1,0 +1,44 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import 'styles';
+
+.core-field-count-row {
+  &__label {
+    color: #737373;
+    font-size: $font-size-md;
+  }
+
+  &__icon-container {
+    display: flex;
+    width: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.header &__label {
+    color: #262626;
+    font-size: $font-size-md;
+  }
+
+  &.margin-top {
+    margin-top: $spacings-md;
+  }
+}
+
+.field-count-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 4px;
+
+  &.blue {
+    background-color: $pipeline-blue-dark;
+  }
+  &.orange {
+    background-color: $pipeline-orange-dark;
+  }
+  &.green {
+    background-color: $pipeline-green-dark;
+  }
+}

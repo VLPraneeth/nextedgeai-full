@@ -1,0 +1,13 @@
+@import 'styles';
+
+.share-with-modal {
+  &__expiry-date {
+    margin-top: $spacings-mmlg;
+    input {
+      width: 250px;
+    }
+  }
+  &__recipients-help-text {
+    color: $gray-600;
+  }
+}

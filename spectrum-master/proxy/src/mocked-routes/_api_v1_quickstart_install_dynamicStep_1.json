@@ -1,0 +1,29 @@
+{
+  "configuration": [
+    {
+      "renderType": "quickStartInstallErrorResolution",
+      "id": "refDataResolvedSample",
+      "name": "refDataResolvedSample",
+      "resolutionData": {
+        "type": "issue_resolved",
+        "successTitle": "Sample reference data successfully verified",
+        "successMessage": "We successfully verified Sample reference data, and you can now continue to the next step."
+      }
+    }
+  ],
+  "description": null,
+  "displayName": null,
+  "helpLink": null,
+  "helpSummary": null,
+  "iconPath": null,
+  "name": null,
+  "renderer": null,
+  "steps": [
+    {
+      "dynamicSteps": true,
+      "fields": ["refDataResolvedSample"],
+      "layout": { "type": "stack", "className": "synri-skull-stack-container-md" },
+      "stepName": "Resolve Sample reference data"
+    }
+  ]
+}

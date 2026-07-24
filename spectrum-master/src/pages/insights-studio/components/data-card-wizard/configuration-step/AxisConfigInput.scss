@@ -1,0 +1,44 @@
+@import 'styles';
+
+.axis-config-input {
+  &--repeatable &__fieldset {
+    display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &__fields {
+      flex: 1;
+      padding-top: $spacings-xs;
+      padding-bottom: $spacings-sm;
+      padding-right: $spacings-mmlg;
+      border-right: 1px solid $gray-400;
+    }
+
+    &__delete {
+      width: $spacings-xxl;
+      margin-right: -$spacings-mmlg;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        cursor: pointer;
+      }
+    }
+
+    &__divider {
+      padding-left: $spacings-sm;
+      margin-top: $spacings-sm;
+      margin-bottom: $spacings-sm;
+    }
+  }
+
+  &__add-metric {
+    display: flex;
+    margin-left: $spacings-mmlg;
+    margin-top: $spacings-sm;
+
+    &__question {
+      margin-left: $spacings-xs;
+    }
+  }
+}

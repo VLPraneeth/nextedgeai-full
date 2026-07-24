@@ -1,0 +1,63 @@
+import AppConstants from 'utils/AppConstants';
+
+import { InstanceState } from '../slice';
+
+export const mockTrialInstanceState: InstanceState = {
+  instance: {
+    active: true,
+    displayName: 'Demo instance',
+    features: [],
+    name: 'Demo instance',
+    orgId: '',
+    orgName: '',
+    planId: '',
+    planName: '',
+    createdByName: '',
+    createdByEmail: '',
+    hasGhostAccessOnInstance: false,
+    quota: [
+      {
+        createdBy: null,
+        updatedBy: null,
+        createdAt: null,
+        updatedAt: null,
+        id: null,
+        type: 'RECORDS_LIMIT',
+        value: '10000',
+        connectorId: null,
+      },
+      {
+        createdBy: null,
+        updatedBy: null,
+        createdAt: null,
+        updatedAt: null,
+        id: null,
+        type: 'PIPELINE_PUBLISH_LIMIT',
+        value: '5',
+        connectorId: null,
+      },
+      {
+        createdBy: null,
+        updatedBy: null,
+        createdAt: null,
+        updatedAt: null,
+        id: null,
+        type: 'TRIAL_DAYS_LIMIT',
+        value: '15',
+        connectorId: null,
+      },
+    ],
+    status: AppConstants.INSTANCE_STATUS.ACTIVE,
+    syncariId: 'VLBD16',
+    trial: true,
+    type: 'trial',
+  },
+  numberOfRecordsLeft: 1265,
+  publishLimitExpired: false,
+  recordLimitExpired: false,
+  trialDaysLeft: 29,
+  expiryDate: '2022-02-18T21:53:49.183+00:00',
+  trialExpired: false,
+  numberofSynapses: 3,
+  numberofPipelines: 0,
+};

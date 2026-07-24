@@ -1,0 +1,11 @@
+{
+  "countMap": {
+    "account": 1,
+    "activity": 2,
+    "contact": 3,
+    "lead": 4,
+    "opportunity": 5,
+    "ticket": 6,
+    "user": 7
+  }
+}

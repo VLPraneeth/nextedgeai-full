@@ -1,0 +1,36 @@
+@import '~styles/index.less';
+
+.data-source-field-picker {
+  width: 100%;
+  padding-bottom: 0;
+
+  &__select {
+    width: 100%;
+    min-width: @spacings[5xl];
+  }
+
+  &.synri-with-label {
+    color: @gray-700;
+  }
+
+  &__group {
+    padding-left: 20px;
+    font-size: @fontSizes[md];
+    font-weight: @fontWeights[bold];
+    text-decoration: underline;
+    color: @gray-900;
+
+    &:hover {
+      color: @gray-900;
+    }
+  }
+
+  &__option {
+    padding-left: 30px;
+  }
+
+  &__option-label {
+    display: inline-block;
+    width: 100%;
+  }
+}

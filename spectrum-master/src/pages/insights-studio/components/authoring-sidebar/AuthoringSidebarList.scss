@@ -1,0 +1,63 @@
+@import 'styles';
+
+.authoring-sidebar-list {
+  height: 100%;
+  padding: $spacings-md;
+  box-shadow: none;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &__section {
+    width: 100%;
+    margin-bottom: $spacings-md;
+    display: flex;
+    justify-content: space-between;
+
+    > div {
+      flex: 1;
+    }
+  }
+
+  &__list-container {
+    max-width: 100%;
+  }
+
+  &__filter.synri-iput-filter-container {
+    .synri-input-filter {
+      input.ant-input {
+        height: 32px;
+      }
+      .synri-filter-collapse-toggle {
+        padding: 7px;
+      }
+      .ant-input-group-addon svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__new-button {
+    margin-left: $spacings-md;
+  }
+
+  .selection-info-with-action {
+    padding: 6px 14px;
+    margin-bottom: 0 !important;
+    margin-top: $spacings-xxxs;
+  }
+
+  &__delete-modal {
+    .synri-inline-message {
+      margin: 14px 0;
+    }
+  }
+
+  &.highlight {
+    // used to highlight the data card list when clicking link in empty dashboard placeholder
+    box-shadow: 0 0 8px 2px $syncari-blue inset;
+  }
+
+  .ant-tabs-bar {
+    margin-bottom: 0;
+  }
+}

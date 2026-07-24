@@ -1,0 +1,29 @@
+//
+// Copyright (c) 2019-Present Syncari All rights reserved.
+//
+
+@import 'styles';
+
+.synri-additional-metadata {
+  height: 100%;
+  padding: $spacings-lg 0;
+
+  .ag-row:first-child {
+    border: none;
+  }
+
+  .ag-table-wrapper {
+    height: 100%;
+
+    .ag-root-wrapper {
+      height: 100%;
+
+      .ag-root-wrapper-body {
+        height: 100%;
+      }
+    }
+  }
+  .add-button {
+    padding: 0 !important;
+  }
+}

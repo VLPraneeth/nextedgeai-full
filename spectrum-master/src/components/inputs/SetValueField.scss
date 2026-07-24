@@ -1,0 +1,21 @@
+@import 'styles/variables.scss';
+
+.set-value-field-container {
+  margin-bottom: $spacings-md;
+
+  &--field-type-input {
+    width: 160px !important;
+  }
+  &--field-selection-input {
+    width: 350px;
+  }
+  &--data-type-input {
+    width: 170px;
+  }
+  &--display-name-input {
+    flex: 1;
+  }
+  &--api-name-input {
+    flex: 1;
+  }
+}

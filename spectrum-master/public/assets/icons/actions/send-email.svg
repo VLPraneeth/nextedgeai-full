@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <circle id="path-1" cx="24" cy="24" r="24"></circle>
+    </defs>
+    <g id="Sync-Studio-(First-Pass)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logos-/-Assets" transform="translate(-131.000000, -110.000000)">
+            <g id="send-email" transform="translate(131.000000, 110.000000)">
+                <g id="Bitmap">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#A9A1DA"></use>
+                </g>
+                <g id="ant-design:mail-outline" transform="translate(8.000000, 8.000000)">
+                    <g id="Icon" transform="translate(2.000000, 5.000000)" fill="#A9A1DA">
+                        <path d="M27,0 L1,0 C0.446875,0 0,0.446875 0,1 L0,21 C0,21.553125 0.446875,22 1,22 L27,22 C27.553125,22 28,21.553125 28,21 L28,1 C28,0.446875 27.553125,0 27,0 Z M25.75,3.4625 L25.75,19.75 L2.25,19.75 L2.25,3.4625 L1.3875,2.790625 L2.615625,1.2125 L3.953125,2.253125 L24.05,2.253125 L25.3875,1.2125 L26.615625,2.790625 L25.75,3.4625 Z M24.05,2.25 L14,10.0625 L3.95,2.25 L2.6125,1.209375 L1.384375,2.7875 L2.246875,3.459375 L12.921875,11.759375 C13.5534068,12.2500041 14.4372182,12.2500041 15.06875,11.759375 L25.75,3.4625 L26.6125,2.790625 L25.384375,1.2125 L24.05,2.25 Z" id="Icon-Shape"></path>
+                    </g>
+                    <rect id="ViewBox" x="0" y="0" width="32" height="32"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

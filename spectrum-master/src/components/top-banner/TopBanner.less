@@ -1,0 +1,56 @@
+@import (reference) '~styles/index.less';
+
+.top-banner {
+  height: @bannerHeight;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: @spacings[xs] @spacings[md];
+
+  color: @white;
+  font-weight: @fontWeights[bold];
+  border-bottom: 1px solid @white;
+
+  &--info {
+    background-color: @blue-info;
+  }
+
+  &--warn {
+    background-color: @orange-650;
+  }
+
+  &--ghosted {
+    background-color: @ghost-banner-bg;
+    justify-content: center;
+  }
+}
+
+.top-banner-button {
+  .clear-button-styles();
+  .transition();
+
+  margin-left: @spacings[sm];
+  border: 1px solid white;
+  border-radius: @borderRadius[md];
+  padding: @spacings[xxsm] @spacings[sm];
+
+  line-height: 1;
+  color: @gray-800;
+  background-color: white;
+
+  font-weight: normal;
+
+  &:hover {
+    color: @syncari-blue;
+  }
+
+  &--ghost {
+    background-color: transparent;
+    color: white;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+}

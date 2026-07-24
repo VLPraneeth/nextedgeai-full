@@ -1,0 +1,34 @@
+@import '~styles/index.less';
+
+.color-options {
+  display: flex;
+  margin-bottom: @spacings[md];
+
+  &__color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: @spacings[xl];
+    height: @spacings[xl];
+    margin-right: @spacings[md];
+    border: 1px solid @light-gray;
+    border-radius: @spacings[xxsm];
+
+    &:hover {
+      border: 2px solid @light-gray;
+      cursor: pointer;
+    }
+
+    &--selected {
+      border: 2px solid @blue-750;
+
+      &:hover {
+        border: 2px solid @blue-750;
+      }
+    }
+  }
+
+  &__color-icon {
+    color: @blue-750;
+  }
+}

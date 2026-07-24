@@ -1,0 +1,1143 @@
+[
+  {
+    "id": "5d7191e70609c0110ecbc537",
+    "name": "capitalize",
+    "displayName": "Capitalize",
+    "helpSummary": "A function which takes a text and changes the case of the first letter to upper case",
+    "helpPath": "",
+    "iconPath": "/icons/capitalize.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "value",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc538",
+    "name": "concatenate",
+    "displayName": "Concatenate",
+    "helpSummary": "A function which takes two text and appends them together",
+    "helpPath": "",
+    "iconPath": "/icons/concatenate.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "first",
+        "datatype": "string"
+      },
+      {
+        "name": "second",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc539",
+    "name": "decode",
+    "displayName": "Decode",
+    "helpSummary": "Decodes the text using the Base64 encoding scheme",
+    "helpPath": "",
+    "iconPath": "/icons/decode.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "text",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc53a",
+    "name": "decrypt",
+    "displayName": "Decrypt",
+    "helpSummary": "Decrypts the given input text using the key provided. Make sure to use the key that was used to encrypt the text.",
+    "helpPath": "",
+    "iconPath": "/icons/decrypt.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "text",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc53b",
+    "name": "default",
+    "displayName": "Default Value",
+    "helpSummary": "A function which assigns a default value if none present",
+    "helpPath": "",
+    "iconPath": "/icons/default.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "first",
+        "datatype": "string"
+      },
+      {
+        "name": "default",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc53c",
+    "name": "empty",
+    "displayName": "Is Empty",
+    "helpSummary": "A function which checks if the given input is empty",
+    "helpPath": "",
+    "iconPath": "/icons/empty.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "value",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc53d",
+    "name": "encode",
+    "displayName": "Decode",
+    "helpSummary": "Encodes the specified text into a String using the Base64 encoding scheme",
+    "helpPath": "",
+    "iconPath": "/icons/encode.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "text",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc53e",
+    "name": "encrypt",
+    "displayName": "Encrypt",
+    "helpSummary": "Encrypts the given input text using the key provided.",
+    "helpPath": "",
+    "iconPath": "/icons/encrypt.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "text",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc53f",
+    "name": "extractDomain",
+    "displayName": "Extract Domain",
+    "helpSummary": "A function which takes an email and extracts the domain out of it",
+    "helpPath": "",
+    "iconPath": "/icons/extractDomain.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "email",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc540",
+    "name": "format",
+    "displayName": "Format",
+    "helpSummary": "A function which takes a text value and replaces the values",
+    "helpPath": "",
+    "iconPath": "/icons/format.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "text",
+        "datatype": "string"
+      },
+      {
+        "name": "args",
+        "datatype": "list"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc541",
+    "name": "indexOf",
+    "displayName": "Index Of",
+    "helpSummary": "A function which returns the size of the input object",
+    "helpPath": "",
+    "iconPath": "/icons/indexOf.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "text",
+        "datatype": "string"
+      },
+      {
+        "name": "searchString",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc542",
+    "name": "length",
+    "displayName": "Length",
+    "helpSummary": "A function which returns the size of the input object",
+    "helpPath": "",
+    "iconPath": "/icons/length.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "value",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc543",
+    "name": "lower",
+    "displayName": "Lower",
+    "helpSummary": "A function which takes a string and changes all characters to lower case",
+    "helpPath": "",
+    "iconPath": "/icons/lower.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "value",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc544",
+    "name": "lpad",
+    "displayName": "Lpad",
+    "helpSummary": "The lpad function pads the given input text with a specified String, to the left of the text.",
+    "helpPath": "",
+    "iconPath": "/icons/lpad.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "value",
+        "datatype": "string"
+      },
+      {
+        "name": "times",
+        "datatype": "string"
+      },
+      {
+        "name": "value",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc545",
+    "name": "ltrim",
+    "displayName": "Ltrim",
+    "helpSummary": "The ltrim function removes any leading whitespace characters from the given argument.",
+    "helpPath": "",
+    "iconPath": "/icons/ltrim.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "value",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc546",
+    "name": "mask",
+    "displayName": "Mask",
+    "helpSummary": "A function which takes a text value and masks the values",
+    "helpPath": "",
+    "iconPath": "/icons/mask.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "text",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc547",
+    "name": "number_format",
+    "displayName": "Number Format",
+    "helpSummary": "A function which returns the size of the input object",
+    "helpPath": "",
+    "iconPath": "/icons/length.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "number",
+        "datatype": "double"
+      },
+      {
+        "name": "noofractionalDigits ",
+        "datatype": "double"
+      },
+      {
+        "name": "decimalSeparator",
+        "datatype": "string"
+      },
+      {
+        "name": " groupingSeparator ",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc548",
+    "name": "removeNonPrintable",
+    "displayName": "Remove Non Printable",
+    "helpSummary": "This function removes all non printable characters from the given text.",
+    "helpPath": "",
+    "iconPath": "/icons/removeNonPrintable.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "text",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc549",
+    "name": "replace",
+    "displayName": "Replace",
+    "helpSummary": "A function which takes a text value and replaces the values",
+    "helpPath": "",
+    "iconPath": "/icons/replace.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "text",
+        "datatype": "string"
+      },
+      {
+        "name": "args",
+        "datatype": "list"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc54a",
+    "name": "reverseString",
+    "displayName": "Reverse String",
+    "helpSummary": "A function which takes a string and reverses the characters",
+    "helpPath": "",
+    "iconPath": "/icons/reverseString.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "values",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc54b",
+    "name": "rpad",
+    "displayName": "Rpad",
+    "helpSummary": "The rpad function pads the given input text with a specified String, to the right of the text.",
+    "helpPath": "",
+    "iconPath": "/icons/rpad.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "value",
+        "datatype": "string"
+      },
+      {
+        "name": "times",
+        "datatype": "string"
+      },
+      {
+        "name": "value",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc54c",
+    "name": "rtrim",
+    "displayName": "Rtrim",
+    "helpSummary": "The rtrim function removes any leading whitespace characters from the given argument.",
+    "helpPath": "",
+    "iconPath": "/icons/rtrim.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "value",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc54d",
+    "name": "split",
+    "displayName": "Split",
+    "helpSummary": "A function which takes a text value and splits the values",
+    "helpPath": "",
+    "iconPath": "/icons/split.jpg",
+    "outputType": "list",
+    "positionalParams": [
+      {
+        "name": "text",
+        "datatype": "string"
+      },
+      {
+        "name": "delimiter",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc54e",
+    "name": "striptags",
+    "displayName": "Strip Tags",
+    "helpSummary": "A function which takes a text value and strips any tags",
+    "helpPath": "",
+    "iconPath": "/icons/striptags.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "text",
+        "datatype": "string"
+      },
+      {
+        "name": "allowedTags",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc54f",
+    "name": "substring",
+    "displayName": "Substring",
+    "helpSummary": "The substring function gives back a portion of the original text using the provide begin index and end index.",
+    "helpPath": "",
+    "iconPath": "/icons/substring.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "text",
+        "datatype": "string"
+      },
+      {
+        "name": "startIndex",
+        "datatype": "string"
+      },
+      {
+        "name": "endIndex",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc550",
+    "name": "title",
+    "displayName": "To Title",
+    "helpSummary": "A function which takes a text value and makes it a title",
+    "helpPath": "",
+    "iconPath": "/icons/title.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "text",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc551",
+    "name": "translate",
+    "displayName": "Translate Text",
+    "helpSummary": "A function which takes a text and translate it to the desired language",
+    "helpPath": "",
+    "iconPath": "/icons/translate.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "text",
+        "datatype": "string"
+      },
+      {
+        "name": "targetLanguage",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc552",
+    "name": "trim",
+    "displayName": "Trim",
+    "helpSummary": "A function which takes a string and trims the whitespaces at the begining and the end",
+    "helpPath": "",
+    "iconPath": "/icons/trim.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "value",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc553",
+    "name": "upper",
+    "displayName": "Upper",
+    "helpSummary": "A function which takes a string and changes all characters to upper case",
+    "helpPath": "",
+    "iconPath": "/icons/upper.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "value",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc554",
+    "name": "url_encode",
+    "displayName": "Url Encode",
+    "helpSummary": "A function which takes an url and encodes it",
+    "helpPath": "",
+    "iconPath": "/icons/url_encode.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "url",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc555",
+    "name": "uuid",
+    "displayName": "Uuid",
+    "helpSummary": "This function gives a randomly generated UUID.  The UUID is generated using a cryptographically strong pseudo random number generator.",
+    "helpPath": "",
+    "iconPath": "/icons/uuid.jpg",
+    "outputType": "string",
+    "positionalParams": [],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc557",
+    "name": "abs",
+    "displayName": "Abs",
+    "helpSummary": "Returns the absolute value of a double value",
+    "helpPath": "",
+    "iconPath": "/icons/abs.jpg",
+    "outputType": "double",
+    "positionalParams": [
+      {
+        "name": "a",
+        "datatype": "double"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc558",
+    "name": "add",
+    "displayName": "Add",
+    "helpSummary": "Returns the sum of its arguments.",
+    "helpPath": "",
+    "iconPath": "/icons/add.jpg",
+    "outputType": "double",
+    "positionalParams": [
+      {
+        "name": "first",
+        "datatype": "double"
+      },
+      {
+        "name": "second",
+        "datatype": "double"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc559",
+    "name": "ceil",
+    "displayName": "Ceil",
+    "helpSummary": "Returns the smallest double value that is greater than or equal to the argument and is equal to a mathematical integer",
+    "helpPath": "",
+    "iconPath": "/icons/ceil.jpg",
+    "outputType": "double",
+    "positionalParams": [
+      {
+        "name": "first",
+        "datatype": "double"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc55a",
+    "name": "decrement",
+    "displayName": "Decrement",
+    "helpSummary": "Returns the argument decremented by one.",
+    "helpPath": "",
+    "iconPath": "/icons/decrement.jpg",
+    "outputType": "double",
+    "positionalParams": [
+      {
+        "name": "first",
+        "datatype": "double"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc55b",
+    "name": "floor",
+    "displayName": "Floor",
+    "helpSummary": "Returns the largest (closest to positive infinity) double value that is less than or equal to the argument and is equal to a mathematical integer",
+    "helpPath": "",
+    "iconPath": "/icons/floor.jpg",
+    "outputType": "double",
+    "positionalParams": [
+      {
+        "name": "first",
+        "datatype": "double"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc55c",
+    "name": "increment",
+    "displayName": "Increment",
+    "helpSummary": "Returns the argument incremented by one",
+    "helpPath": "",
+    "iconPath": "/icons/increment.jpg",
+    "outputType": "double",
+    "positionalParams": [
+      {
+        "name": "first",
+        "datatype": "double"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc55d",
+    "name": "max",
+    "displayName": "Max",
+    "helpSummary": "Returns the greater of the two given double values.",
+    "helpPath": "",
+    "iconPath": "/icons/max.jpg",
+    "outputType": "double",
+    "positionalParams": [
+      {
+        "name": "first",
+        "datatype": "double"
+      },
+      {
+        "name": "second",
+        "datatype": "double"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc55e",
+    "name": "min",
+    "displayName": "Min",
+    "helpSummary": "Returns the lesser of the two given double values.",
+    "helpPath": "",
+    "iconPath": "/icons/min.jpg",
+    "outputType": "double",
+    "positionalParams": [
+      {
+        "name": "first",
+        "datatype": "double"
+      },
+      {
+        "name": "second",
+        "datatype": "double"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc55f",
+    "name": "multiply",
+    "displayName": "Multiply",
+    "helpSummary": "Returns the product of the arguments.",
+    "helpPath": "",
+    "iconPath": "/icons/multiply.jpg",
+    "outputType": "double",
+    "positionalParams": [
+      {
+        "name": "first",
+        "datatype": "double"
+      },
+      {
+        "name": "second",
+        "datatype": "double"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc560",
+    "name": "random",
+    "displayName": "Random",
+    "helpSummary": "Returns a double value with a positive sign, greater than or equal to 0.0 and less than 1.0",
+    "helpPath": "",
+    "iconPath": "/icons/random.jpg",
+    "outputType": "double",
+    "positionalParams": [],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc561",
+    "name": "round",
+    "displayName": "Round",
+    "helpSummary": "Returns the closest long to the argument, with ties rounding to positive infinity",
+    "helpPath": "",
+    "iconPath": "/icons/round.jpg",
+    "outputType": "double",
+    "positionalParams": [
+      {
+        "name": "first",
+        "datatype": "double"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc562",
+    "name": "subtract",
+    "displayName": "Subbtract",
+    "helpSummary": "Returns the difference of the arguments.",
+    "helpPath": "",
+    "iconPath": "/icons/subtract.jpg",
+    "outputType": "double",
+    "positionalParams": [
+      {
+        "name": "first",
+        "datatype": "double"
+      },
+      {
+        "name": "second",
+        "datatype": "double"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc564",
+    "name": "first",
+    "displayName": "First",
+    "helpSummary": "A function which takes a list of values and returns first value",
+    "helpPath": "",
+    "iconPath": "/icons/first.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "values",
+        "datatype": "list"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc565",
+    "name": "join",
+    "displayName": "Join",
+    "helpSummary": "A function which a list and a delimiter and joins the values in the list using the delimiter",
+    "helpPath": "",
+    "iconPath": "/icons/join.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "values",
+        "datatype": "list"
+      },
+      {
+        "name": "delimiter",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc566",
+    "name": "last",
+    "displayName": "Last",
+    "helpSummary": "A function which takes a list of values and returns last value",
+    "helpPath": "",
+    "iconPath": "/icons/last.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "values",
+        "datatype": "list"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc567",
+    "name": "reverse",
+    "displayName": "Reverse List",
+    "helpSummary": "A function which takes a list of values and reverses the values",
+    "helpPath": "",
+    "iconPath": "/icons/reverse.jpg",
+    "outputType": "list",
+    "positionalParams": [
+      {
+        "name": "values",
+        "datatype": "list"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc568",
+    "name": "sort",
+    "displayName": "Sort",
+    "helpSummary": "A function which takes a list of values and sorts the values",
+    "helpPath": "",
+    "iconPath": "/icons/sort.jpg",
+    "outputType": "list",
+    "positionalParams": [
+      {
+        "name": "values",
+        "datatype": "list"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc56a",
+    "name": "dayOfMonth",
+    "displayName": "DayOfMonth",
+    "helpSummary": "This function returns the int value for the day-of-month",
+    "helpPath": "",
+    "iconPath": "/icons/dayOfMonth.jpg",
+    "outputType": "double",
+    "positionalParams": [
+      {
+        "name": "date",
+        "datatype": "date"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc56b",
+    "name": "dayOfWeek",
+    "displayName": "DayOfWeek",
+    "helpSummary": "This function returns the int value for the day-of-week.",
+    "helpPath": "",
+    "iconPath": "/icons/dayOfWeek.jpg",
+    "outputType": "double",
+    "positionalParams": [
+      {
+        "name": "date",
+        "datatype": "date"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc56c",
+    "name": "dayOfYear",
+    "displayName": "DayOfYear",
+    "helpSummary": "This function returns the int value for the day-of-year.",
+    "helpPath": "",
+    "iconPath": "/icons/dayOfYear.jpg",
+    "outputType": "double",
+    "positionalParams": [
+      {
+        "name": "date",
+        "datatype": "date"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc56d",
+    "name": "dateFormat",
+    "displayName": "Date Format",
+    "helpSummary": "Formats the given date into a date-time string using the date time pattern supplied.",
+    "helpPath": "",
+    "iconPath": "/icons/dateFormat.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "date",
+        "datatype": "date"
+      },
+      {
+        "name": "format",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc56e",
+    "name": "isAfterNow",
+    "displayName": "IsAfterNow",
+    "helpSummary": "Checks if this instant is after the specified instant.",
+    "helpPath": "",
+    "iconPath": "/icons/isAfterNow.jpg",
+    "outputType": "boolean",
+    "positionalParams": [
+      {
+        "name": "date",
+        "datatype": "date"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc56f",
+    "name": "isBeforeNow",
+    "displayName": "IsBeforeNow",
+    "helpSummary": "Checks if this instant is bbefore the specified instant.",
+    "helpPath": "",
+    "iconPath": "/icons/isBeforeNow.jpg",
+    "outputType": "boolean",
+    "positionalParams": [
+      {
+        "name": "date",
+        "datatype": "date"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc570",
+    "name": "now",
+    "displayName": "Now",
+    "helpSummary": "Gets the number of seconds from 1970-01-01T00:00:00Z.",
+    "helpPath": "",
+    "iconPath": "/icons/now.jpg",
+    "outputType": "string",
+    "positionalParams": [],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc571",
+    "name": "minus",
+    "displayName": "Minus",
+    "helpSummary": "Use this function to subtract hour/day/month/week/year to any date.",
+    "helpPath": "",
+    "iconPath": "/icons/minus.jpg",
+    "outputType": "date",
+    "positionalParams": [
+      {
+        "name": "date",
+        "datatype": "date"
+      },
+      {
+        "name": "delta",
+        "datatype": "double"
+      },
+      {
+        "name": "unit",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc572",
+    "name": "parse",
+    "displayName": "Parse",
+    "helpSummary": "Obtains an instance of Instant from a text string such as 2007-12-03T10:15:30.00Z.",
+    "helpPath": "",
+    "iconPath": "/icons/parse.jpg",
+    "outputType": "date",
+    "positionalParams": [
+      {
+        "name": "dateString",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc573",
+    "name": "plus",
+    "displayName": "Plus",
+    "helpSummary": "Use this function to add hour/day/month/week/year to any date.",
+    "helpPath": "",
+    "iconPath": "/icons/plus.jpg",
+    "outputType": "date",
+    "positionalParams": [
+      {
+        "name": "date",
+        "datatype": "date"
+      },
+      {
+        "name": "delta",
+        "datatype": "double"
+      },
+      {
+        "name": "unit",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "FUNCTION",
+    "scope": "ATTRIBUTE",
+    "type": "STANDARD"
+  }
+]

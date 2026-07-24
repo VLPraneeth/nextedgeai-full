@@ -1,0 +1,30 @@
+@import '~styles/index.less';
+
+.entity-line-item-title {
+  color: @black;
+}
+
+/* we need this additional wrapper class so we can allow the
+ * legend to scroll independantly
+ */
+.pie-chart-hstack {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.pie-chart-legend {
+  flex: 1;
+
+  /* we need these 2 items to get the legend to scroll */
+  height: 100%;
+  overflow-y: auto;
+
+  .pie-chart-legend-line-items-wrapper {
+    padding-top: @spacings[sm];
+    padding-bottom: @spacings[sm];
+
+    .pie-chart-legend-line-item {
+      margin-left: @spacings[lg];
+    }
+  }
+}

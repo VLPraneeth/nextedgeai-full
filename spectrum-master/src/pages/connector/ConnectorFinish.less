@@ -1,0 +1,46 @@
+@import '~styles/index.less';
+
+.synri-connector-finish {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+
+  .synri-finish-content {
+    flex-direction: column;
+
+    p,
+    div {
+      margin-top: 12px;
+      justify-content: center;
+      display: flex;
+    }
+
+    p {
+      margin-top: 8px;
+    }
+
+    div:first-child .anticon-check-circle {
+      font-size: 64px;
+      color: #d7e1e8;
+    }
+
+    .synri-finish-title {
+      font-weight: bolder;
+      font-size: 16px;
+    }
+
+    .synri-finish-actions {
+      display: flex;
+      width: 400px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+
+      button {
+        margin-left: 12px;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

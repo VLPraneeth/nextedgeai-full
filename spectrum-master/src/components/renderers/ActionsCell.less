@@ -1,0 +1,80 @@
+@import '~styles/index.less';
+
+.actions-cell {
+  justify-content: flex-end;
+}
+
+.actions-cell-menu {
+  .ant-popover-arrow {
+    display: none;
+  }
+
+  /* this is the popover container */
+  .ant-popover-inner {
+    padding: 0;
+    border-radius: @borderRadius[lg];
+    box-shadow: @boxShadows[md];
+  }
+
+  /* this is the content inside the container */
+  .ant-popover-inner-content {
+    padding: 0;
+  }
+
+  /* control offset when positioned on the bottom */
+  &.ant-popover-placement-bottom,
+  &.ant-popover-placement-bottomLeft,
+  &.ant-popover-placement-bottomRight {
+    padding-top: @spacings[xxs];
+  }
+}
+
+.actions-cell-dropdown-menu {
+  min-width: @spacings[5xl];
+  padding: @spacings[xs] 0;
+
+  .actions-cell-dropdown-menu-item {
+    padding: @spacings[xxs] @spacings[md];
+
+    a,
+    button {
+      color: @gray-900;
+      font-weight: @fontWeights[medium];
+      line-height: @lineHeights[loose];
+    }
+
+    button {
+      appearance: none;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+        color: @syncari-blue;
+      }
+
+      &:disabled,
+      &[disabled] {
+        color: @gray-500;
+        cursor: not-allowed;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: @gray-300;
+
+      a,
+      button {
+        color: @syncari-blue;
+      }
+
+      a:disabled,
+      button:disabled {
+        color: @gray-500;
+      }
+    }
+  }
+}

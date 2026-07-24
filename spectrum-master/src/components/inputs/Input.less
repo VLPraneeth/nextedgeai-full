@@ -1,0 +1,32 @@
+@import '~styles/index.less';
+
+.synri-text-input-container {
+  position: relative;
+
+  &.allow-clear {
+    input {
+      padding-right: @spacings[xl];
+    }
+  }
+
+  .synri-text-input-clear {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    right: @spacings[sm];
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.15s @easings[easeInOut];
+
+    &.is-visible {
+      opacity: 1;
+    }
+
+    svg {
+      height: @fontSizes[md];
+      width: @fontSizes[md];
+    }
+  }
+}

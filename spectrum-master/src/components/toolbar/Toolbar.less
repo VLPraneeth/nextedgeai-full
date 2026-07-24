@@ -1,0 +1,67 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+@color-button-icon: #acbbc5;
+@color-border-draft: #ffbc4d;
+@color-background-draft: #ffdfaa;
+@color-icon-draft: #ad6c00;
+@color-text-draft: @color-icon-draft;
+@color-button-draft-disabled: #acb5bc;
+
+.toolbar-container {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  height: @toolbarHeight;
+  z-index: 3;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid @border-color;
+  box-shadow: 0px 5px 13px -14px rgba(0, 0, 0, 0.75);
+  background-color: @white;
+
+  .transition();
+  transition-property: background-color, border-color;
+
+  &.draft {
+    border-color: @orange-400;
+    background-color: @orange-200;
+
+    .toolbar-button {
+      border-color: @orange-400;
+      color: @color-icon-draft;
+    }
+  }
+
+  .toolbar-button {
+    .clear-button-styles();
+    width: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-right: 1px solid @border-color;
+    cursor: pointer;
+
+    &--right {
+      border-right: none;
+      border-left: 1px solid @border-color;
+    }
+  }
+
+  .left-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .right-group {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+}

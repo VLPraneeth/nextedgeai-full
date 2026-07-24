@@ -1,0 +1,12 @@
+@import 'styles';
+
+.data-set-variable-multi-value {
+  width: 98%;
+  padding-left: 6px;
+  padding-top: 4px;
+
+  &__select {
+    min-width: $spacings-5xl;
+    width: 100%;
+  }
+}

@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smokescreen
+spec:
+  replicas: $REPLICAS
+  selector:
+    matchLabels:
+      app: smokescreen
+  template:
+    metadata:
+      labels:
+        app: smokescreen
+        timestamp: "$TIMESTAMP"
+    spec:
+      containers:
+        - name: smokescreen
+          image: gcr.io/$GCP_PROJECT/smokescreen-$ENVIRONMENT_NAME:latest
+          resources:
+            requests:
+              memory: "$MEMORY_REQUEST"
+              cpu: "$CPU_REQUEST"
+
+          ports:
+          - containerPort: 4750
+          readinessProbe:
+            tcpSocket:
+              port: 4750
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            successThreshold: 1
+      tolerations:
+        - key: "SERVICE_TYPE"
+          operator: "Equal"
+          value: "smokescreen"
+          effect: "NoSchedule"

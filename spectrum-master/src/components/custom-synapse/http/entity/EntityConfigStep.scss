@@ -1,0 +1,10 @@
+@import 'styles';
+
+.entity-config-step {
+  &__testing-container {
+    position: relative;
+  }
+  &__schema-testing-button {
+    text-align: right;
+  }
+}

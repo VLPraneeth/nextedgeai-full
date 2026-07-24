@@ -1,0 +1,32 @@
+{
+  "id": "customError",
+  "displayName": "Custom Error",
+  "description": "A card showing a custom error",
+  "layout": {
+    "h": 2
+  },
+  "contents": {
+    "configuration": {
+      "vizType": "COLUMN",
+      "series": null,
+      "xaxis": {
+        "column": "quarter",
+        "name": "quarter",
+        "displayName": "Quarter",
+        "displayFormat": "text"
+      },
+      "yaxis": [
+        {
+          "column": "amount",
+          "name": "amount",
+          "displayName": "Amount",
+          "displayFormat": "currency"
+        }
+      ]
+    },
+    "data": {
+      "error": { "title": "Custom Error", "body": "This is an error message from the API response for the data card" }
+    },
+    "contents": null
+  }
+}

@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: karibu-ingress-qa
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: karibu-qa-ip
+    networking.gke.io/managed-certificates: karibu-qa
+spec:
+  rules:
+    - host: api.qa.syncari.net
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: karibu-service-qa
+                port:
+                  number: 8081

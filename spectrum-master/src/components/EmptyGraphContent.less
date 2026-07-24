@@ -1,0 +1,23 @@
+@import '~components/GraphItemPanel.less';
+
+.synri-empty-graph-content {
+  width: calc(~'100% - @{graph-item-panel-width}px');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+
+  &.synri-full-width-content {
+    width: 100%;
+  }
+
+  .text-container {
+    font-size: 16px;
+    margin-top: 6px;
+  }
+
+  .action-container {
+    margin-top: 22px;
+  }
+}

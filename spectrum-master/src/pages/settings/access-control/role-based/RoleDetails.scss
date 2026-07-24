@@ -1,0 +1,19 @@
+@import 'styles';
+
+$max-input-width: 800px;
+
+.role-details {
+  width: 100%;
+  display: flex;
+
+  &__left {
+    flex-shrink: 0;
+    margin-right: $spacings-5xl;
+  }
+
+  &__right {
+    flex-shrink: 0;
+    flex-grow: 1;
+    max-width: $max-input-width;
+  }
+}

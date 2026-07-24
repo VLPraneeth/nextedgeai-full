@@ -1,0 +1,158 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+.node-configuration-panel {
+  &.no-actions {
+    margin-top: 0px;
+  }
+
+  .synri-node-panel-field-values {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .node-field-name {
+    .unselectable-text();
+    margin-top: 16px;
+    font-size: 13px;
+    color: @gray-800;
+    font-weight: @fontWeights[semibold];
+  }
+
+  .node-field-value {
+    margin-top: 4px;
+  }
+
+  &.node-config-container {
+    padding-right: 18px;
+    padding-left: 18px;
+
+    .configure-container {
+      text-align: right;
+    }
+
+    .synri-group-configuration {
+      overflow-y: auto;
+    }
+  }
+
+  .synri-select {
+    width: 100%;
+  }
+
+  .ant-select-selection-selected-value {
+    user-select: text;
+  }
+}
+
+.sync-studio-content {
+  .flow-right-content {
+    overflow-y: hidden;
+    background-color: @white !important;
+  }
+}
+
+.close-container {
+  &:hover svg {
+    fill: @syncari-blue;
+  }
+}
+
+.flow-item {
+  .flow-item-container {
+    width: 100% !important;
+    border-radius: 6px;
+    border: 1px solid @border-color;
+    box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 1px @white;
+    transition: 0.05s;
+    border-left: 6px solid @border-color;
+
+    &.selected {
+      border-left-width: 6px;
+    }
+
+    &:hover {
+      border-color: @syncari-blue;
+      transition: 0.05s;
+    }
+
+    .flow-item-prefix {
+      margin-left: 15px;
+    }
+
+    .flow-item-title {
+      margin-left: 8px;
+      font-size: 14px;
+      color: @gray-900;
+      font-weight: 600;
+    }
+
+    .anticon {
+      &:hover svg {
+        fill: @syncari-blue;
+      }
+    }
+  }
+
+  &:last-child {
+    padding: 0 !important;
+  }
+
+  &[data-shape='function-node'] .synri-inline-svg {
+    svg {
+      #Iconography,
+      path {
+        fill: @function-cyan;
+      }
+    }
+  }
+
+  &[data-shape='action-node'] .synri-inline-svg {
+    svg {
+      #Iconography,
+      path {
+        fill: @action-purple;
+      }
+    }
+  }
+}
+
+.ant-collapse-header {
+  background: @blue-200;
+  margin: 10px 15px 5px;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+  color: @syncari-blue !important;
+  transition: 0.05s;
+  &:hover {
+    background-color: darken(@blue-200, 3%);
+    transition: 0.05s;
+  }
+  i svg {
+    fill: @blue-500;
+  }
+}
+
+.ant-collapse-content-box {
+  margin: 5px 20px;
+  padding: 0 !important;
+}
+
+.synri-node-panel-error {
+  .anticon-exclamation-circle {
+    font-size: @fontSizes[3xl];
+    color: @red-500;
+  }
+}
+
+.synri-node-panel-title {
+  margin-bottom: @spacings[md];
+}
+
+.synri-node-panel-title--no-bottom-margin {
+  margin-bottom: 0;
+}

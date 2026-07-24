@@ -1,0 +1,22 @@
+@import (reference) '~styles/index.less';
+
+.manage-trial-modal {
+  &__heading {
+    font-size: @fontSizes[lg];
+    margin-bottom: @spacings[md];
+
+    &:not(:first-child) {
+      margin-top: @spacings[lg];
+    }
+  }
+
+  &__attribute {
+    font-size: @fontSizes[md];
+  }
+
+  label {
+    display: block;
+    color: @gray-700;
+    margin-bottom: @spacings[xxs];
+  }
+}

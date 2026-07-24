@@ -1,0 +1,84 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+.synri-fieldset {
+  position: relative;
+  margin: 24px 16px 12px;
+  border-top: 1px solid @property-panel-title-border;
+
+  &.expanded {
+    border-bottom: 1px solid @s-light-gray;
+  }
+
+  &.with-padding {
+    padding: 0 16px;
+  }
+
+  legend {
+    .unselectable-text();
+    font-size: @fontSizes[md];
+    margin-bottom: @spacings[md];
+    padding: 0 @spacings[sm] 0 0;
+    position: relative;
+    width: auto;
+
+    &.collapsible {
+      padding-left: @spacings[xl];
+    }
+
+    .anticon {
+      color: @light-gray;
+      margin-left: @spacings[xs];
+    }
+  }
+}
+
+.fieldset-badge {
+  background-color: @light-gray;
+  border: @spacings[xxs] solid @white;
+  border-radius: @borderRadius[full];
+  color: @white;
+  display: inline-block;
+  font-size: @fontSizes[xs];
+  font-weight: @fontWeights[bold];
+  left: 0;
+  line-height: 1.75;
+  margin-left: @spacings[xs];
+  padding: 0 @spacings[xs];
+  position: relative;
+  top: -1px;
+}
+
+.fieldset-disclosure-arrow-btn {
+  appearance: none;
+  background-color: transparent;
+  border-radius: @borderRadius[sm];
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  left: 0;
+  padding: @spacings[xxs];
+  position: absolute;
+  top: 0;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.025);
+  }
+}
+
+.fieldset-disclosure-arrow {
+  display: flex;
+  margin: auto;
+  height: @fontSizes[sm];
+  width: @fontSizes[sm];
+
+  transform: rotateZ(-90deg);
+  transition: all 0.15s @easings[easeInOut];
+
+  &.is-open {
+    transform: rotateZ(0deg);
+  }
+}

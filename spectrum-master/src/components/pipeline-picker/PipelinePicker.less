@@ -1,0 +1,155 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+@filter-width: 300px;
+@data-filter-width: 200px;
+
+.synri-checkbox-wrapper-aligned {
+  display: flex;
+  flex: 1;
+  line-height: 21px;
+
+  .ant-checkbox-wrapper {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    padding: @spacings[xxxs] @spacings[xxs];
+    border-radius: @spacings[xxxs];
+
+    .synri-checkbox-label-row-container {
+      display: flex;
+      flex: 1;
+      align-items: center;
+
+      .synri-checkbox-label-buttons {
+        display: flex;
+      }
+    }
+
+    > span:nth-child(2) {
+      display: flex;
+      flex: 1;
+    }
+
+    .synri-checkbox-label-container {
+      display: flex;
+      flex: 1;
+      align-items: center;
+    }
+
+    &:hover {
+      background-color: @gray-250;
+      .synri-link-hover-only {
+        color: @syncari-blue;
+      }
+    }
+    .synri-link-hover-only {
+      color: transparent;
+    }
+
+    .ant-checkbox {
+      top: 0;
+    }
+
+    .synri-checkbox-sublabel {
+      font-size: @fontSizes[sm];
+      margin-right: @spacings[xs];
+      color: @gray-600;
+    }
+
+    .synri-checkbox-label {
+      margin-right: @spacings[xxs];
+    }
+
+    .synri-checkbox-content {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+.synri-link-button {
+  background-color: transparent;
+  border: none;
+  color: @syncari-blue;
+  font-size: @fontSizes[sm];
+  cursor: pointer;
+
+  span {
+    display: flex;
+  }
+}
+
+.synri-field-pipeline-container {
+  margin-top: @spacings[xs];
+
+  // Extra classes here to increase specificity and override ant
+  .synri-select.ant-select.synri-field-pipeline-data-filter {
+    width: @data-filter-width;
+  }
+
+  .synri-field-pipeline-filter-container {
+    margin-bottom: @spacings[xs];
+  }
+}
+
+.synri-field-pipeline-item {
+  padding: @spacings[xxxs] 0;
+  line-height: 1.8;
+}
+
+.synri-field-pipeline-top-filter-container {
+  display: flex;
+  border-color: @gray-400;
+  border-style: solid;
+  margin: @spacings[sm] 0px;
+  padding: @spacings[sm] @spacings[xxs];
+  border-width: 0px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+
+  // Extra classes here to increase specificity and override ant
+  .ant-input-search.synri-field-pipeline-filter.ant-input-affix-wrapper {
+    width: @filter-width;
+  }
+
+  .synri-select.synri-field-pipeline-data-filter.ant-select {
+    width: @data-filter-width;
+  }
+}
+
+.synri-field-pipeline-filter {
+  width: @filter-width;
+
+  .ant-input {
+    min-height: 32px;
+  }
+}
+
+.synri-changes-ack-container {
+  background-color: @blue-250;
+  padding: @spacings[xs] @spacings[md];
+  margin-bottom: @spacings[sm];
+}
+
+.synri-loading-fields-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: @spacings[md];
+
+  .ant-spin-text {
+    color: @gray-700;
+  }
+}
+
+.synri-unavailable-pipeline-message {
+  display: flex;
+  align-items: center;
+  padding: @spacings[md];
+}

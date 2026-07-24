@@ -1,0 +1,30 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import 'styles';
+
+.node-config-modal {
+  width: 900px !important;
+
+  .ant-modal-header {
+    height: 56px;
+    padding: 10px 24px;
+    .syncari-text {
+      margin-top: 6px;
+    }
+  }
+
+  .ant-modal-title {
+    margin-right: 38px;
+  }
+
+  .synri-auto-complete {
+    width: 100%;
+  }
+
+  .filter-group-groups {
+    flex-shrink: 1;
+    padding-right: 0;
+  }
+}

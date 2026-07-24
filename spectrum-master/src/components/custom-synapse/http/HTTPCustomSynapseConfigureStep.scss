@@ -1,0 +1,21 @@
+@import 'styles';
+
+.http_custom_synapse_config_step {
+  .synri-image-upload {
+    margin-top: $spacings-xxs;
+    .synri-image-upload-image-container {
+      margin: 0 !important;
+      img {
+        width: 32px !important;
+        height: 32px !important;
+      }
+    }
+  }
+  &__endpoint-input {
+    flex-grow: 1;
+    margin-bottom: 0 !important;
+  }
+  &__endpoint-test {
+    margin-bottom: $spacings-md;
+  }
+}

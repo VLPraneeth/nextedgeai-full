@@ -1,0 +1,8 @@
+apiVersion: networking.gke.io/v1beta2
+kind: ManagedCertificate
+metadata:
+  name: karibu-$ENVIRONMENT_NAME
+  namespace: $ENVIRONMENT_NAME
+spec:
+  domains:
+    - api.$ENVIRONMENT_NAME.syncari.net

@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Private credentials for the isolated second NextEdge AI demo tenant.
+
+Resources:
+  TenantAdminCredentialSecret:
+    Type: AWS::SecretsManager::Secret
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      Name: nextedge-ai/demo/tenant-admin
+      Description: Generated password credentials for the second isolated NextEdge AI demo tenant.
+      GenerateSecretString:
+        ExcludePunctuation: true
+        GenerateStringKey: password
+        PasswordLength: 24
+        SecretStringTemplate: '{"username":"tenant-admin@nextedge.ai"}'
+      Tags:
+        - Key: Project
+          Value: NextEdgeAI
+        - Key: Environment
+          Value: demo
+        - Key: Confidential
+          Value: "true"
+
+Outputs:
+  TenantAdminCredentialSecretArn:
+    Value: !Ref TenantAdminCredentialSecret

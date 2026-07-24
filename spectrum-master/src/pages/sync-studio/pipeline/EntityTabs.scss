@@ -1,0 +1,37 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import 'styles';
+
+.entity-pipeline {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+  .synri-inline-tabs-container {
+    background-color: $white;
+
+    .synri-inline-tab {
+      padding: $spacings-md $spacings-xl;
+    }
+  }
+
+  &__menu {
+    flex: 0 0 51px;
+    border-bottom: 1px solid $gray-500;
+
+    .ant-tabs-nav > div:first-child {
+      justify-content: flex-start;
+    }
+    .ant-tabs-tab {
+      flex: unset;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
+  }
+}

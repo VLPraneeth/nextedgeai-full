@@ -1,0 +1,33 @@
+@import '~styles/index.less';
+
+.data-fix-queries {
+  // No padding needed - Settings.less already provides padding for settings__content
+
+  .data-fix-header {
+    margin-bottom: @spacings[lg];
+
+    h1 {
+      margin-bottom: @spacings[xs];
+      font-size: @fontSizes[xl];
+      font-weight: @fontWeights[semibold];
+      color: @title-color;
+    }
+
+    p {
+      color: @gray-700;
+      font-size: @fontSizes[md];
+      margin: 0;
+    }
+  }
+
+  .data-fix-tabs {
+    .ant-tabs-nav {
+      margin-bottom: @spacings[lg];
+    }
+
+    .ant-tabs-tab {
+      font-size: @fontSizes[md];
+      padding: @spacings[sm] @spacings[lg];
+    }
+  }
+}

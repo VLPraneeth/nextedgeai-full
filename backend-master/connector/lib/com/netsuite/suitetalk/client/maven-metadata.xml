@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.netsuite.suitetalk</groupId>
+  <artifactId>client</artifactId>
+  <versioning>
+    <release>v2020_1-2.0.0</release>
+    <versions>
+      <version>v2020_1-2.0.0</version>
+    </versions>
+    <lastUpdated>20230124053301</lastUpdated>
+  </versioning>
+</metadata>

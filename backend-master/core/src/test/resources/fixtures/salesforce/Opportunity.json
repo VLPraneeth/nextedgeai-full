@@ -1,0 +1,16 @@
+{  
+   "watermark":null,
+   "data":{  
+      "sfdc1":[  
+         {  
+            "name":"Opportunity",
+            "values":{  
+               "Name":"unit test oppty",
+               "Amount":"100",
+               "StageName":"Open",
+               "CloseDate":"06/20/2019"
+            }
+         }
+      ]
+   }
+}

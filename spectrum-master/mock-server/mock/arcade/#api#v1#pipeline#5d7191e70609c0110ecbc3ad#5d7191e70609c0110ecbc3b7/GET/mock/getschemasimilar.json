@@ -1,0 +1,2687 @@
+{
+  "lastRefreshedAt":null,
+  "nodes":[
+     {
+        "id":"5d7191e70609c0110ecbc3ad",
+        "apiName":"account",
+        "displayName":null,
+        "status":"ACTIVE",
+        "type": "standard",
+        "location": {
+          "x": "950",
+          "y": "500"
+        },
+        "connectedTo":[
+           "5d7191e70609c0110ecbc3b2"
+        ],
+        "tags":[
+
+        ],
+        "fields":[
+           {
+              "id":"5d7191e70609c0110ecbc3b4",
+              "apiName":"Id",
+              "displayName":null,
+              "dataType":"id",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3b5",
+              "apiName":"IsDeleted",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3b6",
+              "apiName":"MasterRecordId",
+              "displayName":null,
+              "dataType":"reference",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3b7",
+              "apiName":"Name",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3b8",
+              "apiName":"Type",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3b9",
+              "apiName":"ParentId",
+              "displayName":null,
+              "dataType":"reference",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3ba",
+              "apiName":"BillingStreet",
+              "displayName":null,
+              "dataType":"textarea",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3bb",
+              "apiName":"BillingCity",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3bc",
+              "apiName":"BillingState",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3bd",
+              "apiName":"BillingPostalCode",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3be",
+              "apiName":"BillingCountry",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3bf",
+              "apiName":"BillingLatitude",
+              "displayName":null,
+              "dataType":"double",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3c0",
+              "apiName":"BillingLongitude",
+              "displayName":null,
+              "dataType":"double",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3c1",
+              "apiName":"BillingGeocodeAccuracy",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3c2",
+              "apiName":"BillingAddress",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3c3",
+              "apiName":"ShippingStreet",
+              "displayName":null,
+              "dataType":"textarea",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3c4",
+              "apiName":"ShippingCity",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3c5",
+              "apiName":"ShippingState",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3c6",
+              "apiName":"ShippingPostalCode",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3c7",
+              "apiName":"ShippingCountry",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3c8",
+              "apiName":"ShippingLatitude",
+              "displayName":null,
+              "dataType":"double",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3c9",
+              "apiName":"ShippingLongitude",
+              "displayName":null,
+              "dataType":"double",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3ca",
+              "apiName":"ShippingGeocodeAccuracy",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3cb",
+              "apiName":"ShippingAddress",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3cc",
+              "apiName":"Phone",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3cd",
+              "apiName":"Fax",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3ce",
+              "apiName":"AccountNumber",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3cf",
+              "apiName":"Website",
+              "displayName":null,
+              "dataType":"url",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3d0",
+              "apiName":"PhotoUrl",
+              "displayName":null,
+              "dataType":"url",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3d1",
+              "apiName":"Sic",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3d2",
+              "apiName":"Industry",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3d3",
+              "apiName":"AnnualRevenue",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3d4",
+              "apiName":"NumberOfEmployees",
+              "displayName":null,
+              "dataType":"integer",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3d5",
+              "apiName":"Ownership",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3d6",
+              "apiName":"TickerSymbol",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3d7",
+              "apiName":"Description",
+              "displayName":null,
+              "dataType":"textarea",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3d8",
+              "apiName":"Rating",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3d9",
+              "apiName":"Site",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3da",
+              "apiName":"OwnerId",
+              "displayName":null,
+              "dataType":"reference",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3db",
+              "apiName":"CreatedDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3dc",
+              "apiName":"CreatedById",
+              "displayName":null,
+              "dataType":"reference",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3dd",
+              "apiName":"LastModifiedDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3de",
+              "apiName":"LastModifiedById",
+              "displayName":null,
+              "dataType":"reference",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3df",
+              "apiName":"SystemModstamp",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3e0",
+              "apiName":"LastActivityDate",
+              "displayName":null,
+              "dataType":"date",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3e1",
+              "apiName":"LastViewedDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3e2",
+              "apiName":"LastReferencedDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3e3",
+              "apiName":"Jigsaw",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3e4",
+              "apiName":"JigsawCompanyId",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3e5",
+              "apiName":"CleanStatus",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3e6",
+              "apiName":"AccountSource",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3e7",
+              "apiName":"DunsNumber",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3e8",
+              "apiName":"Tradestyle",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3e9",
+              "apiName":"NaicsCode",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3ea",
+              "apiName":"NaicsDesc",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3eb",
+              "apiName":"YearStarted",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3ec",
+              "apiName":"SicDesc",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3ed",
+              "apiName":"CustomerPriority__c",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3ee",
+              "apiName":"SLA__c",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3ef",
+              "apiName":"Active__c",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3f0",
+              "apiName":"NumberofLocations__c",
+              "displayName":null,
+              "dataType":"double",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3f1",
+              "apiName":"UpsellOpportunity__c",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3f2",
+              "apiName":"SLASerialNumber__c",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3f3",
+              "apiName":"SLAExpirationDate__c",
+              "displayName":null,
+              "dataType":"date",
+              "tags":[
+
+              ]
+           }
+        ]
+     },
+     {
+        "id":"5d7191e70609c0110ecbc3ae",
+        "apiName":"person",
+        "displayName":null,
+        "status":"ACTIVE",
+        "location": {
+          "x": "150",
+          "y": "500"
+        },
+        "type": "standard",
+        "connectedTo":[
+           "5d7191e70609c0110ecbc3ad",
+           "5d7191e70609c0110ecbc3b2"
+        ],
+        "tags":[
+
+        ],
+        "fields":[
+           {
+              "id":"5d7191e70609c0110ecbc3f5",
+              "apiName":"Id",
+              "displayName":null,
+              "dataType":"id",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3f6",
+              "apiName":"IsDeleted",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3f7",
+              "apiName":"MasterRecordId",
+              "displayName":null,
+              "dataType":"reference",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3f8",
+              "apiName":"AccountId",
+              "displayName":null,
+              "dataType":"reference",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3f9",
+              "apiName":"LastName",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3fa",
+              "apiName":"FirstName",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3fb",
+              "apiName":"Salutation",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3fc",
+              "apiName":"Name",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3fd",
+              "apiName":"OtherStreet",
+              "displayName":null,
+              "dataType":"textarea",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3fe",
+              "apiName":"OtherCity",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc3ff",
+              "apiName":"OtherState",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc400",
+              "apiName":"OtherPostalCode",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc401",
+              "apiName":"OtherCountry",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc402",
+              "apiName":"OtherLatitude",
+              "displayName":null,
+              "dataType":"double",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc403",
+              "apiName":"OtherLongitude",
+              "displayName":null,
+              "dataType":"double",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc404",
+              "apiName":"OtherGeocodeAccuracy",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc405",
+              "apiName":"OtherAddress",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc406",
+              "apiName":"MailingStreet",
+              "displayName":null,
+              "dataType":"textarea",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc407",
+              "apiName":"MailingCity",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc408",
+              "apiName":"MailingState",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc409",
+              "apiName":"MailingPostalCode",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc40a",
+              "apiName":"MailingCountry",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc40b",
+              "apiName":"MailingLatitude",
+              "displayName":null,
+              "dataType":"double",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc40c",
+              "apiName":"MailingLongitude",
+              "displayName":null,
+              "dataType":"double",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc40d",
+              "apiName":"MailingGeocodeAccuracy",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc40e",
+              "apiName":"MailingAddress",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc40f",
+              "apiName":"Phone",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc410",
+              "apiName":"Fax",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc411",
+              "apiName":"MobilePhone",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc412",
+              "apiName":"HomePhone",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc413",
+              "apiName":"OtherPhone",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc414",
+              "apiName":"AssistantPhone",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc415",
+              "apiName":"ReportsToId",
+              "displayName":null,
+              "dataType":"reference",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc416",
+              "apiName":"Email",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc417",
+              "apiName":"Title",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc418",
+              "apiName":"Department",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc419",
+              "apiName":"AssistantName",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc41a",
+              "apiName":"LeadSource",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc41b",
+              "apiName":"Birthdate",
+              "displayName":null,
+              "dataType":"date",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc41c",
+              "apiName":"Description",
+              "displayName":null,
+              "dataType":"textarea",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc41d",
+              "apiName":"OwnerId",
+              "displayName":null,
+              "dataType":"reference",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc41e",
+              "apiName":"CreatedDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc41f",
+              "apiName":"CreatedById",
+              "displayName":null,
+              "dataType":"reference",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc420",
+              "apiName":"LastModifiedDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc421",
+              "apiName":"LastModifiedById",
+              "displayName":null,
+              "dataType":"reference",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc422",
+              "apiName":"SystemModstamp",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc423",
+              "apiName":"LastActivityDate",
+              "displayName":null,
+              "dataType":"date",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc424",
+              "apiName":"LastCURequestDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc425",
+              "apiName":"LastCUUpdateDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc426",
+              "apiName":"LastViewedDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc427",
+              "apiName":"LastReferencedDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc428",
+              "apiName":"EmailBouncedReason",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc429",
+              "apiName":"EmailBouncedDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc42a",
+              "apiName":"IsEmailBounced",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc42b",
+              "apiName":"PhotoUrl",
+              "displayName":null,
+              "dataType":"url",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc42c",
+              "apiName":"Jigsaw",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc42d",
+              "apiName":"JigsawContactId",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc42e",
+              "apiName":"CleanStatus",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc42f",
+              "apiName":"Level__c",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc430",
+              "apiName":"Languages__c",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           }
+        ]
+     },
+     {
+        "id":"5d7191e70609c0110ecbc3b2",
+        "apiName":"user",
+        "displayName":null,
+        "status":"ACTIVE",
+        "location": {
+          "x": "550",
+          "y": "100"
+        },
+        "type": "custom",
+        "connectedTo":[
+           "5d7191e70609c0110ecbc3ad"
+        ],
+        "tags":[
+
+        ],
+        "fields":[
+           {
+              "id":"5d7191e70609c0110ecbc432",
+              "apiName":"Id",
+              "displayName":null,
+              "dataType":"id",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc433",
+              "apiName":"Username",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc434",
+              "apiName":"LastName",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc435",
+              "apiName":"FirstName",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc436",
+              "apiName":"Name",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc437",
+              "apiName":"CompanyName",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc438",
+              "apiName":"Division",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc439",
+              "apiName":"Department",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc43a",
+              "apiName":"Title",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc43b",
+              "apiName":"Street",
+              "displayName":null,
+              "dataType":"textarea",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc43c",
+              "apiName":"City",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc43d",
+              "apiName":"State",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc43e",
+              "apiName":"PostalCode",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc43f",
+              "apiName":"Country",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc440",
+              "apiName":"Latitude",
+              "displayName":null,
+              "dataType":"double",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc441",
+              "apiName":"Longitude",
+              "displayName":null,
+              "dataType":"double",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc442",
+              "apiName":"GeocodeAccuracy",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc443",
+              "apiName":"Address",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc444",
+              "apiName":"Email",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc445",
+              "apiName":"EmailPreferencesAutoBcc",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc446",
+              "apiName":"EmailPreferencesAutoBccStayInTouch",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc447",
+              "apiName":"EmailPreferencesStayInTouchReminder",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc448",
+              "apiName":"SenderEmail",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc449",
+              "apiName":"SenderName",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc44a",
+              "apiName":"Signature",
+              "displayName":null,
+              "dataType":"textarea",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc44b",
+              "apiName":"StayInTouchSubject",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc44c",
+              "apiName":"StayInTouchSignature",
+              "displayName":null,
+              "dataType":"textarea",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc44d",
+              "apiName":"StayInTouchNote",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc44e",
+              "apiName":"Phone",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc44f",
+              "apiName":"Fax",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc450",
+              "apiName":"MobilePhone",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc451",
+              "apiName":"Alias",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc452",
+              "apiName":"CommunityNickname",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc453",
+              "apiName":"BadgeText",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc454",
+              "apiName":"IsActive",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc455",
+              "apiName":"TimeZoneSidKey",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc456",
+              "apiName":"LocaleSidKey",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc457",
+              "apiName":"ReceivesInfoEmails",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc458",
+              "apiName":"ReceivesAdminInfoEmails",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc459",
+              "apiName":"EmailEncodingKey",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc45a",
+              "apiName":"UserType",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc45b",
+              "apiName":"LanguageLocaleKey",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc45c",
+              "apiName":"EmployeeNumber",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc45d",
+              "apiName":"DelegatedApproverId",
+              "displayName":null,
+              "dataType":"reference",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc45e",
+              "apiName":"ManagerId",
+              "displayName":null,
+              "dataType":"reference",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc45f",
+              "apiName":"LastLoginDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc460",
+              "apiName":"LastPasswordChangeDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc461",
+              "apiName":"CreatedDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc462",
+              "apiName":"CreatedById",
+              "displayName":null,
+              "dataType":"reference",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc463",
+              "apiName":"LastModifiedDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc464",
+              "apiName":"LastModifiedById",
+              "displayName":null,
+              "dataType":"reference",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc465",
+              "apiName":"SystemModstamp",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc466",
+              "apiName":"OfflineTrialExpirationDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc467",
+              "apiName":"OfflinePdaTrialExpirationDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc468",
+              "apiName":"UserPermissionsMarketingUser",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc469",
+              "apiName":"UserPermissionsOfflineUser",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc46a",
+              "apiName":"UserPermissionsCallCenterAutoLogin",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc46b",
+              "apiName":"UserPermissionsMobileUser",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc46c",
+              "apiName":"UserPermissionsSFContentUser",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc46d",
+              "apiName":"UserPermissionsKnowledgeUser",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc46e",
+              "apiName":"UserPermissionsInteractionUser",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc46f",
+              "apiName":"UserPermissionsSupportUser",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc470",
+              "apiName":"UserPermissionsJigsawProspectingUser",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc471",
+              "apiName":"UserPermissionsSiteforceContributorUser",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc472",
+              "apiName":"UserPermissionsSiteforcePublisherUser",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc473",
+              "apiName":"UserPermissionsWorkDotComUserFeature",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc474",
+              "apiName":"ForecastEnabled",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc475",
+              "apiName":"UserPreferencesActivityRemindersPopup",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc476",
+              "apiName":"UserPreferencesEventRemindersCheckboxDefault",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc477",
+              "apiName":"UserPreferencesTaskRemindersCheckboxDefault",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc478",
+              "apiName":"UserPreferencesReminderSoundOff",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc479",
+              "apiName":"UserPreferencesDisableAllFeedsEmail",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc47a",
+              "apiName":"UserPreferencesDisableFollowersEmail",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc47b",
+              "apiName":"UserPreferencesDisableProfilePostEmail",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc47c",
+              "apiName":"UserPreferencesDisableChangeCommentEmail",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc47d",
+              "apiName":"UserPreferencesDisableLaterCommentEmail",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc47e",
+              "apiName":"UserPreferencesDisProfPostCommentEmail",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc47f",
+              "apiName":"UserPreferencesContentNoEmail",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc480",
+              "apiName":"UserPreferencesContentEmailAsAndWhen",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc481",
+              "apiName":"UserPreferencesApexPagesDeveloperMode",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc482",
+              "apiName":"UserPreferencesHideCSNGetChatterMobileTask",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc483",
+              "apiName":"UserPreferencesDisableMentionsPostEmail",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc484",
+              "apiName":"UserPreferencesDisMentionsCommentEmail",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc485",
+              "apiName":"UserPreferencesHideCSNDesktopTask",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc486",
+              "apiName":"UserPreferencesHideChatterOnboardingSplash",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc487",
+              "apiName":"UserPreferencesHideSecondChatterOnboardingSplash",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc488",
+              "apiName":"UserPreferencesDisCommentAfterLikeEmail",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc489",
+              "apiName":"UserPreferencesDisableLikeEmail",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc48a",
+              "apiName":"UserPreferencesSortFeedByComment",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc48b",
+              "apiName":"UserPreferencesDisableMessageEmail",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc48c",
+              "apiName":"UserPreferencesJigsawListUser",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc48d",
+              "apiName":"UserPreferencesDisableBookmarkEmail",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc48e",
+              "apiName":"UserPreferencesDisableSharePostEmail",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc48f",
+              "apiName":"UserPreferencesEnableAutoSubForFeeds",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc490",
+              "apiName":"UserPreferencesDisableFileShareNotificationsForApi",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc491",
+              "apiName":"UserPreferencesShowTitleToExternalUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc492",
+              "apiName":"UserPreferencesShowManagerToExternalUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc493",
+              "apiName":"UserPreferencesShowEmailToExternalUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc494",
+              "apiName":"UserPreferencesShowWorkPhoneToExternalUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc495",
+              "apiName":"UserPreferencesShowMobilePhoneToExternalUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc496",
+              "apiName":"UserPreferencesShowFaxToExternalUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc497",
+              "apiName":"UserPreferencesShowStreetAddressToExternalUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc498",
+              "apiName":"UserPreferencesShowCityToExternalUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc499",
+              "apiName":"UserPreferencesShowStateToExternalUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc49a",
+              "apiName":"UserPreferencesShowPostalCodeToExternalUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc49b",
+              "apiName":"UserPreferencesShowCountryToExternalUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc49c",
+              "apiName":"UserPreferencesShowProfilePicToGuestUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc49d",
+              "apiName":"UserPreferencesShowTitleToGuestUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc49e",
+              "apiName":"UserPreferencesShowCityToGuestUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc49f",
+              "apiName":"UserPreferencesShowStateToGuestUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4a0",
+              "apiName":"UserPreferencesShowPostalCodeToGuestUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4a1",
+              "apiName":"UserPreferencesShowCountryToGuestUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4a2",
+              "apiName":"UserPreferencesDisableFeedbackEmail",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4a3",
+              "apiName":"UserPreferencesDisableWorkEmail",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4a4",
+              "apiName":"UserPreferencesPipelineViewHideHelpPopover",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4a5",
+              "apiName":"UserPreferencesHideS1BrowserUI",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4a6",
+              "apiName":"UserPreferencesDisableEndorsementEmail",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4a7",
+              "apiName":"UserPreferencesPathAssistantCollapsed",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4a8",
+              "apiName":"UserPreferencesCacheDiagnostics",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4a9",
+              "apiName":"UserPreferencesShowEmailToGuestUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4aa",
+              "apiName":"UserPreferencesShowManagerToGuestUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4ab",
+              "apiName":"UserPreferencesShowWorkPhoneToGuestUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4ac",
+              "apiName":"UserPreferencesShowMobilePhoneToGuestUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4ad",
+              "apiName":"UserPreferencesShowFaxToGuestUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4ae",
+              "apiName":"UserPreferencesShowStreetAddressToGuestUsers",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4af",
+              "apiName":"UserPreferencesLightningExperiencePreferred",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4b0",
+              "apiName":"UserPreferencesPreviewLightning",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4b1",
+              "apiName":"UserPreferencesHideEndUserOnboardingAssistantModal",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4b2",
+              "apiName":"UserPreferencesHideLightningMigrationModal",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4b3",
+              "apiName":"UserPreferencesHideSfxWelcomeMat",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4b4",
+              "apiName":"UserPreferencesHideBiggerPhotoCallout",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4b5",
+              "apiName":"UserPreferencesGlobalNavBarWTShown",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4b6",
+              "apiName":"UserPreferencesGlobalNavGridMenuWTShown",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4b7",
+              "apiName":"UserPreferencesCreateLEXAppsWTShown",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4b8",
+              "apiName":"UserPreferencesFavoritesWTShown",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4b9",
+              "apiName":"UserPreferencesRecordHomeSectionCollapseWTShown",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4ba",
+              "apiName":"UserPreferencesRecordHomeReservedWTShown",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4bb",
+              "apiName":"UserPreferencesFavoritesShowTopFavorites",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4bc",
+              "apiName":"UserPreferencesExcludeMailAppAttachments",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4bd",
+              "apiName":"UserPreferencesSuppressTaskSFXReminders",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4be",
+              "apiName":"UserPreferencesSuppressEventSFXReminders",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4bf",
+              "apiName":"UserPreferencesPreviewCustomTheme",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4c0",
+              "apiName":"UserPreferencesHasCelebrationBadge",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4c1",
+              "apiName":"UserPreferencesUserDebugModePref",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4c2",
+              "apiName":"UserPreferencesNewLightningReportRunPageEnabled",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4c3",
+              "apiName":"ContactId",
+              "displayName":null,
+              "dataType":"reference",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4c4",
+              "apiName":"AccountId",
+              "displayName":null,
+              "dataType":"reference",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4c5",
+              "apiName":"Extension",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4c6",
+              "apiName":"FederationIdentifier",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4c7",
+              "apiName":"AboutMe",
+              "displayName":null,
+              "dataType":"textarea",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4c8",
+              "apiName":"FullPhotoUrl",
+              "displayName":null,
+              "dataType":"url",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4c9",
+              "apiName":"SmallPhotoUrl",
+              "displayName":null,
+              "dataType":"url",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4ca",
+              "apiName":"IsExtIndicatorVisible",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4cb",
+              "apiName":"OutOfOfficeMessage",
+              "displayName":null,
+              "dataType":"string",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4cc",
+              "apiName":"MediumPhotoUrl",
+              "displayName":null,
+              "dataType":"url",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4cd",
+              "apiName":"DigestFrequency",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4ce",
+              "apiName":"DefaultGroupNotificationFrequency",
+              "displayName":null,
+              "dataType":"picklist",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4cf",
+              "apiName":"JigsawImportLimitOverride",
+              "displayName":null,
+              "dataType":"integer",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4d0",
+              "apiName":"LastViewedDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4d1",
+              "apiName":"LastReferencedDate",
+              "displayName":null,
+              "dataType":"datetime",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4d2",
+              "apiName":"BannerPhotoUrl",
+              "displayName":null,
+              "dataType":"url",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4d3",
+              "apiName":"SmallBannerPhotoUrl",
+              "displayName":null,
+              "dataType":"url",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4d4",
+              "apiName":"MediumBannerPhotoUrl",
+              "displayName":null,
+              "dataType":"url",
+              "tags":[
+
+              ]
+           },
+           {
+              "id":"5d7191e70609c0110ecbc4d5",
+              "apiName":"IsProfilePhotoActive",
+              "displayName":null,
+              "dataType":"boolean",
+              "tags":[
+
+              ]
+           }
+        ]
+     }
+  ],
+  "edges":[
+     {
+        "sourceEntityId":"5d7191e70609c0110ecbc3ae",
+        "targetEntityId":"5d7191e70609c0110ecbc3b2",
+        "direction":"OUTBOUND",
+        "anchor": {
+          "source": 1,
+          "target": 3
+        },
+        "status":"ACTIVE"
+     },
+     {
+        "sourceEntityId":"5d7191e70609c0110ecbc3ae",
+        "targetEntityId":"5d7191e70609c0110ecbc3ad",
+        "direction":"OUTBOUND",
+        "anchor": {
+          "source": 1,
+          "target": 3
+        },
+        "status":"ACTIVE"
+     },
+     {
+        "sourceEntityId":"5d7191e70609c0110ecbc3ad",
+        "targetEntityId":"5d7191e70609c0110ecbc3b2",
+        "direction":"BIDI",
+        "anchor": {
+          "source": 3,
+          "target": 1
+        },
+        "status":"ACTIVE"
+     }
+  ]
+}

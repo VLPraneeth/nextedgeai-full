@@ -1,0 +1,17 @@
+@import 'styles';
+
+.information-snippet {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    color: $gray-1000;
+    font-weight: $font-weights-semibold;
+    margin-bottom: $spacings-xxs;
+  }
+
+  &__value {
+    color: $gray-800;
+    font-size: $font-size-md;
+  }
+}

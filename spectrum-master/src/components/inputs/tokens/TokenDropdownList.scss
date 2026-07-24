@@ -1,0 +1,24 @@
+@import 'styles/color.scss';
+@import 'styles/variables.scss';
+
+.token-dropdown-list {
+  // Position offscreen to start
+  top: -9999px;
+  left: -9999px;
+  position: absolute;
+  z-index: 1;
+  padding: $spacings-xxs;
+  background: $white;
+  border-radius: $border-radius-md;
+  box-shadow: $box-shadows-md;
+  display: block;
+
+  &__token {
+    padding: $spacings-xxxs $spacings-xxs;
+    border-radius: $border-radius-sm;
+    background: 'transparent';
+    &--selected {
+      background: $blue-250;
+    }
+  }
+}

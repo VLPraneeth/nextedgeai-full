@@ -1,0 +1,30 @@
+@import '~styles/index.less';
+
+.data-card-error {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+
+  &__title {
+    color: @gray-1000;
+    display: flex;
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      padding-right: @spacings[xxsm];
+    }
+  }
+
+  &__body {
+    padding-top: @spacings[xs];
+    max-width: 55%;
+    font-size: @fontSizes[sm];
+    color: @gray-800;
+  }
+}

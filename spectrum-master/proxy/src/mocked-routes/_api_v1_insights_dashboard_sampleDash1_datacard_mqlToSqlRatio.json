@@ -1,0 +1,19 @@
+{
+  "id": "mqlCount",
+  "displayName": "MQL to SQL Ratio",
+  "description": "",
+  "layout": { "h": 2 },
+  "contents": {
+    "configuration": {
+      "columns": [
+        { "column": "amount", "name": "Total", "displayName": "Total", "color": null, "displayFormat": "percent" }
+      ],
+      "vizType": "METRIC",
+      "series": null,
+      "yaxis": null,
+      "xaxis": null
+    },
+    "data": { "series": null, "rows": [{ "Total": 0.83 }] },
+    "contents": null
+  }
+}

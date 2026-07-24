@@ -1,0 +1,15 @@
+{
+  "short_name": "NextEdge AI",
+  "name": "NextEdge AI",
+  "icons": [
+    {
+      "src": "assets/icons/nextedge-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1E40AF",
+  "background_color": "#F8FAFC"
+}

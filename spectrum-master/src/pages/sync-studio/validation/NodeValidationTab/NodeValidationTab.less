@@ -1,0 +1,34 @@
+@import '~styles/index.less';
+
+.node-validation-tab-container {
+  padding: 0 @spacings[md];
+
+  .node-validation-tab-header {
+    display: flex;
+    align-items: center;
+    font-size: @fontSizes[md];
+
+    span {
+      margin-right: @spacings[sm];
+      min-width: 0;
+    }
+  }
+
+  .node-validation-tab-divider {
+    height: 1px;
+    background-color: @gray-400;
+    flex-grow: 1;
+  }
+
+  :last-child {
+    border-bottom: 0;
+  }
+}
+
+.node-validation-tab-empty-state {
+  padding: 0 @spacings[md];
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: @light-gray;
+}

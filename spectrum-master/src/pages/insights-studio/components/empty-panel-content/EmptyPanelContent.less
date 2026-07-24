@@ -1,0 +1,28 @@
+@import '~styles/index.less';
+
+.empty-panel-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  flex: 1;
+
+  height: 100%;
+  text-align: center;
+
+  padding: @spacings[xl] @spacings[md];
+
+  &__icon {
+    margin-bottom: @spacings[md];
+  }
+
+  &__title {
+    font-size: @fontSizes[lg];
+    margin-bottom: @spacings[xs];
+  }
+
+  &__body {
+    margin-bottom: @spacings[lg];
+  }
+}

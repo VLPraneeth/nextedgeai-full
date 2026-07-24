@@ -1,0 +1,89 @@
+{
+  "id": "issuesIn7Days",
+  "displayName": "Trend of % Issues Resolved in 7 Days",
+  "description": "A daily line series of tickets resolved in 7 days",
+  "layout": {
+    "h": 2
+  },
+  "contents": {
+    "configuration": {
+      "vizType": "LINE",
+      "xaxis": {
+        "name": "date",
+        "displayName": "Day",
+        "displayFormat": "text"
+      },
+      "yaxis": [
+        {
+          "name": "percent",
+          "displayName": "Percent of Issues Resolved",
+          "displayFormat": "percent"
+        }
+      ]
+    },
+    "data": {
+      "series": [{ "displayName": "Percent of Issues Resolved", "color": "green-700" }],
+      "rows": [
+        { "percent": 0.7467, "date": "2022-05-01" },
+        { "percent": 0.7302, "date": "2022-05-02" },
+        { "percent": 0.0556, "date": "2022-05-03" },
+        { "percent": 0.2277, "date": "2022-05-04" },
+        { "percent": 0.5972, "date": "2022-05-05" },
+        { "percent": 0.4509, "date": "2022-05-06" },
+        { "percent": 0.2471, "date": "2022-05-07" },
+        { "percent": 0.5135, "date": "2022-05-08" },
+        { "percent": 0.4646, "date": "2022-05-09" },
+        { "percent": 0.9325, "date": "2022-05-10" },
+        { "percent": 0.8545, "date": "2022-05-11" },
+        { "percent": 0.0464, "date": "2022-05-12" },
+        { "percent": 0.626, "date": "2022-05-13" },
+        { "percent": 0.3548, "date": "2022-05-14" },
+        { "percent": 0.3334, "date": "2022-05-15" },
+        { "percent": 0.263, "date": "2022-05-16" },
+        { "percent": 0.4394, "date": "2022-05-17" },
+        { "percent": 0.4104, "date": "2022-05-18" },
+        { "percent": 0.6906, "date": "2022-05-19" },
+        { "percent": 0.2545, "date": "2022-05-20" },
+        { "percent": 0.9336, "date": "2022-05-21" },
+        { "percent": 0.4101, "date": "2022-05-22" },
+        { "percent": 0.4791, "date": "2022-05-23" },
+        { "percent": 0.0924, "date": "2022-05-24" },
+        { "percent": 0.5571, "date": "2022-05-25" },
+        { "percent": 0.3789, "date": "2022-05-26" },
+        { "percent": 0.1584, "date": "2022-05-27" },
+        { "percent": 0.0465, "date": "2022-05-28" },
+        { "percent": 0.9721, "date": "2022-05-29" },
+        { "percent": 0.9244, "date": "2022-05-30" },
+        { "percent": 0.2772, "date": "2022-05-31" },
+        { "percent": 0.6502, "date": "2022-06-01" },
+        { "percent": 0.099, "date": "2022-06-02" },
+        { "percent": 0.8729, "date": "2022-06-03" },
+        { "percent": 0.4803, "date": "2022-06-04" },
+        { "percent": 0.3878, "date": "2022-06-05" },
+        { "percent": 0.1415, "date": "2022-06-06" },
+        { "percent": 0.844, "date": "2022-06-07" },
+        { "percent": 0.6067, "date": "2022-06-08" },
+        { "percent": 0.0657, "date": "2022-06-09" },
+        { "percent": 0.0745, "date": "2022-06-10" },
+        { "percent": 0.085, "date": "2022-06-11" },
+        { "percent": 0.1286, "date": "2022-06-12" },
+        { "percent": 0.6872, "date": "2022-06-13" },
+        { "percent": 0.0425, "date": "2022-06-14" },
+        { "percent": 0.9995, "date": "2022-06-15" },
+        { "percent": 0.8844, "date": "2022-06-16" },
+        { "percent": 0.8762, "date": "2022-06-17" },
+        { "percent": 0.3059, "date": "2022-06-18" },
+        { "percent": 0.8928, "date": "2022-06-19" },
+        { "percent": 0.4786, "date": "2022-06-20" },
+        { "percent": 0.5878, "date": "2022-06-21" },
+        { "percent": 0.7741, "date": "2022-06-22" },
+        { "percent": 0.5077, "date": "2022-06-23" },
+        { "percent": 0.8612, "date": "2022-06-24" },
+        { "percent": 0.0094, "date": "2022-06-25" },
+        { "percent": 0.7908, "date": "2022-06-26" },
+        { "percent": 0.9476, "date": "2022-06-27" }
+      ]
+    },
+    "contents": null
+  }
+}

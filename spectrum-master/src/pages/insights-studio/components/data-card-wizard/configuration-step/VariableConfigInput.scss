@@ -1,0 +1,17 @@
+@import 'styles';
+
+.variable-config-input {
+  &__field-row {
+    display: flex;
+  }
+
+  &__field-column {
+    flex: 1;
+  }
+
+  &__allow-change-field {
+    flex: 1;
+    margin-top: 38px;
+    margin-left: $spacings-md;
+  }
+}

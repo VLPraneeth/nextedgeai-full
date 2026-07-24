@@ -1,0 +1,169 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import 'styles';
+
+.react-flow__edge-path-hitarea {
+  stroke: transparent;
+  stroke-width: 10px; /* Increase this value to make the hit area larger */
+  fill: none;
+  pointer-events: stroke;
+}
+
+.react-flow__node-coreNode,
+.react-flow__node-functionActionNode,
+.react-flow__node-synapseNode {
+  &:hover .bottom-handle-container {
+    opacity: 1;
+  }
+}
+
+.bottom-handle-container:hover {
+  .bottom-handle {
+    width: 24px;
+    height: 24px;
+  }
+}
+.bottom-handle-container {
+  opacity: 0;
+  position: absolute;
+  bottom: -14px;
+  left: 80px;
+  transition: 160ms all ease;
+  width: 120px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .bottom-handle {
+    cursor: pointer !important;
+    background-color: $white;
+    border: 1px solid #076dd9;
+    border-radius: 16px;
+    transition: 160ms all ease;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.react-flow__edge-path {
+  stroke-width: 1.5px;
+  --xy-edge-stroke-selected-default: $syncari-blue;
+  &.selected {
+    stroke-width: 2px;
+  }
+}
+
+.custom-target-handle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0;
+  transform: none;
+  border: none;
+  opacity: 0;
+}
+
+.pipeline-pill-node-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  min-width: 140px;
+  min-height: 36px;
+  padding: 0px 10px;
+  max-width: 140px;
+
+  background-color: $pipeline-gray-light;
+  border: 1px solid $gray-450;
+  border-radius: 8px;
+
+  &__label {
+    color: $gray-750;
+    font-weight: $font-weights-semibold;
+  }
+
+  &__arrow {
+    color: $gray-800;
+    width: 10px;
+  }
+}
+
+.pipeline-node-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &:hover .pipeline-node-content,
+  &.selected .pipeline-node-content,
+  &.selected .pipeline-pill-node-wrapper {
+    border-color: $new-colors-blue;
+  }
+
+  &:hover .pipeline-node-title-bar,
+  &.selected .pipeline-node-title-bar {
+    border-top-color: $new-colors-blue;
+    border-left-color: $new-colors-blue;
+    border-right-color: $new-colors-blue;
+  }
+
+  &__top-bar {
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    height: 32px;
+    justify-content: space-between;
+
+    &--left-content {
+      display: flex;
+      flex: 1;
+    }
+    &--right-content {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.pipeline-node {
+  background-color: $white;
+  border-radius: 4px;
+  width: 280px;
+  overflow: hidden;
+  flex-direction: column;
+  box-shadow: 1px 2px 4px 0px #0000001f;
+  transition: all 200ms ease;
+
+  &:hover,
+  &.selected {
+    box-shadow: 1px 2px 4px 0px #3f91f733;
+  }
+
+  display: flex;
+
+  &__header-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__left-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+
+    &--icon {
+      width: 26px;
+      height: 26px;
+    }
+  }
+}
+
+.synri-canvas-react-flow {
+  width: calc(100% - 350px) !important;
+}

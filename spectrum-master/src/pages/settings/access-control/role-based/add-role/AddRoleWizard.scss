@@ -1,0 +1,64 @@
+$steps-width: 225px;
+$min-input-width: 40vw;
+$max-input-width: 800px;
+
+.add-role {
+  &__container {
+    height: 100%;
+    display: flex;
+  }
+
+  &__steps {
+    margin-left: -1.5rem;
+    margin-top: -1rem;
+    height: calc(100% + 1.5rem) !important;
+    width: $steps-width;
+  }
+
+  &__form-container {
+    padding: 1.5rem;
+    padding-top: 0px;
+    min-width: $min-input-width;
+    max-width: $max-input-width;
+    padding-bottom: 100px;
+  }
+
+  &__steps-footer {
+    background-color: white;
+    height: 52px;
+    border-top: 1px solid #e7e7e7;
+    position: absolute;
+    bottom: 0px;
+    left: $steps-width;
+    width: calc(100% - $steps-width);
+    display: flex;
+    padding-right: 1rem;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  // this is used to hide the select counter
+  &__search {
+    .ant-select-selection__choice {
+      display: none !important;
+    }
+  }
+
+  &__list {
+    overflow-y: auto;
+    height: 25vh;
+    border: 1px solid #d7d7d7;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+
+  &__list-item {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.page-button {
+  width: 85px;
+}

@@ -1,0 +1,153 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+//
+@import '~styles/index.less';
+
+// hardcoded to match antd size :/
+@label-height: 18px;
+
+// hardcoded to match antd size :/
+@input-height: 32px;
+
+.synri-condition {
+  display: flex;
+
+  .synri-condition-left {
+    flex: 0 1 40%;
+    max-width: 40%;
+
+    .synri-select {
+      width: 100%;
+    }
+
+    .synri-label {
+      display: inline-block;
+      min-height: @label-height;
+    }
+  }
+
+  .synri-condition-operator {
+    flex: 0 0 20%;
+
+    .synri-select {
+      width: 100%;
+    }
+
+    .synri-label {
+      display: inline-block;
+      min-height: @label-height;
+    }
+  }
+
+  .synri-condition-right {
+    flex: 0 2 40%;
+    overflow-x: auto;
+
+    .synri-select {
+      width: 100%;
+    }
+
+    .synri-label {
+      display: inline-block;
+      min-height: @label-height;
+    }
+
+    .synri-condition-right-datatype-checkbox {
+      align-items: center;
+      display: inline-flex;
+      min-height: @input-height;
+    }
+  }
+
+  > div {
+    margin: 0; // 14px 0 0;
+  }
+}
+
+.synri-condition-readonly {
+  line-height: 22px;
+}
+
+.synri-hidden-label {
+  display: inline-block;
+  height: 21px;
+  visibility: hidden;
+}
+
+.user-token-condition-option {
+  width: 100%;
+  border-top: 1px solid @gray-400;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding: @spacings[xs] @spacings[md];
+  color: #1890ff;
+  cursor: pointer;
+
+  &:hover {
+    color: #40a9ff;
+  }
+
+  &--disabled {
+    color: @blue-400 !important;
+    pointer-events: none;
+  }
+
+  &__icon {
+    margin-left: @spacings[xs];
+    pointer-events: all !important;
+  }
+}
+
+// Data Studio specific styles
+.synri-condition.data-studio-vertical-layout {
+  flex-direction: column;
+  align-items: stretch;
+
+  .synri-condition-left {
+    max-width: 100%;
+    flex: 1;
+    margin-bottom: @spacings[xs];
+  }
+
+  .synri-condition-operator {
+    flex: 1;
+    max-width: 100%;
+    margin-bottom: @spacings[xs];
+  }
+
+  .synri-condition-right {
+    flex: 1;
+    max-width: 100%;
+  }
+}
+
+.synri-condition.data-studio-hide-left {
+  .synri-condition-left {
+    display: none;
+  }
+
+  .synri-condition-operator {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .synri-condition-right {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+// When both vertical and hide left are applied
+.synri-condition.data-studio-vertical-layout.data-studio-hide-left {
+  .synri-condition-operator {
+    flex: 1;
+    max-width: 100%;
+  }
+
+  .synri-condition-right {
+    flex: 1;
+    max-width: 100%;
+  }
+}

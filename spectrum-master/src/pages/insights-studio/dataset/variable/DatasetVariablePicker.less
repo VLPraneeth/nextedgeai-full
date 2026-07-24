@@ -1,0 +1,169 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+@dataset-variable-picker-height: 64px;
+
+.dataset-variable-picker {
+  position: relative;
+
+  &__wrapper-div {
+    position: absolute;
+    background: @gray-320;
+    // It will be slightly bigger than the component its wrapping.
+    // use the exact pixels due to delicate position of the hover and
+    // the action button.
+    width: 104%;
+    height: @dataset-variable-picker-height;
+    border: 1px solid @gray-370;
+    border-radius: 7px;
+    transition: visibility 1s, opacity 1s;
+    opacity: 0;
+    top: -6px;
+    left: -4px;
+
+    &--active {
+      opacity: 1;
+    }
+
+    button {
+      margin-top: 41px;
+      font-size: 12px;
+      margin-left: 5px;
+      border: 1px solid @gray-370;
+      border-radius: 4px;
+      color: @s-med-gray;
+      cursor: pointer;
+      line-height: 1.3;
+      i {
+        font-size: 10px;
+      }
+    }
+  }
+
+  &--variable-view {
+    .box-bordered-no-shadow(@gray-400);
+    height: 32px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    padding-left: 4px;
+    cursor: auto;
+
+    .ant-tag {
+      display: flex;
+
+      .field-data-type-wrapper {
+        color: @gray-700;
+        font-size: @fontSizes[md];
+        padding-top: 2px;
+        padding-bottom: 2px;
+
+        svg {
+          color: @gray-500;
+        }
+      }
+
+      .anticon-close {
+        padding-top: 6px;
+      }
+    }
+  }
+}
+
+.configuration-content__fieldset-container {
+  .group-filter-container {
+    padding-top: 0;
+
+    .filter-operator-container {
+      margin-right: @spacings[xs];
+    }
+  }
+
+  .synri-filter-condition {
+    padding: 6px 8px 0 8px;
+    max-height: 92px;
+
+    .btn-add-condition {
+      top: -18px;
+      margin-top: 0;
+      padding-left: 6px;
+    }
+
+    // TODO: Add a mode to the filter with a different layout
+    .synri-condition-right-overflow-auto {
+      padding: 0 10px 10px 10px;
+      height: @dataset-variable-picker-height;
+      // Hidding the overflow since mention is the
+      // only component will be rendered
+      // on the right and doesn't need overflow
+      overflow: hidden;
+
+      .synri-text-input-container {
+        margin-top: 4px;
+      }
+
+      input.ant-input {
+        margin-top: 4px;
+        margin-left: 4px;
+      }
+
+      .dataset-variable-picker {
+        &--variable-view {
+          margin-top: 8px;
+          margin-left: 6px;
+        }
+
+        &__wrapper-div {
+          width: 100%;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+
+    .synri-condition-operator {
+      margin-top: 4px;
+    }
+
+    .synri-condition-left {
+      margin-top: 4px;
+    }
+
+    .synri-hidden-label,
+    .synri-condition-right-label-container {
+      display: none;
+    }
+
+    .synri-condition-right {
+      margin-left: -16px;
+    }
+
+    .ant-mentions {
+      top: 0;
+      left: 4px;
+      height: 32px;
+      width: 98%;
+
+      textarea {
+        line-height: 1.6;
+      }
+    }
+
+    .filter-condition-container .anticon-delete {
+      margin-bottom: 34px;
+    }
+  }
+
+  .synri-composite-input {
+    .dataset-variable-picker__wrapper-div {
+      top: -2px;
+
+      button {
+        margin-top: 40px;
+      }
+    }
+  }
+}

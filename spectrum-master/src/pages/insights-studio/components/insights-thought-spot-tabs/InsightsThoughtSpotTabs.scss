@@ -1,0 +1,40 @@
+@import 'styles';
+
+.thought-spot-tabs {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: fit-content !important;
+  z-index: 10;
+  background: white;
+  &__tab {
+    display: flex;
+    align-items: center;
+
+    :first-child {
+      margin-right: $spacings-xxs;
+    }
+  }
+
+  .top_bar_actions {
+    margin-right: $spacings-mxl;
+
+    :after {
+      border-bottom: none;
+    }
+
+    &-share {
+      margin-right: 10px;
+    }
+  }
+
+  &__tab__dataset-icon {
+    width: 22px;
+    height: 14px;
+  }
+  &__tab__info-icon {
+    margin-left: $spacings-xs;
+    width: 18px;
+    color: $blue-750;
+  }
+}

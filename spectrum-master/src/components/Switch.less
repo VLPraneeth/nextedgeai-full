@@ -1,0 +1,38 @@
+@import '~styles/index.less';
+
+.switch-label-container {
+  display: flex;
+  align-items: center;
+}
+
+.switch-control {
+  background-color: @light-gray;
+
+  &.synri-switch-control-small {
+    // Override to set the correct width for small switch
+    width: @spacings[xl];
+  }
+
+  &.ant-switch-checked {
+    background-color: @syncari-blue;
+  }
+
+  // text labels inside switch
+  .ant-switch-inner {
+    font-size: @fontSizes[xs];
+    font-weight: @fontWeights[bold];
+    min-width: @spacings[lg];
+  }
+}
+
+.switch-label-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+
+  margin-left: @spacings[md];
+}
+
+.switch-label-text {
+  font-weight: @fontWeights[semibold];
+}

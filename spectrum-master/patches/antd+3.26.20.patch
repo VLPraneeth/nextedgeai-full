@@ -1,0 +1,66 @@
+diff --git a/node_modules/antd/es/menu/index.js b/node_modules/antd/es/menu/index.js
+--- a/node_modules/antd/es/menu/index.js
++++ b/node_modules/antd/es/menu/index.js
+@@ -290,7 +290,6 @@ function (_React$Component) {
+         // [Legacy] Old code will return after `openKeys` changed.
+         // Not sure the reason, we should keep this logic still.
+         if (nextProps.inlineCollapsed && !prevProps.inlineCollapsed || nextProps.siderCollapsed && !prevProps.siderCollapsed) {
+-          newState.switchingModeFromInline = true;
+           newState.inlineOpenKeys = prevState.openKeys;
+           newState.openKeys = [];
+         }
+diff --git a/node_modules/antd/lib/drawer/index.js b/node_modules/antd/lib/drawer/index.js
+--- a/node_modules/antd/lib/drawer/index.js
++++ b/node_modules/antd/lib/drawer/index.js
+@@ -201,6 +201,8 @@ function (_React$Component) {
+         open: _this.props.visible,
+         showMask: mask,
+         placement: placement,
++        width: width,
++        height: height,
+         style: _this.getRcDrawerStyle(),
+         className: (0, _classnames["default"])(wrapClassName, className, haveMask)
+       }), _this.renderBody()));
+diff --git a/node_modules/antd/lib/menu/index.js b/node_modules/antd/lib/menu/index.js
+--- a/node_modules/antd/lib/menu/index.js
++++ b/node_modules/antd/lib/menu/index.js
+@@ -316,7 +316,6 @@ function (_React$Component) {
+         // [Legacy] Old code will return after `openKeys` changed.
+         // Not sure the reason, we should keep this logic still.
+         if (nextProps.inlineCollapsed && !prevProps.inlineCollapsed || nextProps.siderCollapsed && !prevProps.siderCollapsed) {
+-          newState.switchingModeFromInline = true;
+           newState.inlineOpenKeys = prevState.openKeys;
+           newState.openKeys = [];
+         }
+diff --git a/node_modules/antd/lib/select/index.js b/node_modules/antd/lib/select/index.js
+--- a/node_modules/antd/lib/select/index.js
++++ b/node_modules/antd/lib/select/index.js
+@@ -79,7 +79,8 @@ var SelectPropTypes = {
+   optionLabelProp: PropTypes.string,
+   transitionName: PropTypes.string,
+   choiceTransitionName: PropTypes.string,
+-  id: PropTypes.string
++  id: PropTypes.string,
++  duplicatesAllowed: PropTypes.bool
+ };
+ 
+ var Select = /*#__PURE__*/function (_React$Component) {
+@@ -115,7 +116,8 @@ var Select = /*#__PURE__*/function (_React$Component) {
+           clearIcon = _a.clearIcon,
+           menuItemSelectedIcon = _a.menuItemSelectedIcon,
+           showArrow = _a.showArrow,
+-          restProps = __rest(_a, ["prefixCls", "className", "size", "mode", "getPopupContainer", "removeIcon", "clearIcon", "menuItemSelectedIcon", "showArrow"]);
++          duplicatesAllowed = _a.duplicatesAllowed,
++          restProps = __rest(_a, ["prefixCls", "className", "size", "mode", "getPopupContainer", "removeIcon", "clearIcon", "menuItemSelectedIcon", "showArrow", "duplicatesAllowed"]);
+ 
+       var rest = (0, _omit["default"])(restProps, ['inputIcon']);
+       var prefixCls = getPrefixCls('select', customizePrefixCls);
+@@ -157,6 +159,7 @@ var Select = /*#__PURE__*/function (_React$Component) {
+         clearIcon: finalClearIcon,
+         menuItemSelectedIcon: finalMenuItemSelectedIcon,
+-        showArrow: showArrow
++        showArrow: showArrow,
++        duplicatesAllowed: duplicatesAllowed
+       }, rest, modeConfig, {
+         prefixCls: prefixCls,
+         className: cls,

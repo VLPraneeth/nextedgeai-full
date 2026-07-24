@@ -1,0 +1,11 @@
+@import 'styles';
+
+.export-sync-errors-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__icon {
+    margin-left: $spacings-xs;
+  }
+}

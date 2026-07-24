@@ -1,0 +1,19 @@
+@import 'styles';
+
+.selected-field-picker {
+  width: 100%;
+
+  &__dropdown {
+    .option-group {
+      padding-left: 20px !important;
+      font-weight: bold !important;
+      text-decoration: underline;
+      color: $gray-1000 !important;
+      font-size: $font-size-md !important;
+    }
+
+    .option-group-item {
+      padding-left: 30px !important;
+    }
+  }
+}

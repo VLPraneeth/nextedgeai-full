@@ -1,0 +1,18 @@
+@import 'styles/index.scss';
+
+.synapse-page {
+  &__tabs {
+    position: fixed;
+    width: 100%;
+    height: fit-content !important;
+    z-index: 1;
+    background: white;
+  }
+}
+
+.connections-content {
+  .synapse-page__tabs {
+    position: relative;
+    transform: translateY(49px);
+  }
+}

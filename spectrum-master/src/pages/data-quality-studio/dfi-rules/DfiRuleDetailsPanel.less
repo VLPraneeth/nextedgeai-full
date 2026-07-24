@@ -1,0 +1,147 @@
+@import '~styles/index.less';
+
+@header-footer-height: 155px;
+@form-item-width: 220px;
+
+.synri-dfi-rules-modal-icon {
+  font-size: @fontSizes[lgr];
+  margin-right: @spacings[xs];
+}
+
+.synri-dfi-rules-modal-icon-select {
+  display: flex;
+  align-items: center;
+}
+
+.synri-dfi-rules-modal {
+  .ant-drawer-body {
+    overflow: auto;
+    // Set the body of the ant drawer to fit inside the modal with footer so it
+    // can scroll when there are lots of fields/conditions
+    height: calc(100vh - @header-footer-height);
+  }
+
+  .synri-dfi-rules-target-fields,
+  .synri-dfi-rules-conditions {
+    margin-bottom: @spacings[md];
+
+    .synri-dfi-rules-condition-labels {
+      display: flex;
+      justify-content: space-between;
+
+      .synri-dfi-rules-condition-label-score-change {
+        margin-right: 34px; // Move label to align with the field drop down
+      }
+
+      .synri-dfi-rules-condition-label-impact {
+        display: inline-block;
+        margin-right: 88px; // Move label to align with the field drop down
+      }
+      .synri-dfi-rules-condition-tooltip-icon {
+        margin-left: @spacings[xxs];
+        color: @gray-700;
+        font-size: @fontSizes[sm];
+      }
+    }
+
+    button.ant-btn-link {
+      padding: 0;
+    }
+
+    .ant-form-item-control {
+      line-height: initial;
+    }
+
+    .synri-dfi-rules-row-striped .synri-flex-spacer {
+      border-right: 1px solid @gray-500;
+      align-self: stretch;
+      margin: @spacings[xs];
+    }
+
+    .synri-dfi-rules-row-striped:nth-child(odd) {
+      background-color: @gray-200;
+      border-color: @gray-400;
+      border-top-width: 1px;
+      border-bottom-width: 1px;
+      border-style: solid;
+      border-width: 1px 0;
+      border-radius: 0;
+    }
+
+    .synri-dfi-rules-row {
+      .ant-form-item {
+        flex: 1;
+      }
+    }
+
+    .synri-dfi-rules-condition-options {
+      display: flex;
+      margin: @spacings[xs] 0;
+
+      &.type-text {
+        .ant-form-item {
+          width: @form-item-width;
+        }
+      }
+
+      &.type-date-range {
+        margin: @spacings[xs] 0;
+        flex-direction: column;
+        .synri-dfi-rules-condition-options-container {
+          margin-top: @spacings[xs];
+        }
+
+        .ant-form-item {
+          width: @form-item-width;
+        }
+      }
+    }
+
+    .synri-dfi-rules-row,
+    .synri-dfi-rules-row-striped {
+      display: flex;
+      align-items: center;
+      min-height: 40px;
+      padding-left: @spacings[xxs];
+      border-radius: @borderRadius[sm];
+
+      .synri-dfi-rules-condition-key {
+        min-width: @form-item-width;
+      }
+
+      .ant-form-item {
+        margin-bottom: 0;
+        margin-right: @spacings[sm];
+      }
+
+      .synri-dfi-rules-delete {
+        color: @gray-700;
+        display: flex;
+        border: none;
+        background-color: transparent;
+        border-radius: @borderRadius[sm];
+        cursor: pointer;
+        padding: @spacings[xs];
+        margin-right: @spacings[xs];
+        // Move the trash icon closer to the input
+        margin-left: -@spacings[xs];
+
+        transition: background-color 300ms @easings[easeInOut];
+        &:hover {
+          background-color: @gray-300;
+        }
+      }
+    }
+
+    .synri-dfi-rules-condition-options-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .syncari-text {
+        margin-right: @spacings[sm];
+        color: @gray-700;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import 'styles';
+
+.composite-group-input-fieldMergePredicate {
+  .synri-filter-condition .synri-condition {
+    align-items: start;
+
+    .field-merge-policy-retain-field {
+      &--config-fields {
+        .synri-multi-value-text .input-component {
+          width: 100%;
+        }
+      }
+
+      &--multi-field {
+        padding: 0;
+        display: flex;
+
+        .synri-label-with-help {
+          margin-right: $spacings-sm;
+
+          label {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}

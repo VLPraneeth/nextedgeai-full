@@ -1,0 +1,20 @@
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient x1="38.031982%" y1="6.74791785%" x2="59.9293086%" y2="63.8227635%" id="linearGradient-1">
+      <stop stop-color="#0052CC" offset="0%"></stop>
+      <stop stop-color="#2684FF" offset="100%"></stop>
+    </linearGradient>
+  </defs>
+  <g id="UI-Elements" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Iconography" transform="translate(-468.000000, -183.000000)">
+      <g id="S3" transform="translate(472.000000, 184.000000)">
+        <g id="jira-service-desk-1">
+          <path d="M18.0207854,14.9113924 L28.2617837,14.965212 C29.1806769,14.965212 29.8731762,15.7321413 29.819907,16.6470744 C29.819907,16.969992 29.7133686,17.3063645 29.500292,17.5754625 L14.3984817,38 C9.65752544,34.4075418 8.68536306,27.5993627 12.2543976,22.7555988 L18.0207854,14.9113924 Z" id="Path" fill="url(#linearGradient-1)"></path>
+          <path d="M11.8108492,22.6075949 L1.56921138,22.5544006 C0.658843578,22.5012063 -0.0507077978,21.7963812 0.00284324945,20.8787789 C0.00284324945,20.5596128 0.109945344,20.2271482 0.324149533,20.0143708 L15.3987693,0 C20.1648125,3.55072226 21.1421192,10.3330007 17.5675867,15.0672971 L11.8108492,22.6075949 Z" id="Path" fill="#2684FF"></path>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

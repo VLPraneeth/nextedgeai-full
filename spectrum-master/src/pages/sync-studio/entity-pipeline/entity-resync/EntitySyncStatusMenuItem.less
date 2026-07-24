@@ -1,0 +1,148 @@
+@import '~styles/index.less';
+
+@background-color: @white;
+@border-color: @gray-300;
+
+// dropdown panel for syncstatus
+.sync-status-panel-wrapper {
+  z-index: 900; // put this below our other modals
+
+  .sync-status-panel {
+    position: relative;
+    min-width: 22rem;
+    background-color: @background-color;
+    border-radius: @borderRadius[md];
+    border: 1px solid @border-color;
+    padding: @spacings[md] @spacings[lg];
+
+    filter: drop-shadow(@boxShadows[md]);
+    filter: drop-shadow(0 1px 6px rgba(0, 0, 0, 0.15));
+
+    &:after,
+    &:before {
+      bottom: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: ' ';
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    &:before {
+      border-bottom-color: @border-color;
+      border-width: 11px;
+      margin-left: -11px;
+    }
+    &:after {
+      border-bottom-color: @background-color;
+      border-width: 10px;
+      margin-left: -10px;
+    }
+
+    .sync-status-header {
+      display: flex;
+      justify-content: space-between;
+
+      font-size: @fontSizes[sm];
+      font-weight: @fontWeights[bold];
+      color: @gray-700;
+    }
+
+    .sync-source-entities-list {
+      padding: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        padding: @spacings[xs] 0;
+
+        .source-label {
+          flex-basis: 50%;
+          white-space: nowrap;
+          margin-right: @spacings[lg];
+        }
+
+        .progress {
+          flex-basis: 50%;
+          margin-left: @spacings[lg];
+        }
+      }
+    }
+  }
+}
+
+.sync-progress-bar {
+  position: relative;
+  height: @spacings[sm];
+  width: 100%;
+  background-color: @gray-300;
+  border-radius: 3px;
+
+  .sync-progress-bar-mercury {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: @blue-500;
+    border-radius: 3px;
+
+    transition: width 0.25s ease-in;
+  }
+}
+
+ul.entity-source-well {
+  border: 1px solid @gray-400;
+  border-radius: @borderRadius[md];
+
+  max-height: @spacings[6xl];
+  overflow-y: auto;
+
+  margin: 0;
+  padding: 0;
+
+  li.entity-source-row {
+    display: flex;
+    align-items: center;
+    height: calc(@spacings[xl] + @spacings[sm]);
+    padding: @spacings[xxs] @spacings[md];
+    margin: 0;
+    list-style-type: none;
+
+    &.is-checked {
+      background-color: @blue-200;
+    }
+
+    .ant-checkbox-wrapper {
+      display: flex;
+      width: 100%;
+      flex-flow: row nowrap;
+      align-items: center;
+
+      & > span:last-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 1 1;
+        white-space: nowrap;
+      }
+    }
+    .instance-roles-select {
+      flex-basis: 60%;
+    }
+
+    & + & {
+      margin-top: 1px;
+    }
+  }
+}
+
+.resync-modal {
+  .ant-modal-body {
+    padding: @spacings[md] @spacings[lg];
+  }
+
+  .entity-resync-error {
+  }
+}

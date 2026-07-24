@@ -1,0 +1,22 @@
+@import 'styles';
+
+.clear-filter-button {
+  display: inline-flex;
+  align-items: center;
+  padding: $spacings-xs $spacings-md;
+  font-size: $font-size-md;
+  color: $red-500;
+  border-radius: $spacings-xxs;
+  transition: all 200ms ease-in-out;
+
+  svg {
+    margin-right: $spacings-xs;
+    height: 16px;
+    width: 16px;
+  }
+
+  &:hover {
+    background-color: $gray-250;
+    color: $red-500;
+  }
+}

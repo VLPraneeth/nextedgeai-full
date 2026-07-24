@@ -1,0 +1,21 @@
+@import 'styles/index.scss';
+
+.connector-details-modal {
+  .ant-modal-body {
+    padding-top: $spacings-xxsm;
+    padding-bottom: $spacings-xxsm;
+    min-height: 300px;
+    overflow: hidden;
+
+    .ant-spin-container {
+      min-height: $spacings-3xl;
+    }
+  }
+
+  iframe {
+    border: none;
+    width: 79vw;
+    height: 75vh;
+    padding-right: $spacings-mlg;
+  }
+}

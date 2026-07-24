@@ -1,0 +1,36 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+@import '~styles/index.less';
+
+.synri-fragment-modal {
+  &__node-selection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: @gray-300;
+    border-radius: 5px;
+    padding: @spacings[sm];
+    color: @gray-800;
+    margin-bottom: @spacings[md];
+  }
+
+  &__button-left {
+    padding: 0;
+    padding-right: @spacings[xs];
+  }
+
+  &__button-right {
+    padding: 0;
+    padding-left: @spacings[xs];
+  }
+
+  &__message {
+    margin-bottom: @spacings[md];
+  }
+
+  .anticon-exclamation-circle {
+    font-size: @fontSizes[3xl];
+    color: @red-500;
+  }
+}

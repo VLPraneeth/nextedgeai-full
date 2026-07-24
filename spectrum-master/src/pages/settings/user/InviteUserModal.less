@@ -1,0 +1,50 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+.invite-user-modal {
+  &__user-type__options {
+    padding-top: @spacings[xs];
+    padding-left: @spacings[sm];
+
+    .synri-checkbox {
+      height: @spacings[xl];
+
+      .synri-label-with-help {
+        line-height: @lineHeights[single];
+
+        .synri-label {
+          font-weight: @fontWeights[regular];
+        }
+      }
+
+      .ant-form-item {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+
+        .ant-form-item-control {
+          line-height: @lineHeights[loose];
+        }
+      }
+    }
+  }
+
+  ul.instance-permissions-well {
+    border: 1px solid @gray-400;
+    border-radius: @borderRadius[md];
+
+    max-height: @spacings[6xl];
+    overflow-y: auto;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .content-container {
+    overflow: hidden;
+  }
+}

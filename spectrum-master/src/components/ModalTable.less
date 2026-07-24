@@ -1,0 +1,56 @@
+@import '~styles/index.less';
+
+table.syncari-modal-table {
+  border-collapse: collapse;
+  width: 100%;
+
+  &.padded {
+    td.syncari-modal-table-td,
+    th.syncari-modal-table-th {
+      padding: @spacings[xxs] @spacings[sm];
+    }
+  }
+
+  &.as-flex {
+    display: flex;
+    flex-flow: column nowrap;
+
+    tr.syncari-modal-table-tr {
+      display: flex;
+      margin: 0 @spacings[md];
+      padding: @spacings[xxs] 0;
+    }
+
+    td,
+    th {
+      flex: 1;
+    }
+  }
+
+  border: 1px solid @gray-400;
+  border-radius: @borderRadius[md];
+
+  tr.syncari-modal-table-tr {
+    & + tr.syncari-modal-table-tr {
+      border-top: 1px solid @gray-300;
+    }
+  }
+
+  thead.syncari-modal-table-thead {
+    background-color: @gray-200;
+    border-radius: @borderRadius[md] @borderRadius[md] 0 0;
+    border-bottom: 1px solid @gray-400;
+
+    tr.syncari-modal-table-tr {
+      th {
+        color: @gray-700;
+        font-size: @fontSizes[sm];
+      }
+    }
+  }
+
+  tbody.syncari-modal-table-tbody {
+    max-height: 26rem;
+    overflow-y: auto;
+  }
+}

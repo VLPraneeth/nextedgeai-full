@@ -1,0 +1,23 @@
+diff --git a/node_modules/slate-modern/dist/index.es.js b/node_modules/slate-modern/dist/index.es.js
+index bfe8742..95af68d 100644
+--- a/node_modules/slate-modern/dist/index.es.js
++++ b/node_modules/slate-modern/dist/index.es.js
+@@ -67,6 +67,7 @@ var CHAMELEON = /['\u2018\u2019]/;
+ var SURROGATE_START = 0xd800;
+ var SURROGATE_END = 0xdfff;
+ var ZERO_WIDTH_JOINER = 0x200d;
++var TOKEN_CHAR = /[\u007B]/;
+ /**
+  * Get the distance to the end of the first character in a string of text.
+  */
+@@ -182,6 +183,10 @@ var isWordCharacter = (char, remaining) => {
+   } // Chameleons count as word characters as long as they're in a word, so
+   // recurse to see if the next one is a word character or not.
+ 
++  // Include our token char a word character
++  if (TOKEN_CHAR.test(char)) {
++    return true
++  }
+ 
+   if (CHAMELEON.test(char)) {
+     var next = remaining.charAt(0);

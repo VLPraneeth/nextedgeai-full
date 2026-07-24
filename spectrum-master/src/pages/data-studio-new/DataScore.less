@@ -1,0 +1,31 @@
+@import '~styles/index.less';
+
+.data-studio-data-score-card {
+  .ant-popover-inner {
+    min-width: 400px;
+  }
+}
+
+.data-score-card-header {
+  display: flex;
+  flex-flow: row nowrap;
+
+  .header-item {
+    flex-basis: 50%;
+  }
+
+  .data-score-source {
+    text-align: right;
+
+    .data-score-source-value {
+      color: @gray-700;
+      font-size: @fontSizes[xl];
+      font-weight: @fontWeights[bold];
+    }
+
+    .data-score-source-label {
+      color: @gray-700;
+      font-size: @fontSizes[md];
+    }
+  }
+}

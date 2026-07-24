@@ -1,0 +1,136 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+@small-input-size: 26px;
+
+@items-container-max-height: 300px;
+
+.synri-search-box-input {
+  &.ant-input-search {
+    input.ant-input {
+      border: 1px solid @gray-400;
+      border-radius: @borderRadius[lg];
+      font-size: @fontSizes[md];
+      height: 40px;
+      width: 100%;
+      padding-left: 40px;
+    }
+
+    &.ant-input-affix-wrapper {
+      display: flex;
+
+      .ant-input-suffix {
+        position: absolute;
+        order: -1;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+
+        .ant-input-search-icon {
+          pointer-events: all;
+          margin-left: @spacings[md];
+        }
+
+        .ant-input-clear-icon {
+          pointer-events: all;
+          position: absolute;
+          right: 0;
+          margin-right: @spacings[md];
+          height: @fontSizes[md];
+          width: @fontSizes[md];
+
+          svg {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &.synri-search-box-input-small {
+      input.ant-input {
+        height: @small-input-size;
+        padding-left: @spacings[xl];
+      }
+
+      .ant-input-suffix {
+        .ant-input-search-icon {
+          margin-left: @spacings[xs];
+        }
+
+        .ant-input-clear-icon {
+          margin-right: @spacings[xs];
+        }
+      }
+    }
+  }
+}
+
+.synri-search-main-header {
+  width: 350px;
+  transition: width 200ms @easings[easeInOut];
+
+  &.collapse-search {
+    width: 50px;
+    cursor: pointer;
+    :hover {
+      transition: background-color 200ms @easings[easeInOut];
+      background-color: @gray-200;
+    }
+  }
+
+  &__input {
+    height: 51px !important;
+    border: 0px solid @gray-300;
+    border-left: 1px solid @gray-300;
+    border-right: none;
+    border-radius: 0px;
+    font-size: @fontSizes[md];
+
+    .ant-input {
+      height: 51px;
+      border: 0px;
+      border-radius: 0px;
+      padding-left: 40px;
+      transition: width 200ms @easings[easeInOut];
+      overflow: hidden;
+    }
+
+    &.ant-input-affix-wrapper {
+      display: flex;
+
+      &.collapse-search {
+        input {
+          display: none;
+        }
+      }
+
+      .ant-input-suffix {
+        padding-left: 18px;
+        order: -1;
+        right: auto;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__items-container {
+    position: relative;
+    background-color: white;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    margin-top: @spacings[xxs];
+    max-height: @items-container-max-height;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+
+  &__loader {
+    display: grid;
+    place-items: center;
+    padding: 10px;
+  }
+}

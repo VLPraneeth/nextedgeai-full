@@ -1,0 +1,20 @@
+{ 
+   "id":"5e3b921952fb745409cf1431",
+   "email":"admin@syncari.com",
+   "password":"$2a$10$Px9/5zX/3WzSg5cKxIbzR.HFxIV4RrxsyGtG7XkYfOM4oHDJK.Ud6",
+   "status":"ACTIVE",
+   "orgId":"5e3b921952fb745409cf1435",
+   "orgName":"Syncari Master",
+   "orgLogo":null,
+   "currentInstanceName":"Syncari Master Instance",
+   "firstName":"Syncari",
+   "lastName":"Admin",
+   "roles":[ 
+      "Admin",
+      "Super Admin"
+   ],
+   "createdBy":null,
+   "updatedBy":null,
+   "createdAt":null,
+   "updatedAt":null
+}

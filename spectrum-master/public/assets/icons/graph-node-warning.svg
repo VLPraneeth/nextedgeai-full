@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <g id="UI-Elements" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Iconography" transform="translate(-941.000000, -729.000000)">
+            <g id="Node-Warning" transform="translate(942.000000, 730.000000)">
+                <circle id="Oval" fill="#F49904" cx="11.3333333" cy="11" r="11"></circle>
+                <g id="c-warning-e" transform="translate(4.333333, 4.000000)" fill="#FFFFFF">
+                    <path d="M7,0 C3.15,0 0,3.15 0,7 C0,10.85 3.15,14 7,14 C10.85,14 14,10.85 14,7 C14,3.15 10.85,0 7,0 Z M7,12.25 C4.1125,12.25 1.75,9.8875 1.75,7 C1.75,4.1125 4.1125,1.75 7,1.75 C9.8875,1.75 12.25,4.1125 12.25,7 C12.25,9.8875 9.8875,12.25 7,12.25 Z" id="Shape" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" x="6.125" y="3.5" width="1.75" height="4.375"></rect>
+                    <circle id="Oval" cx="7" cy="9.625" r="1"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

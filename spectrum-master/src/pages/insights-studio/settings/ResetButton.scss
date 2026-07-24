@@ -1,0 +1,17 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.scss';
+
+.reset-button {
+  &__icon.anticon {
+    color: $red-800;
+  }
+
+  &.ant-btn-link,
+  &.ant-btn-link:hover {
+    color: $red-800;
+    padding-left: $spacings-xxsm;
+  }
+}

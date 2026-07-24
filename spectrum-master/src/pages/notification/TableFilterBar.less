@@ -1,0 +1,54 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+@import '~styles/index.less';
+
+.table-filter-bar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  margin: -0.25rem 0;
+  padding: 0 0 2rem;
+
+  & > * {
+    padding: 0.25rem 0;
+  }
+}
+
+.table-filters {
+  display: flex;
+  flex-flow: row wrap;
+
+  margin: -0.25rem -0.5rem;
+
+  & > .table-filter {
+    display: flex;
+    align-items: baseline;
+
+    padding: 0.25rem 0.5rem;
+
+    label {
+      /*color: @color-label;*/
+      font-size: @font-size-label;
+      font-weight: @font-weight-bold-label;
+      text-transform: uppercase;
+
+      margin-right: 1rem;
+    }
+  }
+}
+
+.table-bulk-actions {
+  display: flex;
+  align-self: flex-end;
+  margin: 0 -0.5rem;
+
+  & > .bulk-action {
+    padding: 0 0.5rem;
+  }
+}
+
+.filter-notification-type {
+  min-width: 10rem;
+}

@@ -1,0 +1,20 @@
+@import 'styles';
+
+.funnel-config-form {
+  &__radio {
+    display: block !important;
+    margin-bottom: $spacings-xs !important;
+  }
+
+  &__checkbox {
+    margin: $spacings-xs 0;
+  }
+
+  &__sort-container {
+    margin-left: $spacings-sm;
+  }
+
+  &__display-additional {
+    margin-bottom: $spacings-md;
+  }
+}

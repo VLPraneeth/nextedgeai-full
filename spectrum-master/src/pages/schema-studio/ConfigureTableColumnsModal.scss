@@ -1,0 +1,137 @@
+@import 'styles';
+
+.columns-row {
+  margin-left: -$spacings-md;
+  margin-right: -$spacings-md;
+}
+
+.configure-table-columns {
+  .top_bar,
+  .top_bar .action_buttons {
+    display: flex;
+    align-items: center;
+    gap: $spacings-xs;
+  }
+  .ant-input-search.column-search-box {
+    height: $search-input-height;
+
+    input.ant-input {
+      height: $search-input-height;
+    }
+  }
+
+  .ant-modal-body {
+    padding: $spacings-mmlg;
+
+    .ant-btn:focus {
+      color: rgba(0, 0, 0, 0.65);
+      background-color: #fff;
+      border-color: $gray-400;
+    }
+
+    .actions {
+      svg {
+        cursor: pointer;
+      }
+      .send_to_top_icon,
+      .send_to_bottom_icon {
+        &:hover {
+          background-color: $s-white;
+          path {
+            fill: #4890eb;
+          }
+        }
+      }
+      .move_one_up_icon,
+      .move_one_down_icon {
+        &:hover {
+          path {
+            fill: #4890eb;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.column-list {
+  flex: 0 0 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow-x: hidden;
+  max-height: 450px;
+
+  .column-list-droppable {
+    flex: 1 0 auto;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-height: 300px;
+
+    transition: all 0.15s $easing-easeInOut;
+
+    &.drag-over {
+      background-color: $gray-200;
+    }
+
+    .column-list-draggable {
+      @include ellipsis-text;
+
+      padding: $spacings-sm;
+      background-color: $white;
+      border-style: solid;
+      border-width: 1px;
+      border-color: $gray-400;
+      border-radius: 4px;
+      margin-bottom: 12px;
+
+      &:hover {
+        border-color: #4890eb;
+      }
+
+      &.is-hidden {
+        visibility: none;
+      }
+
+      &.dragging {
+        box-shadow: $box-shadows-sm;
+      }
+
+      & + .column-list-draggable {
+        margin-top: -1px;
+      }
+
+      .column-label {
+        max-width: 380px;
+        text-wrap: wrap;
+      }
+
+      .drag-handle {
+        cursor: pointer;
+        padding: $spacings-xs;
+        margin-right: $spacings-sm;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5px;
+      }
+      .drag-handle.disabled {
+        cursor: not-allowed;
+        svg {
+          cursor: not-allowed;
+        }
+        path {
+          fill: $gray-500;
+        }
+      }
+      .field-data-type .field-data-type-icon {
+        margin: 0;
+      }
+    }
+  }
+}

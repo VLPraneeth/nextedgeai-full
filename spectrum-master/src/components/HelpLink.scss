@@ -1,0 +1,29 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import 'styles';
+
+.help-link {
+  display: flex;
+  place-items: center;
+  color: $s-med-gray;
+  font-size: $font-size-md;
+  padding: $spacings-xs;
+
+  svg {
+    margin-right: $spacings-xxs;
+  }
+
+  &:hover {
+    background-color: $s-white;
+    transition: background-color 0.2s ease-in;
+    border-radius: $border-radius-md;
+
+    svg {
+      path {
+        fill: $antd-blue;
+      }
+    }
+  }
+}

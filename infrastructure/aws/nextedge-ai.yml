@@ -1,0 +1,808 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Isolated single-node demo infrastructure for the private NextEdge AI platform.
+
+Parameters:
+  UbuntuAmiId:
+    Type: AWS::EC2::Image::Id
+    Description: Ubuntu 22.04 LTS AMI for ap-south-1.
+  InstanceType:
+    Type: String
+    Default: m6i.2xlarge
+    AllowedValues:
+      - m6i.2xlarge
+  BedrockModelId:
+    Type: String
+    Default: apac.amazon.nova-lite-v1:0
+
+Resources:
+  Vpc:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.42.0.0/16
+      EnableDnsHostnames: true
+      EnableDnsSupport: true
+      Tags:
+        - Key: Name
+          Value: nextedge-ai-vpc
+        - Key: Project
+          Value: NextEdgeAI
+        - Key: Environment
+          Value: demo
+
+  InternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+        - Key: Name
+          Value: nextedge-ai-igw
+        - Key: Project
+          Value: NextEdgeAI
+
+  InternetGatewayAttachment:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      InternetGatewayId: !Ref InternetGateway
+      VpcId: !Ref Vpc
+
+  PublicSubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: !Select [0, !GetAZs ""]
+      CidrBlock: 10.42.10.0/24
+      MapPublicIpOnLaunch: false
+      VpcId: !Ref Vpc
+      Tags:
+        - Key: Name
+          Value: nextedge-ai-public-a
+        - Key: Project
+          Value: NextEdgeAI
+
+  PublicRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref Vpc
+      Tags:
+        - Key: Name
+          Value: nextedge-ai-public-routes
+        - Key: Project
+          Value: NextEdgeAI
+
+  DefaultPublicRoute:
+    Type: AWS::EC2::Route
+    DependsOn: InternetGatewayAttachment
+    Properties:
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref InternetGateway
+      RouteTableId: !Ref PublicRouteTable
+
+  PublicSubnetRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref PublicRouteTable
+      SubnetId: !Ref PublicSubnet
+
+  AppSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Public HTTP/S only; administration is through SSM Session Manager.
+      SecurityGroupEgress:
+        - IpProtocol: -1
+          CidrIp: 0.0.0.0/0
+      SecurityGroupIngress:
+        - Description: Public HTTP for the demo reverse proxy
+          IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - Description: Public HTTPS for the demo reverse proxy
+          IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: nextedge-ai-app-sg
+        - Key: Project
+          Value: NextEdgeAI
+      VpcId: !Ref Vpc
+
+  ArtifactBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      LifecycleConfiguration:
+        Rules:
+          - Id: expire-incomplete-multipart-uploads
+            Status: Enabled
+            AbortIncompleteMultipartUpload:
+              DaysAfterInitiation: 7
+          - Id: expire-old-noncurrent-versions
+            Status: Enabled
+            NoncurrentVersionExpiration:
+              NoncurrentDays: 30
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      Tags:
+        - Key: Name
+          Value: nextedge-ai-artifacts
+        - Key: Project
+          Value: NextEdgeAI
+        - Key: Confidential
+          Value: "true"
+      VersioningConfiguration:
+        Status: Enabled
+
+  AdminCredentialSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: nextedge-ai/demo/admin
+      Description: Generated password credentials for the private NextEdge AI demo administrator.
+      GenerateSecretString:
+        ExcludePunctuation: true
+        GenerateStringKey: password
+        PasswordLength: 24
+        SecretStringTemplate: '{"username":"admin@nextedge.ai"}'
+      Tags:
+        - Key: Project
+          Value: NextEdgeAI
+        - Key: Environment
+          Value: demo
+        - Key: Confidential
+          Value: "true"
+
+  JwtSigningSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: nextedge-ai/demo/jwt
+      Description: Generated JWT signing secret for the private NextEdge AI demo.
+      GenerateSecretString:
+        ExcludePunctuation: true
+        PasswordLength: 64
+      Tags:
+        - Key: Project
+          Value: NextEdgeAI
+        - Key: Environment
+          Value: demo
+        - Key: Confidential
+          Value: "true"
+
+  MongoCredentialSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: nextedge-ai/demo/mongodb
+      Description: Generated credentials for the private NextEdge AI demo MongoDB service.
+      GenerateSecretString:
+        ExcludePunctuation: true
+        GenerateStringKey: password
+        PasswordLength: 32
+        SecretStringTemplate: '{"username":"nextedge"}'
+      Tags:
+        - Key: Project
+          Value: NextEdgeAI
+        - Key: Environment
+          Value: demo
+        - Key: Confidential
+          Value: "true"
+
+  RedisCredentialSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: nextedge-ai/demo/redis
+      Description: Generated password for the private NextEdge AI demo Redis service.
+      GenerateSecretString:
+        ExcludePunctuation: true
+        PasswordLength: 32
+      Tags:
+        - Key: Project
+          Value: NextEdgeAI
+        - Key: Environment
+          Value: demo
+        - Key: Confidential
+          Value: "true"
+
+  ConnectorDatabaseSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: nextedge-ai/demo/connectors
+      Description: Generated credentials for private PostgreSQL and MySQL connector demos.
+      GenerateSecretString:
+        ExcludePunctuation: true
+        GenerateStringKey: password
+        PasswordLength: 32
+        SecretStringTemplate: '{"username":"nextedge_connector"}'
+      Tags:
+        - Key: Project
+          Value: NextEdgeAI
+        - Key: Environment
+          Value: demo
+        - Key: Confidential
+          Value: "true"
+
+  GitHubActionsOidcProvider:
+    Type: AWS::IAM::OIDCProvider
+    Properties:
+      ClientIdList:
+        - sts.amazonaws.com
+      Tags:
+        - Key: Project
+          Value: NextEdgeAI
+      Url: https://token.actions.githubusercontent.com
+
+  GitHubDeployRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: nextedge-ai-github-deploy
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Federated: !Ref GitHubActionsOidcProvider
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                token.actions.githubusercontent.com:aud: sts.amazonaws.com
+                token.actions.githubusercontent.com:sub: repo:saisharan0103/NextedgeAI:ref:refs/heads/main
+      Policies:
+        - PolicyName: nextedge-ai-release-deploy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetBucketLocation
+                  - s3:ListBucket
+                Resource: !GetAtt ArtifactBucket.Arn
+                Condition:
+                  StringLike:
+                    s3:prefix: releases/*
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                Resource: !Sub ${ArtifactBucket.Arn}/releases/*
+              - Effect: Allow
+                Action: ssm:SendCommand
+                Resource:
+                  - !Sub arn:${AWS::Partition}:ssm:${AWS::Region}::document/AWS-RunShellScript
+                  - !Sub arn:${AWS::Partition}:ec2:${AWS::Region}:${AWS::AccountId}:instance/${AppInstance}
+              - Effect: Allow
+                Action:
+                  - ssm:GetCommandInvocation
+                  - ssm:ListCommandInvocations
+                Resource: "*"
+      Tags:
+        - Key: Project
+          Value: NextEdgeAI
+        - Key: Environment
+          Value: demo
+
+  AppLogGroup:
+    Type: AWS::Logs::LogGroup
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      LogGroupName: /nextedge-ai/application
+      RetentionInDays: 30
+      Tags:
+        - Key: Project
+          Value: NextEdgeAI
+
+  VpcFlowLogGroup:
+    Type: AWS::Logs::LogGroup
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      LogGroupName: /nextedge-ai/vpc-flow
+      RetentionInDays: 30
+      Tags:
+        - Key: Project
+          Value: NextEdgeAI
+
+  FlowLogRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: nextedge-ai-vpc-flow-role
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: vpc-flow-logs.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: publish-vpc-flow-logs
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogStream
+                  - logs:DescribeLogGroups
+                  - logs:DescribeLogStreams
+                  - logs:PutLogEvents
+                Resource: !Sub ${VpcFlowLogGroup.Arn}:*
+      Tags:
+        - Key: Project
+          Value: NextEdgeAI
+
+  VpcFlowLog:
+    Type: AWS::EC2::FlowLog
+    Properties:
+      DeliverLogsPermissionArn: !GetAtt FlowLogRole.Arn
+      LogDestinationType: cloud-watch-logs
+      LogGroupName: !Ref VpcFlowLogGroup
+      MaxAggregationInterval: 60
+      ResourceId: !Ref Vpc
+      ResourceType: VPC
+      TrafficType: ALL
+
+  BedrockEnabledParameter:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /nextedge-ai/llm/enabled
+      Type: String
+      Value: "true"
+      Description: Emergency application kill switch for all NextEdge AI model calls.
+      Tags:
+        Project: NextEdgeAI
+
+  InstanceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: nextedge-ai-ec2-role
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ec2.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+        - arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy
+      Policies:
+        - PolicyName: nextedge-ai-runtime
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Sid: InvokeApprovedBedrockModel
+                Effect: Allow
+                Action:
+                  - bedrock:InvokeModel
+                  - bedrock:InvokeModelWithResponseStream
+                Resource:
+                  - !Sub arn:${AWS::Partition}:bedrock:${AWS::Region}:${AWS::AccountId}:inference-profile/${BedrockModelId}
+                  - !Sub arn:${AWS::Partition}:bedrock:*::foundation-model/amazon.nova-lite-v1:0
+              - Sid: ReadLlmKillSwitch
+                Effect: Allow
+                Action: ssm:GetParameter
+                Resource: !Sub arn:${AWS::Partition}:ssm:${AWS::Region}:${AWS::AccountId}:parameter/nextedge-ai/llm/enabled
+              - Sid: ReadNextEdgeSecrets
+                Effect: Allow
+                Action: secretsmanager:GetSecretValue
+                Resource: !Sub arn:${AWS::Partition}:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:nextedge-ai/*
+              - Sid: UsePrivateArtifactBucket
+                Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                  - s3:DeleteObject
+                  - s3:ListBucket
+                  - s3:GetBucketLocation
+                Resource:
+                  - !GetAtt ArtifactBucket.Arn
+                  - !Sub ${ArtifactBucket.Arn}/*
+              - Sid: PublishApplicationMetrics
+                Effect: Allow
+                Action: cloudwatch:PutMetricData
+                Resource: "*"
+                Condition:
+                  StringEquals:
+                    cloudwatch:namespace: NextEdgeAI
+      Tags:
+        - Key: Project
+          Value: NextEdgeAI
+
+  InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      InstanceProfileName: nextedge-ai-ec2-profile
+      Roles:
+        - !Ref InstanceRole
+
+  AppInstance:
+    Type: AWS::EC2::Instance
+    DependsOn: DefaultPublicRoute
+    Properties:
+      AvailabilityZone: !GetAtt PublicSubnet.AvailabilityZone
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            DeleteOnTermination: true
+            Encrypted: true
+            VolumeSize: 100
+            VolumeType: gp3
+      IamInstanceProfile: !Ref InstanceProfile
+      ImageId: !Ref UbuntuAmiId
+      InstanceType: !Ref InstanceType
+      MetadataOptions:
+        HttpEndpoint: enabled
+        # Two hops are required for IAM-role credentials inside the trusted Docker network.
+        HttpPutResponseHopLimit: 2
+        HttpTokens: required
+        InstanceMetadataTags: enabled
+      Monitoring: true
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: false
+          DeleteOnTermination: true
+          DeviceIndex: "0"
+          GroupSet:
+            - !Ref AppSecurityGroup
+          SubnetId: !Ref PublicSubnet
+      PropagateTagsToVolumeOnCreation: true
+      Tags:
+        - Key: Name
+          Value: nextedge-ai-app
+        - Key: Project
+          Value: NextEdgeAI
+        - Key: Environment
+          Value: demo
+        - Key: Confidential
+          Value: "true"
+        - Key: ManagedBy
+          Value: CloudFormation
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          set -euxo pipefail
+          export DEBIAN_FRONTEND=noninteractive
+          apt-get update
+          apt-get install -y ca-certificates curl git jq unzip docker.io openjdk-11-jdk maven unattended-upgrades
+          curl -fsSL https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o /tmp/awscliv2.zip
+          unzip -q /tmp/awscliv2.zip -d /tmp
+          /tmp/aws/install --update
+          rm -rf /tmp/aws /tmp/awscliv2.zip
+          install -d -m 0755 /usr/local/lib/docker/cli-plugins
+          curl -fsSL https://github.com/docker/compose/releases/download/v5.1.4/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose
+          echo "33b20815cfd36782478197e3065004c22a7617c1cf4c2b05c2ed2d92f262e64a  /usr/local/lib/docker/cli-plugins/docker-compose" | sha256sum -c -
+          chmod 0755 /usr/local/lib/docker/cli-plugins/docker-compose
+          curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+          apt-get install -y nodejs
+          systemctl enable --now docker
+          usermod -aG docker ubuntu
+          snap start amazon-ssm-agent || true
+          mkdir -p /opt/nextedge-ai/app /opt/nextedge-ai/data /opt/nextedge-ai/logs
+          chown -R ubuntu:ubuntu /opt/nextedge-ai
+          curl -fsSL https://amazoncloudwatch-agent.s3.amazonaws.com/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb -o /tmp/amazon-cloudwatch-agent.deb
+          dpkg -i /tmp/amazon-cloudwatch-agent.deb || apt-get install -f -y
+          cat >/opt/nextedge-ai/BOOTSTRAP_COMPLETE <<'EOF'
+          region=${AWS::Region}
+          project=NextEdgeAI
+          model=${BedrockModelId}
+          EOF
+
+  ElasticIp:
+    Type: AWS::EC2::EIP
+    DependsOn: InternetGatewayAttachment
+    Properties:
+      Domain: vpc
+      Tags:
+        - Key: Name
+          Value: nextedge-ai-eip
+        - Key: Project
+          Value: NextEdgeAI
+
+  ElasticIpAssociation:
+    Type: AWS::EC2::EIPAssociation
+    Properties:
+      AllocationId: !GetAtt ElasticIp.AllocationId
+      InstanceId: !Ref AppInstance
+
+  SnapshotLifecycleRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: nextedge-ai-snapshot-lifecycle
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: dlm.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: nextedge-ai-ebs-snapshots
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - ec2:CreateSnapshot
+                  - ec2:CreateSnapshots
+                  - ec2:DeleteSnapshot
+                  - ec2:DescribeInstances
+                  - ec2:DescribeSnapshots
+                  - ec2:DescribeVolumes
+                Resource: "*"
+              - Effect: Allow
+                Action:
+                  - ec2:CreateTags
+                Resource: arn:aws:ec2:*::snapshot/*
+      Tags:
+        - Key: Project
+          Value: NextEdgeAI
+
+  DailySnapshotPolicy:
+    Type: AWS::DLM::LifecyclePolicy
+    Properties:
+      Description: Daily snapshots for NextEdge AI demo volume with seven day retention
+      ExecutionRoleArn: !GetAtt SnapshotLifecycleRole.Arn
+      PolicyDetails:
+        ResourceTypes:
+          - VOLUME
+        TargetTags:
+          - Key: Project
+            Value: NextEdgeAI
+          - Key: Environment
+            Value: demo
+        Schedules:
+          - Name: nextedge-ai-daily
+            CopyTags: true
+            CreateRule:
+              Interval: 24
+              IntervalUnit: HOURS
+              Times:
+                - "03:00"
+            RetainRule:
+              Count: 7
+            TagsToAdd:
+              - Key: Project
+                Value: NextEdgeAI
+              - Key: BackupType
+                Value: Daily
+      State: ENABLED
+      Tags:
+        - Key: Project
+          Value: NextEdgeAI
+
+  InstanceStatusAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: NextEdge AI EC2 instance or system status check failed.
+      AlarmName: nextedge-ai-instance-status-check
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      Dimensions:
+        - Name: InstanceId
+          Value: !Ref AppInstance
+      EvaluationPeriods: 2
+      MetricName: StatusCheckFailed
+      Namespace: AWS/EC2
+      Period: 60
+      Statistic: Maximum
+      Threshold: 1
+      TreatMissingData: breaching
+
+  HighCpuAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: NextEdge AI CPU remained above 90 percent for fifteen minutes.
+      AlarmName: nextedge-ai-high-cpu
+      ComparisonOperator: GreaterThanThreshold
+      Dimensions:
+        - Name: InstanceId
+          Value: !Ref AppInstance
+      EvaluationPeriods: 3
+      MetricName: CPUUtilization
+      Namespace: AWS/EC2
+      Period: 300
+      Statistic: Average
+      Threshold: 90
+      TreatMissingData: notBreaching
+
+  BudgetAlertTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: nextedge-ai-budget-alerts
+      Tags:
+        - Key: Project
+          Value: NextEdgeAI
+
+  BudgetGuardrailTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: nextedge-ai-budget-guardrail
+      Tags:
+        - Key: Project
+          Value: NextEdgeAI
+
+  BudgetTopicPolicy:
+    Type: AWS::SNS::TopicPolicy
+    Properties:
+      Topics:
+        - !Ref BudgetAlertTopic
+        - !Ref BudgetGuardrailTopic
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: AllowBudgetsToPublishAlerts
+            Effect: Allow
+            Principal:
+              Service: budgets.amazonaws.com
+            Action: sns:Publish
+            Resource: !Ref BudgetAlertTopic
+            Condition:
+              StringEquals:
+                aws:SourceAccount: !Ref AWS::AccountId
+          - Sid: AllowBudgetsToPublishGuardrail
+            Effect: Allow
+            Principal:
+              Service: budgets.amazonaws.com
+            Action: sns:Publish
+            Resource: !Ref BudgetGuardrailTopic
+            Condition:
+              StringEquals:
+                aws:SourceAccount: !Ref AWS::AccountId
+
+  GuardrailFunctionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: nextedge-ai-budget-guardrail-role
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: disable-nextedge-ai-bedrock
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: ssm:PutParameter
+                Resource: !Sub arn:${AWS::Partition}:ssm:${AWS::Region}:${AWS::AccountId}:parameter/nextedge-ai/llm/enabled
+              - Effect: Allow
+                Action: iam:PutRolePolicy
+                Resource: !GetAtt InstanceRole.Arn
+      Tags:
+        - Key: Project
+          Value: NextEdgeAI
+
+  GuardrailFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: nextedge-ai-disable-bedrock
+      Description: Disables NextEdge AI model access when its Bedrock budget reaches 100 percent.
+      Handler: index.handler
+      Runtime: python3.12
+      Timeout: 30
+      Role: !GetAtt GuardrailFunctionRole.Arn
+      Environment:
+        Variables:
+          TARGET_ROLE_NAME: !Ref InstanceRole
+          PARAMETER_NAME: !Ref BedrockEnabledParameter
+      Code:
+        ZipFile: |
+          import json
+          import os
+          import boto3
+
+          def handler(event, context):
+              ssm = boto3.client("ssm")
+              iam = boto3.client("iam")
+              ssm.put_parameter(
+                  Name=os.environ["PARAMETER_NAME"],
+                  Type="String",
+                  Value="false",
+                  Overwrite=True,
+              )
+              iam.put_role_policy(
+                  RoleName=os.environ["TARGET_ROLE_NAME"],
+                  PolicyName="NextEdgeAIBedrockEmergencyDeny",
+                  PolicyDocument=json.dumps({
+                      "Version": "2012-10-17",
+                      "Statement": [{
+                          "Sid": "DenyModelCallsAfterBudgetThreshold",
+                          "Effect": "Deny",
+                          "Action": ["bedrock:InvokeModel", "bedrock:InvokeModelWithResponseStream"],
+                          "Resource": "*",
+                      }],
+                  }),
+              )
+              return {"disabled": True}
+      Tags:
+        - Key: Project
+          Value: NextEdgeAI
+
+  GuardrailSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      Endpoint: !GetAtt GuardrailFunction.Arn
+      Protocol: lambda
+      TopicArn: !Ref BudgetGuardrailTopic
+
+  GuardrailInvokePermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !Ref GuardrailFunction
+      Principal: sns.amazonaws.com
+      SourceArn: !Ref BudgetGuardrailTopic
+
+  BedrockBudget:
+    Type: AWS::Budgets::Budget
+    Properties:
+      Budget:
+        BudgetLimit:
+          Amount: 100
+          Unit: USD
+        BudgetName: nextedge-ai-bedrock-monthly-100
+        BudgetType: COST
+        CostFilters:
+          Service:
+            - Amazon Bedrock
+        TimeUnit: MONTHLY
+      NotificationsWithSubscribers:
+        - Notification:
+            ComparisonOperator: GREATER_THAN
+            NotificationType: ACTUAL
+            Threshold: 70
+            ThresholdType: PERCENTAGE
+          Subscribers:
+            - Address: !Ref BudgetAlertTopic
+              SubscriptionType: SNS
+        - Notification:
+            ComparisonOperator: GREATER_THAN
+            NotificationType: ACTUAL
+            Threshold: 90
+            ThresholdType: PERCENTAGE
+          Subscribers:
+            - Address: !Ref BudgetAlertTopic
+              SubscriptionType: SNS
+        - Notification:
+            ComparisonOperator: GREATER_THAN
+            NotificationType: ACTUAL
+            Threshold: 100
+            ThresholdType: PERCENTAGE
+          Subscribers:
+            - Address: !Ref BudgetGuardrailTopic
+              SubscriptionType: SNS
+
+Outputs:
+  AdminCredentialSecretArn:
+    Value: !Ref AdminCredentialSecret
+  ArtifactBucketName:
+    Value: !Ref ArtifactBucket
+  BedrockModel:
+    Value: !Ref BedrockModelId
+  InstanceId:
+    Value: !Ref AppInstance
+  LlmKillSwitchParameter:
+    Value: !Ref BedrockEnabledParameter
+  JwtSigningSecretArn:
+    Value: !Ref JwtSigningSecret
+  GitHubDeployRoleArn:
+    Value: !GetAtt GitHubDeployRole.Arn
+  ConnectorDatabaseSecretArn:
+    Value: !Ref ConnectorDatabaseSecret
+  MongoCredentialSecretArn:
+    Value: !Ref MongoCredentialSecret
+  PublicIp:
+    Value: !Ref ElasticIp
+  RedisCredentialSecretArn:
+    Value: !Ref RedisCredentialSecret
+  SecurityGroupId:
+    Value: !Ref AppSecurityGroup
+  VpcId:
+    Value: !Ref Vpc

@@ -1,0 +1,16 @@
+@import 'styles';
+
+.pipeline-error-node {
+  border-bottom: 1px solid $gray-400;
+  padding: $spacings-md 0;
+
+  &--header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &--message {
+    margin-top: $spacings-md;
+    font-size: $font-size-md;
+  }
+}

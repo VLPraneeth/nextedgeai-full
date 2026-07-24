@@ -1,0 +1,6 @@
+@import 'styles/text.scss';
+
+.breadcrumb-link--menu-trigger {
+  display: flex;
+  @include unselectable-text;
+}

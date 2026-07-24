@@ -1,0 +1,26 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+@import '~styles/index.less';
+
+.settings {
+  display: flex;
+  height: 100%;
+
+  &__menu {
+    flex: 0 0 220px;
+    height: 100%;
+  }
+
+  &__menu-label {
+    padding-left: 7px;
+  }
+
+  &__content {
+    flex: 1;
+    padding: @spacings[lg] @spacings[xl];
+    height: 100%;
+    overflow-y: auto;
+    background: white;
+  }
+}

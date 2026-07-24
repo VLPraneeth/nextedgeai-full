@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainApp renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="route-spinner-container"
+  >
+    <div
+      class="ant-spin"
+    >
+      <span
+        class="ant-spin-dot ant-spin-dot-spin"
+      >
+        <i
+          class="ant-spin-dot-item"
+        />
+        <i
+          class="ant-spin-dot-item"
+        />
+        <i
+          class="ant-spin-dot-item"
+        />
+        <i
+          class="ant-spin-dot-item"
+        />
+      </span>
+    </div>
+    <div
+      class="route-spinner-title"
+    >
+      Loading…
+    </div>
+  </div>
+</DocumentFragment>
+`;

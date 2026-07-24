@@ -1,0 +1,52 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+.synri-quick-start-wizard-container {
+  &.synri-h-stack {
+    height: 100%;
+  }
+
+  .synri-quick-start-body-wrapper {
+    width: 100%;
+    height: 100%;
+
+    .synri-config-footer {
+      border-top: 1px solid @border-color;
+      height: @panelFooterHeight;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: @spacings[md];
+
+      button {
+        margin-right: @spacings[xs];
+      }
+    }
+  }
+}
+
+.synri-config-full-content {
+  .synri-quick-start-wrapper {
+    height: calc(100% - @panelFooterHeight);
+    display: flex;
+    .ant-form-item-control {
+      line-height: unset !important;
+    }
+  }
+
+  .ant-drawer-body {
+    height: @panelBodyHeight;
+  }
+}
+
+.synri-quick-start-panel-empty-action-text {
+  .anticon-plus {
+    // 12px is explicit to have the plus icon look proportional
+    font-size: 12px;
+    margin-right: @spacings[xs];
+    color: @light-gray;
+  }
+}

@@ -1,0 +1,62 @@
+@import 'styles';
+
+.switch-case {
+  width: 100%;
+
+  &--default {
+    padding: $spacings-md;
+    @include box-bordered-no-shadow();
+    background-color: $gray-200;
+  }
+
+  &__inputs {
+    .synri-checkbox {
+      margin-top: 20px;
+
+      .synri-label {
+        width: 90px;
+      }
+    }
+
+    .synri-container {
+      width: 100%;
+      padding: 0 $spacings-xs;
+    }
+
+    &__multivalued {
+      width: 44% !important;
+
+      .synri-label {
+        width: 22px;
+      }
+    }
+
+    &__value {
+      padding: 0 0 0 $spacings-xxsm !important;
+    }
+  }
+
+  .tokens-input-container {
+    cursor: text !important;
+  }
+}
+
+.switch-case-value-input {
+  padding-left: $spacings-sm;
+}
+
+.switch-case-input-readonly {
+  @include box-bordered-no-shadow();
+  padding: $spacings-xs;
+  background-color: $gray-200;
+}
+
+.switch-case-composite--read-only {
+  .ant-checkbox-inner {
+    margin-top: $spacings-sm;
+  }
+
+  .synri-filter-condition-group {
+    @include box-bordered-no-shadow();
+  }
+}

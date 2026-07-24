@@ -1,0 +1,89 @@
+@import '~styles/index.less';
+
+.update-queries {
+  .query-section {
+    background: @gray-200;
+    padding: @spacings[lg];
+    border-radius: @borderRadius[lg];
+
+    .warning-alert {
+      margin-bottom: @spacings[lg];
+    }
+
+    .form-group {
+      margin-bottom: @spacings[mlg];
+
+      label {
+        display: block;
+        margin-bottom: @spacings[xs];
+        font-weight: @fontWeights[medium];
+        color: @color-label;
+
+        .required {
+          color: @red-300;
+          margin-left: @spacings[xxsm];
+        }
+      }
+
+      .sql-editor {
+        font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        font-size: @fontSizes[sm];
+      }
+
+      .query-warning {
+        margin-top: @spacings[xs];
+      }
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: @spacings[mmlg];
+      margin-top: @spacings[lg];
+    }
+
+    .error-alert {
+      margin-top: @spacings[lg];
+    }
+
+    .results-section {
+      margin-top: @spacings[xxl];
+      padding-top: @spacings[xxl];
+      border-top: 1px solid @gray-320;
+
+      .results-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: @spacings[mmlg];
+
+        h3 {
+          margin: 0;
+          font-size: @fontSizes[lg];
+          font-weight: @fontWeights[semibold];
+          color: @syncari-blue;
+        }
+
+        .row-count {
+          color: @gray-700;
+          font-size: @fontSizes[md];
+          font-weight: @fontWeights[semibold];
+        }
+      }
+
+      .no-results {
+        text-align: center;
+        padding: @spacings[xxl];
+        color: @light-gray;
+        font-size: @fontSizes[md];
+      }
+    }
+  }
+
+  .my-queries-section {
+    h3 {
+      margin-bottom: @spacings[mmlg];
+      font-size: @fontSizes[lg];
+      font-weight: @fontWeights[semibold];
+    }
+  }
+}

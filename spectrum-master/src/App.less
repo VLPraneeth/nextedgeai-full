@@ -1,0 +1,134 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+// NOTE: PERCENTAGES DO NOT CURRENTLY WORK WITH OUR VERSION OF CSS NANO
+
+@import '~styles/index.less';
+
+body {
+  font-family: @font-family;
+  font-weight: @fontWeights[regular];
+
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+  font-smooth: auto;
+
+  overflow-y: hidden;
+
+  // Remove the increase/decrease arrows for number inputs
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  /* Firefox */
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  #root {
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    color: @light-gray;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  & > div {
+    font-family: @font-family;
+  }
+}
+
+.ant-modal-header {
+  color: #454545;
+  font-family: DM Sans;
+  font-weight: 500;
+}
+.ant-modal-close {
+  width: 55px;
+  height: 55px;
+  align-self: center;
+  border-left: 1px solid #e4e4e4;
+  display: grid;
+  place-items: center;
+
+  .ant-modal-close-x {
+    height: 36px;
+    width: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+
+    &:hover {
+      transition: background-color 0.2s ease-in;
+      background-color: #f6f6f6;
+    }
+  }
+}
+// import global antd style overrides
+@import '~styles/modules/tooltip.less';
+
+// Antd overwrites
+// Adds Syncari styling for drawers
+.ant-drawer-header {
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: @panelHeaderHeight;
+  border-bottom: 1px solid @gray-400;
+  background-color: @white;
+  border-radius: 0;
+
+  .ant-drawer-title {
+    .ellipsis-text();
+    height: 100%;
+    display: flex;
+    place-items: center;
+    /* setting margin-right to 54px because the close button is absolutely positioned and we use this for the border  */
+    margin-right: 54px;
+    padding-right: 10px;
+    margin-left: 21px;
+    color: #454545;
+    font-size: 16px;
+    font-weight: 400px;
+    font-family: DM Sans;
+    width: 100%;
+    border-right: 1px solid #e4e4e4;
+  }
+
+  .ant-drawer-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    margin: calc(35px / 4);
+    margin-left: 10px;
+    color: #696969;
+
+    &:hover {
+      background-color: #f6f6f6;
+      transition: background-color 0.2s ease-in;
+      border-radius: 4px;
+    }
+  }
+}
+
+.disabled {
+  opacity: 0.5;
+  color: gray;
+}
+
+.disabled-center-align {
+  opacity: 0.5;
+  color: gray;
+  text-align: center;
+}
+
+.debuttonize {
+  .clear-button-styles();
+}

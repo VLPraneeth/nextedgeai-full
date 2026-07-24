@@ -1,0 +1,15 @@
+.dataset-group-field-picker {
+  .data-source-field-picker {
+    width: 100%;
+  }
+
+  &--with-time-grain {
+    .data-source-field-picker {
+      width: 70%;
+    }
+  }
+
+  .dataset-variable-picker {
+    width: 30%;
+  }
+}

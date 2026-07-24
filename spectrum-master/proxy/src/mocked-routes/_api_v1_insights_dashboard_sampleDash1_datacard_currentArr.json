@@ -1,0 +1,19 @@
+{
+  "id": "currentArr",
+  "displayName": "Current Year Sales",
+  "description": "Amount in $ of closed won opportunities this year",
+  "layout": { "h": 2 },
+  "contents": {
+    "configuration": {
+      "columns": [
+        { "column": "amount", "name": "Total", "displayName": "Total", "color": null, "displayFormat": "currency" }
+      ],
+      "vizType": "METRIC",
+      "series": null,
+      "yaxis": null,
+      "xaxis": null
+    },
+    "data": { "series": null, "rows": [{ "Total": 564930 }] },
+    "contents": null
+  }
+}

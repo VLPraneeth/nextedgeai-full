@@ -1,0 +1,10 @@
+{
+  "id": "emptyData",
+  "displayName": "Empty Data",
+  "description": "A card with no data rows returned and no backend-provided error",
+  "layout": { "h": 2 },
+  "contents": {
+    "configuration": { "vizType": "bar" },
+    "data": { "rows": [] }
+  }
+}

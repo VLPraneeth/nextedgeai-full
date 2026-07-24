@@ -1,0 +1,99 @@
+/**
+ * Copyright (c) 2019-Present Syncari - All rights reserved.
+ */
+
+@import '~styles/index.less';
+
+.ant-breadcrumb a {
+  color: #23365b;
+  font-weight: bolder;
+}
+
+.actions-container {
+  margin-bottom: 14px;
+}
+
+.actions-container .ant-btn {
+  margin-right: 14px;
+}
+
+.main-content {
+  background-color: white;
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+.main-content-measurement-wrapper {
+  display: flex;
+  flex: 1 0 0;
+}
+
+.main-page-layout-contents {
+  width: 100%;
+  flex: 1 0 0;
+}
+
+.content-inner {
+  background-color: @content-background-color;
+  display: flex;
+  overflow-y: hidden;
+  z-index: 0;
+}
+
+// Loading styles
+.ant-spin-nested-loading {
+  height: 100%;
+  width: 100%;
+
+  .ant-spin-container {
+    height: 100%;
+
+    &.ant-spin-blur {
+      cursor: wait;
+    }
+  }
+
+  .ant-spin {
+    cursor: wait;
+
+    .ant-spin-text {
+      color: @color-label;
+    }
+  }
+}
+
+.ant-menu-submenu-popup.ant-menu-submenu-placement-rightTop {
+  .ant-menu {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .ant-menu-item {
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+    span {
+      color: #d7e1e8 !important;
+    }
+    &:hover {
+      span {
+        color: #fff !important;
+      }
+      .synri-menu-item-container {
+        background-color: transparent !important;
+      }
+    }
+  }
+  .synri-menu-item {
+    margin-left: 0px !important;
+    padding-left: 0px !important;
+    i {
+      display: none;
+    }
+  }
+}
+
+/**
+ * Reach router adds a div for accessiblity.
+ */
+.main-page-layout-container {
+  height: 100%;
+}

@@ -1,0 +1,104 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+@import (reference) '~styles/index.less';
+
+// Anchor panel to bottom so height adjustments reduce from
+// top of screen instead of bottom
+.ant-drawer-content-wrapper {
+  bottom: 0;
+}
+
+.synri-drawer-panel {
+  position: relative;
+
+  .ant-drawer-body {
+    padding: @spacings[md] @spacings[lg];
+    max-height: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+  // Keep below .ant-drawer-body to maintain cascade order
+  &--no-body-padding {
+    .ant-drawer-body {
+      padding: 0;
+    }
+  }
+
+  &--with-footer-or-header {
+    .ant-drawer-body {
+      height: calc(100% - @panelFooterHeight);
+      max-height: calc(100% - @panelFooterHeight);
+    }
+  }
+
+  &--with-footer-and-header {
+    .ant-drawer-body {
+      height: calc(100% - @panelFooterHeight - @toolbarHeight);
+      max-height: calc(100% - @panelFooterHeight - @toolbarHeight);
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: @panelFooterHeight;
+
+    border-top: 1px solid @gray-300;
+    padding: @spacings[sm] @spacings[md];
+    background: @white;
+    text-align: right;
+
+    > :not(:last-child) {
+      margin-right: @spacings[xs];
+    }
+  }
+
+  &__landing-zone {
+    position: relative;
+    width: 0px;
+    border-left: @gray-300 solid 1px;
+    height: 100%;
+    .transition();
+
+    &--open {
+      width: @panelWidth;
+    }
+  }
+
+  &--absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &--bottom {
+    .ant-drawer-content-wrapper {
+      left: @syncari-sidebar-collapse-width;
+    }
+  }
+
+  .synri-fieldset {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .synri-input,
+  .synri-select {
+    width: 100%;
+  }
+
+  .ant-form-item {
+    margin-bottom: @spacings[xxsm];
+  }
+
+  .synri-checkbox {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+}

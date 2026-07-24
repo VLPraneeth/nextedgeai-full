@@ -1,0 +1,94 @@
+{
+  "search_results": [
+    {
+      "company": {
+        "domains": [
+          "syncari.com"
+        ],
+        "id": 64712636,
+        "naics_codes": [
+          "54151",
+          "5415",
+          "541511"
+        ],
+        "sic_codes": [
+          "7371"
+        ],
+        "name": "Syncari",
+        "revenue": 5,
+        "revenue_range": "$1M - $10M",
+        "size": 19,
+        "size_range": "10 - 50"
+      },
+      "dates": {
+        "created_date": "1622329525877",
+        "last_modified_date": "1622329525877"
+      },
+      "display_name": "",
+      "is_international": false,
+      "location": "Newark, CA",
+      "match_id": "64712636-c-64712636",
+      "phone_numbers": [],
+      "company_domains": [
+        "syncari.com"
+      ],
+      "company_id": 64712636,
+      "company_name": "Syncari",
+      "company_revenue": 5,
+      "company_revenue_range": "$1M - $10M",
+      "company_size": 19,
+      "company_size_range": "10 - 50",
+      "naics_code": "5415",
+      "sic_code": "7371",
+      "verified": true,
+      "cds_batch_id": 1068,
+      "company_status": "whitelist",
+      "intent": [],
+      "linkedin_url": "https://www.linkedin.com/company/syncari/",
+      "locations": [
+        {
+          "city": "Newark",
+          "country": "USA",
+          "domains": [
+            {
+              "domain": "syncari.com",
+              "domain_type": "web"
+            }
+          ],
+          "is_ushq": true,
+          "location_id": 42700000,
+          "names": [
+            {
+              "name": "Syncari"
+            }
+          ],
+          "phones": [],
+          "postal_code": "94560-3431",
+          "state": "CA",
+          "street1": "8407 Central Ave Ste 2021",
+          "street2": ""
+        }
+      ],
+      "logo_url": "https://2xq5x3jfj3owatfg3grgotn8-wpengine.netdna-ssl.com/wp-content/themes/syncaroo/img/syncari-logo.svg",
+      "primary_domain": "syncari.com",
+      "primary_name": "Syncari",
+      "relations": [],
+      "revenue_range": "$1M - $10M",
+      "size_range": "10 - 50",
+      "status_reason": "",
+      "tags": [],
+      "technographics": [],
+      "tier": 0,
+      "specialties": [],
+      "industry": "Computer Systems Design and Related Services",
+      "sector": "Information Technology"
+    }
+  ],
+  "batch_id": 1068,
+  "page": 1,
+  "page_size": 50,
+  "result_count": 1,
+  "total_count": 1,
+  "took": 458,
+  "is_preview": false
+}

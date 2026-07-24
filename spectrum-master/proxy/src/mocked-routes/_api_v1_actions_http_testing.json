@@ -1,0 +1,17 @@
+{
+  "request": {
+    "requestHeaders": {
+      "Content-Type": "application/json"
+    },
+    "body": "eyJib2R5IjogInZhbHVlIn0=",
+    "method": "GET",
+    "URL": "http://www.example.com/testing"
+  },
+  "response": {
+    "httpStatusCode": 200,
+    "responseHeaders": {
+      "Content-Type": "application/json"
+    },
+    "body": "eyJib2R5IjogInJlc3BvbnNlVmFsdWUiIH0="
+  }
+}

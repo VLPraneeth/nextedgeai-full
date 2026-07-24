@@ -1,0 +1,25 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %X{subscription}:%X{instance}:%X{syncariId}:%X{user} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <turboFilter class="ch.qos.logback.classic.turbo.DynamicThresholdFilter">
+        <Key>debugMode</Key>
+        <DefaultThreshold>INFO</DefaultThreshold>
+        <MDCValueLevelPair>
+            <value>true</value>
+            <level>DEBUG</level>
+        </MDCValueLevelPair>
+        <MDCValueLevelPair>
+            <value>false</value>
+            <level>INFO</level>
+        </MDCValueLevelPair>
+    </turboFilter>
+
+    <logger name="com.syncari" level="DEBUG"/>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

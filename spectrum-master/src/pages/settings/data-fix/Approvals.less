@@ -1,0 +1,74 @@
+@import '~styles/index.less';
+
+.approvals {
+  .approvals-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: @spacings[lg];
+
+    h2 {
+      margin: 0;
+      font-size: @fontSizes[lgr];
+      font-weight: @fontWeights[semibold];
+    }
+  }
+
+  .review-modal-content {
+    .review-warning {
+      margin-bottom: @spacings[lg];
+    }
+
+    .query-details {
+      margin-bottom: @spacings[lg];
+
+      .sql-query {
+        font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        font-size: @fontSizes[xs];
+        background: @gray-250;
+        padding: @spacings[sm];
+        border-radius: @borderRadius[md];
+        overflow-x: auto;
+        margin: 0;
+      }
+    }
+
+    .dry-run-preview {
+      margin: @spacings[lg] 0;
+
+      h3 {
+        font-size: @fontSizes[md];
+        font-weight: @fontWeights[semibold];
+        margin-bottom: @spacings[sm];
+        color: @syncari-blue;
+      }
+
+      .no-results {
+        text-align: center;
+        padding: @spacings[lg];
+        color: @light-gray;
+        font-size: @fontSizes[md];
+      }
+    }
+
+    .approval-actions {
+      margin-top: @spacings[lg];
+
+      .form-group {
+        margin-bottom: @spacings[mmlg];
+
+        label {
+          display: block;
+          margin-bottom: @spacings[xs];
+          font-weight: @fontWeights[medium];
+          color: @color-label;
+
+          .required {
+            color: @red-300;
+            font-weight: @fontWeights[regular];
+          }
+        }
+      }
+    }
+  }
+}

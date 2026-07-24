@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: spectrum-ingress-$IMAGE_TAG
+  namespace: $IMAGE_TAG
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: spectrum-$IMAGE_TAG-ip
+    networking.gke.io/managed-certificates: spectrum-$IMAGE_TAG
+spec:
+  rules:
+    - host: spectrum.$IMAGE_TAG.syncari.net
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: spectrum-service-$IMAGE_TAG
+                port:
+                  number: 80

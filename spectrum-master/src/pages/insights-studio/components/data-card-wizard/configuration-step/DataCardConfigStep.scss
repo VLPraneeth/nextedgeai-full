@@ -1,0 +1,60 @@
+@import 'styles';
+
+.data-card-config-step {
+  display: flex;
+  justify-content: space-between;
+  gap: 28;
+
+  .spinner {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__column {
+    flex: 1;
+
+    padding-left: $spacings-lg;
+
+    &--left {
+      padding-left: 0;
+      padding-right: $spacings-xl;
+      border-right: 1px solid $gray-300;
+
+      // allow border to span full height of content area
+      margin-top: -$spacings-md;
+      padding-top: $spacings-md;
+    }
+  }
+
+  &__tabs {
+    margin-bottom: $spacings-md;
+    overflow-x: auto;
+
+    .synri-h-stack {
+      .synri-inline-tab {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__input-group {
+    padding: $spacings-xxs $spacings-mlg;
+    border: 1px solid $gray-300;
+    background: $content-background-color;
+    border-radius: $border-radius-lg;
+
+    &--fieldset {
+      margin-left: $spacings-sm;
+    }
+  }
+
+  .trash-icon {
+    color: $black;
+  }
+
+  &__label-location {
+    .ant-radio-wrapper {
+      display: block;
+    }
+  }
+}

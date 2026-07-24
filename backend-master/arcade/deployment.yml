@@ -1,0 +1,198 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: arcade
+spec:
+  replicas: $REPLICAS
+  selector:
+    matchLabels:
+      app: arcade
+  template:
+    metadata:
+      labels:
+        app: arcade
+        timestamp: "$TIMESTAMP"
+    spec:
+      containers:
+        - name: arcade
+          image: gcr.io/$GCP_PROJECT/arcade-$ENVIRONMENT_NAME:latest
+          resources:
+            requests:
+              memory: "$MEMORY_REQUEST"
+              cpu: "$CPU_REQUEST"
+          env:
+          - name: MONGODB_URI
+            value: $MONGODB_URI
+          - name: MONGODB_READONLYURI
+            value: $MONGODB_READONLYURI
+          - name: GCP_CREDENTIALS_KEY
+            value: $GCP_CREDENTIALS_KEY
+          - name: GCP_PROJECT
+            value: $GCP_PROJECT
+          - name: GCP_CF_PROJECT
+            value: $GCP_CF_PROJECT
+          - name: GCP_CLOUD_FUNCTIONS_URL
+            value: $GCP_CLOUD_FUNCTIONS_URL
+          - name: GCP_CFDEPLOYER_CREDENTIALS_KEY
+            value: $GCP_CFDEPLOYER_CREDENTIALS_KEY
+          - name: GCP_CFEXECUTOR_CREDENTIALS_KEY
+            value: $GCP_CFEXECUTOR_CREDENTIALS_KEY
+          - name: GCP_CFEXECUTOR_SA_EMAIL
+            value: $GCP_CFEXECUTOR_SA_EMAIL
+          - name: API_SERVER_HOST
+            value: $API_SERVER_HOST
+          - name: SPECTRUM_SERVER_HOST
+            value: $SPECTRUM_SERVER_HOST         
+          - name: MAIL_PORT
+            value: "$MAIL_PORT"
+          - name: MAIL_HOST
+            value: "$MAIL_HOST"
+          - name: MAIL_USERNAME
+            value: "$MAIL_USERNAME"
+          - name: MAIL_PASSWORD
+            value: "$MAIL_PASSWORD"
+          - name: MAIL_PLG_USERNAME
+            value: "$MAIL_PLG_USERNAME"
+          - name: MAIL_PLG_PASSWORD
+            value: "$MAIL_PLG_PASSWORD"
+          - name: MAIL_FROM_FOR_ERROR
+            value: "$MAIL_FROM_FOR_ERROR"
+          - name: CLEARBIT_API_KEY
+            value: "$CLEARBIT_API_KEY"
+          - name: SYNCARI_SLACK_CLIENT_ID
+            value: "$SYNCARI_SLACK_CLIENT_ID"
+          - name: SYNCARI_SLACK_CLIENT_SECRET
+            value: "$SYNCARI_SLACK_CLIENT_SECRET"
+          - name: SYNCARI_SLACK_SYNAPSE_SIGNING_SECRET
+            value: "$SYNCARI_SLACK_SYNAPSE_SIGNING_SECRET"
+          - name: SYNCARI_DATASTORE_HOST
+            value: "$SYNCARI_DATASTORE_HOST"
+          - name: SYNCARI_DATASTORE_PUBLIC_HOST
+            value: "$SYNCARI_DATASTORE_PUBLIC_HOST"
+          - name: SYNCARI_DATASTORE_USER
+            value: "$SYNCARI_DATASTORE_USER" 
+          - name: SYNCARI_DATASTORE_PASSWORD
+            value: "$SYNCARI_DATASTORE_PASSWORD" 
+          - name: SYNCARI_DATASTORE_CERT
+            value: "$SYNCARI_DATASTORE_CERT"                                     
+          - name: ENVIRONMENT_NAME
+            value: "$ENVIRONMENT_NAME"     
+          - name: EVENTLOG_TOPIC_NAME
+            value: "$EVENTLOG_TOPIC_NAME" 
+          - name: EVENTLOG_SUBSCRIPTION_NAME
+            value: "$EVENTLOG_SUBSCRIPTION_NAME"           
+          - name: GENERIC_TOPIC_NAME
+            value: "$GENERIC_TOPIC_NAME"  
+          - name: GENERIC_SUBSCRIPTION_NAME
+            value: "$GENERIC_SUBSCRIPTION_NAME"
+          - name: WEBHOOK_TOPIC_NAME
+            value: "$WEBHOOK_TOPIC_NAME"
+          - name: WEBHOOK_SUBSCRIPTION_NAME
+            value: "$WEBHOOK_SUBSCRIPTION_NAME"
+          - name: VIPER_TOPIC_NAME
+            value: "$VIPER_TOPIC_NAME"  
+          - name: VIPER_SUBSCRIPTION_NAME
+            value: "$VIPER_SUBSCRIPTION_NAME"
+          - name: GCS_BUCKET_NAME
+            value: "$GCS_BUCKET_NAME"
+          - name: GCS_CF_BUCKET_NAME
+            value: "$GCS_CF_BUCKET_NAME"
+          - name: SYNCARI_ASSET_CDN
+            value: "$SYNCARI_ASSET_CDN"
+          - name: ZENDESK_SHARED_SECRET
+            value: "$ZENDESK_SHARED_SECRET"
+          - name: ZENDESK_SSO_SECRET
+            value: "$ZENDESK_SSO_SECRET"
+          - name: ZENDESK_SUPPORT_URL
+            value: "$ZENDESK_SUPPORT_URL"
+          - name: ZENDESK_SUPPORT_URL_ALIAS
+            value: "$ZENDESK_SUPPORT_URL_ALIAS"
+          - name: SYNCARI_SALESLOFT_CLIENT_ID
+            value: "$SYNCARI_SALESLOFT_CLIENT_ID"
+          - name: SYNCARI_SALESLOFT_CLIENT_SECRET
+            value: "$SYNCARI_SALESLOFT_CLIENT_SECRET"
+          - name: SYNCARI_HUBSPOT_CLIENT_ID
+            value: "$SYNCARI_HUBSPOT_CLIENT_ID"
+          - name: SYNCARI_HUBSPOT_CLIENT_SECRET
+            value: "$SYNCARI_HUBSPOT_CLIENT_SECRET"
+          - name: SYNCARI_GSUITE_CLIENT_ID
+            value: "$SYNCARI_GSUITE_CLIENT_ID"
+          - name: SYNCARI_GSUITE_CLIENT_SECRET
+            value: "$SYNCARI_GSUITE_CLIENT_SECRET"
+          - name: SPRING_PROFILES_ACTIVE
+            value: "$SPRING_PROFILES_ACTIVE"
+          - name: WORKRAMP_INTERNAL_PRIVATEKEY
+            value: "$WORKRAMP_INTERNAL_PRIVATEKEY"
+          - name: WORKRAMP_INTERNAL_CERTIFICATE
+            value: "$WORKRAMP_INTERNAL_CERTIFICATE"
+          - name: WORKRAMP_ACADEMIES_PRIVATEKEY
+            value: "$WORKRAMP_ACADEMIES_PRIVATEKEY"
+          - name: WORKRAMP_ACADEMIES_CERTIFICATE
+            value: "$WORKRAMP_ACADEMIES_CERTIFICATE"
+          - name: WORKRAMP_SP_SAML_INTERNAL_METADATA
+            value: "$WORKRAMP_SP_SAML_INTERNAL_METADATA"
+          - name: WORKRAMP_SP_SAML_ACADEMIES_METADATA
+            value: "$WORKRAMP_SP_SAML_ACADEMIES_METADATA"
+          - name: ERROR_NOTIFICATION_TOPIC_NAME
+            value: "$ERROR_NOTIFICATION_TOPIC_NAME"
+          - name: ERROR_NOTIFICATION_SUBSCRIPTION_NAME
+            value: "$ERROR_NOTIFICATION_SUBSCRIPTION_NAME"
+          - name: DFI_RESULT_NOTIFICATION_TOPIC_NAME
+            value: "$DFI_RESULT_NOTIFICATION_TOPIC_NAME"
+          - name: DFI_RESULT_NOTIFICATION_SUBSCRIPTION_NAME
+            value: "$DFI_RESULT_NOTIFICATION_SUBSCRIPTION_NAME"
+          - name: REDIS_HOST
+            value: "$REDIS_HOST"
+          - name: REDIS_PORT
+            value: "$REDIS_PORT"
+          - name: REDIS_PASSWORD
+            value: "$REDIS_PASSWORD"
+          - name: NEW_REDIS_HOST
+            value: "$NEW_REDIS_HOST"
+          - name: NEW_REDIS_PORT
+            value: "$NEW_REDIS_PORT"
+          - name: NEW_REDIS_PASSWORD
+            value: "$NEW_REDIS_PASSWORD"
+          - name: ENTITYCACHE_REDIS_DB_HOST
+            value: "$ENTITYCACHE_REDIS_DB_HOST"
+          - name: ENTITYCACHE_REDIS_DB_PORT
+            value: "$ENTITYCACHE_REDIS_DB_PORT"
+          - name: ENTITYCACHE_REDIS_DB_PASSWORD
+            value: "$ENTITYCACHE_REDIS_DB_PASSWORD"
+          - name: PROXY_ENABLED
+            value: "$PROXY_ENABLED"
+          - name: PROXY_HOST
+            value: "$PROXY_HOST"
+          - name: PROXY_PORT
+            value: "$PROXY_PORT"
+          - name: SYNCARI_MSTEAMS_CLIENT_ID
+            value: $SYNCARI_MSTEAMS_CLIENT_ID
+          - name: SYNCARI_MSTEAMS_CLIENT_SECRET
+            value: $SYNCARI_MSTEAMS_CLIENT_SECRET
+          - name: SYNCARI_JWT_SECURITY_SECRET
+            value: "$SYNCARI_JWT_SECURITY_SECRET"
+          - name: SYNCARI_ENV_NAME
+            value: "$SYNCARI_ENV_NAME"
+          - name: WEBHOOK_SERVER_HOST
+            value: "$WEBHOOK_SERVER_HOST"
+          - name: WEBHOOK_KARIBU_SERVER_HOST
+            value: "$WEBHOOK_KARIBU_SERVER_HOST"
+          - name: CF_VPC_CONNECTOR
+            value: "$CF_VPC_CONNECTOR"
+          - name: GCP_TS_BGSA_CREDENTIALS_KEY
+            value: "$GCP_TS_BGSA_CREDENTIALS_KEY"
+
+          ports:
+          - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            successThreshold: 1
+      tolerations:
+        - key: "SERVICE_TYPE"
+          operator: "Equal"
+          value: "arcade"
+          effect: "NoSchedule"

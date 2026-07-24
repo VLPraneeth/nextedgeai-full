@@ -1,0 +1,35 @@
+@import '~styles/index.less';
+
+.synri-date-range-picker {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid @gray-400;
+  border-radius: @borderRadius[md];
+
+  .synri-date-range-start input.ant-calendar-picker-input.ant-input,
+  .synri-date-range-end input.ant-calendar-picker-input.ant-input {
+    border: 0;
+    line-height: @lineHeights[loose];
+    text-overflow: ellipsis;
+    padding-right: 2.5rem;
+  }
+
+  .synri-date-range-start input.ant-calendar-picker-input.ant-input {
+    border-radius: @borderRadius[md] 0 0 @borderRadius[md];
+  }
+
+  .synri-date-range-end input.ant-calendar-picker-input.ant-input {
+    border-radius: 0 @borderRadius[md] @borderRadius[md] 0;
+  }
+
+  .synri-date-range-token {
+    display: inline-flex;
+    align-items: center;
+    background-color: @gray-200;
+    border-left: 1px solid @gray-400;
+    border-right: 1px solid @gray-400;
+    color: @gray-700;
+    font-weight: @fontWeights[semibold];
+    padding: @spacings[z] @spacings[sm];
+  }
+}

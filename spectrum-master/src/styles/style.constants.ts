@@ -1,0 +1,2 @@
+export const ENTITY_DRAWER_HEIGHT_OFFSET = 101;
+export const FIELD_DRAWER_HEIGHT_OFFSET = 52;

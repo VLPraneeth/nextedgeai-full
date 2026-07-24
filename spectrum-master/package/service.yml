@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spectrum-service-$IMAGE_TAG
+  namespace: $IMAGE_TAG
+spec:
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  selector:
+    app: spectrum
+  type: NodePort

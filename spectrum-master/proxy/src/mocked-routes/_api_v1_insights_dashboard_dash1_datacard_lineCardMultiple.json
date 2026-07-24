@@ -1,0 +1,59 @@
+{
+  "id": "lineCardMultiple",
+  "displayName": "Multi-series Line Card",
+  "description": "A line graph with multiple data series",
+  "layout": {
+    "h": 2
+  },
+  "contents": {
+    "configuration": {
+      "vizType": "LINE",
+      "series": [{ "name": "oppType" }],
+      "xaxis": {
+        "name": "quarter",
+        "displayName": "Quarter",
+        "displayFormat": "text"
+      },
+      "yaxis": [
+        {
+          "name": "amount",
+          "displayName": "Amount",
+          "displayFormat": "currency"
+        }
+      ]
+    },
+    "data": {
+      "series": [{ "displayName": "New Business" }, { "displayName": "Renewal" }, { "displayName": "Total" }],
+      "rows": [
+        { "amount": 125000, "oppType": "Renewal", "quarter": "2021 Q1" },
+        { "amount": 231000, "oppType": "New Business", "quarter": "2021 Q1" },
+        { "amount": 356000, "oppType": "Total", "quarter": "2021 Q1" },
+
+        { "amount": 141000, "oppType": "Renewal", "quarter": "2021 Q2" },
+        { "amount": 243480, "oppType": "New Business", "quarter": "2021 Q2" },
+        { "amount": 384480, "oppType": "Total", "quarter": "2021 Q2" },
+
+        { "amount": 151239, "oppType": "Renewal", "quarter": "2021 Q3" },
+        { "amount": 166000, "oppType": "New Business", "quarter": "2021 Q3" },
+        { "amount": 317239, "oppType": "Total", "quarter": "2021 Q3" },
+
+        { "amount": 176000, "oppType": "Renewal", "quarter": "2021 Q4" },
+        { "amount": 282459, "oppType": "New Business", "quarter": "2021 Q4" },
+        { "amount": 458459, "oppType": "Total", "quarter": "2021 Q4" },
+
+        { "amount": 196336, "oppType": "Renewal", "quarter": "2022 Q1" },
+        { "amount": 328000, "oppType": "New Business", "quarter": "2022 Q1" },
+        { "amount": 524336, "oppType": "Total", "quarter": "2022 Q1" },
+
+        { "amount": 210500, "oppType": "Renewal", "quarter": "2022 Q2" },
+        { "amount": 320000, "oppType": "New Business", "quarter": "2022 Q2" },
+        { "amount": 530500, "oppType": "Total", "quarter": "2022 Q2" },
+
+        { "amount": 226488, "oppType": "Renewal", "quarter": "2022 Q3" },
+        { "amount": 334000, "oppType": "New Business", "quarter": "2022 Q3" },
+        { "amount": 560488, "oppType": "Total", "quarter": "2022 Q3" }
+      ]
+    },
+    "contents": null
+  }
+}

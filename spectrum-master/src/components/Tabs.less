@@ -1,0 +1,165 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+@tabs-background-color: #DEE3E7;
+@tab-default-background-color: #F0F3F8;
+@tab-default-color: @gray-700;
+
+.synri-tabs {
+  height: 100%;
+  overflow: hidden;
+
+  .ant-tabs-nav {
+    height: 100%;
+    width: 100%;
+  }
+
+  .ant-tabs-nav > div:first-child {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ant-tabs-content {
+    height: calc(100% - @toolbarHeight);
+    overflow: hidden;
+
+    .ant-tabs-tabpane:not(.ant-tabs-tabpane-inactive) {
+      overflow: hidden;
+      height: 100%;
+
+      & > div {
+        height: 100%;
+        overflow: hidden;
+      }
+    }
+  }
+  .ant-tabs-tab {
+    flex: 1 0 auto;
+    display: inline-flex;
+    justify-content: center;
+    height: initial;
+    margin-right: @spacings[xs];
+    background-color: @tab-default-background-color;
+    color: @tab-default-color;
+
+    &.ant-tabs-tab-active {
+      background-color: @white;
+      color: currentColor;
+    }
+  }
+
+  &.ant-tabs-line {
+    .ant-tabs-bar {
+      color: @syncari-blue;
+    }
+
+    .ant-tabs-nav-wrap {
+      height: @toolbarHeight;
+      padding: @spacings[xs] @spacings[md] 0 @spacings[md];
+      background-color: @tabs-background-color;
+
+      .ant-tabs-ink-bar {
+        display: none;
+        visibility: hidden;
+        top: 0;
+        background-color: currentColor;
+      }
+
+      .ant-tabs-tab {
+        .synri-tab {
+          display: flex;
+
+          &::before {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            background-color: currentColor;
+            transition: all 0.15s ease-in-out;
+
+            content: '';
+          }
+        }
+
+        &.ant-tabs-tab-active {
+          background-color: @white;
+          color: currentColor;
+
+          .synri-tab {
+            color: @syncari-blue;
+
+            &::before {
+              height: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.ant-tabs-card {
+    .ant-tabs-nav-container {
+      height: initial !important;
+    }
+
+    .ant-tabs-nav-wrap {
+      padding: 0 @spacings[xl];
+      background-color: @tabs-background-color;
+
+      .ant-tabs-nav {
+        width: 100%;
+      }
+
+      .ant-tabs-nav > div:first-child {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .ant-tabs-tab {
+        flex: 1 0 auto;
+        margin: @spacings[xs] @spacings[xxs] 0 @spacings[xxs];
+        border: none;
+        border-radius: 0;
+        padding: 0;
+
+        &:hover {
+          color: currentColor;
+        }
+
+        .synri-tab {
+          padding: @spacings[xs] @spacings[md];
+
+          &::before {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            background-color: currentColor;
+            transition: all 0.15s ease-in-out;
+
+            content: '';
+          }
+        }
+
+        &.ant-tabs-tab-active {
+          color: currentColor;
+
+          .synri-tab {
+            color: @syncari-blue;
+
+            &::before {
+              height: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

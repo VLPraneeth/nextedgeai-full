@@ -1,0 +1,98 @@
+{
+  "id": "63d142c0c4e73b0bb8e53fa7",
+  "name": "setValue",
+  "displayName": "Set Value",
+  "description": null,
+  "helpSummary": "A function which assigns a value.",
+  "helpPath": "functions.setValue",
+  "iconPath": "/assets/icons/functions/default.svg",
+  "outputType": "string",
+  "positionalParams": [{ "name": "first", "datatype": "object" }],
+  "engineType": "FUNCTION",
+  "scope": "ATTRIBUTE",
+  "type": "STANDARD",
+  "configuration": [
+    {
+      "name": "nodeLabel",
+      "datatype": "string",
+      "value": "Set Value",
+      "renderType": "string",
+      "helpSummary": "Enter a brief description that explains the configuration settings and its overall purpose.",
+      "implicit": true,
+      "mapping": [{ "graphKey": "label" }]
+    },
+    {
+      "name": "Description",
+      "datatype": "textarea",
+      "value": "63d142c0c4e73b0bb8e53fa7",
+      "renderType": "string",
+      "helpSummary": "Enter a brief description that explains the configuration settings and its overall purpose.",
+      "implicit": false,
+      "mapping": [{ "graphKey": "configuration.description" }]
+    },
+    {
+      "name": "functionDefinition",
+      "datatype": "string",
+      "value": "63d142c0c4e73b0bb8e53fa7",
+      "implicit": true,
+      "mapping": [{ "graphKey": "configuration.definition" }]
+    },
+    {
+      "name": "nodeType",
+      "datatype": "string",
+      "value": "FUNCTION",
+      "implicit": true,
+      "mapping": [{ "graphKey": "nodeType" }]
+    },
+    {
+      "name": "inputPorts",
+      "datatype": "object",
+      "value": [{ "portType": "INPUT", "datatype": "object", "maxConnections": 1 }],
+      "implicit": true,
+      "mapping": [{ "graphKey": "inputPorts" }]
+    },
+    {
+      "name": "outputPorts",
+      "datatype": "object",
+      "value": [{ "portType": "OUTPUT", "datatype": "string", "maxConnections": 1 }],
+      "implicit": true,
+      "mapping": [{ "graphKey": "outputPorts" }]
+    },
+    {
+      "name": "setValueField",
+      "label": "Select field",
+      "datatype": "composite",
+      "defaultValue": null,
+      "helpSummary": "Set a field or a temporary variable to be used later in the pipeline execution.",
+      "mapping": [{ "graphKey": "configuration.setValueField" }],
+      "renderType": "setValueField",
+      "isField": true,
+      "required": false,
+      "readOnly": false
+    },
+    {
+      "name": "newValue",
+      "datatype": "string",
+      "label": "New Value",
+      "defaultValue": "",
+      "helpSummary": "Value for the field. Accepts tokens.",
+      "mapping": [{ "graphKey": "configuration.newValue" }],
+      "dependsOn": { "dependantField": "configuration.dataType", "dependantType": "datatype" },
+      "required": false,
+      "readOnly": false
+    },
+    {
+      "name": "useEmpty",
+      "datatype": "boolean",
+      "label": "Use Empty",
+      "defaultValue": false,
+      "helpSummary": "Do not convert to null in case new value evaluates to empty string",
+      "mapping": [{ "graphKey": "configuration.useEmpty" }],
+      "required": false,
+      "readOnly": false
+    }
+  ],
+  "dynamicConfig": true,
+  "hidden": false,
+  "renderer": { "renderType": "form", "steps": null }
+}

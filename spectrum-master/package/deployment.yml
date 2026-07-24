@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spectrum
+spec:
+  replicas: $REPLICAS
+  selector:
+    matchLabels:
+      app: spectrum
+  template:
+    metadata:
+      labels:
+        app: spectrum
+    spec:
+      tolerations:
+        - key: 'SERVICE_TYPE'
+          operator: 'Equal'
+          value: 'spectrum'
+          effect: 'NoSchedule'
+      containers:
+        - name: spectrum
+          image: gcr.io/$GCP_PROJECT/spectrum:$IMAGE_TAG
+          imagePullPolicy: Always
+          env:
+            - name: GCP_CREDENTIALS_KEY
+              value: $GCP_CREDENTIALS_KEY
+            - name: GCP_PROJECT
+              value: $GCP_PROJECT
+            - name: GENERIC_TOPIC_NAME
+              value: '$GENERIC_TOPIC_NAME'
+            - name: VIPER_TOPIC_NAME
+              value: $VIPER_TOPIC_NAME
+            - name: GCS_BUCKET_NAME
+              value: '$GCS_BUCKET_NAME'
+            - name: GCS_PATH_PREFIX
+              value: '$BUILD_NUMBER'
+            - name: ARTIFACTS_ROOT
+              value: './dist/public'
+            - name: ARCADE_TARGET
+              value: $ARCADE_TARGET
+            - name: ARCADE_LOG_LEVEL
+              value: $ARCADE_LOG_LEVEL
+            - name: SPECTRUM_PORT
+              value: '$SPECTRUM_PORT'
+            - name: BUILD_NUMBER
+              value: '$BUILD_NUMBER'
+            - name: SECURE_COOKIES
+              value: '$SECURE_COOKIES'
+            - name: NODE_ENV
+              value: $NODE_ENV
+            - name: DEBUG
+              value: $DEBUG
+            - name: TRACK_RESPONSE_TIME
+              value: '$TRACK_RESPONSE_TIME'
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /arcade/health
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            successThreshold: 1

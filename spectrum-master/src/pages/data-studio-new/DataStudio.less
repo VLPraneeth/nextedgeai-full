@@ -1,0 +1,708 @@
+@import '~styles/index.less';
+
+.data-studio-inner-content {
+  background-color: @white;
+
+  & > .main-page-layout-contents {
+    display: flex;
+
+    & > .main-page-layout-container {
+      flex: 1 0 0;
+      display: flex;
+    }
+  }
+}
+
+.data-studio-container {
+  position: relative;
+  flex: 1 0 0;
+  display: flex;
+  flex-flow: row nowrap;
+
+  overflow-y: hidden;
+
+  .data-studio-sidebar-item-badge.active {
+    background-color: @green-500;
+  }
+  .data-studio-sidebar-item-badge.deleted {
+    background-color: @orange-600;
+  }
+}
+
+.data-studio-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: @spacings[xl];
+  box-sizing: border-box;
+
+  &.content-section {
+    border: 1px solid @gray-400;
+    border-radius: @borderRadius[md];
+    padding: @spacings[md] 0 0;
+    margin: @spacings[md] 0 0 0;
+    position: relative;
+    width: 100%;
+    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: width;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 150px);
+    overflow: hidden;
+
+    &[data-drawer-visible='true'] {
+      width: calc(100% - 400px); // Reduce width by drawer width
+      margin-right: 400px; // Make space for the drawer
+    }
+
+    .data-studio-filter-save-button {
+      margin-right: @spacings[sm];
+    }
+
+    .ag-root-wrapper {
+      border-left: none;
+      border-right: none;
+    }
+  }
+}
+
+.data-studio-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 @spacings[md];
+
+  .data-studio-meta-row-right-section,
+  .data-studio-meta-row-right-section .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .kebab-menu,
+  .refresh-btn {
+    border: 1px solid @gray-400;
+    border-radius: @borderRadius[md];
+    padding: 3px;
+  }
+
+  .kebab-menu {
+    button {
+      padding: @spacings[xxxs];
+    }
+    .icon-wrapper {
+      width: 18px !important;
+      height: 18px !important;
+    }
+  }
+
+  .refresh-btn {
+    .icon-wrapper {
+      width: 23px !important;
+      height: auto !important;
+    }
+  }
+}
+
+.empty-state-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: @spacings[md];
+
+  .empty-state-title {
+    color: @gray-900;
+    font-weight: @fontWeights[bold];
+    font-size: @fontSizes[lg];
+  }
+
+  .empty-state-content {
+    color: @gray-700;
+    max-width: 22rem;
+  }
+}
+
+.favorite-filter-icon {
+  line-height: 1.75;
+
+  svg {
+    fill: @syncari-blue;
+  }
+}
+
+.show-entity-fields-btn.actions-btn-xxs {
+  font-size: @fontSizes[sm];
+}
+
+.data-studio-item {
+  &__lag-count {
+    color: @orange-600;
+    position: relative;
+    display: inline-block;
+    font-weight: @fontWeights[bold];
+    margin-right: @spacings[xxs];
+    &::before {
+      content: '';
+      width: @fontSizes[xxs];
+      height: @fontSizes[xxs];
+      border-radius: 50%;
+      top: -1px;
+      background-color: @orange-600;
+      position: relative;
+      display: inline-block;
+      margin-right: @spacings[xxs];
+    }
+  }
+  &__lag-timestamp {
+    margin-bottom: @spacings[xs];
+  }
+}
+.data-studio-link {
+  color: @gray-900;
+  border-radius: @spacings[xxs];
+  border: 1px solid @gray-400;
+  padding: @spacings[xxs] @spacings[sm];
+  &:hover {
+    transition: all 0.2s ease-in;
+    border-color: @antd-blue;
+    color: @antd-blue;
+  }
+}
+
+.data-studio-breadcrumb {
+  display: flex;
+  gap: @spacings[md];
+
+  .total-count-item {
+    display: flex;
+    gap: @spacings[xs];
+    justify-content: space-between;
+    align-items: center;
+    font-size: @fontSizes[md];
+    font-weight: @fontWeights[light];
+    color: #757575;
+
+    .anticon {
+      cursor: pointer;
+    }
+  }
+}
+
+.record-count-tooltip {
+  .ant-tooltip-content {
+    width: 120px;
+  }
+  .ant-tooltip-inner {
+    background-color: @white;
+    min-width: 135px;
+
+    .record-count-tooltip-text-wrapper {
+      display: flex;
+      gap: @spacings[xxs];
+    }
+
+    p {
+      text-align: right;
+      color: @gray-700;
+      margin: 0;
+      width: 70px;
+    }
+    p.count {
+      color: @black;
+      font-weight: @fontWeights[medium];
+      text-align: left;
+    }
+  }
+
+  .ant-tooltip-arrow::before {
+    background-color: @white;
+  }
+}
+
+.lag-icon-tooltip {
+  .ant-popover-arrow {
+    display: block !important;
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .ant-popover-inner-content {
+    padding: @spacings[sm] !important;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  .ant-popover-title {
+    font-size: @fontSizes[sm];
+    font-weight: @fontWeights[medium];
+    color: @gray-900;
+    border: transparent;
+    padding-bottom: 0;
+  }
+
+  .data-studio-item__lag-timestamp {
+    margin-bottom: 0;
+  }
+}
+// Entity Picker Popover
+.data-studio-entity-picker-popover {
+  .ant-popover-inner-content {
+    padding: @spacings[sm] @spacings[sm] 0 @spacings[md] !important;
+    max-height: 60vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 4px;
+
+    -ms-overflow-style: none; /* IE, Edge */
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #9a9a9a;
+      border-radius: 1px;
+      height: 4px;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  &.ant-popover-placement-bottomLeft {
+    padding-top: 0;
+  }
+}
+
+// Trigger input
+.data-studio-entity-picker-trigger {
+  cursor: pointer;
+  max-width: 360px;
+
+  .ant-input-affix-wrapper {
+    cursor: pointer;
+
+    input {
+      cursor: pointer;
+    }
+
+    .ant-input-suffix {
+      color: rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+// Make sure the popover has enough width
+.ant-popover.data-studio-entity-picker-popover {
+  width: 100%;
+  max-width: 360px;
+}
+
+// Ensure the search box has proper spacing
+.data-studio-entity-picker-popover {
+  input.ant-input {
+    max-height: 36px;
+  }
+}
+
+.custom-header {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.custom-header-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: @spacings[md];
+  width: 100%;
+  cursor: pointer;
+  padding: 0 8px;
+  user-select: none;
+}
+
+.data-studio-grid-custom-sort-container {
+  &.custom-header-dropdown {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 272px;
+    max-width: 400px;
+    padding: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px 0 rgba(19, 35, 95, 0.24);
+    pointer-events: auto;
+    overflow: visible;
+  }
+
+  .synri-filter-condition {
+    border: none;
+    padding-top: 12px;
+    background-color: white;
+    margin-bottom: 0;
+
+    .synri-condition-operator {
+      margin-bottom: 12px;
+    }
+  }
+
+  .header-icon {
+    margin-left: 8px;
+    font-size: 0.7rem;
+  }
+
+  .quick-filter-disabled-message {
+    display: flex;
+    align-items: center;
+    gap: @spacings[xxs];
+    margin: 0 18px @spacings[md];
+    background-color: #fffbeb;
+    border-radius: @borderRadius[md];
+    font-size: @fontSizes[sm];
+    font-weight: @fontWeights[medium];
+    padding: @spacings[xs];
+    color: #e5a000;
+    border: '1px solid #ffe58f';
+  }
+
+  .apply-filter-container {
+    padding: 0 20px 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.sort-buttons {
+  padding: @spacings[md] 0;
+  display: flex;
+  gap: @spacings[md];
+  justify-content: flex-start;
+  width: 85%;
+  margin: auto;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.sort-btn {
+  &.synri-button.synri-icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid @gray-400;
+    border-radius: 24px;
+    background: white;
+    box-shadow: none;
+    width: 48px;
+    font-size: 18px;
+    max-height: 28px;
+  }
+
+  .icon-wrapper {
+    svg {
+      width: auto !important;
+      height: auto !important;
+    }
+  }
+}
+
+.filter-select {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+  background: white;
+  cursor: pointer;
+  color: #2d3748;
+}
+
+.filter-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.apply-filter-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.apply-filter-btn:hover {
+  background: #5568d3;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+}
+
+.data-studio-kebab-menu-dropdown {
+  ul > li.ant-dropdown-menu-item-divider {
+    display: block; /* Show all dividers by default */
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Hide only the first divider */
+  ul > li.ant-dropdown-menu-item-divider:nth-child(2),
+  ul > li.ant-dropdown-menu-item-divider:nth-last-child(2) {
+    display: none !important;
+  }
+}
+
+.data-studio-history-drawer {
+  .ant-drawer-content-wrapper {
+    height: 100vh !important;
+  }
+}
+
+// Custom modal title styling - ONLY for data studio modals
+.data-studio-enhanced-modal {
+  &.ant-modal {
+    .ant-modal-body {
+      padding: 0;
+    }
+
+    .ant-modal-confirm-body > .anticon {
+      display: none;
+    }
+
+    // Remove the icon margin from body when icon is hidden
+    .ant-modal-confirm-body {
+      margin-left: 0 !important;
+
+      .ant-modal-confirm-title {
+        padding: @spacings[xl];
+        border-bottom: 1px solid @gray-400;
+
+        .syncari-text {
+          font-size: 20px;
+        }
+      }
+
+      .ant-modal-confirm-content {
+        padding: 2rem;
+        margin: 0;
+
+        .delete-confirmation-text {
+          color: #757575;
+        }
+      }
+    }
+
+    // Custom icon styling in title
+    .ant-modal-close {
+      display: inline-flex;
+      align-items: flex-end;
+      font-size: @fontSizes[lg];
+      border: none;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    .ant-modal-confirm-btns {
+      border-top: 1px solid @gray-400;
+      padding: @spacings[md];
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0;
+    }
+  }
+}
+
+// Data Studio Grid - Hide actions column header and position actions
+.data-studio-main-content {
+  // Hide the actions column header
+  .ag-pinned-right-header {
+    width: 0 !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    position: absolute;
+  }
+
+  .ag-pinned-right-cols-container {
+    position: absolute;
+    right: 0;
+    height: 0 !important;
+    width: 0 !important;
+
+    &:hover {
+      height: auto !important;
+      width: auto !important;
+    }
+
+    .ag-row:has(.ag-row-hover) {
+      z-index: 1000;
+    }
+    .ag-row:not(.ag-row-hover) {
+      z-index: -1;
+    }
+  }
+
+  .ag-header-cell[col-id='actions'] {
+    width: 0 !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+
+    .ag-header-cell-label {
+      display: none !important;
+    }
+  }
+
+  // Position the pinned right container (actions) relative to viewport
+  .ag-root-wrapper {
+    position: relative;
+    .ag-horizontal-right-spacer {
+      display: none;
+    }
+  }
+
+  // Ensure actions column cells have proper width
+  .ag-cell[col-id='actions'] {
+    background: transparent !important;
+    border: none !important;
+
+    .ag-cell-wrapper {
+      justify-content: flex-end;
+    }
+  }
+
+  .ag-row[col-id='actions'] {
+    background: transparent !important;
+  }
+
+  // Hide actions by default
+  .ag-row {
+    .actions-cell {
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      pointer-events: none;
+
+      .action-button-icon {
+        width: 30px;
+        height: 24px;
+        padding: 8px 7px;
+
+        .icon-wrapper {
+          height: 18px !important;
+        }
+
+        &--disabled {
+          width: 30px;
+          height: 24px;
+          padding: 8px 7px;
+          cursor: not-allowed;
+          opacity: 0.5;
+          pointer-events: auto; // Allow tooltip to show
+
+          // Gray out the icon
+          .icon-wrapper svg {
+            path[fill] {
+              fill: @gray-500 !important;
+            }
+            path[stroke] {
+              stroke: @gray-500 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Show pointer cursor on row hover
+  .ag-row:hover {
+    cursor: pointer;
+  }
+
+  // Show actions only on row hover
+  .ag-row-hover {
+    .actions-cell {
+      transform: translateX(0);
+      pointer-events: auto;
+
+      .action-button-icon {
+        width: 30px;
+        height: 24px;
+        padding: 8px 7px;
+
+        .icon-wrapper {
+          height: 18px !important;
+        }
+      }
+    }
+  }
+
+  // Additional rule for delete icon hover
+  .delete-icon &:hover {
+    background-color: @red-200 !important;
+    border-radius: 4px;
+
+    svg path[fill] {
+      fill: @red-500 !important;
+    }
+
+    &--disabled {
+      &:hover {
+        cursor: not-allowed;
+        opacity: 0.5;
+        pointer-events: auto; // Allow tooltip to show
+      }
+
+      // Gray out the icon
+      .icon-wrapper svg {
+        path[fill] {
+          fill: @gray-500 !important;
+        }
+        path[stroke] {
+          stroke: @gray-500 !important;
+        }
+      }
+    }
+  }
+
+  // AG Grid tooltip styled to match Ant Design, positioned at bottom-right
+  .ag-tooltip {
+    max-width: 250px !important;
+    min-width: 100px !important;
+    word-wrap: break-word;
+    white-space: normal;
+
+    background-color: rgba(0, 0, 0, 0.75) !important;
+    color: #fff !important;
+    font-size: 14px !important;
+    line-height: 1.5715;
+    padding: 6px 8px !important;
+    border-radius: 2px !important;
+    border: none !important;
+    box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05) !important;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: 12px;
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-bottom: 4px solid rgba(0, 0, 0, 0.75);
+      z-index: 1;
+    }
+  }
+}

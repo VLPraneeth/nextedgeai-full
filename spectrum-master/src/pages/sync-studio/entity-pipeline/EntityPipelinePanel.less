@@ -1,0 +1,45 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+@panel-width: 350px;
+
+.flow-entity-pipeline {
+  height: 100%;
+  overflow: hidden;
+  background: white;
+
+  .ant-tabs-tab-active,
+  .ant-tabs-tab:hover {
+    .synri-tab {
+      &.fns-tab {
+        color: @function-cyan !important;
+      }
+
+      &.actions-tab {
+        color: @purple-400 !important;
+      }
+
+      &.entities-tab {
+        color: @syncari-blue !important;
+      }
+
+      &.fragment-tab {
+        color: @green-400 !important;
+      }
+    }
+  }
+}
+
+// Creates an element around the tab to allow userflow to highlight the whole
+// box and not just the inner content
+.entities-tab-bounding-box {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

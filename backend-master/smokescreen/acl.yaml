@@ -1,0 +1,15 @@
+# You can utilize this file for the purpose of including prohibited domain names that the proxy should prevent access to.
+# Please insert the domain names within the "global_deny_list" section.
+---
+version: v1
+services:
+  - name: syncari
+    project: syncari
+    action: enforce
+default:
+  action: report
+global_deny_list:
+  - syncari.net
+  - "*.syncari.net"
+  - "*.internal"
+ 

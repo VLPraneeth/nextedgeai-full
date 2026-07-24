@@ -1,0 +1,27 @@
+@import '~styles/index.less';
+
+.imported-files-preview-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: @spacings[lg];
+}
+
+.imported-files {
+  &__header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: @spacings[xxs];
+  }
+
+  &__export-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__export-button-icon {
+    padding-right: @spacings[xxs];
+  }
+}

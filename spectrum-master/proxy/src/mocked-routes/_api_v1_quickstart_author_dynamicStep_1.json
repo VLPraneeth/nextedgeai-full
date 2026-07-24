@@ -1,0 +1,276 @@
+{
+  "configuration": [
+    {
+      "renderType": "pipelinePicker",
+      "id": "pipelines",
+      "name": "pipelines",
+      "entities": [
+        {
+          "id": "5fcfc539583f8300016eb3ff",
+          "apiName": "account",
+          "displayName": "Account",
+          "fields": [
+            {
+              "id": "5fcfc539583f8300016eb427",
+              "apiName": "AccountSource",
+              "displayName": "Account Source",
+              "dataType": "picklist"
+            },
+            {
+              "id": "5fcfc539583f8300016eb40f",
+              "apiName": "BillingCity",
+              "displayName": "Billing City",
+              "dataType": "string"
+            },
+            {
+              "id": "5fcfc539583f8300016eb412",
+              "apiName": "BillingCountry",
+              "displayName": "Billing Country",
+              "dataType": "string"
+            },
+            {
+              "id": "5fcfc539583f8300016eb411",
+              "apiName": "BillingPostalCode",
+              "displayName": "Billing Zip/Postal Code",
+              "dataType": "string"
+            },
+            {
+              "id": "5fcfc539583f8300016eb410",
+              "apiName": "BillingState",
+              "displayName": "Billing State/Province",
+              "dataType": "string"
+            },
+            {
+              "id": "5fcfc539583f8300016eb40e",
+              "apiName": "BillingStreet",
+              "displayName": "Billing Street",
+              "dataType": "textarea"
+            },
+            {
+              "id": "5fcfc539583f8300016eb41d",
+              "apiName": "Description",
+              "displayName": "Account Description",
+              "dataType": "textarea"
+            },
+            {
+              "id": "5fcfc539583f8300016eb41b",
+              "apiName": "Industry",
+              "displayName": "Industry",
+              "dataType": "picklist"
+            },
+            {
+              "id": "5fcfc539583f8300016eb40a",
+              "apiName": "MasterRecordId",
+              "displayName": "Master Record ID",
+              "dataType": "reference"
+            },
+            {
+              "id": "5fcfc539583f8300016eb40b",
+              "apiName": "Name",
+              "displayName": "Account Name",
+              "dataType": "string"
+            },
+            {
+              "id": "5fcfc539583f8300016eb41c",
+              "apiName": "NumberOfEmployees",
+              "displayName": "Employees",
+              "dataType": "integer"
+            },
+            {
+              "id": "5fcfc539583f8300016eb41e",
+              "apiName": "OwnerId",
+              "displayName": "Owner ID",
+              "dataType": "reference"
+            },
+            {
+              "id": "5fcfc539583f8300016eb40d",
+              "apiName": "ParentId",
+              "displayName": "Parent Account ID",
+              "dataType": "reference"
+            },
+            {
+              "id": "5fcfc539583f8300016eb418",
+              "apiName": "Phone",
+              "displayName": "Account Phone",
+              "dataType": "string"
+            },
+            { "id": "5fcfc539583f8300016eb41a", "apiName": "PhotoUrl", "displayName": "Photo URL", "dataType": "url" },
+            {
+              "id": "5fcfc539583f8300016eb414",
+              "apiName": "ShippingCity",
+              "displayName": "Shipping City",
+              "dataType": "string"
+            },
+            {
+              "id": "5fcfc539583f8300016eb417",
+              "apiName": "ShippingCountry",
+              "displayName": "Shipping Country",
+              "dataType": "string"
+            },
+            {
+              "id": "5fcfc539583f8300016eb416",
+              "apiName": "ShippingPostalCode",
+              "displayName": "Shipping Zip/Postal Code",
+              "dataType": "string"
+            },
+            {
+              "id": "5fcfc539583f8300016eb415",
+              "apiName": "ShippingState",
+              "displayName": "Shipping State/Province",
+              "dataType": "string"
+            },
+            {
+              "id": "5fcfc539583f8300016eb413",
+              "apiName": "ShippingStreet",
+              "displayName": "Shipping Street",
+              "dataType": "textarea"
+            },
+            {
+              "id": "5fcfc539583f8300016eb40c",
+              "apiName": "Type",
+              "displayName": "Account Type",
+              "dataType": "picklist"
+            },
+            { "id": "5fcfc539583f8300016eb419", "apiName": "Website", "displayName": "Website", "dataType": "url" },
+            {
+              "id": "5fcfc539583f8300016eb421",
+              "apiName": "LastModifiedDate",
+              "displayName": "Last Modified Date",
+              "dataType": "datetime"
+            }
+          ]
+        },
+        {
+          "id": "5fcfc539583f8300016eb400",
+          "apiName": "contact",
+          "displayName": "Contact",
+          "fields": [
+            {
+              "id": "5fcfc539583f8300016eb432",
+              "apiName": "AccountId",
+              "displayName": "Account ID",
+              "dataType": "reference"
+            },
+            {
+              "id": "5fcfc539583f8300016eb445",
+              "apiName": "Department",
+              "displayName": "Department",
+              "dataType": "string"
+            },
+            { "id": "5fcfc539583f8300016eb443", "apiName": "Email", "displayName": "Email", "dataType": "string" },
+            {
+              "id": "5fcfc539583f8300016eb452",
+              "apiName": "EmailBouncedDate",
+              "displayName": "Email Bounced Date",
+              "dataType": "datetime"
+            },
+            {
+              "id": "5fcfc539583f8300016eb451",
+              "apiName": "EmailBouncedReason",
+              "displayName": "Email Bounced Reason",
+              "dataType": "string"
+            },
+            {
+              "id": "5fcfc539583f8300016eb434",
+              "apiName": "FirstName",
+              "displayName": "First Name",
+              "dataType": "string"
+            },
+            {
+              "id": "5fcfc539583f8300016eb453",
+              "apiName": "IsEmailBounced",
+              "displayName": "Is Email Bounced",
+              "dataType": "boolean"
+            },
+            {
+              "id": "5fcfc539583f8300016eb455",
+              "apiName": "Jigsaw",
+              "displayName": "Data.com Key",
+              "dataType": "string"
+            },
+            {
+              "id": "5fcfc539583f8300016eb456",
+              "apiName": "JigsawContactId",
+              "displayName": "Jigsaw Contact ID",
+              "dataType": "string"
+            },
+            {
+              "id": "5fcfc539583f8300016eb44d",
+              "apiName": "LastCURequestDate",
+              "displayName": "Last Stay-in-Touch Request Date",
+              "dataType": "datetime"
+            },
+            {
+              "id": "5fcfc539583f8300016eb44e",
+              "apiName": "LastCUUpdateDate",
+              "displayName": "Last Stay-in-Touch Save Date",
+              "dataType": "datetime"
+            },
+            {
+              "id": "5fcfc539583f8300016eb433",
+              "apiName": "LastName",
+              "displayName": "Last Name",
+              "dataType": "string"
+            },
+            { "id": "5fcfc539583f8300016eb438", "apiName": "City", "displayName": "City", "dataType": "string" },
+            { "id": "5fcfc539583f8300016eb43b", "apiName": "Country", "displayName": "Country", "dataType": "string" },
+            {
+              "id": "5fcfc539583f8300016eb43a",
+              "apiName": "PostalCode",
+              "displayName": "Zip/Postal Code",
+              "dataType": "string"
+            },
+            {
+              "id": "5fcfc539583f8300016eb439",
+              "apiName": "State",
+              "displayName": "State/Province",
+              "dataType": "string"
+            },
+            { "id": "5fcfc539583f8300016eb437", "apiName": "Street", "displayName": "Street", "dataType": "textarea" },
+            {
+              "id": "5fcfc539583f8300016eb431",
+              "apiName": "MasterRecordId",
+              "displayName": "Master Record ID",
+              "dataType": "reference"
+            },
+            {
+              "id": "5fcfc539583f8300016eb442",
+              "apiName": "MobilePhone",
+              "displayName": "Mobile Phone",
+              "dataType": "string"
+            },
+            { "id": "5fcfc539583f8300016eb436", "apiName": "Name", "displayName": "Full Name", "dataType": "string" },
+            {
+              "id": "5fcfc539583f8300016eb446",
+              "apiName": "OwnerId",
+              "displayName": "Owner ID",
+              "dataType": "reference"
+            },
+            {
+              "id": "5fcfc539583f8300016eb441",
+              "apiName": "Phone",
+              "displayName": "Business Phone",
+              "dataType": "string"
+            },
+            { "id": "5fcfc539583f8300016eb454", "apiName": "PhotoUrl", "displayName": "Photo URL", "dataType": "url" },
+            {
+              "id": "5fcfc539583f8300016eb435",
+              "apiName": "Salutation",
+              "displayName": "Salutation",
+              "dataType": "picklist"
+            },
+            { "id": "5fcfc539583f8300016eb444", "apiName": "Title", "displayName": "Title", "dataType": "string" }
+          ]
+        }
+      ]
+    }
+  ],
+  "description": null,
+  "displayName": null,
+  "helpLink": null,
+  "helpSummary": null,
+  "iconPath": null,
+  "name": null,
+  "renderer": null,
+  "steps": []
+}

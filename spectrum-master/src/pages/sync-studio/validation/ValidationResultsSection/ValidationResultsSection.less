@@ -1,0 +1,36 @@
+@import '~styles/index.less';
+
+.validation-results-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: @spacings[xl];
+
+  .validation-results-header {
+    display: flex;
+    align-items: center;
+    font-size: @fontSizes[md];
+    margin-bottom: @spacings[md];
+
+    span {
+      margin-right: @spacings[sm];
+      min-width: 0;
+    }
+  }
+
+  .validation-results-divider {
+    height: 1px;
+    background-color: @gray-400;
+    flex-grow: 1;
+  }
+
+  .validation-results {
+    :first-child {
+      padding-top: 0;
+    }
+
+    :last-child {
+      padding-bottom: 0;
+      border: 0;
+    }
+  }
+}

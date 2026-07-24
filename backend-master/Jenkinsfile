@@ -1,0 +1,84 @@
+pipeline {
+    agent any
+    parameters {
+        booleanParam(name: 'FORCE_ALL_TESTS', defaultValue: false, description: 'Forces all tests to run, regardless of changes in code')
+    }
+    tools {
+        maven 'Maven'
+    }
+    environment {
+        MAVEN_HOME = tool('Maven')
+        CLEARBIT_API_KEY=credentials('integration.clearbit.api.key')
+        ENVIRONMENT_NAME='int'
+        ERROR_NOTIFICATION_EMAIL='dev@syncari.com'
+        EVENTLOG_SUBSCRIPTION_NAME='eventLogSubscription'
+        EVENTLOG_TOPIC_NAME='eventlog'
+        GCP_CREDENTIALS_KEY=credentials('INT_GCP_SA_CREDENTIALS_KEY')
+        GCP_PROJECT='hopeful-sunset-238922'
+        GENERIC_SUBSCRIPTION_NAME='genericSubscription'
+        GENERIC_TOPIC_NAME='generic'
+        MAIL_HOST='email-smtp.us-west-2.amazonaws.com'
+        MAIL_PASSWORD=credentials('integration.mail.password')
+        MAIL_PORT=587
+        MAIL_USERNAME=credentials('integration.mail.username')
+        SPECTRUM_SERVER_HOST='https://spectrum.integration.syncari.net'
+        SYNCARI_ASSET_CDN='http://assets.integration.syncari.net'
+        SYNCARI_DATASTORE_HOST='redshift-cluster-1.cpw4tshf4wuk.us-east-2.redshift.amazonaws.com:5439'
+        SYNCARI_DATASTORE_PASSWORD=credentials('syncari.datastore.password')
+        SYNCARI_DATASTORE_USER=credentials('syncari.datastore.user')
+        SYNCARI_SLACK_CLIENT_ID=credentials('integration.syncari.slack.synapse.client.id')
+        SYNCARI_SLACK_CLIENT_SECRET=credentials('integration.syncari.slack.synapse.client.secret')
+        VIPER_SUBSCRIPTION_NAME='viper_subscription_integration'
+        VIPER_TOPIC_NAME='viper_integration'
+    }
+    stages {
+        stage('Build') {
+            steps {
+                git 'git@gitlab.com:syncari/product/backend.git'
+                script{
+                    //We store the last commit sha in this file.
+                    //Read it and use it for change comparisons
+                    if(fileExists('last_commit.txt') && params.FORCE_ALL_TESTS == false){
+                        env.LAST_COMMIT=sh(script:"cat last_commit.txt", returnStdout: true).trim()
+                    }else{
+                        //First build wont have the file, so default to first commit
+                        env.LAST_COMMIT=sh(script:"git log --pretty=oneline --reverse | head -1|cut -d ' ' -f 1", returnStdout: true).trim()
+                    }
+                    //store the current commit sha,
+                    //and if build succeeds, overwrite last_commit.txt with this in the 'post' step
+                    env.CURRENT_COMMIT=sh(script:"git show --oneline|cut -d ' ' -f 1", returnStdout: true).trim()
+                }
+                sh "mvn clean install -DskipTests"
+            }
+
+        }
+        stage('Connector Tests') {
+            steps {
+               runTests('connector',env.LAST_COMMIT)
+            }
+        }
+
+    }
+    post {
+        always {
+            junit allowEmptyResults: true,testResults:'**/target/surefire-reports/*.xml'
+        }
+        //On successful build, store current commit
+        success {
+            script{
+                sh "echo ${CURRENT_COMMIT} > last_commit.txt"
+            }
+        }
+    }
+}
+
+void runTests(module, lastVersion) {
+    script{
+        def has_changes=sh(script:"git diff  --quiet HEAD ${lastVersion} -- ${module} || echo yes", returnStdout: true).trim()
+        if(has_changes == "yes") {
+            sh "mvn test -pl ${module}"
+        }else{
+            echo "No changes detected in ${module}"
+        }
+    }
+}

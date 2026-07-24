@@ -1,0 +1,31 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+@import '~styles/index.less';
+
+.synri-panel-filter {
+  box-shadow: none;
+  outline: none;
+  border: none;
+
+  &.ant-input-search {
+    input.ant-input:hover,
+    input.ant-input {
+      border: none;
+      border-bottom: solid 1px @gray-400;
+      border-radius: 0;
+      height: 55px;
+      padding-left: 44px;
+      box-shadow: none;
+    }
+
+    &.ant-input-affix-wrapper {
+      display: flex;
+      .ant-input-suffix {
+        padding-left: 14px;
+        order: -1;
+        right: auto;
+      }
+    }
+  }
+}

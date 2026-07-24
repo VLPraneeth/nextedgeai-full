@@ -1,0 +1,225 @@
+/**
+ * Copyright (c) 2019-Present Syncari - All rights reserved.
+ */
+
+@import '~styles/index.less';
+
+@account-info-logo-size: 33px;
+@instance-switcher-width: 300px;
+
+.small-text-with-letter-spacing() {
+  color: @gray-700;
+  text-transform: uppercase;
+  font-size: @fontSizes[xs];
+  line-height: @lineHeights[snug];
+  letter-spacing: 0.36px;
+}
+
+.synri-instance-switcher {
+  .instance-switcher-menu-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: @spacings[sm];
+    border-style: solid;
+    border-width: 0 1px 0 1px;
+    border-color: @gray-300;
+    transition: all 200ms @easings[easeInOut];
+
+    // If the overflow is not hidden it can block other UI elements like the
+    // delete pipelined draft button
+    &:not(.instance-switcher-popover-open) {
+      overflow: hidden;
+    }
+
+    &.instance-switcher-popover-open,
+    &:hover {
+      background-color: @gray-300;
+      cursor: pointer;
+    }
+  }
+
+  .account-info {
+    display: flex;
+    flex: 2 0 auto;
+    padding: 0;
+  }
+
+  .account-info-logo {
+    display: block;
+    flex: 0 0 auto;
+    width: @account-info-logo-size;
+    height: @account-info-logo-size;
+    border-radius: @borderRadius[sm];
+  }
+
+  .account-info-container {
+    margin-left: @spacings[sm];
+
+    display: flex;
+    flex: 2 0 auto;
+    flex-flow: column nowrap;
+    line-height: @lineHeights[regular];
+
+    .org-name,
+    .instance-name {
+      .unselectable-text();
+      .ellipsis-text();
+    }
+
+    .org-name {
+      .small-text-with-letter-spacing();
+      .unselectable-text();
+      font-weight: @fontWeights[semibold];
+      max-width: @spacings[6xl];
+    }
+
+    .instance-name-container {
+      display: flex;
+      align-items: baseline;
+
+      .instance-name {
+        color: @gray-900;
+        max-width: @spacings[5xl];
+      }
+    }
+  }
+}
+
+.instance-sandbox-badge {
+  border-radius: 4px;
+  background-color: @light-gray;
+  color: @white;
+  font-size: @fontSizes[xs];
+  padding: 0 @spacings[xs];
+  margin-left: @spacings[sm];
+}
+
+.synri-instance-list-container {
+  width: @instance-switcher-width;
+
+  .ant-popover-arrow {
+    display: none;
+  }
+
+  .ant-popover-content {
+    background-color: @white;
+    border-radius: @borderRadius[lg];
+    box-shadow: @boxShadows[md];
+    overflow: hidden;
+
+    .ant-input-search.ant-input-affix-wrapper {
+      margin: 2px;
+      width: calc(100% - 4px);
+    }
+
+    .ant-popover-inner-content {
+      padding: 0;
+      max-height: 50vh;
+      overflow-y: auto;
+
+      .instance-filter {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        padding: 2px;
+        background-color: @white;
+        margin: 0px;
+        width: 100%;
+      }
+
+      .ant-spin-show-text {
+        display: flex;
+        justify-content: center;
+        padding: @spacings[md] 0;
+
+        .ant-spin-text {
+          padding-left: @spacings[sm];
+        }
+      }
+    }
+
+    ul.organization-instance-list.border {
+      border-top-width: 1px;
+      border-color: @gray-300;
+      border-top-style: solid;
+    }
+
+    ul.organization-instance-list {
+      margin: 0;
+      padding: 0;
+
+      li {
+        color: @gray-900;
+        list-style-type: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      li.organization-instance-list-title {
+        .small-text-with-letter-spacing();
+        position: sticky;
+        top: 36px; // Pushing the titles down below the filter
+        background-color: @white;
+        font-weight: @fontWeights[bold];
+        padding: @spacings[xs] @spacings[md];
+        word-break: break-word;
+      }
+    }
+
+    .instance-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      word-break: break-word;
+
+      padding: @spacings[xs] @spacings[md];
+
+      transition: all 200ms @easings[easeInOut];
+
+      cursor: pointer;
+
+      &.selected {
+        background-color: @syncari-blue;
+        color: @white;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: @gray-300;
+        color: @gray-900;
+      }
+
+      .instance-item-content {
+        display: flex;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        align-items: center;
+
+        span.ellipse-text {
+          .ellipsis-text();
+          min-width: 0;
+        }
+
+        span.instance-id {
+          margin-top: 2px;
+          margin-left: 8px;
+        }
+      }
+
+      .instance-name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: @spacings[4xl];
+      }
+
+      .instance-sandbox-badge {
+        margin-left: @spacings[md];
+        word-break: initial;
+      }
+    }
+  }
+}

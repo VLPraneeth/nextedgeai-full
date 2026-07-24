@@ -1,0 +1,16 @@
+@import 'styles';
+
+.synri-entity-schema-modal-title-container {
+  display: flex;
+  align-items: center;
+
+  &__title_text {
+    margin-right: $spacings-sm;
+  }
+}
+
+.entity-additional-rules-wrapper {
+  p {
+    color: $gray-700;
+  }
+}

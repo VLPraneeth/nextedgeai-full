@@ -1,0 +1,200 @@
+@import '~styles/index.less';
+// Add these styles to Sidebar.less
+
+.data-studio-sidebar-section {
+  color: @gray-900;
+  font-size: @fontSizes[md];
+  font-weight: @fontWeights[bold];
+  overflow: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+
+  // Hide scrollbars while keeping scroll functionality
+  -ms-overflow-style: none; // IE and Edge
+  scrollbar-width: none; // Firefox
+
+  &::-webkit-scrollbar {
+    display: none; // Chrome, Safari, and Opera
+  }
+
+  .data-studio-sidebar-item-badge {
+    color: #757575;
+    font-size: @fontSizes[sm];
+    font-weight: @fontWeights[bold];
+  }
+}
+
+.data-studio-sidebar-section-title {
+  color: #757575;
+  font-size: @fontSizes[md];
+  font-weight: @fontWeights[bold];
+  cursor: pointer;
+}
+
+.reference-data-create-call-to-action-btn {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  color: @light-gray;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: @fontSizes[xl];
+  margin-right: -@spacings[xs];
+
+  &:hover {
+    color: @syncari-blue;
+  }
+}
+
+.data-studio-sidebar-section-item-link {
+  display: block;
+  color: #1e1e1e;
+  cursor: pointer;
+  flex: 1 1 auto;
+  padding: @spacings[xxs] @spacings[sm];
+  font-weight: 400;
+
+  &:hover {
+    color: @syncari-blue;
+    background-color: @gray-200;
+  }
+
+  .data-studio-item-title-truncated {
+    .anticon {
+      position: relative;
+      left: 4px;
+      top: 2px;
+    }
+  }
+}
+
+.sidebar-expansion-arrow {
+  padding-bottom: @spacings[xxs];
+}
+
+.data-studio-select-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: @spacings[xs] @spacings[sm];
+  border: 1px solid #d9d9d9;
+  border-radius: @borderRadius[md];
+  background-color: #ffffff;
+  cursor: pointer;
+  font-size: @fontSizes[md];
+  transition: all 0.3s;
+
+  .data-studio-select-value {
+    display: flex;
+    gap: @spacings[xxs];
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    p {
+      color: #1e1e1e;
+      margin-bottom: 0;
+    }
+
+    span {
+      color: #757575;
+    }
+  }
+
+  .data-studio-select-icon {
+    color: #262626;
+    transition: transform 0.3s;
+    font-size: @fontSizes[sm];
+  }
+
+  .ant-select-selector {
+    border-radius: 8px;
+    border: 1px solid #d9d9d9;
+    display: flex;
+    align-items: center;
+  }
+
+  .ant-select-selection-placeholder {
+    color: #8c8c8c;
+  }
+
+  .ant-select-arrow {
+    color: #8c8c8c;
+  }
+
+  // Style the search box
+  .ant-input-affix-wrapper {
+    border-radius: 8px;
+    border: 1px solid #d9d9d9;
+    padding: 4px 11px;
+    margin: 8px;
+    width: calc(100% - 16px) !important;
+
+    .ant-input {
+      font-size: 14px;
+    }
+
+    .ant-input-prefix {
+      color: #8c8c8c;
+      margin-right: 8px;
+    }
+  }
+
+  // Style section headers within the dropdown
+  .sidebar-section {
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 16px;
+      color: #8c8c8c;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      background-color: #fafafa;
+      border-bottom: 1px solid #f0f0f0;
+    }
+  }
+
+  // Style entity items within the dropdown
+  .sidebar-section-item {
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #262626;
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+
+    .record-count {
+      color: #8c8c8c;
+      font-size: 12px;
+    }
+  }
+
+  // Custom scrollbar for the dropdown menu
+  .ant-select-dropdown-menu {
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #d9d9d9;
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+  }
+}

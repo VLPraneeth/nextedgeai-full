@@ -1,0 +1,8 @@
+<svg width="230" height="40" viewBox="0 0 230 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="nextedge-logo-title">
+  <title id="nextedge-logo-title">NextEdge AI</title>
+  <rect x="1" y="1" width="38" height="38" rx="11" fill="#1E40AF"/>
+  <path d="M10 29V11L29 29V11" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M29 11H36V18" stroke="#D97706" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="50" y="27" fill="#172554" font-family="Fira Sans, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="-0.4">NextEdge</text>
+  <text x="161" y="27" fill="#1E40AF" font-family="Fira Sans, Arial, sans-serif" font-size="24" font-weight="700"> AI</text>
+</svg>

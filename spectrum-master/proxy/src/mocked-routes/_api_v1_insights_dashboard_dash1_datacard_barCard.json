@@ -1,0 +1,43 @@
+{
+  "id": "629e46244e32bab8f6e6d2da",
+  "name": "quarterlyClosedPipelineRevenue",
+  "displayName": "Bar Card",
+  "description": "A card showing a bar graph with multiple data series",
+  "layout": { "h": 2 },
+  "hidden": false,
+  "contents": {
+    "configuration": {
+      "vizType": "BAR",
+      "series": null,
+      "columns": null,
+      "dateFilter": {
+        "fieldName": "closedate",
+        "startDate": "1969-12-31",
+        "endDate": "2022-06-06"
+      },
+      "xaxis": {
+        "column": "date",
+        "name": "date",
+        "displayName": "Month",
+        "displayFormat": "text"
+      },
+      "yaxis": [
+        {
+          "column": "count",
+          "name": "count",
+          "displayName": "Open Renewal Count",
+          "displayFormat": "number"
+        }
+      ]
+    },
+    "data": {
+      "series": [{ "displayName": "Open Renewal Count" }],
+      "rows": [
+        { "date": "Jun", "count": 2 },
+        { "date": "Jul", "count": 2 },
+        { "date": "Aug", "count": 1 }
+      ]
+    },
+    "contents": null
+  }
+}

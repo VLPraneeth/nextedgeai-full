@@ -1,0 +1,27 @@
+@import 'styles/index';
+
+.synri-test-live-result-card {
+  border: 1px solid $gray-300;
+  border-width: 1px;
+  border-radius: $spacings-xxs;
+  padding: $spacings-xs $spacings-sm;
+
+  .synri-test-result-card-live-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $gray-400;
+    padding-bottom: $spacings-xs;
+
+    .ant-dropdown-trigger {
+      line-height: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  .synri-test-result-title {
+    flex: 1;
+    align-items: center;
+    color: $gray-1000;
+    font-weight: 600;
+  }
+}

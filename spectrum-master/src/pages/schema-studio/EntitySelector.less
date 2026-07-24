@@ -1,0 +1,43 @@
+@import '~styles/index.less';
+
+.entity-selector {
+  .entity-select-control {
+    min-width: @spacings[6xl];
+
+    &:focus-within {
+      z-index: 5;
+    }
+
+    &.has-versions {
+      .ant-select-selection {
+        border-radius: @borderRadius[md] 0 0 @borderRadius[md];
+      }
+    }
+  }
+
+  .version-select-control {
+    min-width: @spacings[5xl];
+    left: -1px;
+
+    .ant-select-selection {
+      border-radius: 0 @borderRadius[md] @borderRadius[md] 0;
+    }
+  }
+}
+
+.toolbar-container.draft {
+  .entity-selector {
+    .entity-select-control,
+    .version-select-control {
+      .ant-select-selection {
+        border-color: @orange-500;
+      }
+    }
+
+    .version-select-control {
+      .ant-select-selection {
+        background-color: #ffca72;
+      }
+    }
+  }
+}

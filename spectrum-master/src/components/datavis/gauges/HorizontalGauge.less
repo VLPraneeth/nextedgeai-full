@@ -1,0 +1,55 @@
+@import '~styles/index.less';
+
+.h-gauge-container {
+  width: 100%;
+}
+
+.h-gauge {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: @spacings[md];
+}
+
+.h-gauge-title {
+  color: @gray-1000;
+  font-size: @fontSizes[xl];
+  font-weight: @fontWeights[bold];
+}
+
+.h-gauge-subtitle {
+  color: @gray-800;
+}
+
+@segment-height: 4px;
+@cursor-border-width: 3px;
+@cursor-size: 13px;
+
+.h-gauge-cursor {
+  position: absolute;
+  border-radius: @borderRadius[circle];
+  background-color: @white;
+  border: @cursor-border-width solid @gray-500;
+  height: @cursor-size;
+  width: @cursor-size;
+  transition: margin 0.4s @easings[easeInOut], border 0.5s @easings[easeInOut];
+  margin-left: 0;
+}
+
+.h-gauge-segment {
+  display: inline-block;
+  height: @segment-height;
+  background-color: @gray-500;
+
+  &:first-of-type {
+    border-radius: @borderRadius[full] 0 0 @borderRadius[full];
+  }
+
+  &:last-of-type {
+    border-radius: 0 @borderRadius[full] @borderRadius[full] 0;
+  }
+
+  & + & {
+    margin-left: @spacings[xxs];
+  }
+}

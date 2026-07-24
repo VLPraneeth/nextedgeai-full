@@ -1,0 +1,79 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+@import '~styles/index.less';
+
+.synri-table {
+  .ant-table-small > .ant-table-content > .ant-table-body > table > .ant-table-thead > tr > th,
+  .ant-table-thead > tr > th {
+    background-color: @background-color-table-header;
+    font-weight: @font-weight-table-header;
+    color: @gray-800;
+    background-color: @gray-300 !important;
+  }
+
+  .ant-table-thead > tr:first-child > th:first-child {
+    border-top-left-radius: 0;
+  }
+  .ant-table-thead > tr:first-child > th:last-child {
+    border-top-right-radius: 0;
+  }
+
+  .ant-table-body {
+    color: @gray-800;
+    background-color: @white;
+  }
+
+  .ant-table-borderd {
+    table {
+      border-width: 0;
+      border-radius: 0;
+      thead {
+        th {
+          border-width: 0;
+        }
+      }
+    }
+  }
+
+  .ant-table-bordered .ant-table-body > table {
+    border-left-width: 0;
+
+    .ant-table-row {
+      border-right-width: 1px;
+    }
+
+    .ant-table-row td:last-child {
+      border-right-width: 0;
+    }
+  }
+
+  .ant-table {
+    .ant-table-bordered {
+      .ant-table-thead > tr:first-child > th:first-child {
+        border-top-left-radius: 0;
+      }
+
+      .ant-table-thead > tr:first-child > th:last-child {
+        border-top-right-radius: 0;
+      }
+    }
+  }
+
+  .ant-table-bordered .ant-table-thead > tr > th {
+    border-right-width: 0;
+  }
+
+  &.flat {
+    .ant-table-tbody > tr > td,
+    .ant-table-thead > tr > th {
+      border-bottom: none;
+    }
+  }
+
+  // Note not that syncari does not
+  // have any table border even for bordered styles :(
+  .ant-table-small {
+    border: none;
+  }
+}

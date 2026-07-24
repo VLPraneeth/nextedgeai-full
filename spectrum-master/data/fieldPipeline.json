@@ -1,0 +1,172 @@
+{ 
+  "id":"5d8d50bda974a84a35d44992",
+  "targetId":"5d8d4236a974a84a21707483",
+  "parentId":null,
+  "scope":"ATTRIBUTE",
+  "name":"First Name",
+  "createdBy":"5d8d421ba974a84a0cc34d52",
+  "updatedBy":null,
+  "createdAt":"2019-09-26T23:58:53.434+0000",
+  "updatedAt":null,
+  "draftStatus":"NEW",
+  "nodes":[ 
+    { 
+      "id":"5d8d50bda974a84a35d44994",
+      "name":"First Name",
+      "inputPorts":[ 
+        { 
+          "portType":"INPUT",
+          "datatype":"string",
+          "maxConnections":1
+        }
+      ],
+      "outputPorts":[ 
+        { 
+          "portType":"OUTPUT",
+          "datatype":"string",
+          "maxConnections":2147483647
+        }
+      ],
+      "configuration":{ 
+        "attributeDefinition":"5d8d4236a974a84a21707483",
+        "dataAuthority":{ 
+          "datAuthorityStrategy":"LATEST_RECORD",
+          "dataAuthorityConfiguration":{ 
+
+          }
+        }
+      },
+      "nodeType":"CORE_ATTRIBUTE",
+      "location":{ 
+
+      }
+    },
+    {
+      "name" : "First Name",
+      "id" : "5d896a7a35638b8b7ff15c47",
+      "inputPorts" : [],
+      "configuration" : {
+         "attributeDefinition" : "5d8d426da974a84a35d444ee",
+         "custom": "hubspot contact first name"
+      },
+      "nodeType" : "ATTRIBUTE_SOURCE",
+      "location" : {"x":"450","y":"700"},
+      "outputPorts" : [
+         {
+            "portType" : "OUTPUT",
+            "maxConnections" : 1,
+            "datatype" : "string"
+         }
+      ]
+    },
+    {
+      "inputPorts" : [
+         {
+            "datatype" : "string",
+            "maxConnections" : 1,
+            "portType" : "INPUT"
+         }
+      ],
+      "id" : "5d896a7a35638b8b7ff15c48",
+      "name" : "First Name",
+      "nodeType" : "ATTRIBUTE_SINK",
+      "outputPorts" : [],
+      "location" : {},
+      "configuration" : {
+        "attributeDefinition" : "5d8d42fca974a84a35d445b6",
+        "custom": "sfdc contact first name"
+      }
+    },
+    {
+      "inputPorts" : [
+         {
+            "datatype" : "string",
+            "maxConnections" : 1,
+            "portType" : "INPUT"
+         }
+      ],
+      "id" : "5d896a7a35638b8b7ff15c49",
+      "name" : "capitalize",
+      "nodeType" : "FUNCTION",
+      "outputPorts" : [
+        {
+           "datatype" : "string",
+           "maxConnections" : 1,
+           "portType" : "INPUT"
+        }
+     ],
+      "location" : {"x":"450","y":"500"},
+      "configuration" : {
+        "functionDefinition" : "5d8d4237a974a84a217075c5"
+      }
+    }
+  ],
+  "edges":[
+    {
+      "custom": "from capitalize to core attribute",
+      "destination" : {
+        "anchor" : "0",
+        "nodeId" : "5d8d50bda974a84a35d44994",
+        "port" : {
+          "portType" : "INPUT",
+          "datatype" : "string",
+          "maxConnections" : 1
+        }
+      },
+      "id" : "5d896a7a35638b8b7ff15c50",
+      "source" : {
+        "anchor" : "0",
+        "port" : {
+          "maxConnections" : 1,
+          "datatype" : "string",
+          "portType" : "OUTPUT"
+        },
+        "nodeId" : "5d896a7a35638b8b7ff15c49"
+      }
+    },
+    {
+      "custom" : "going from source in to capitalize",
+      "destination" : {
+        "anchor" : "0",
+        "nodeId" : "5d896a7a35638b8b7ff15c49",
+        "port" : {
+          "portType" : "INPUT",
+          "datatype" : "string",
+          "maxConnections" : 1
+        }
+      },
+      "id" : "5d896a7a35638b8b7ff15c53",
+      "source" : {
+        "anchor" : "0",
+        "port" : {
+          "maxConnections" : 1,
+          "datatype" : "string",
+          "portType" : "OUTPUT"
+        },
+        "nodeId" : "5d896a7a35638b8b7ff15c47"
+      }
+    },
+    {
+      "destination" : {
+        "port" : {
+          "portType" : "INPUT",
+          "maxConnections" : 1,
+          "datatype" : "string"
+        },
+        "nodeId" : "5d896a7a35638b8b7ff15c48",
+        "anchor" : "0"
+      },
+      "id" : "5d896a7a35638b8b7ff15c51",
+      "source" : {
+        "anchor" : "0",
+        "nodeId" : "5d8d50bda974a84a35d44994",
+        "port" : {
+          "datatype" : "string",
+          "maxConnections" : 2147483647,
+          "portType" : "OUTPUT"
+        }
+      }
+    }
+  ],
+  "draft":null
+}

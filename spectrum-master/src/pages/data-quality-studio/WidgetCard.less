@@ -1,0 +1,40 @@
+@import '~styles/index.less';
+
+.widget-card {
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+}
+
+.widget-card-title {
+  color: @gray-1000;
+  font-size: @fontSizes[md];
+  font-weight: @fontWeights[semibold];
+  margin-bottom: @spacings[sm];
+}
+
+.widget-content-spinner-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -@spacings[xl];
+}
+
+.widget-card-content {
+  flex: 1;
+  overflow-y: hidden;
+
+  & > .synri-stack,
+  & > .synri-h-stack {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.widget-error-state {
+  .empty-state-stack {
+    border-color: @red-500;
+  }
+}

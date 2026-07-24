@@ -1,0 +1,275 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+@import '~styles/index.less';
+
+@field-background: @content-background-color;
+
+.field-list {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  border-radius: @borderRadius[lg];
+
+  .field-item-container + .field-item-container {
+    margin-top: -1px;
+  }
+
+  .field-item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border: solid 1px @gray-400;
+    margin: 0;
+    background-color: @field-background;
+
+    a {
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: darken(@field-background, 5%);
+    }
+
+    &:first-child {
+      border-radius: @borderRadius[lg] @borderRadius[lg] 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 @borderRadius[lg] @borderRadius[lg];
+    }
+
+    .field-item {
+      &.field-item-title {
+        .ellipsis-text();
+
+        flex: 1 2 auto;
+      }
+    }
+
+    .field-item-link {
+      flex: 1 2 auto;
+      display: flex;
+      color: rgba(0, 0, 0, 0.65);
+      font-weight: @font-weight-link;
+      font-size: @fontSizes[sm];
+      padding: @spacings[sm] 0 @spacings[sm] @spacings[xs];
+      overflow: hidden;
+      cursor: pointer;
+
+      span {
+        cursor: pointer;
+      }
+    }
+
+    &.field-pipeline-error {
+      background-color: @red-200;
+      border-color: @red-500;
+      z-index: 1;
+
+      .field-data-type {
+        color: @red-500;
+      }
+
+      .kebab-menu-trigger {
+        color: darken(@red-500, 10%);
+      }
+
+      &:hover {
+        background-color: darken(@red-200, 5%);
+      }
+    }
+
+    &.field-pipeline-deleted {
+      background-color: @red-200;
+      border-color: @red-500;
+      z-index: 1;
+
+      .field-data-type {
+        color: @red-500;
+      }
+
+      .kebab-menu-trigger {
+        color: darken(@red-500, 10%);
+      }
+
+      &:hover {
+        background-color: darken(@red-200, 5%);
+      }
+    }
+
+    &.field-pipeline-draft {
+      background-color: @orange-300;
+      border-color: @orange-500;
+      z-index: 1;
+
+      .field-data-type {
+        color: @orange-500;
+      }
+
+      .kebab-menu-trigger {
+        color: darken(@orange-500, 10%);
+      }
+
+      &:hover {
+        background-color: darken(@orange-300, 5%);
+      }
+    }
+
+    &.field-pipeline-ready {
+      background-color: @green-100;
+      border-color: @green-400;
+
+      .field-data-type {
+        color: @green-400;
+      }
+
+      .kebab-menu-trigger {
+        color: darken(@green-400, 10%);
+      }
+
+      &:hover {
+        background-color: darken(@green-100, 5%);
+      }
+    }
+
+    .field-data-type {
+      height: calc(@fontSizes[sm] * @lineHeights[regular]);
+      margin-right: @spacings[xs];
+      color: @light-gray;
+
+      svg {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    .draft-badge {
+      height: calc(@fontSizes[sm] * @lineHeights[regular]);
+      font-size: @fontSizes[xs];
+      padding: @spacings[xxs] @spacings[xs];
+      border-radius: @borderRadius[md];
+      background-color: @orange-500;
+      display: flex;
+      align-items: center;
+      color: @white;
+      margin-left: @spacings[sm];
+
+      svg {
+        height: 100%;
+        width: auto;
+
+        margin-right: @spacings[xxs];
+      }
+    }
+
+    .error-badge {
+      height: calc(@fontSizes[sm] * @lineHeights[regular]);
+      font-size: @fontSizes[xs];
+      padding: @spacings[xxs] @spacings[xs];
+      border-radius: @borderRadius[md];
+      background-color: @red-500;
+      display: flex;
+      align-items: center;
+      color: @white;
+      margin-left: @spacings[sm];
+      flex-shrink: 0;
+    }
+
+    .warning-badge {
+      height: calc(@fontSizes[sm] * @lineHeights[regular]);
+      font-size: @fontSizes[xs];
+      padding: @spacings[xxs] @spacings[xs];
+      border-radius: @borderRadius[md];
+      background-color: @orange-500;
+      display: flex;
+      align-items: center;
+      color: @white;
+      margin-left: @spacings[sm];
+      flex-shrink: 0;
+    }
+
+    .ready-badge {
+      height: calc(@fontSizes[sm] * @lineHeights[regular]);
+      font-size: @fontSizes[xs];
+      padding: @spacings[xxs] @spacings[xs];
+      border-radius: @borderRadius[md];
+      background-color: @green-400;
+      display: flex;
+      align-items: center;
+      color: @white;
+      margin-left: @spacings[sm];
+
+      svg {
+        height: 100%;
+        width: auto;
+
+        margin-right: @spacings[xxs];
+      }
+    }
+
+    .hidden-badge {
+      display: flex;
+      align-items: center;
+      height: calc(@fontSizes[sm] * @lineHeights[regular]);
+      font-size: @fontSizes[xs];
+      color: @gray-700;
+      margin-left: @spacings[sm];
+
+      .anticon {
+        font-size: @fontSizes[md];
+      }
+    }
+
+    .kebab-menu-trigger {
+      display: flex;
+      padding: 0 @spacings[xs];
+
+      color: @gray-700;
+
+      svg {
+        height: 24px;
+        width: auto;
+      }
+
+      &:hover {
+        color: @syncari-blue;
+      }
+    }
+
+    .unmapped-badge {
+      display: flex;
+      align-items: center;
+      color: @light-gray;
+      margin-left: @spacings[xs];
+
+      svg {
+        height: @fontSizes[md];
+        width: auto;
+      }
+    }
+
+    .field-item-title:hover {
+      cursor: pointer;
+    }
+
+    .field-item-suffix {
+      padding-top: 4px;
+    }
+  }
+}
+
+// tooltip for data type icons
+.field-data-type-description {
+  text-transform: capitalize;
+}
+
+// field dropdown menu
+.kebab-menu-dropdown {
+  min-width: @spacings[5xl];
+}

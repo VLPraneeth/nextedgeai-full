@@ -1,0 +1,22 @@
+.connector-default-mappings {
+  &__map-table {
+    width: 650px;
+    min-height: 150px;
+  }
+
+  .ag-layout-auto-height {
+    height: 100%;
+  }
+
+  .ant-modal-body {
+    max-height: 80vh;
+    min-height: 200px;
+    overflow: auto;
+  }
+
+  .connector-default-mappings--empty {
+    .ag-body-viewport.ag-layout-auto-height {
+      height: 100px;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import './color.less';
+
+.box-bordered(@color-border: @color-box-border, @background-color: @white, @borderRadius: @borderRadius[lg]) {
+  border: 1px solid @color-border;
+  border-radius: @borderRadius;
+  background-color: @background-color;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.box-bordered-no-shadow(@color-border: @color-box-border, @background-color: @white, @border-radius: 6px, @border-width: 1px) {
+  border: @border-width solid @color-border;
+  border-radius: @border-radius;
+  background-color: @background-color;
+}

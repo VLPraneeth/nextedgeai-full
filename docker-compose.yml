@@ -1,0 +1,330 @@
+x-backend-environment: &backend-environment
+  SPRING_CONFIG_ADDITIONAL_LOCATION: file:/config/local-dev.properties
+  MONGODB_URI: mongodb://${NEXTEDGE_MONGO_USERNAME}:${NEXTEDGE_MONGO_PASSWORD}@mongo:27017/nextedge_demo?authSource=admin
+  MONGODB_READONLYURI: mongodb://${NEXTEDGE_MONGO_USERNAME}:${NEXTEDGE_MONGO_PASSWORD}@mongo:27017/nextedge_demo?authSource=admin
+  SPRING_DATA_MONGODB_URI: mongodb://${NEXTEDGE_MONGO_USERNAME}:${NEXTEDGE_MONGO_PASSWORD}@mongo:27017/nextedge_demo?authSource=admin
+  SPRING_DATA_MONGODB_READONLYURI: mongodb://${NEXTEDGE_MONGO_USERNAME}:${NEXTEDGE_MONGO_PASSWORD}@mongo:27017/nextedge_demo?authSource=admin
+  REDIS_HOST: redis
+  REDIS_PASSWORD: ${NEXTEDGE_REDIS_PASSWORD}
+  NEW_REDIS_HOST: redis
+  NEW_REDIS_PASSWORD: ${NEXTEDGE_REDIS_PASSWORD}
+  SPRING_REDIS_HOST: redis
+  SPRING_REDIS_PASSWORD: ${NEXTEDGE_REDIS_PASSWORD}
+  SPRING_NEWREDIS_HOST: redis
+  SPRING_NEWREDIS_PASSWORD: ${NEXTEDGE_REDIS_PASSWORD}
+  ENTITYCACHE_REDIS_DB_HOST: redis
+  ENTITYCACHE_REDIS_DB_PORT: 6379
+  ENTITYCACHE_REDIS_DB_PASSWORD: ${NEXTEDGE_REDIS_PASSWORD}
+  ENTITYCACHE_REDIS_HOST: redis
+  ENTITYCACHE_REDIS_PORT: 6379
+  ENTITYCACHE_REDIS_PASSWORD: ${NEXTEDGE_REDIS_PASSWORD}
+  NEXTEDGE_ADMIN_EMAIL: ${NEXTEDGE_ADMIN_EMAIL}
+  NEXTEDGE_ADMIN_PASSWORD: ${NEXTEDGE_ADMIN_PASSWORD}
+  NEXTEDGE_TENANT_ADMIN_EMAIL: ${NEXTEDGE_TENANT_ADMIN_EMAIL}
+  NEXTEDGE_TENANT_ADMIN_PASSWORD: ${NEXTEDGE_TENANT_ADMIN_PASSWORD}
+  NEXTEDGE_JWT_SECURITY_SECRET: ${NEXTEDGE_JWT_SECURITY_SECRET}
+  NEXTEDGE_LLM_PROVIDER: bedrock
+  NEXTEDGE_AWS_MODE: "true"
+  NEXTEDGE_GCS_ENDPOINT: http://gcs-emulator:4443
+  NEXTEDGE_BIGQUERY_ENDPOINT: http://bigquery-emulator:9050
+  NEXTEDGE_BIGQUERY_GRPC_ENDPOINT: bigquery-emulator:9060
+  NEXTEDGE_BEDROCK_MODEL_ID: apac.amazon.nova-lite-v1:0
+  AWS_REGION: ap-south-1
+  AWS_DEFAULT_REGION: ap-south-1
+  AWS_EC2_METADATA_DISABLED: "false"
+
+services:
+  redis:
+    image: redis:7.4-alpine
+    container_name: nextedge-ai-redis
+    command: ["redis-server", "--appendonly", "yes", "--requirepass", "${NEXTEDGE_REDIS_PASSWORD}"]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli -a \"$$NEXTEDGE_REDIS_PASSWORD\" ping | grep PONG"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    environment:
+      NEXTEDGE_REDIS_PASSWORD: ${NEXTEDGE_REDIS_PASSWORD}
+    volumes:
+      - redis-data:/data
+    logging:
+      driver: awslogs
+      options:
+        awslogs-region: ap-south-1
+        awslogs-group: /nextedge-ai/application
+        awslogs-stream: redis
+    networks:
+      - nextedge-private
+
+  mongo:
+    image: mongo:7.0
+    container_name: nextedge-ai-mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${NEXTEDGE_MONGO_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${NEXTEDGE_MONGO_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "mongosh --quiet --username \"$$MONGO_INITDB_ROOT_USERNAME\" --password \"$$MONGO_INITDB_ROOT_PASSWORD\" --authenticationDatabase admin --eval 'db.adminCommand({ ping: 1 }).ok' | grep 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 15
+    volumes:
+      - mongo-data:/data/db
+    logging:
+      driver: awslogs
+      options:
+        awslogs-region: ap-south-1
+        awslogs-group: /nextedge-ai/application
+        awslogs-stream: mongodb
+    networks:
+      - nextedge-private
+
+  postgres-demo:
+    image: postgres:16-alpine
+    container_name: nextedge-ai-postgres-demo
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: nextedge_demo
+      POSTGRES_USER: ${NEXTEDGE_CONNECTOR_DB_USERNAME}
+      POSTGRES_PASSWORD: ${NEXTEDGE_CONNECTOR_DB_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$$POSTGRES_USER\" -d \"$$POSTGRES_DB\""]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    logging:
+      driver: awslogs
+      options:
+        awslogs-region: ap-south-1
+        awslogs-group: /nextedge-ai/application
+        awslogs-stream: postgres-demo
+    networks:
+      - nextedge-private
+
+  mysql-demo:
+    image: mysql:8.4
+    container_name: nextedge-ai-mysql-demo
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: nextedge_demo
+      MYSQL_USER: ${NEXTEDGE_CONNECTOR_DB_USERNAME}
+      MYSQL_PASSWORD: ${NEXTEDGE_CONNECTOR_DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${NEXTEDGE_CONNECTOR_DB_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping --silent -h 127.0.0.1 -u root -p\"$$MYSQL_ROOT_PASSWORD\""]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+    volumes:
+      - mysql-data:/var/lib/mysql
+    logging:
+      driver: awslogs
+      options:
+        awslogs-region: ap-south-1
+        awslogs-group: /nextedge-ai/application
+        awslogs-stream: mysql-demo
+    networks:
+      - nextedge-private
+
+  gcs-emulator:
+    image: fsouza/fake-gcs-server:1.54.0@sha256:3730da0e31f7e5186a90ec4899dc2c336104e7599df400411392ef17e684c31f
+    container_name: nextedge-ai-gcs-emulator
+    command: ["-scheme", "http", "-port", "4443", "-external-url", "http://gcs-emulator:4443", "-backend", "filesystem", "-filesystem-root", "/storage"]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:4443/storage/v1/b >/dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+    volumes:
+      - gcs-data:/storage
+    logging:
+      driver: awslogs
+      options:
+        awslogs-region: ap-south-1
+        awslogs-group: /nextedge-ai/application
+        awslogs-stream: gcs-emulator
+    networks:
+      - nextedge-private
+
+  bigquery-emulator:
+    image: ghcr.io/goccy/bigquery-emulator:0.6.1@sha256:666406fb976287045fce806b5a89b5126b6ce91315467c5ad9bc2e0f53b0d3a8
+    container_name: nextedge-ai-bigquery-emulator
+    command: ["--project=nextedge-local", "--database=/data/nextedge.db"]
+    restart: unless-stopped
+    volumes:
+      - bigquery-data:/data
+    logging:
+      driver: awslogs
+      options:
+        awslogs-region: ap-south-1
+        awslogs-group: /nextedge-ai/application
+        awslogs-stream: bigquery-emulator
+    networks:
+      - nextedge-private
+
+  pubsub-emulator:
+    image: gcr.io/google.com/cloudsdktool/google-cloud-cli:emulators@sha256:873834701bc92f5fd5052cd5f5e572246caaf24b3e3b79e741ba1b29f7a291c6
+    container_name: nextedge-ai-pubsub-emulator
+    command: ["gcloud", "beta", "emulators", "pubsub", "start", "--project=nextedge-local", "--host-port=0.0.0.0:8085", "--quiet"]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "bash -c 'echo >/dev/tcp/127.0.0.1/8085'"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+    logging:
+      driver: awslogs
+      options:
+        awslogs-region: ap-south-1
+        awslogs-group: /nextedge-ai/application
+        awslogs-stream: pubsub-emulator
+    networks:
+      - nextedge-private
+
+  pubsub-init:
+    image: gcr.io/google.com/cloudsdktool/google-cloud-cli:emulators@sha256:873834701bc92f5fd5052cd5f5e572246caaf24b3e3b79e741ba1b29f7a291c6
+    container_name: nextedge-ai-pubsub-init
+    restart: unless-stopped
+    depends_on:
+      pubsub-emulator:
+        condition: service_healthy
+    entrypoint: ["bash", "-c"]
+    command:
+      - >-
+        set -eu;
+        reconcile() {
+          for pair in local-event-log:local-event-log-sub local-generic:local-generic-sub local-webhook:local-webhook-sub local-viper:local-viper-sub local-error-notification:local-error-notification-sub local-dfi-result:local-dfi-result-sub; do
+            topic="$${pair%%:*}";
+            subscription="$${pair##*:}";
+            topic_status="$$(curl --silent --output /dev/null --write-out '%{http_code}' --request PUT "http://pubsub-emulator:8085/v1/projects/nextedge-local/topics/$${topic}")";
+            test "$${topic_status}" = "200" || test "$${topic_status}" = "409";
+            subscription_status="$$(curl --silent --output /dev/null --write-out '%{http_code}' --request PUT --header "Content-Type: application/json" --data "{\"topic\":\"projects/nextedge-local/topics/$${topic}\"}" "http://pubsub-emulator:8085/v1/projects/nextedge-local/subscriptions/$${subscription}")";
+            test "$${subscription_status}" = "200" || test "$${subscription_status}" = "409";
+          done;
+          touch /tmp/nextedge-pubsub-ready;
+        };
+        while true; do reconcile; sleep 30; done
+    healthcheck:
+      test: ["CMD-SHELL", "test -f /tmp/nextedge-pubsub-ready"]
+      interval: 5s
+      timeout: 2s
+      retries: 20
+    logging:
+      driver: awslogs
+      options:
+        awslogs-region: ap-south-1
+        awslogs-group: /nextedge-ai/application
+        awslogs-stream: pubsub-init
+    networks:
+      - nextedge-private
+
+  db-migrate:
+    build:
+      context: ./backend-master
+      dockerfile: Dockerfile.runtime
+    image: nextedge-ai/backend:${NEXTEDGE_RELEASE_TAG:-local}
+    container_name: nextedge-ai-db-migrate
+    restart: "no"
+    depends_on:
+      redis:
+        condition: service_healthy
+      mongo:
+        condition: service_healthy
+      gcs-emulator:
+        condition: service_healthy
+      pubsub-init:
+        condition: service_healthy
+    environment:
+      <<: *backend-environment
+      SPRING_PROFILES_ACTIVE: dbm
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - >-
+        java -XX:MaxRAMPercentage=50.0 -jar /app/dbm.jar cli migrate --target syncari &&
+        java -XX:MaxRAMPercentage=50.0 -jar /app/dbm.jar cli migrate --target customer --sids nextedge_admin nextedge_tenant_b
+    volumes:
+      - ./backend-master/local-dev.properties:/config/local-dev.properties:ro
+    logging:
+      driver: awslogs
+      options:
+        awslogs-region: ap-south-1
+        awslogs-group: /nextedge-ai/application
+        awslogs-stream: db-migrate
+    networks:
+      - nextedge-private
+
+  backend:
+    build:
+      context: ./backend-master
+      dockerfile: Dockerfile.runtime
+    image: nextedge-ai/backend:${NEXTEDGE_RELEASE_TAG:-local}
+    container_name: nextedge-ai-backend
+    restart: unless-stopped
+    depends_on:
+      db-migrate:
+        condition: service_completed_successfully
+    environment:
+      <<: *backend-environment
+    volumes:
+      - ./backend-master/local-dev.properties:/config/local-dev.properties:ro
+    logging:
+      driver: awslogs
+      options:
+        awslogs-region: ap-south-1
+        awslogs-group: /nextedge-ai/application
+        awslogs-stream: backend
+    networks:
+      - nextedge-private
+
+  web:
+    build:
+      context: ./spectrum-master
+      dockerfile: Dockerfile.production
+      args:
+        NEXTEDGE_BUILD_SHA: ${NEXTEDGE_BUILD_SHA:-source-archive}
+        NEXTEDGE_BUILD_BRANCH: ${NEXTEDGE_BUILD_BRANCH:-main}
+    image: nextedge-ai/web:${NEXTEDGE_RELEASE_TAG:-local}
+    container_name: nextedge-ai-web
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      ARCADE_TARGET: http://backend:8080
+      ARCADE_LOG_LEVEL: info
+      DISABLE_XSRF: "false"
+      NODE_ENV: production
+      SECURE_COOKIES: "false"
+      SPECTRUM_PORT: 8088
+    ports:
+      - "80:8088"
+    logging:
+      driver: awslogs
+      options:
+        awslogs-region: ap-south-1
+        awslogs-group: /nextedge-ai/application
+        awslogs-stream: web
+    networks:
+      - nextedge-private
+
+networks:
+  nextedge-private:
+    name: nextedge-ai-private
+
+volumes:
+  mongo-data:
+    name: nextedge-ai-mongo-data
+  redis-data:
+    name: nextedge-ai-redis-data
+  postgres-data:
+    name: nextedge-ai-postgres-data
+  mysql-data:
+    name: nextedge-ai-mysql-data
+  gcs-data:
+    name: nextedge-ai-gcs-data
+  bigquery-data:
+    name: nextedge-ai-bigquery-data

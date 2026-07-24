@@ -1,0 +1,23 @@
+@import 'styles';
+
+.dashboard-expired {
+  display: flex;
+  width: 100vw;
+  &__marketing-content {
+    width: 50vw;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__text {
+    color: black;
+    font-size: $font-size-lgr;
+    text-align: center;
+  }
+  &__exit-button {
+    display: flex;
+    margin-top: $spacings-xl;
+    justify-content: center;
+  }
+}

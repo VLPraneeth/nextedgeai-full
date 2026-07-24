@@ -1,0 +1,104 @@
+@import 'styles';
+
+$icon-width: 42px;
+
+.pipeline-details-activity-panel {
+  display: flex;
+
+  .ant-drawer-content-wrapper {
+    height: calc(100vh - $details-view-panels-height-offset) !important;
+  }
+
+  .synri-entity-details-empty-list {
+    height: 50px;
+  }
+
+  .pipeline-details-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow-y: auto;
+
+    .pipeline-details-header {
+      display: flex;
+      border-bottom: 1px solid $gray-300;
+      padding: $spacings-xs $spacings-md;
+      justify-content: space-between;
+      align-items: center;
+
+      .synri-buttons-flex {
+        display: flex;
+        align-items: center;
+
+        button {
+          margin-left: $spacings-xs;
+        }
+      }
+    }
+
+    .pipeline-details-subheader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &.bottom-border {
+        border-bottom: 1px solid $gray-300;
+        margin-bottom: $spacings-md;
+        padding-bottom: $spacings-md;
+      }
+    }
+
+    .pipeline-details-subheader-message-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pipeline-details-timeline-row-icon-wrapper {
+      display: flex;
+      align-items: center;
+      padding-right: $spacings-sm;
+
+      &:hover {
+        background-color: $gray-200;
+      }
+    }
+
+    .pipeline-details-synapse-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $icon-width;
+
+      // The Syncari svg has padding so it looks small without scaling it.
+      // TODO: Add a new syncari icon without padding to use.
+      .synri-scale-syncari-icon {
+        transform: scale(1.8);
+      }
+    }
+
+    .pipeline-details-timeline-row {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      .pipeline-details-timeline-row-details {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .synri-pipeline-details-last-processed {
+      min-width: 270px;
+    }
+
+    .synri-pipeline-details-last-processed-with-icon {
+      min-width: calc(270px - $icon-width);
+    }
+
+    .synri-pipeline-details-duration {
+      min-width: 100px;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

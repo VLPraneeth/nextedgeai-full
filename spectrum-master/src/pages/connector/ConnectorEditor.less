@@ -1,0 +1,26 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+@import '~styles/index.less';
+
+.synapses-content {
+  .main-page-layout-contents > div,
+  .main-page-layout-contents > div > div {
+    height: 100%;
+  }
+
+  .flow-right-content {
+    .right-sidebar();
+    margin-top: @toolbarHeight;
+
+    .ant-collapse-item {
+      border: none;
+    }
+  }
+}
+
+.center-spacer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}

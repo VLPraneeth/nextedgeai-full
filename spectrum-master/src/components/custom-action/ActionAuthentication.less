@@ -1,0 +1,34 @@
+//
+// Copyright (c) 2019-Present Syncari All rights reserved.
+//
+
+@import '~styles/index.less';
+
+.synri-action-auth {
+  .synri-action-auth-container {
+    align-items: baseline;
+    height: 47vh;
+    max-width: 78vw;
+
+    .synri-action-auth-type {
+      width: 30%;
+      height: 100%;
+      padding-top: @spacings[lg];
+      border-right: 1px solid @gray-400;
+
+      .synri-picklist {
+        width: 90%;
+      }
+    }
+
+    .synri-action-auth-value {
+      width: 70%;
+      padding-top: @spacings[lg];
+      margin-left: @spacings[lg];
+
+      .synri-picklist {
+        width: 40%;
+      }
+    }
+  }
+}

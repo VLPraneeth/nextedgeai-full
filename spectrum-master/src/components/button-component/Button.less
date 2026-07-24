@@ -1,0 +1,48 @@
+//
+// Copyright (c) 2019-Present Syncari All rights reserved.
+//
+@import '~styles/index.less';
+
+@gray-200: #f8fafd;
+
+.synri-button {
+  &:disabled {
+    // pointerEvents: 'none' needed to dismiss the tooltip when the button is disabled.
+    // See https://github.com/ant-design/ant-design/issues/9581#issuecomment-599668648
+    pointer-events: none;
+  }
+
+  &.synri-icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    padding: 0 @spacings[xxs];
+    background-color: transparent;
+    box-shadow: none;
+
+    .icon-wrapper {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: @fontSizes[xxl];
+      width: @fontSizes[xxl];
+
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &.small {
+      .icon-wrapper {
+        height: @fontSizes[lg];
+        width: @fontSizes[lg];
+      }
+    }
+
+    &:hover {
+      background-color: @gray-200;
+    }
+  }
+}

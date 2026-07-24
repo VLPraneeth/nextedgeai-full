@@ -1,0 +1,447 @@
+{
+  "success": true,
+  "data": {
+    "outputFields": [
+      [
+        "id",
+        "firstname",
+        "middlename",
+        "lastname",
+        "email",
+        "hascanadianemail",
+        "phone",
+        "directphonedonotcall",
+        "street",
+        "city",
+        "region",
+        "metroarea",
+        "zipcode",
+        "state",
+        "country",
+        "personhasmoved",
+        "withineu",
+        "withincalifornia",
+        "withincanada",
+        "lastupdateddate",
+        "noticeprovideddate",
+        "salutation",
+        "suffix",
+        "jobtitle",
+        "jobfunction",
+        "companydivision",
+        "education",
+        "hashedemails",
+        "picture",
+        "mobilephonedonotcall",
+        "externalurls",
+        "companyid",
+        "companyname",
+        "companydescriptionlist",
+        "companyphone",
+        "companyfax",
+        "companystreet",
+        "companycity",
+        "companystate",
+        "companyzipcode",
+        "companycountry",
+        "companylogo",
+        "companysiccodes",
+        "companynaicscodes",
+        "contactaccuracyscore",
+        "companywebsite",
+        "companyrevenue",
+        "companyrevenuenumeric",
+        "companyemployeecount",
+        "companytype",
+        "companyticker",
+        "companyranking",
+        "isdefunct",
+        "companysocialmediaurls",
+        "companyprimaryindustry",
+        "companyindustries",
+        "companyrevenuerange",
+        "companyemployeerange",
+        "employmenthistory",
+        "managementlevel",
+        "locationcompanyid",
+        "companyId"
+      ]
+    ],
+    "result": [
+      {
+        "input": {
+          "companyid": 346572700,
+          "firstname": "henry",
+          "lastname": "schuck"
+        },
+        "data": [
+          {
+            "id": 1260398587,
+            "firstName": "Henry",
+            "middleName": "L.",
+            "lastName": "Schuck",
+            "email": "henry.schuck@zoominfo.com",
+            "hasCanadianEmail": "false",
+            "phone": "(360) 783-6816",
+            "directPhoneDoNotCall": false,
+            "street": "805 Broadway Ste. 900",
+            "city": "Vancouver",
+            "region": "Washington",
+            "metroArea": "Portland",
+            "zipCode": "98660",
+            "state": "Washington",
+            "country": "United States",
+            "personHasMoved": "Uncertain",
+            "withinEu": false,
+            "withinCalifornia": true,
+            "withinCanada": false,
+            "lastUpdatedDate": "1/5/2020 2:59 PM",
+            "noticeProvidedDate": "06/27/2020",
+            "salutation": "",
+            "suffix": "",
+            "jobTitle": "Founder & Chief Executive Officer",
+            "jobFunction": [
+              {
+                "name": "Executive",
+                "department": "C-Suite"
+              }
+            ],
+            "education": [
+              {
+                "school": "University of Nevada , Las Vegas",
+                "educationDegree": {
+                  "degree": "",
+                  "areaOfStudy": ""
+                }
+              },
+              {
+                "school": "Oxford University",
+                "educationDegree": {
+                  "degree": "comparative law",
+                  "areaOfStudy": ""
+                }
+              },
+              {
+                "school": "The Ohio State University Moritz College of Law",
+                "educationDegree": {
+                  "degree": "",
+                  "areaOfStudy": "juris doctorate degree cum laude"
+                }
+              }
+            ],
+            "hashedEmails": [
+              "f58f6a9d081a378bccd8c8a067f5d757c1bcfe1114b17d1a0173c4f64f132a76",
+              "882301004d270daab518d5d4fc0ec9a3e790159c4802e04394c0e70d7d817a5df5d19ba86a495ea2b22c19911a4606c63af22b85326c5a477e5b845a9ffcc33d",
+              "8dceb85dffad7d86c656fabd105d5781a1cdc66d3e5e0f1e723f04dc172c13e7839948f8253f382ecb91b5a3892aa4c8cec671061a24b18ef4cd3fc08a89d0bc",
+              "f68bd1de672a4c37fdc87d88b4d543c2634ed129e5c73f69ca74c5dd21bc0fd6",
+              "eed1872f83bf7d777eef83d459e14dc97cc8bbe4c391665d02130d1a02b9c6bae8fde805e5556bc9345e01da360856c36c08d3fde3c6564ce9eda330c11307cb",
+              "b187e4ed0351e0988c5e7efb63c73d8fba14252ede5b29c4b111445ed60a205e566feaa37eb2a5da512f93d8c34bab8add0ebec823ee2a9ba718e709ae5bb999",
+              "8eb26ee14126e66bbf71cfc7da77803ab2079298c4f63075b4a9329605d0844c3b9d989ae4e9486f12701bad2b40cf45c8b461b751a3b37e97b18bd07cddf950",
+              "695d19bdc9be7f8e742c5f8d21d20832",
+              "29d9667b9865bd4c0ade732d87491588",
+              "0277d9b958853b227aae74c49fb3f47ed1a4f7a0",
+              "8f74df87a34f9eace4f392081fdf1701ecdd0a82",
+              "0cf4aef9be54921f056cfbd01aa21aaa",
+              "c9415971b7ed54e1ef2ba9b76d7517d8",
+              "3255f0cea9d54f85c3ffe066798f68c8d9ff5131",
+              "c2a09501b2e2d8542c90a9014a3e035be5d5412b",
+              "73874aff0dc933c6b08f9ecfdcd281ae5f2b2ef4",
+              "b29c16b0355cdf202e47561cc82b2ce10325c7c9fbf35fc8c8d2ac97e1a15751",
+              "0b3c1656c901009da30bd69f431f901d17aea3b5",
+              "219df7fce416087db95f41b22a3e99de",
+              "74a841493b2be80de6b0523e3e51388ee702162b98bf0a1b761dc20a67c24bf9dd7c1c1edb43ec378754489dcb2c8b94fe8652c4f8aad2294758f1e37738093c",
+              "11862b70dc429e354ecb9e8c3f94baa980cd848a4e65b0607f098c2c4784e1e9",
+              "f96d816c6506277d8917284d6ae01c086d6bb738",
+              "e2107f85303216debfc490c1128ad0026bc66cba",
+              "42f9c1101b858d906f1e9249377705cc",
+              "2d707a32b6c36d7860df4ded85a3675da59487bd",
+              "70c0572ab995de4b75a50d4f3b9527b2f23ee3729d8dee19454732bb5974b96ce3b46c126ef9da3072e0db19331b713551c8f51af7d06d7456b006e6b6c6786f",
+              "cb428444a92caccbf74196a56ce2ce47bedb7c810165a3f5670e0142b9e20488",
+              "fb8f9342f5555bac4b5576e18203dee9649eb6cac775a60444a08912d57ecfaf",
+              "02d590f02c638a0f0a14330f8ed41ac3f29be73f3cc61510cffd5010f4076a56",
+              "077edc0b42f5b3a2ebced95cb466d7540eb13f84",
+              "35fae950b9267686ad59bf5540f05fe32614b05f7ce111c88215d397c4ccca80",
+              "072d54d1cd80722271757be3ad70e2fa80a4f7a9ddcfa4986bdacfaf44090d01",
+              "f9cec62f4b2805124098741a9ff318cfc7601014799360d909d6160941a6700d4ec1dcfbfcfd445a8fd5549670bebefd0169ab53d5332296af6c70a55e22848a",
+              "4d49f8386d59b45ddda50a5ef5430120",
+              "81863a5a64ae6c4df9eab6200808260ffd99324308dcdb234cb95fe2f01868fd",
+              "3b4031ad2889aba895b3f7a0132f254c",
+              "adb40c784326c0581284f4c8301bbeb0b217bab6a09eb811f8eee4fce2ea431b3cf01da7192c0af813ce7df177fc634770b4557c74301d41c412ee7dc890b9bf",
+              "20b54d86e974f4dfeb4383ed2c748e2d79ac7d28",
+              "258ba4f8558fbea656732b28211c9df8",
+              "b389c6b4c6d1ab9c45a41f2ac41d7a2367b980866587f0d8afc8d07e87bf7dbee8638f4194e24674aa56a225bc9db668a6febd13fe0b975cc330dfb7c54df4f2",
+              "36c30998984a06a5eb56f5322ff8a284d144d159365b93423cc08223081965d606e6af6dddd30b7fd09bc627f9dcecd3ea85c036c3ba485ed31e07d2bd7ca65b",
+              "5233cc7bd91cb8234b136cd44db83d94",
+              "6a17da18c38ef9b4d42cefdaf7db0a03",
+              "2154155b799c35d2d58ad920146b2477635884f5af0839bc6ebbdb99216b7415"
+            ],
+            "picture": "https://www.zoominfo.com/ge-assets/images/leadership/henry_schuck.png",
+            "mobilePhoneDoNotCall": true,
+            "externalUrls": [
+              {
+                "type": "linkedin.com",
+                "url": "https://www.linkedin.com/in/hschuck"
+              },
+              {
+                "type": "twitter.com",
+                "url": "https://www.twitter.com/henrylschuck"
+              },
+              {
+                "type": "salesforce.com",
+                "url": "https://www.salesforce.com/00361000005FuKPAA0"
+              }
+            ],
+            "contactAccuracyScore": 96,
+            "isDefunct": false,
+            "employmentHistory": [
+              {
+                "jobTitle": "Vice President of Data and Marketing",
+                "managementLevel": [
+                  "VP-Level"
+                ],
+                "fromDate": "2002-01-02T00:00:00.000Z",
+                "toDate": "2006-01-02T00:00:00.000Z",
+                "company": {
+                  "companyId": 0,
+                  "companyName": "iProfile",
+                  "companyPhone": "",
+                  "companyWebsite": ""
+                }
+              }
+            ],
+            "managementLevel": [
+              "C-Level"
+            ],
+            "locationCompanyId": 344589814,
+            "company": {
+              "division": "",
+              "id": 344589814,
+              "name": "ZoomInfo",
+              "descriptionList": [
+                {
+                  "description": "ZoomInfo was founded in 2000 and is headquartered in Vancouver, Washington. The company offers a business-to-business data platform utilized by sales and marketing teams, recruiters, and other business professionals for lead generation and detailed information on people and companies."
+                },
+                {
+                  "description": "Built over 20 years ago, ZoomInfo Powered by DiscoverOrg has become the go-to-market standard for over 13,500 companies worldwide. Designed to be the single source of truth, the ZoomInfo platform offers best-in-class technology paired with unrivaled data coverage, accuracy, and depth of contacts, companies, and opportunities essential to empower sales, marketing and recruiting professionals to hit their numbers. Deeply embedded into business workflows and technology stacks- including integrations with the leading CRM, Sales Engagement, Marketing Automation, and Talent Management applications - ZoomInfo is capable of delivering more predictable, accelerated, and sustainable growth than any stand-alone solution. ZoomInfo's investors include TA Associates, The Carlyle Group and 22C Capital."
+                },
+                {
+                  "description": "ZoomInfo (NASDAQ: ZI) is a Go-To-Market Intelligence Solution for more than 15,000 companies worldwide. The ZoomInfo platform empowers business-to-business sales, marketing, and recruiting professionals to hit their number by pairing best-in-class technology with unrivaled data coverage, accuracy, and depth of contacts. With integrations embedded into workflows and technology stacks, including the leading CRM, Sales Engagement, Marketing Automation, and Talent Management applications, ZoomInfo drives more predictable, accelerated, and sustainable growth for its customers. "
+                },
+                {
+                  "description": "ZoomInfo?is a leading go-to-market intelligence platform for sales and marketing teams. Its go-to-market intelligence platform delivers comprehensive and high-quality intelligence and analytics on approximately 14 million companies, including advanced attributes, technologies used by companies, intent signals, and decision-maker contact information. Its software, insights, and data enable over 15,000 companies to sell and market more effectively and efficiently. "
+                },
+                {
+                  "description": "Accelerate your growth with Zoom Information Inc. (ZoomInfo), an Inc. 5000 company. ZoomInfo's Growth Acceleration Platform combines the world's most comprehensive and searchable B2B contact database with integrated tools to help companies optimize sales and marketing effectiveness, jump-start growth, and maximize profitability. The continuously updated B2B data platform provides businesses access to direct-dial phone numbers, email addresses, and professional background information. "
+                }
+              ],
+              "phone": "(360) 783-6800",
+              "fax": "(617) 507-8187",
+              "street": "805 Broadway St Suite 900",
+              "city": "Vancouver",
+              "state": "Washington",
+              "zipCode": "98660",
+              "country": "United States",
+              "logo": "http://www.zoominfo.com/business/mktg/images/zi_logo.png",
+              "sicCodes": [
+                {
+                  "id": "73",
+                  "name": "Business Services"
+                },
+                {
+                  "id": "737",
+                  "name": "Computer Programming, Data Processing, And Other Computer Related Services"
+                },
+                {
+                  "id": "7375",
+                  "name": "Information Retrieval Services"
+                },
+                {
+                  "id": "27",
+                  "name": "Printing, Publishing, And Allied Industries"
+                },
+                {
+                  "id": "274",
+                  "name": "Miscellaneous Publishing"
+                },
+                {
+                  "id": "2741",
+                  "name": "Miscellaneous Publishing"
+                },
+                {
+                  "id": "731",
+                  "name": "Advertising"
+                },
+                {
+                  "id": "7371",
+                  "name": "Computer Programming Services"
+                },
+                {
+                  "id": "7372",
+                  "name": "Prepackaged Software"
+                },
+                {
+                  "id": "738",
+                  "name": "Miscellaneous Business Services"
+                },
+                {
+                  "id": "7389",
+                  "name": "Business Services, Not Elsewhere Classified"
+                },
+                {
+                  "id": "89",
+                  "name": "Miscellaneous Services"
+                },
+                {
+                  "id": "899",
+                  "name": "Miscellaneous Services"
+                },
+                {
+                  "id": "8999",
+                  "name": "Services, Not Elsewhere Classified"
+                },
+                {
+                  "id": "7374",
+                  "name": "Computer Processing and Data Preparation and Processing Services"
+                }
+              ],
+              "naicsCodes": [
+                {
+                  "id": "541613",
+                  "name": "Marketing Consulting Services"
+                },
+                {
+                  "id": "541511",
+                  "name": "Custom Computer Programming Services"
+                },
+                {
+                  "id": "51919",
+                  "name": "All Other Information Services"
+                },
+                {
+                  "id": "518210",
+                  "name": "Data Processing, Hosting, and Related Services"
+                },
+                {
+                  "id": "54151",
+                  "name": "Computer Systems Design and Related Services"
+                },
+                {
+                  "id": "5182",
+                  "name": "Data Processing, Hosting, and Related Services"
+                },
+                {
+                  "id": "511",
+                  "name": "Publishing Industries (except Internet)"
+                },
+                {
+                  "id": "51121",
+                  "name": "Software Publishers"
+                },
+                {
+                  "id": "51821",
+                  "name": "Data Processing, Hosting, and Related Services"
+                },
+                {
+                  "id": "517",
+                  "name": "Telecommunications"
+                },
+                {
+                  "id": "5415",
+                  "name": "Computer Systems Design and Related Services"
+                },
+                {
+                  "id": "518",
+                  "name": "Data Processing, Hosting, and Related Services"
+                },
+                {
+                  "id": "51",
+                  "name": "Information"
+                },
+                {
+                  "id": "5416",
+                  "name": "Management, Scientific, and Technical Consulting Services"
+                },
+                {
+                  "id": "519",
+                  "name": "Other Information Services"
+                },
+                {
+                  "id": "5418",
+                  "name": "Advertising, Public Relations, and Related Services"
+                },
+                {
+                  "id": "54",
+                  "name": "Professional, Scientific, and Technical Services"
+                },
+                {
+                  "id": "5112",
+                  "name": "Software Publishers"
+                },
+                {
+                  "id": "511210",
+                  "name": "Software Publishers"
+                },
+                {
+                  "id": "517110",
+                  "name": ""
+                },
+                {
+                  "id": "5191",
+                  "name": "Other Information Services"
+                },
+                {
+                  "id": "5171",
+                  "name": ""
+                },
+                {
+                  "id": "54161",
+                  "name": "Management Consulting Services"
+                },
+                {
+                  "id": "519130",
+                  "name": "Internet Publishing and Broadcasting and Web Search Portals"
+                },
+                {
+                  "id": "541",
+                  "name": "Professional, Scientific, and Technical Services"
+                },
+                {
+                  "id": "519190",
+                  "name": "All Other Information Services"
+                },
+                {
+                  "id": "51711",
+                  "name": ""
+                },
+                {
+                  "id": "51913",
+                  "name": "Internet Publishing and Broadcasting and Web Search Portals"
+                }
+              ],
+              "website": "www.zoominfo.com",
+              "revenue": "$400 Million",
+              "revenueNumeric": 400000000,
+              "employeeCount": 1500,
+              "type": "PUBLIC",
+              "ticker": "NASDAQ: ZI",
+              "ranking": [
+                "Inc 5000"
+              ],
+              "socialMediaUrls": [],
+              "primaryIndustry": [
+                "Software"
+              ],
+              "industries": [
+                "Data Collection & Internet Portals",
+                "Software",
+                "Media & Internet"
+              ],
+              "revenueRange": "$250 mil. - $500 mil.",
+              "employeeRange": "1,000 - 5,000"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

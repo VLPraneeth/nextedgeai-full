@@ -1,0 +1,15 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import 'styles';
+
+.synri-rich-text-container {
+  border: 1px solid $gray-300;
+  padding: 10px;
+  color: $gray-1000;
+
+  *:focus-visible {
+    outline: none;
+  }
+}

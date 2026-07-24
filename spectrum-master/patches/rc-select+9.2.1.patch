@@ -1,0 +1,82 @@
+diff --git a/node_modules/rc-select/es/Select.js b/node_modules/rc-select/es/Select.js
+index dde51ba..0f681b6 100644
+--- a/node_modules/rc-select/es/Select.js
++++ b/node_modules/rc-select/es/Select.js
+@@ -182,8 +182,16 @@ function (_React$Component) {
+         event.preventDefault();
+         var value = state.value;
+ 
+-        if (value.length) {
+-          _this.removeSelected(value[value.length - 1]);
++        if(_this.props.duplicatesAllowed) {
++          var duplicateSelectValue = _this.props.duplicateSelectValue
++          if(duplicateSelectValue.length) {
++            _this.removeSelected(duplicateSelectValue[duplicateSelectValue.length - 1].value, event, duplicateSelectValue[duplicateSelectValue.length - 1].id);
++          }
++        }
++        else {
++          if (value.length) {
++            _this.removeSelected(value[value.length - 1]);
++          }
+         }
+ 
+         return;
+@@ -245,6 +253,8 @@ function (_React$Component) {
+       var lastValue = value[value.length - 1];
+       var skipTrigger = false;
+ 
++      
++
+       if (isMultipleOrTags(props)) {
+         if (findIndexInValueBySingleValue(value, selectedValue) !== -1) {
+           skipTrigger = true;
+@@ -893,7 +903,7 @@ function (_React$Component) {
+       }
+     };
+ 
+-    _this.removeSelected = function (selectedKey, e) {
++    _this.removeSelected = function (selectedKey, e, id) {
+       var props = _this.props;
+ 
+       if (props.disabled || _this.isChildDisabled(selectedKey)) {
+@@ -922,7 +932,7 @@ function (_React$Component) {
+         }
+ 
+         if (props.onDeselect) {
+-          props.onDeselect(event, _this.getOptionBySingleValue(selectedKey));
++          props.onDeselect(event, _this.getOptionBySingleValue(selectedKey), id);
+         }
+       }
+ 
+@@ -1210,7 +1220,10 @@ function (_React$Component) {
+         }
+ 
+         if (isMultipleOrTags(props)) {
+-          selectedValueNodes = limitedCountValue.map(function (singleValue) {
++            var duplicatesAllowed = _this.props.duplicatesAllowed
++            selectedValueNodes = (duplicatesAllowed ? _this.props.duplicateSelectValue : limitedCountValue).map(function (val) {
++            var singleValue = duplicatesAllowed ? val.value : val
++
+             var info = _this.getOptionInfoBySingleValue(singleValue);
+ 
+             var content = info.label;
+@@ -1235,7 +1248,7 @@ function (_React$Component) {
+               className: "".concat(prefixCls, "-selection__choice__content")
+             }, content), disabled ? null : React.createElement("span", {
+               onClick: function onClick(event) {
+-                _this.removeSelected(singleValue, event);
++                _this.removeSelected(singleValue, event, val.id);
+               },
+               className: "".concat(prefixCls, "-selection__choice__remove")
+             }, removeIcon || React.createElement("i", {
+@@ -1582,6 +1595,10 @@ Select.getDerivedStateFromProps = function (nextProps, prevState) {
+     newState.open = nextProps.open;
+   }
+ 
++  if('searchText' in nextProps) {
++    newState.inputValue = nextProps.searchText
++  }
++
+   if ('value' in nextProps) {
+     var value = Select.getValueFromProps(nextProps);
+     newState.value = value;

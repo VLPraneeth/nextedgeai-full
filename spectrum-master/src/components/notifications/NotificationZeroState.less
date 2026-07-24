@@ -1,0 +1,55 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+.notification-bell-container {
+  margin-bottom: 11px;
+
+  &.with-lines {
+    .synri-inline-svg {
+      &::before,
+      &::after {
+        flex-grow: 1;
+
+        content: ' ';
+        height: 1px;
+        background-color: @gray-300;
+      }
+
+      &::before {
+        margin-right: 10px;
+      }
+
+      &::after {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .synri-inline-svg {
+    width: 100%;
+    height: 63px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.notification-zero-state-title {
+  margin-bottom: 9px;
+
+  color: @gray-800;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.notification-zero-state-subtitle {
+  color: @light-gray;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+}

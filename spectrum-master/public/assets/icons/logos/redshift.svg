@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    
+    <desc>Created with sketchtool.</desc>
+    <g id="Kitchen-Sink" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Iconography" transform="translate(-348.000000, -105.000000)">
+            <g id="Redshift" transform="translate(353.000000, 109.000000)">
+                <polygon id="Path" fill="#205B97" points="14.9843049 24.4627803 27.1511211 27.3596413 27.1511211 4.57040359 14.9843049 7.46726457"></polygon>
+                <path d="M27.1511211,4.57040359 L29.4686099,5.72914798 L29.4686099,26.2008969 L27.1511211,27.3596413 L27.1511211,4.57040359 Z M14.9843049,24.4627803 L2.81748879,27.3596413 L2.81748879,4.57040359 L14.9843049,7.46726457 L14.9843049,24.4627803 Z" id="Shape" fill="#5193CE" fill-rule="nonzero"></path>
+                <polygon id="Path" fill="#205B97" points="2.81748879 4.57040359 0.5 5.72914798 0.5 26.2008969 2.81748879 27.3596413"></polygon>
+                <polygon id="Path" fill="#5193CE" points="18.0748879 31.9946188 22.7098655 29.67713 22.7098655 2.31748879 18.0748879 1.13686838e-13 16.6578475 15.1928251"></polygon>
+                <polygon id="Path" fill="#205B97" points="11.893722 31.9946188 7.25874439 29.67713 7.25874439 2.31748879 11.893722 1.13686838e-13 13.3107623 15.1928251"></polygon>
+                <polygon id="Path" fill="#2E73B7" points="11.893722 0 18.1376682 0 18.1376682 31.9300448 11.893722 31.9300448"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,80 @@
+@import '~styles/index.less';
+
+.data-studio-lineage-details-panel {
+  .ant-drawer-content-wrapper {
+    display: flex;
+    height: 100vh !important;
+  }
+
+  .ant-drawer-content {
+    display: flex;
+  }
+
+  .ant-drawer-wrapper-body {
+    display: flex;
+    flex-flow: column;
+    flex: 1 1 auto;
+  }
+
+  .ant-drawer-body {
+    display: flex;
+    flex: 1 1 auto;
+    padding: 0;
+  }
+
+  .synri-transaction-detail-table-container {
+    padding: @spacings[mlg];
+  }
+
+  .transaction-merge-table-container {
+    padding-top: 0;
+  }
+
+  .synri-filter-condition-readonly {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+
+    .synri-condition-readonly {
+      color: @gray-1000;
+    }
+  }
+
+  .merge-detail-header {
+    & > .synri-stack {
+      flex-basis: 25%;
+    }
+  }
+
+  .header-link {
+    color: #1e1e1e;
+  }
+
+  .truncate-first-column {
+    .syncari-text {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 250px;
+    }
+  }
+}
+
+.connector-field-popover {
+  .ant-popover-inner-content {
+    .synri-divider {
+      margin-left: -@spacings[md];
+      margin-right: -@spacings[md];
+    }
+  }
+}
+
+.field-name-renderer-wrapper {
+  margin-top: 0.15rem;
+  margin-bottom: auto;
+}
+
+.external-value-renderer,
+.transaction-merge-predicate-cell {
+  margin-top: 0.15rem;
+  min-height: 2rem;
+}

@@ -1,0 +1,949 @@
+[
+    {
+        "apiName": "campaigns",
+        "displayName": "Campaigns",
+        "attributes": [
+            {
+                "apiName": "id",
+                "displayName": "Id",
+                "dataType": "integer",
+                "system": true,
+                "idField": true
+            },
+            {
+                "apiName": "name",
+                "displayName": "Name",
+                "dataType": "string",
+                "updateable": false
+            },
+            {
+                "apiName": "cost",
+                "displayName": "Cost",
+                "dataType": "integer",
+                "updateable": false
+            },
+            {
+                "apiName": "folderId",
+                "displayName": "Folder Id",
+                "dataType": "integer",
+                "updateable": false
+            },
+            {
+                "apiName": "parentCampaignId",
+                "displayName": "Parent Campaign",
+                "dataType": "reference",
+                "referenceTo": "campaign",
+                "referenceTargetField": "id",
+                "updateable": false
+            },
+            {
+                "apiName": "createdAt",
+                "displayName": "Created At",
+                "dataType": "datetime",
+                "updateable": false,
+                "initializable": false,
+                "system": true
+            },
+            {
+                "apiName": "updatedAt",
+                "displayName": "Updated At",
+                "dataType": "datetime",
+                "updateable": false,
+                "initializable": false,
+                "watermarkField": true,
+                "system": true
+            }
+        ]
+    },
+    {
+        "apiName": "prospects",
+        "displayName": "Prospects",
+        "attributes": [
+            {
+                "apiName": "id",
+                "displayName": "Id",
+                "dataType": "integer",
+                "system": true,
+                "idField": true
+            },
+            {
+                "apiName": "campaignId",
+                "displayName": "Campaign",
+                "dataType": "reference",
+                "referenceTo": "campaign",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "salutation",
+                "displayName": "Salutation",
+                "dataType": "picklist"
+            },
+            {
+                "apiName": "firstName",
+                "displayName": "First Name",
+                "dataType": "string"
+            },
+            {
+                "apiName": "lastName",
+                "displayName": "Last Name",
+                "dataType": "string"
+            },
+            {
+                "apiName": "email",
+                "displayName": "Email",
+                "dataType": "string",
+                "nillable": false
+            },
+            {
+                "apiName": "password",
+                "displayName": "Password",
+                "dataType": "string",
+                "updateable": false
+            },
+            {
+                "apiName": "company",
+                "displayName": "Company",
+                "dataType": "string"
+            },
+            {
+                "apiName": "prospectAccountId",
+                "displayName": "Prospect Account",
+                "dataType": "reference",
+                "referenceTo": "prospectAccount",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "website",
+                "displayName": "Website",
+                "dataType": "string"
+            },
+            {
+                "apiName": "jobTitle",
+                "displayName": "Job Title",
+                "dataType": "string"
+            },
+            {
+                "apiName": "department",
+                "displayName": "Department",
+                "dataType": "string"
+            },
+            {
+                "apiName": "country",
+                "displayName": "Country",
+                "dataType": "string"
+            },
+            {
+                "apiName": "addressOne",
+                "displayName": "Address1",
+                "dataType": "string"
+            },
+            {
+                "apiName": "addressTwo",
+                "displayName": "Address2",
+                "dataType": "string"
+            },
+            {
+                "apiName": "city",
+                "displayName": "City",
+                "dataType": "string"
+            },
+            {
+                "apiName": "state",
+                "displayName": "State",
+                "dataType": "string"
+            },
+            {
+                "apiName": "territory",
+                "displayName": "Territory",
+                "dataType": "string"
+            },
+            {
+                "apiName": "zip",
+                "displayName": "Zip",
+                "dataType": "string"
+            },
+            {
+                "apiName": "phone",
+                "displayName": "Phone",
+                "dataType": "string"
+            },
+            {
+                "apiName": "fax",
+                "displayName": "Fax",
+                "dataType": "string"
+            },
+            {
+                "apiName": "source",
+                "displayName": "Source",
+                "dataType": "string"
+            },
+            {
+                "apiName": "annualRevenue",
+                "displayName": "Annual Revenue",
+                "dataType": "string"
+            },
+            {
+                "apiName": "employees",
+                "displayName": "Number of Employees",
+                "dataType": "string"
+            },
+            {
+                "apiName": "industry",
+                "displayName": "Industry",
+                "dataType": "string"
+            },
+            {
+                "apiName": "yearsInBusiness",
+                "displayName": "Years in Business",
+                "dataType": "string"
+            },
+            {
+                "apiName": "comments",
+                "displayName": "Comments",
+                "dataType": "string"
+            },
+            {
+                "apiName": "notes",
+                "displayName": "Notes",
+                "dataType": "string"
+            },
+            {
+                "apiName": "score",
+                "displayName": "Score",
+                "dataType": "integer"
+            },
+            {
+                "apiName": "grade",
+                "displayName": "Grade",
+                "updateable": false,
+                "initializable": false,
+                "dataType": "string"
+            },
+            {
+                "apiName": "lastActivityAt",
+                "displayName": "Last Activity At",
+                "updateable": false,
+                "initializable": false,
+                "dataType": "datetime"
+            },
+            {
+                "apiName": "recentInteraction",
+                "displayName": "Recent Interaction",
+                "updateable": false,
+                "initializable": false,
+                "dataType": "string"
+            },
+            {
+                "apiName": "crmLeadFid",
+                "displayName": "CRM Lead Id",
+                "updateable": false,
+                "initializable": false,
+                "dataType": "string"
+            },
+            {
+                "apiName": "crmContactFid",
+                "displayName": "CRM Contact Id",
+                "updateable": false,
+                "initializable": false,
+                "dataType": "string"
+            },
+            {
+                "apiName": "crmOwnerFid",
+                "displayName": "CRM Owner Id",
+                "updateable": false,
+                "initializable": false,
+                "dataType": "string"
+            },
+            {
+                "apiName": "crmAccountFid",
+                "displayName": "CRM Account Id",
+                "updateable": false,
+                "initializable": false,
+                "dataType": "string"
+            },
+            {
+                "apiName": "crmLastSync",
+                "displayName": "CRM Last Sync",
+                "updateable": false,
+                "initializable": false,
+                "dataType": "datetime"
+            },
+            {
+                "apiName": "crmUrl",
+                "displayName": "CRM URL",
+                "updateable": false,
+                "initializable": false,
+                "dataType": "string"
+            },
+            {
+                "apiName": "isDoNotEmail",
+                "displayName": "Do Not Email",
+                "dataType": "boolean"
+            },
+            {
+                "apiName": "isDoNotCall",
+                "displayName": "Do Not Call",
+                "dataType": "boolean"
+            },
+            {
+                "apiName": "optedOut",
+                "displayName": "Opted Out",
+                "updateable": false,
+                "initializable": false,
+                "dataType": "boolean"
+            },
+            {
+                "apiName": "isReviewed",
+                "displayName": "Reviewed",
+                "dataType": "boolean"
+            },
+            {
+                "apiName": "isStarred",
+                "displayName": "Starred",
+                "dataType": "boolean"
+            },
+            {
+                "apiName": "createdAt",
+                "displayName": "Created At",
+                "dataType": "datetime",
+                "updateable": false,
+                "initializable": false,
+                "system": true
+            },
+            {
+                "apiName": "updatedAt",
+                "displayName": "Updated At",
+                "dataType": "datetime",
+                "updateable": false,
+                "initializable": false,
+                "watermarkField": true,
+                "system": true
+            }
+        ]
+    },
+    {
+        "apiName": "prospect-accounts",
+        "displayName": "Prospect Accounts",
+        "attributes": [
+            {
+                "apiName": "id",
+                "displayName": "Id",
+                "dataType": "integer",
+                "system": true,
+                "idField": true
+            },
+            {
+                "apiName": "name",
+                "displayName": "Name",
+                "dataType": "string"
+            },
+            {
+                "apiName": "createdAt",
+                "displayName": "Created At",
+                "dataType": "datetime",
+                "updateable": false,
+                "initializable": false,
+                "system": true
+            },
+            {
+                "apiName": "updatedAt",
+                "displayName": "Updated At",
+                "dataType": "datetime",
+                "updateable": false,
+                "initializable": false,
+                "watermarkField": true,
+                "system": true
+            }
+        ]
+    },
+    {
+        "apiName": "lists",
+        "displayName": "Lists",
+        "attributes": [
+            {
+                "apiName": "id",
+                "displayName": "Id",
+                "dataType": "integer",
+                "system": true,
+                "idField": true
+            },
+            {
+                "apiName": "name",
+                "displayName": "Name",
+                "dataType": "string"
+            },
+            {
+                "apiName": "isPublic",
+                "displayName": "Is Public",
+                "dataType": "boolean",
+                "defaultValue": false
+            },
+            {
+                "apiName": "title",
+                "displayName": "Title",
+                "dataType": "string"
+            },
+            {
+                "apiName": "description",
+                "displayName": "Description",
+                "dataType": "string"
+            },
+            {
+                "apiName": "createdAt",
+                "displayName": "Created At",
+                "dataType": "datetime",
+                "updateable": false,
+                "initializable": false,
+                "system": true
+            },
+            {
+                "apiName": "updatedAt",
+                "displayName": "Updated At",
+                "dataType": "datetime",
+                "updateable": false,
+                "initializable": false,
+                "watermarkField": true,
+                "system": true
+            }
+        ]
+    },
+    {
+        "apiName": "list-memberships",
+        "displayName": "List Memberships",
+        "attributes": [
+            {
+                "apiName": "id",
+                "displayName": "Id",
+                "dataType": "integer",
+                "system": true,
+                "idField": true
+            },
+            {
+                "apiName": "listId",
+                "displayName": "List",
+                "dataType": "reference",
+                "referenceTo": "list",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "prospectId",
+                "displayName": "Prospect",
+                "dataType": "reference",
+                "referenceTo": "prospect",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "optedOut",
+                "displayName": "Opted Out",
+                "dataType": "boolean",
+                "updateable": false
+            },
+            {
+                "apiName": "createdAt",
+                "displayName": "Created At",
+                "dataType": "datetime",
+                "updateable": false,
+                "initializable": false,
+                "system": true
+            },
+            {
+                "apiName": "updatedAt",
+                "displayName": "Updated At",
+                "dataType": "datetime",
+                "updateable": false,
+                "initializable": false,
+                "watermarkField": true,
+                "system": true
+            }
+        ]
+    },
+    {
+        "apiName": "visitor-page-views",
+        "displayName": "Visitor Page Views",
+        "readOnly": true,
+        "attributes": [
+            {
+                "apiName": "id",
+                "displayName": "Id",
+                "dataType": "integer",
+                "system": true,
+                "idField": true
+            },
+            {
+                "apiName": "visitorId",
+                "displayName": "Visitor Id",
+                "dataType": "integer",
+                "referenceTo": "visitor",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "campaignId",
+                "displayName": "Campaign",
+                "dataType": "reference",
+                "referenceTo": "campaign",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "visitId",
+                "displayName": "Visit Id",
+                "dataType": "integer",
+                "referenceTo": "visit",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "url",
+                "displayName": "Url",
+                "dataType": "string"
+            },
+            {
+                "apiName": "title",
+                "displayName": "Title",
+                "dataType": "string"
+            },
+            {
+                "apiName": "durationInSeconds",
+                "displayName": "DurationInSeconds",
+                "dataType": "integer"
+            },
+            {
+                "apiName": "salesforceId",
+                "displayName": "SalesforceId",
+                "dataType": "string"
+            },
+            {
+                "apiName": "campaign",
+                "displayName": "Campaign",
+                "dataType": "object"
+            },
+            {
+                "apiName": "visit",
+                "displayName": "Visit",
+                "dataType": "object"
+            },
+            {
+                "apiName": "createdAt",
+                "displayName": "Created At",
+                "dataType": "datetime",
+                "updateable": false,
+                "initializable": false,
+                "watermarkField": true,
+                "system": true
+            }
+        ]
+    },
+    {
+        "apiName": "visits",
+        "displayName": "Visits",
+        "readOnly": true,
+        "attributes": [
+            {
+                "apiName": "id",
+                "displayName": "Id",
+                "dataType": "integer",
+                "system": true,
+                "idField": true
+            },
+            {
+                "apiName": "prospectId",
+                "displayName": "Prospect Id",
+                "dataType": "integer",
+                "referenceTo": "prospect",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "visitorId",
+                "displayName": "Visitor Id",
+                "dataType": "integer",
+                "referenceTo": "visitor",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "visitorPageViewCount",
+                "displayName": "VisitorPageViewCount",
+                "dataType": "integer"
+            },
+            {
+                "apiName": "firstVisitorPageViewAt",
+                "displayName": "FirstVisitorPageViewAt",
+                "dataType": "datetime"
+            },
+            {
+                "apiName": "lastVisitorPageViewAt",
+                "displayName": "LastVisitorPageViewAt",
+                "dataType": "datetime"
+            },
+            {
+                "apiName": "durationInSeconds",
+                "displayName": "DurationInSeconds",
+                "dataType": "integer"
+            },
+            {
+                "apiName": "campaignParameter",
+                "displayName": "CampaignParameter",
+                "dataType": "string",
+                "updateable": false
+            },
+            {
+                "apiName": "mediumParameter",
+                "displayName": "MediumParameter",
+                "dataType": "string"
+            },
+            {
+                "apiName": "sourceParameter",
+                "displayName": "SourceParameter",
+                "dataType": "string"
+            },
+            {
+                "apiName": "contentParameter",
+                "displayName": "ContentParameter",
+                "dataType": "string",
+                "updateable": false
+            },
+            {
+                "apiName": "termParameter",
+                "displayName": "TermParameter",
+                "dataType": "string"
+            },
+            {
+                "apiName": "prospect",
+                "displayName": "Prospect",
+                "dataType": "object"
+            },
+            {
+                "apiName": "createdAt",
+                "displayName": "Created At",
+                "dataType": "datetime",
+                "updateable": false,
+                "initializable": false,
+                "system": true
+            },
+            {
+                "apiName": "updatedAt",
+                "displayName": "Updated At",
+                "dataType": "datetime",
+                "updateable": false,
+                "initializable": false,
+                "watermarkField": true,
+                "system": true
+            }
+        ]
+    },
+    {
+        "apiName": "visitors",
+        "displayName": "Visitors",
+        "attributes": [
+            {
+                "apiName": "id",
+                "displayName": "Id",
+                "dataType": "integer",
+                "system": true,
+                "idField": true
+            },
+            {
+                "apiName": "campaignParameter",
+                "displayName": "Campaign Parameter",
+                "dataType": "string"
+            },
+            {
+                "apiName": "contentParameter",
+                "displayName": "Content Parameter",
+                "dataType": "string",
+                "updateable": false
+            },
+            {
+                "apiName": "prospectId",
+                "displayName": "Prospect Id",
+                "dataType": "integer",
+                "referenceTo": "prospect",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "campaignId",
+                "displayName": "Campaign Id",
+                "dataType": "integer",
+                "referenceTo": "campaign",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "doNotSell",
+                "displayName": "Do Not Sell",
+                "dataType": "boolean"
+            },
+            {
+                "apiName": "hostName",
+                "displayName": "Host Name",
+                "dataType": "string"
+            },
+            {
+                "apiName": "ipAddress",
+                "displayName": "IP Address",
+                "dataType": "string"
+            },
+            {
+                "apiName": "mediumParameter",
+                "displayName": "Medium Parameter",
+                "dataType": "string"
+            },
+            {
+                "apiName": "pageViewCount",
+                "displayName": "Page View Count",
+                "dataType": "integer"
+            },
+            {
+                "apiName": "sourceParameter",
+                "displayName": "Source Parameter",
+                "dataType": "string"
+            },
+            {
+                "apiName": "termParameter",
+                "displayName": "Term Parameter",
+                "dataType": "string"
+            },
+            {
+                "apiName": "isIdentified",
+                "displayName": "Is Identified",
+                "dataType": "boolean"
+            },
+            {
+                "apiName": "createdAt",
+                "displayName": "Created At",
+                "dataType": "datetime",
+                "updateable": false,
+                "initializable": false,
+                "system": true
+            },
+            {
+                "apiName": "updatedAt",
+                "displayName": "Updated At",
+                "dataType": "datetime",
+                "updateable": false,
+                "initializable": false,
+                "watermarkField": true,
+                "system": true
+            }
+        ]
+    },
+    {
+        "apiName": "visitor-activities",
+        "displayName": "Visitor Activities",
+        "readOnly": true,
+        "attributes": [
+            {
+                "apiName": "id",
+                "displayName": "Id",
+                "dataType": "integer",
+                "system": true,
+                "idField": true
+            },
+            {
+                "apiName": "customRedirectId",
+                "displayName": "Custom Redirect Id",
+                "dataType": "integer"
+            },
+            {
+                "apiName": "customRedirect",
+                "displayName": "Custom Redirect",
+                "dataType": "object"
+            },
+            {
+                "apiName": "details",
+                "displayName": "Details",
+                "dataType": "string"
+            },
+            {
+                "apiName": "emailId",
+                "displayName": "Email Id",
+                "dataType": "integer"
+            },
+            {
+                "apiName": "emailTemplateId",
+                "displayName": "Email Template Id",
+                "dataType": "integer"
+            },
+            {
+                "apiName": "emailTemplate",
+                "displayName": "Email Template",
+                "dataType": "object"
+            },
+            {
+                "apiName": "email",
+                "displayName": "Email",
+                "dataType": "object"
+            },
+            {
+                "apiName": "fileId",
+                "displayName": "File Id",
+                "dataType": "integer",
+                "referenceTo": "file",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "file",
+                "displayName": "File",
+                "dataType": "object"
+            },
+            {
+                "apiName": "formHandlerId",
+                "displayName": "Form Handler id",
+                "dataType": "integer",
+                "referenceTo": "formHandler",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "formHandler",
+                "displayName": "Form Handler",
+                "dataType": "object"
+            },
+            {
+                "apiName": "formId",
+                "displayName": "Form Id",
+                "dataType": "integer",
+                "referenceTo": "form",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "form",
+                "displayName": "Form",
+                "dataType": "object"
+            },
+            {
+                "apiName": "landingPageId",
+                "displayName": "Landing Page Id",
+                "dataType": "integer",
+                "referenceTo": "landingPage",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "landingPage",
+                "displayName": "Landing Page",
+                "dataType": "object"
+            },
+            {
+                "apiName": "listEmailId",
+                "displayName": "List Email Id",
+                "dataType": "integer",
+                "referenceTo": "listEmail",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "listEmail",
+                "displayName": "List Email",
+                "dataType": "object"
+            },
+            {
+                "apiName": "multivariateTestVariationId",
+                "displayName": "MultivariateTestVariationId",
+                "dataType": "integer"
+            },
+            {
+                "apiName": "opportunityId",
+                "displayName": "Opportunity Id",
+                "dataType": "integer",
+                "referenceTo": "opportunity",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "opportunity",
+                "displayName": "Opportunity",
+                "dataType": "object"
+            },
+            {
+                "apiName": "paidSearchAdId",
+                "displayName": "PaidSearchAdId",
+                "dataType": "integer"
+            },
+            {
+                "apiName": "siteSearchQueryId",
+                "displayName": "SiteSearchQueryId",
+                "dataType": "integer"
+            },
+            {
+                "apiName": "typeName",
+                "displayName": "Type Name",
+                "dataType": "string"
+            },
+            {
+                "apiName": "type",
+                "displayName": "Type",
+                "dataType": "integer"
+            },
+            {
+                "apiName": "visitId",
+                "displayName": "Visit Id",
+                "dataType": "integer",
+                "referenceTo": "visit",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "visit",
+                "displayName": "Visit",
+                "dataType": "object"
+            },
+            {
+                "apiName": "visitorId",
+                "displayName": "Visitor Id",
+                "dataType": "integer",
+                "referenceTo": "visitor",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "visitor",
+                "displayName": "Visitor",
+                "dataType": "object"
+            },
+            {
+                "apiName": "visitorPageViewId",
+                "displayName": "Visitor Page View Id",
+                "dataType": "integer",
+                "referenceTo": "visitorPageView",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "visitorPageView",
+                "displayName": "Visitor Page View",
+                "dataType": "object"
+            },
+            {
+                "apiName": "prospectId",
+                "displayName": "Prospect Id",
+                "dataType": "integer",
+                "referenceTo": "prospect",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "prospect",
+                "displayName": "Prospect",
+                "dataType": "object"
+            },
+            {
+                "apiName": "campaignId",
+                "displayName": "Campaign Id",
+                "dataType": "integer",
+                "referenceTo": "campaign",
+                "referenceTargetField": "id"
+            },
+            {
+                "apiName": "campaign",
+                "displayName": "Campaign",
+                "dataType": "object"
+            },
+            {
+                "apiName": "createdAt",
+                "displayName": "Created At",
+                "dataType": "datetime",
+                "updateable": false,
+                "initializable": false,
+                "system": true
+            },
+            {
+                "apiName": "updatedAt",
+                "displayName": "Updated At",
+                "dataType": "datetime",
+                "updateable": false,
+                "initializable": false,
+                "watermarkField": true,
+                "system": true
+            }
+        ]
+    }
+]

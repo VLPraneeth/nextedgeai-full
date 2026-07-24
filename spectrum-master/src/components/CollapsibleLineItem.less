@@ -1,0 +1,53 @@
+@import '~styles/index.less';
+
+.synri-collapsible-disclosure-arrow-btn {
+  appearance: none;
+  background-color: transparent;
+  border-radius: @borderRadius[sm];
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  padding: @spacings[xxs];
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.025);
+  }
+}
+
+.synri-collapsible-disclosure-arrow {
+  color: @gray-700;
+  display: flex;
+  margin: auto;
+  height: @fontSizes[sm];
+  width: @fontSizes[sm];
+
+  transform: rotateZ(-90deg);
+  transition: all 0.15s @easings[easeInOut];
+
+  &.is-open {
+    transform: rotateZ(0deg);
+  }
+}
+
+.synri-collapsible-line-item-container {
+  .synri-collapsible-line-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: @spacings[sm] 0;
+    border-bottom: 1px solid @gray-300;
+
+    .synri-collapsible-line-item-title {
+      color: @gray-1000;
+      font-size: @fontSizes[md];
+      font-weight: @fontWeights[bold];
+    }
+  }
+
+  .synri-collapsible-line-item-content {
+    &.expanded {
+      padding-top: @spacings[sm];
+    }
+  }
+}

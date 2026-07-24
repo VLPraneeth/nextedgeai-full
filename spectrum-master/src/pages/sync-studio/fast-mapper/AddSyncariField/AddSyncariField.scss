@@ -1,0 +1,12 @@
+@import 'styles';
+@import '../Mapper/Mapper.scss';
+
+.add-syncari-field {
+  color: $syncari-blue;
+  padding: $spacings-md $spacings-xs;
+  cursor: pointer;
+
+  .synri-button {
+    padding-left: $spacings-xxxs;
+  }
+}

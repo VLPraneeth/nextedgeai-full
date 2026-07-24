@@ -1,0 +1,8 @@
+{
+  "name": "nextedgeai-local",
+  "private": true,
+  "scripts": {
+    "synca": "node scripts/start-local.js",
+    "start:local": "node scripts/start-local.js"
+  }
+}

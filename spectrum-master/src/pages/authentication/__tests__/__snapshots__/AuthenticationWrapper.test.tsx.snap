@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthenticationWrapper renders the authentication wrapper correctly 1`] = `
+<div>
+  <div
+    class="center-layout-container authentication-wrapper"
+  >
+    <div
+      class="logo-container"
+    >
+      <img
+        alt="NextEdge AI"
+        class="logo"
+        src="Logo.svg"
+      />
+    </div>
+    <div
+      class="authentication-content"
+    />
+  </div>
+</div>
+`;

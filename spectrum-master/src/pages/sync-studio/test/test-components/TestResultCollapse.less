@@ -1,0 +1,78 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+@import '~styles/index.less';
+
+.synri-test-result-collapse {
+  .ant-collapse-arrow {
+    color: @black !important;
+  }
+
+  .ant-collapse-item {
+    border-bottom: none;
+    margin-bottom: 8px;
+    margin-top: 8px;
+
+    .ant-collapse-header {
+      margin: 0;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-left: 22px;
+      border-radius: 0 !important;
+      border-top-left-radius: 6px !important;
+      border-top-right-radius: 6px !important;
+      background-color: transparent;
+
+      .anticon {
+        left: 8px;
+      }
+      i svg {
+        fill: currentColor;
+      }
+    }
+
+    .ant-collapse-content {
+      .ant-collapse-content-box {
+        margin: 0;
+        border-radius: @spacings[xxs];
+      }
+    }
+
+    &.ant-collapse-item-active {
+      .ant-collapse-header {
+        background-color: @gray-300;
+      }
+
+      .ant-collapse-content {
+        border: 8px solid @gray-300;
+        border-bottom-left-radius: 6px !important;
+        border-bottom-right-radius: 6px !important;
+        border-top: 0;
+      }
+
+      .synri-test-node-result-container.synri-test-node-result-active {
+        .synri-test-node-name {
+          padding-left: 0 !important;
+        }
+      }
+    }
+  }
+
+  .synri-test-result-header {
+    display: flex;
+    justify-content: space-between;
+
+    .synri-test-result-title,
+    .synri-test-result-status {
+      display: flex;
+      align-items: center;
+      color: @gray-1000;
+      font-weight: 400;
+
+      .anticon {
+        font-size: 1rem !important;
+        margin-right: 4px;
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+@import '~styles/index.less';
+
+.ant-btn-group.filter-button-group {
+  display: flex;
+}
+
+.synri-table-filters-search {
+  max-width: 20rem;
+}
+
+.filter-button {
+  display: inline-flex;
+  align-items: center;
+
+  &.match-search-size {
+    // this is set to match the SearchBox
+    height: 32px;
+  }
+}
+
+.filter-clear-button {
+  display: block;
+}
+
+.filter-button-icon {
+  height: @fontSizes[xxl];
+  width: @fontSizes[xxl];
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.filters-toolbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.filters-toolbar-primary-items {
+  flex-grow: 1;
+}
+
+@disclosure-arrow-size: 0.5rem;
+@disclosure-arrow-border-width: 1px;
+
+.filters-container {
+  position: relative;
+  border-radius: @borderRadius[md];
+  border: 1px solid @blue-300;
+  background-color: @blue-200;
+  padding: @spacings[md];
+  overflow: auto;
+
+  .filters-disclosure-arrow {
+    position: absolute;
+    border-width: @disclosure-arrow-size;
+    border-style: solid;
+    border-color: transparent transparent @blue-300 transparent;
+
+    top: calc((-2 * @disclosure-arrow-size) - @disclosure-arrow-border-width);
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: calc(-@disclosure-arrow-size + @disclosure-arrow-border-width);
+      left: -@disclosure-arrow-size;
+
+      border-width: @disclosure-arrow-size;
+      border-style: solid;
+      border-color: transparent transparent @blue-200 transparent;
+    }
+
+    // TODO: temporary
+    left: 24rem;
+  }
+}
+
+.schema-studio-table-filter {
+  display: flex;
+  flex-flow: column nowrap;
+
+  .schema-studio-table-filter-name {
+    font-weight: @fontWeights[bold];
+    color: @gray-900;
+    margin-bottom: @spacings[xs];
+  }
+}

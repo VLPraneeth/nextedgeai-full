@@ -1,0 +1,48 @@
+{
+  "id": "salesFunnel",
+  "displayName": "Sales Funnel",
+  "description": "Open opportunities grouped by stage",
+  "layout": { "h": 2 },
+  "hidden": false,
+  "contents": {
+    "configuration": {
+      "vizType": "TABLE",
+      "series": null,
+      "columns": [
+        {
+          "column": "stage",
+          "name": "stage",
+          "displayName": "Stage",
+          "color": null,
+          "displayFormat": "text"
+        },
+        { "column": "amount", "name": "amount", "displayName": "Amount", "color": null, "displayFormat": "currency" },
+        {
+          "column": "pipeline %",
+          "name": "pipeline %",
+          "displayName": "Pipeline %",
+          "color": null
+        },
+        {
+          "column": "count",
+          "name": "count",
+          "displayName": "Open Pipeline Count",
+          "color": null,
+          "displayFormat": "number"
+        }
+      ],
+      "dateFilter": null,
+      "yaxis": null,
+      "xaxis": null
+    },
+    "data": {
+      "series": null,
+      "rows": [
+        { "count": "46", "stage": "prospecting", "amount": "1402500", "pipeline %": "55.11%" },
+        { "count": "29", "stage": "qualification", "amount": "892500", "pipeline %": "35.07%" },
+        { "count": "8", "stage": "proposal", "amount": "250000", "pipeline %": "9.82%" }
+      ]
+    },
+    "contents": null
+  }
+}

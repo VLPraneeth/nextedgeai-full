@@ -1,0 +1,25 @@
+@import '~styles/index.less';
+
+.launch-tour-button {
+  .clear-button-styles();
+  .transition();
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 @spacings[md];
+
+  &:hover {
+    svg {
+      color: @syncari-blue;
+    }
+  }
+
+  &__icon {
+    height: 24px;
+    width: 24px;
+
+    color: @gray-700;
+  }
+}

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a1d02ad0-b6fe-482b-a1d1-c7d67c673ad8" name="Changes" comment="Draft: SYN-20253: DataQuality AI Backend Service (SyncAI DFI Rule Generation)">
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/syncari/core/config/MongoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/syncari/core/config/MongoConfig.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Ankoor Shah &lt;ankoor@syncari.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="SYN-20564" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="34OBqT1ttrXd8Rz33d0EjLq0Jx4" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.arcade.executor": "Debug",
+    "Application.viper.executor": "Debug",
+    "JUnit.AdvancedRecordMergeServiceTest.dedupeWithBooleanFieldNotEqualOrBothFalse.executor": "Run",
+    "JUnit.AdvancedRecordMergeServiceTest.executor": "Run",
+    "JUnit.AdvancedRecordMergeServiceTest.testProductionBugSimpleOrAllConditions.executor": "Debug",
+    "JUnit.CsvEdgeCasesTest.executor": "Run",
+    "JUnit.FileDataControllerTest.executor": "Run",
+    "JUnit.HubSpotContactAutomapperTest.testHubSpotContactAutomapping.executor": "Run",
+    "JUnit.LuceneAutoFieldMapperTest.basicAutomapping.executor": "Run",
+    "JUnit.LuceneAutoFieldMapperTest.executor": "Run",
+    "JUnit.LuceneAutoFieldMapperTest.testContactFields.executor": "Run",
+    "JUnit.MappingGraphServiceMockTest.executor": "Run",
+    "Maven.arcade.executor": "Debug",
+    "Maven.backend [clean,install,-DskipTests,-pl...].executor": "Run",
+    "Maven.backend [clean,install,-DskipTests].executor": "Run",
+    "Maven.backend [clean,install].executor": "Run",
+    "Maven.backend [install,--projects...].executor": "Run",
+    "Maven.utils [install].executor": "Run",
+    "Maven.viper.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Remote JVM Debug.arcade_debug_cli.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "SYN-20253",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/as/Documents/Projects/backend/arcade/src/test/java/com/syncari/api/core/util",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.splitter.proportion": "0.28615072"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/arcade/src/test/java/com/syncari/api/core/util" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install -DskipTests -pl viper spring-boot:run -Dspring-boot.run.arguments=--server.port=8083" />
+      <command value="mvn clean install" />
+      <command value="mvn clean install -DskipTests" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.arcade">
+    <configuration name="arcade" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="ms-11" />
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.syncari.api.Application" />
+      <module name="arcade" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="viper" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="ms-11" />
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.syncari.viper.ViperApp" />
+      <module name="viper" />
+      <option name="PROGRAM_PARAMETERS" value="--server.port=8083" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdvancedRecordMergeServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.syncari.core.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.syncari.core.service" />
+      <option name="MAIN_CLASS_NAME" value="com.syncari.core.service.AdvancedRecordMergeServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdvancedRecordMergeServiceTest.dedupeWithBooleanFieldNotEqualOrBothFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.syncari.core.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.syncari.core.service" />
+      <option name="MAIN_CLASS_NAME" value="com.syncari.core.service.AdvancedRecordMergeServiceTest" />
+      <option name="METHOD_NAME" value="dedupeWithBooleanFieldNotEqualOrBothFalse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdvancedRecordMergeServiceTest.testProductionBugSimpleOrAllConditions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.syncari.core.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.syncari.core.service" />
+      <option name="MAIN_CLASS_NAME" value="com.syncari.core.service.AdvancedRecordMergeServiceTest" />
+      <option name="METHOD_NAME" value="testProductionBugSimpleOrAllConditions" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LuceneAutoFieldMapperTest.basicAutomapping" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.syncari.core.service.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.syncari.core.service.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.syncari.core.service.mapper.LuceneAutoFieldMapperTest" />
+      <option name="METHOD_NAME" value="basicAutomapping" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LuceneAutoFieldMapperTest.testContactFields" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.syncari.core.service.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.syncari.core.service.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.syncari.core.service.mapper.LuceneAutoFieldMapperTest" />
+      <option name="METHOD_NAME" value="testContactFields" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="arcade_debug_cli" type="Remote">
+      <module name="arcade" />
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.arcade" />
+      <item itemvalue="Application.viper" />
+      <item itemvalue="JUnit.AdvancedRecordMergeServiceTest" />
+      <item itemvalue="JUnit.AdvancedRecordMergeServiceTest.testProductionBugSimpleOrAllConditions" />
+      <item itemvalue="JUnit.AdvancedRecordMergeServiceTest.dedupeWithBooleanFieldNotEqualOrBothFalse" />
+      <item itemvalue="JUnit.LuceneAutoFieldMapperTest.basicAutomapping" />
+      <item itemvalue="JUnit.LuceneAutoFieldMapperTest.testContactFields" />
+      <item itemvalue="Remote JVM Debug.arcade_debug_cli" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AdvancedRecordMergeServiceTest.testProductionBugSimpleOrAllConditions" />
+        <item itemvalue="JUnit.AdvancedRecordMergeServiceTest" />
+        <item itemvalue="JUnit.AdvancedRecordMergeServiceTest.dedupeWithBooleanFieldNotEqualOrBothFalse" />
+        <item itemvalue="JUnit.LuceneAutoFieldMapperTest.testContactFields" />
+        <item itemvalue="JUnit.LuceneAutoFieldMapperTest.basicAutomapping" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a1d02ad0-b6fe-482b-a1d1-c7d67c673ad8" name="Changes" comment="" />
+      <created>1761074929095</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761074929095</updated>
+    </task>
+    <task id="LOCAL-00001" summary="fix(csv): handle missing columns to prevent IndexOutOfBoundsException">
+      <option name="closed" value="true" />
+      <created>1761599510582</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761599510582</updated>
+    </task>
+    <task id="LOCAL-00002" summary="SYN-20024 fix(csv): handle missing columns safely to prevent IndexOutOfBoundsException">
+      <option name="closed" value="true" />
+      <created>1761600123703</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1761600123703</updated>
+    </task>
+    <task id="LOCAL-00003" summary="  SYN-20070: Add dynamic mapper routing (basicSearch/syncAI)&#10;&#10;  - Add MapperType enum and AutoFieldMapperFactory for routing&#10;  - Update MappingGraphService and PipelineController to accept mapperType param&#10;  - Remove hardcoded generic token filtering for better generalization&#10;  - Code cleanup: simplify logic, fix comments, modernize Java idioms">
+      <option name="closed" value="true" />
+      <created>1762989449186</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1762989449186</updated>
+    </task>
+    <task id="LOCAL-00004" summary="SYN-20070: Removed the old HubSpotContactAutomapperTest.java class and added all the test-cases into LuceneAutoFieldMapperTest.java class">
+      <option name="closed" value="true" />
+      <created>1763010971615</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1763010971615</updated>
+    </task>
+    <task id="LOCAL-00005" summary="SYN-20070: Fixed the dependency injection for the LLM Service">
+      <option name="closed" value="true" />
+      <created>1763012473955</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1763012473955</updated>
+    </task>
+    <task id="LOCAL-00006" summary="SYN-20070: Removed commented lines">
+      <option name="closed" value="true" />
+      <created>1763012642090</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1763012642090</updated>
+    </task>
+    <task id="LOCAL-00007" summary="SYN-20070: Resolved the comments of MR">
+      <option name="closed" value="true" />
+      <created>1763404740345</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1763404740345</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix: SYN-20070: fixed the MapperType.valueOf() method not working.">
+      <option name="closed" value="true" />
+      <created>1763678556502</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1763678556502</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Draft: SYN-20253: DataQuality AI Backend Service">
+      <option name="closed" value="true" />
+      <created>1767396649164</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1767396649164</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Draft: SYN-20253: DataQuality AI Backend Service">
+      <option name="closed" value="true" />
+      <created>1767396706853</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1767396706853</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Draft: SYN-20253: DataQuality AI Backend Service">
+      <option name="closed" value="true" />
+      <created>1767397905253</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1767397905253</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Draft: SYN-20253: DataQuality AI Backend Service">
+      <option name="closed" value="true" />
+      <created>1767833343349</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1767833343349</updated>
+    </task>
+    <task id="LOCAL-00013" summary="SYN-20501 - Issue pipeline is retrying record that does not exist and continues to error">
+      <option name="closed" value="true" />
+      <created>1767833604149</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1767833604149</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Draft: SYN-20253: DataQuality AI Backend Service (SyncAI DFI Rule Generation)-">
+      <option name="closed" value="true" />
+      <created>1767919374628</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1767919374628</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix(csv): handle missing columns to prevent IndexOutOfBoundsException" />
+    <MESSAGE value="SYN-20024 fix(csv): handle missing columns safely to prevent IndexOutOfBoundsException" />
+    <MESSAGE value="  SYN-20070: Add dynamic mapper routing (basicSearch/syncAI)&#10;&#10;  - Add MapperType enum and AutoFieldMapperFactory for routing&#10;  - Update MappingGraphService and PipelineController to accept mapperType param&#10;  - Remove hardcoded generic token filtering for better generalization&#10;  - Code cleanup: simplify logic, fix comments, modernize Java idioms" />
+    <MESSAGE value="SYN-20070: Removed the old HubSpotContactAutomapperTest.java class and added all the test-cases into LuceneAutoFieldMapperTest.java class" />
+    <MESSAGE value="SYN-20070: Fixed the dependency injection for the LLM Service" />
+    <MESSAGE value="SYN-20070: Removed commented lines" />
+    <MESSAGE value="SYN-20070: Resolved the comments of MR" />
+    <MESSAGE value="fix: SYN-20070: fixed the MapperType.valueOf() method not working." />
+    <MESSAGE value="Draft: SYN-20253: DataQuality AI Backend Service" />
+    <MESSAGE value="SYN-20501 - Issue pipeline is retrying record that does not exist and continues to error" />
+    <MESSAGE value="Draft: SYN-20253: DataQuality AI Backend Service (SyncAI DFI Rule Generation)-" />
+    <option name="LAST_COMMIT_MESSAGE" value="Draft: SYN-20253: DataQuality AI Backend Service (SyncAI DFI Rule Generation)-" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/utils/src/main/java/com/syncari/utils/CsvUtils.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

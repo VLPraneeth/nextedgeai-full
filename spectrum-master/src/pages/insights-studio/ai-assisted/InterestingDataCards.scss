@@ -1,0 +1,13 @@
+.interesting-data-cards {
+  flex: 1;
+  height: 100%;
+
+  &--container {
+    height: calc(100% - 50px);
+  }
+
+  .react-grid-layout {
+    overflow: auto;
+    min-height: auto;
+  }
+}

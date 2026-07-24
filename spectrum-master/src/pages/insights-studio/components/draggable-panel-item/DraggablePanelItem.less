@@ -1,0 +1,68 @@
+@import '~styles/index.less';
+
+.draggable-panel-item {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  height: 50px;
+
+  border-radius: @borderRadius[lg];
+  border: 1px solid @gray-300;
+  border-left-width: 6px;
+
+  padding-right: @spacings[sm];
+  margin-bottom: @spacings[md];
+
+  background-color: @white;
+  box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.075);
+
+  .transition();
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:active,
+  &:hover {
+    border-color: @syncari-blue;
+  }
+
+  &--draggable {
+    &:hover {
+      cursor: grab;
+    }
+    &:active {
+      cursor: grabbing !important;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__main {
+    flex: 1;
+    padding-left: @spacings[xxs];
+    // Necessary for text truncation in title element
+    min-width: 0;
+  }
+
+  &__title {
+    min-width: 0;
+    font-weight: @fontWeights[semibold];
+    .ellipsis-text();
+  }
+
+  &__subtitle {
+    font-size: @fontSizes[sm];
+    color: @gray-700;
+  }
+}

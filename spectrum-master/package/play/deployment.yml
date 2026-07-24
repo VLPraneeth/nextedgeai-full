@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spectrum-components-styleguide
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spectrum-components-styleguide
+  template:
+    metadata:
+      labels:
+        app: spectrum-components-styleguide
+    spec:
+      containers:
+        - name: spectrum-components-styleguide
+          image: gcr.io/$GCP_PROJECT/spectrum-component:latest
+          env:
+            - name: BUILD_NUMBER
+              value: '$BUILD_NUMBER'
+          ports:
+            - containerPort: 80

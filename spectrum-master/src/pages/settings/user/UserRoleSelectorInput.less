@@ -1,0 +1,51 @@
+@import '~styles/index.less';
+
+li.instance-role-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: calc(@spacings[xl] + @spacings[sm]);
+  padding: @spacings[xxs] @spacings[md];
+  margin: 1px 0 0 0;
+
+  list-style-type: none;
+
+  &:first-child {
+    // Only apply top margin after the first row
+    margin: 0;
+  }
+
+  &.is-checked {
+    .transition();
+    background-color: @blue-200;
+    &:hover {
+      background-color: @blue-300;
+    }
+  }
+
+  &.is-disabled {
+    pointer-events: none;
+  }
+
+  .instance-checkbox {
+    flex-basis: 45%;
+    // This max-width prevents the nowrap text from
+    // breaking the flexbox layout calculations
+    max-width: 45%;
+
+    .ant-checkbox-wrapper {
+      display: flex;
+      align-items: center;
+
+      & > span:last-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+  .instance-roles-select {
+    flex-basis: 55%;
+  }
+}

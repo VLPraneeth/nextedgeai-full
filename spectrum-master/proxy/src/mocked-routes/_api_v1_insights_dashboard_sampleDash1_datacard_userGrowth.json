@@ -1,0 +1,50 @@
+{
+  "id": "userGrowth",
+  "displayName": "User Growth",
+  "description": "A line showing user growth",
+  "layout": {
+    "h": 2
+  },
+  "contents": {
+    "configuration": {
+      "vizType": "LINE",
+      "series": null,
+      "xaxis": {
+        "name": "month",
+        "displayName": "Month",
+        "displayFormat": "text"
+      },
+      "yaxis": [
+        {
+          "name": "users",
+          "displayName": "Users",
+          "displayFormat": "number"
+        }
+      ]
+    },
+    "data": {
+      "series": [{ "displayName": "Users", "color": "green-300" }],
+      "rows": [
+        { "users": 3402, "month": "2021-01-01" },
+        { "users": 4500, "month": "2021-02-01" },
+        { "users": 3400, "month": "2021-03-01" },
+        { "users": 3800, "month": "2021-04-01" },
+        { "users": 5000, "month": "2021-05-01" },
+        { "users": 5204, "month": "2021-06-01" },
+        { "users": 6532, "month": "2021-07-01" },
+        { "users": 7808, "month": "2021-08-01" },
+        { "users": 7584, "month": "2021-09-01" },
+        { "users": 8621, "month": "2021-10-01" },
+        { "users": 9388, "month": "2021-11-01" },
+        { "users": 10154, "month": "2021-12-01" },
+        { "users": 11011, "month": "2022-01-01" },
+        { "users": 11725, "month": "2022-02-01" },
+        { "users": 12455, "month": "2022-03-01" },
+        { "users": 13222, "month": "2022-04-01" },
+        { "users": 13988, "month": "2022-05-01" },
+        { "users": 14755, "month": "2022-06-01" }
+      ]
+    },
+    "contents": null
+  }
+}

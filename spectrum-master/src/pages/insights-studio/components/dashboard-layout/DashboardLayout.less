@@ -1,0 +1,27 @@
+@import '~styles/index.less';
+
+.dashboard-layout {
+  height: 100%;
+  position: relative;
+  .react-grid-layout {
+    min-height: 100%;
+  }
+  &__error {
+    margin: @spacings[md] @spacings[xl];
+  }
+
+  .react-grid-item.react-grid-placeholder {
+    background: @syncari-blue;
+  }
+
+  &__placeholder {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .ant-btn-link {
+      padding: 0 7px;
+    }
+  }
+}

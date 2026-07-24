@@ -1,0 +1,41 @@
+{
+  "id": "arrByQuarter",
+  "displayName": "Sales by Quarter",
+  "description": "Amount in $ of closed won opportunities by quarter",
+  "layout": {
+    "h": 2
+  },
+  "contents": {
+    "configuration": {
+      "vizType": "COLUMN",
+      "series": null,
+      "xaxis": {
+        "column": "quarter",
+        "name": "quarter",
+        "displayName": "Quarter",
+        "displayFormat": "text"
+      },
+      "yaxis": [
+        {
+          "column": "amount",
+          "name": "amount",
+          "displayName": "Amount",
+          "displayFormat": "currency"
+        }
+      ]
+    },
+    "data": {
+      "series": [{ "displayName": "Amount", "color": "teal-500" }],
+      "rows": [
+        { "amount": 356000, "quarter": "2021 Q1" },
+        { "amount": 384480, "quarter": "2021 Q2" },
+        { "amount": 317239, "quarter": "2021 Q3" },
+        { "amount": 458459, "quarter": "2021 Q4" },
+        { "amount": 524336, "quarter": "2022 Q1" },
+        { "amount": 530500, "quarter": "2022 Q2" },
+        { "amount": 560488, "quarter": "2022 Q3" }
+      ]
+    },
+    "contents": null
+  }
+}

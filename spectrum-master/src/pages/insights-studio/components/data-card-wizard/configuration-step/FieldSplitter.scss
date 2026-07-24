@@ -1,0 +1,19 @@
+@import 'styles';
+
+.field-splitter {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: $spacings-xs;
+  margin: $spacings-sm 0;
+
+  &__label {
+    color: $gray-800;
+  }
+
+  &__line {
+    background: #d9d9d9;
+    height: 1px;
+    flex-grow: 1;
+  }
+}

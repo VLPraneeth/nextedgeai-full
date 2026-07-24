@@ -1,0 +1,53 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+proxy/node_modules
+
+# testing
+/coverage
+/proxy/coverage
+
+# production
+/build
+/proxy/public/
+/public/version.json
+/storybook-static/
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+.vscode/
+.env/
+.cache
+dist/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+mock-server/rest/*/*/*/mock/response.txt
+
+.idea
+.project
+
+/cypress/screenshots
+/cypress/videos
+
+# ignore user .env
+.env
+
+# ignore pubsub
+.psk
+
+# generated files
+/src/utils/LessConstants.ts
+
+#Claude init files
+CLAUDE.md

@@ -1,0 +1,130 @@
+{
+  "id": "dash1",
+  "configuration": {
+    "displayName": "Sales",
+    "description": "Sales dashboard"
+  },
+  "dataCards": [
+    {
+      "id": "barCard",
+      "layout": {
+        "minH": 2,
+        "resizable": false,
+        "w": 6,
+        "h": 2,
+        "x": 0,
+        "y": 0
+      },
+      "displayName": "Bar Card",
+      "description": "Fallback description"
+    },
+    {
+      "id": "lineCard",
+      "layout": {
+        "minH": 2,
+        "resizable": false,
+        "w": 6,
+        "h": 2,
+        "x": 7,
+        "y": 0
+      },
+      "displayName": "Line Card",
+      "description": "Fallback description"
+    },
+    {
+      "id": "columnCard",
+      "layout": {
+        "minH": 1,
+        "resizable": false,
+        "w": 8,
+        "h": 2,
+        "x": 0,
+        "y": 2
+      },
+      "displayName": "Column Card",
+      "description": "Fallback description"
+    },
+    {
+      "id": "lineCardMultiple",
+      "layout": {
+        "minH": 1,
+        "resizable": false,
+        "w": 4,
+        "h": 2,
+        "x": 8,
+        "y": 2
+      },
+      "displayName": "Multi-series Line Card",
+      "description": "Fallback description"
+    },
+    {
+      "id": "metricCard",
+      "layout": {
+        "minH": 1,
+        "resizable": false,
+        "w": 4,
+        "h": 2,
+        "x": 0,
+        "y": 4
+      },
+
+      "displayName": "Metric Card",
+      "description": "Fallback description"
+    },
+    {
+      "id": "tableCard",
+      "layout": {
+        "minH": 1,
+        "resizable": false,
+        "w": 8,
+        "h": 2,
+        "x": 4,
+        "y": 4
+      },
+
+      "displayName": "Table Card"
+    },
+    {
+      "id": "missingCard",
+      "layout": {
+        "minH": 1,
+        "resizable": false,
+        "w": 4,
+        "h": 2,
+        "x": 0,
+        "y": 6
+      },
+
+      "displayName": "Missing Card",
+      "description": "This card doesn't exist, so it shows the generic error"
+    },
+    {
+      "id": "emptyData",
+      "layout": {
+        "minH": 1,
+        "resizable": false,
+        "w": 4,
+        "h": 2,
+        "x": 4,
+        "y": 6
+      },
+
+      "displayName": "Empty Data",
+      "description": "A card with no data rows returned"
+    },
+    {
+      "id": "customError",
+      "layout": {
+        "minH": 1,
+        "resizable": false,
+        "w": 4,
+        "h": 2,
+        "x": 8,
+        "y": 6
+      },
+
+      "displayName": "Custom Error",
+      "description": "This card does exist but has a data error, so it shows a custom message"
+    }
+  ]
+}

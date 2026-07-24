@@ -1,0 +1,15 @@
+@import 'styles';
+
+.color-theme-input {
+  width: $color-input-width !important;
+  &__label {
+    display: flex;
+    align-items: center;
+  }
+  &__label-color {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: $spacings-xxsm;
+  }
+}

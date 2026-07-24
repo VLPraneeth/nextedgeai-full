@@ -1,0 +1,5 @@
+@import 'styles/index';
+
+.synri-link-renderer {
+  @include ellipsis-text();
+}

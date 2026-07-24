@@ -1,0 +1,24 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+@import 'styles/index';
+
+.synri-test-result-criteria-container {
+  display: flex;
+  flex-direction: column;
+  font-weight: $font-weights-regular;
+  color: $gray-800;
+  margin-top: $spacings-sm;
+
+  .label {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .label span {
+    @include ellipsis-text();
+  }
+}

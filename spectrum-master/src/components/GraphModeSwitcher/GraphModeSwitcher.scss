@@ -1,0 +1,52 @@
+@import 'styles/variables.scss';
+@import 'styles/color.scss';
+
+.graph-mode-switcher {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__button {
+    height: 60px;
+    border-radius: 0;
+    border-width: 0 1px 0 0;
+    padding: 0 $spacings-sm;
+    font-weight: $font-weights-semibold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--selected {
+      background-color: $blue-200 !important;
+    }
+  }
+
+  &__icon {
+    width: $spacings-mlg;
+    height: $spacings-mlg;
+
+    &--selected {
+      color: $blue-600;
+    }
+  }
+
+  :first-child {
+    border-width: 0 1px 1px 0;
+  }
+
+  .ant-btn:focus,
+  .ant-btn:active {
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  .ant-btn:hover,
+  .ant-btn:focus,
+  .ant-btn:active {
+    border-color: #d9d9d9;
+  }
+
+  .ant-btn::after {
+    content: none;
+  }
+}

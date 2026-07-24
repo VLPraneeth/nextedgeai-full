@@ -1,0 +1,43 @@
+@import 'styles';
+
+.validation__issues {
+  display: flex;
+  gap: $spacings-xs;
+  align-items: center;
+  cursor: pointer;
+  .validation__error,
+  .validation__warning {
+    background: $red-150;
+    border: 1px solid $red-200;
+    padding: $spacings-xxxs $spacings-xs;
+    display: flex;
+    align-items: center;
+    gap: $spacings-xxs;
+    border-radius: $border-radius-md;
+    min-width: 42px;
+    max-height: 20px;
+    &-icon {
+      path {
+        fill: $red-500;
+      }
+    }
+    &-count {
+      font-size: $font-size-sm;
+      font-weight: $font-weights-regular;
+      color: $red-800;
+    }
+  }
+
+  .validation__warning {
+    background: $orange-250;
+    border: 1px solid $orange-300;
+    &-icon {
+      path {
+        fill: $orange-600;
+      }
+    }
+    &-count {
+      color: $orange-800;
+    }
+  }
+}

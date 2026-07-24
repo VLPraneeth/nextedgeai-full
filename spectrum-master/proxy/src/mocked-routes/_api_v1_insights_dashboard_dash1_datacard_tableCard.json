@@ -1,0 +1,48 @@
+{
+  "id": "tableCard",
+  "displayName": "Table Card",
+  "description": "A card showing a table visualization",
+  "layout": { "h": 2 },
+  "hidden": false,
+  "contents": {
+    "configuration": {
+      "vizType": "TABLE",
+      "series": null,
+      "columns": [
+        {
+          "column": "source",
+          "name": "source",
+          "displayName": "source",
+          "displayFormat": "text"
+        },
+        { "column": "amount", "name": "amount", "displayName": "Revenue", "displayFormat": "number" },
+        {
+          "column": "pipeline",
+          "name": "pipeline",
+          "displayName": "Pipeline %",
+          "displayFormat": "text"
+        },
+        {
+          "column": "count",
+          "name": "count",
+          "displayName": "Open Pipeline Count",
+          "displayFormat": "number"
+        }
+      ],
+      "dateFilter": null,
+      "yaxis": null,
+      "xaxis": null
+    },
+    "data": {
+      "series": null,
+      "rows": [
+        { "count": "45", "amount": "447000", "source": "display", "pipeline": "17.55%" },
+        { "count": "24", "amount": "700000", "source": "organic", "pipeline": "27.48%" },
+        { "count": "35", "amount": "600000", "source": "search", "pipeline": "23.56%" },
+        { "count": "9", "amount": "240000", "source": "social", "pipeline": "9.42%" },
+        { "count": "46", "amount": "560000", "source": "affiliate", "pipeline": "21.99%" }
+      ]
+    },
+    "contents": null
+  }
+}

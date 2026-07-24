@@ -1,0 +1,37 @@
+@import '~styles/index.less';
+
+.schema-studio-entity-table {
+  overflow-x: auto;
+  max-width: calc(100vw - 350px - 90px - (@spacings[md] * 2));
+}
+
+.schema-studio-row.schema-studio-field-row {
+  &.has-draft {
+    & > td,
+    & > div {
+      background-color: @orange-200;
+      border-top: @orange-400;
+      border-bottom-color: @orange-400;
+
+      .field-data-type {
+        svg {
+          color: @orange-500;
+        }
+      }
+    }
+
+    &:hover {
+      & > td,
+      & > div {
+        background-color: darken(@orange-200, 5%);
+      }
+    }
+
+    &.ag-row-selected {
+      & > td,
+      & > div {
+        background-color: @orange-400;
+      }
+    }
+  }
+}

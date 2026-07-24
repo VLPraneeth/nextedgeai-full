@@ -1,0 +1,23 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import 'styles';
+
+$used-by-preview-height: 250px;
+
+.dataset-review-table {
+  &__table {
+    height: $used-by-preview-height;
+  }
+
+  &__loading {
+    min-height: $used-by-preview-height;
+  }
+
+  &__error {
+    .synri-inline-message {
+      margin-bottom: $spacings-sm;
+    }
+  }
+}

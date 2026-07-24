@@ -1,0 +1,49 @@
+@import 'styles';
+
+.synri-dqs-dashboard-empty-state-container {
+  text-align: center;
+  margin-top: $spacings-xxl;
+}
+
+.data-quality-studio-content .data-quality-studio-inner-content {
+  overflow-y: auto;
+}
+
+.data-quality-studio {
+  margin: 0px;
+
+  &__dashboard-selector {
+    min-width: 200px;
+  }
+}
+
+.data-quality-studio-main {
+  padding: 0 $spacings-md;
+}
+
+.data-quality-studio-grid {
+}
+
+.data-quality-studio-grid-item {
+  display: flex;
+  padding: $spacings-sm $spacings-mlg;
+  background-color: $white;
+  border: 1px solid $gray-300;
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  position: relative;
+}
+
+.data-quality-studio-table {
+  display: flex;
+  height: 100%;
+}
+
+.datascore-line-items {
+  overflow-y: auto;
+}
+
+.synri-dfi-progress-container {
+  margin-top: $spacings-xxs;
+  margin-right: $spacings-sm;
+}

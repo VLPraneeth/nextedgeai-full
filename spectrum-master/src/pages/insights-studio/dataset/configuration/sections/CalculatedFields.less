@@ -1,0 +1,59 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+.calculated-fields-picker {
+  &__select,
+  &--inputs {
+    width: 500px;
+  }
+
+  &--pop-over {
+    .input-component {
+      width: 300px;
+    }
+  }
+
+  &--footer {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      margin-left: 8px;
+    }
+  }
+
+  &--variable-view {
+    .box-bordered-no-shadow(@gray-400);
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    flex-wrap: wrap;
+    padding-left: 4px;
+    cursor: auto;
+
+    .ant-tag {
+      display: flex;
+      margin-top: 4px;
+      margin-bottom: 4px;
+
+      .field-data-type-wrapper {
+        color: @gray-700;
+        font-size: @fontSizes[md];
+        padding-top: 2px;
+        padding-bottom: 2px;
+
+        svg {
+          color: @gray-500;
+        }
+      }
+
+      .anticon-close {
+        padding-top: 6px;
+      }
+    }
+  }
+}

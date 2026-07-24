@@ -1,0 +1,34 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import 'styles';
+
+.vizer-metric {
+  &__display-value {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: $font-size-5xl;
+  }
+  &__range-value {
+    text-align: center;
+    font-weight: $font-weights-semibold;
+    font-size: $font-size-lg;
+    line-height: $line-height-snug;
+    .synri-tooltip {
+      margin-left: $spacings-xxsm;
+    }
+  }
+}
+
+.vizer {
+  &--with-label {
+    .vizer-metric {
+      height: 88%;
+    }
+  }
+}

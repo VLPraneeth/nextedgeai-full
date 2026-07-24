@@ -1,0 +1,31 @@
+@import '~styles/index.less';
+
+.audit-logs {
+  .audit-logs-header {
+    margin-bottom: @spacings[lg];
+
+    h2 {
+      margin-bottom: @spacings[mmlg];
+      font-size: @fontSizes[lgr];
+      font-weight: @fontWeights[semibold];
+    }
+
+    .audit-logs-filters {
+      display: flex;
+      gap: @spacings[mmlg];
+      align-items: center;
+
+      .date-range-picker {
+        width: 400px;
+      }
+    }
+  }
+
+  code {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: @fontSizes[xs];
+    background: @gray-250;
+    padding: @spacings[xxxs] @spacings[xxsm];
+    border-radius: @borderRadius[sm];
+  }
+}

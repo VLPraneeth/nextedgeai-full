@@ -1,0 +1,38 @@
+@import '~styles/index.less';
+
+.field-data-type {
+  color: @gray-500;
+  display: inline-flex;
+  align-items: center;
+
+  .field-data-type-icon-wrapper {
+    display: inline-flex;
+  }
+
+  &.small .field-data-type-icon-wrapper {
+    height: calc(@fontSizes[xs] * @lineHeights[snug]);
+  }
+
+  &.medium .field-data-type-icon-wrapper {
+    height: calc(@fontSizes[sm] * @lineHeights[regular]);
+  }
+
+  svg {
+    height: 100%;
+    width: auto;
+  }
+
+  .field-data-type-wrapper {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .field-data-type-icon {
+    margin-right: @spacings[xs];
+  }
+}
+
+// tooltip for data type icons
+.field-data-type-description {
+  text-transform: capitalize;
+}

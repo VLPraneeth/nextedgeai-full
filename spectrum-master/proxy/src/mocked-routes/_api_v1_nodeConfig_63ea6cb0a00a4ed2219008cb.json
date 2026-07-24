@@ -1,0 +1,459 @@
+{
+  "id": "63d142c4c4e73b0bb8e54038",
+  "name": "setValueOnEntity",
+  "displayName": "Set Value",
+  "description": null,
+  "helpSummary": "A function which assigns a value to the selected field on the current record in the pipeline.",
+  "helpPath": "functions.setValueOnEntity",
+  "iconPath": "/assets/icons/functions/default.svg",
+  "outputType": "string",
+  "positionalParams": [{ "name": "entity", "datatype": "object" }],
+  "engineType": "FUNCTION",
+  "scope": "ENTITY",
+  "type": "STANDARD",
+  "configuration": [
+    {
+      "name": "nodeLabel",
+      "datatype": "string",
+      "value": "Set Value",
+      "renderType": "string",
+      "helpSummary": "Enter a brief description that explains the configuration settings and its overall purpose.",
+      "implicit": true,
+      "mapping": [{ "graphKey": "label" }]
+    },
+    {
+      "name": "Description",
+      "datatype": "textarea",
+      "value": "63d142c4c4e73b0bb8e54038",
+      "renderType": "string",
+      "helpSummary": "Enter a brief description that explains the configuration settings and its overall purpose.",
+      "implicit": false,
+      "mapping": [{ "graphKey": "configuration.description" }]
+    },
+    {
+      "name": "functionDefinition",
+      "datatype": "string",
+      "value": "63d142c4c4e73b0bb8e54038",
+      "implicit": true,
+      "mapping": [{ "graphKey": "configuration.definition" }]
+    },
+    {
+      "name": "nodeType",
+      "datatype": "string",
+      "value": "FUNCTION",
+      "implicit": true,
+      "mapping": [{ "graphKey": "nodeType" }]
+    },
+    {
+      "name": "inputPorts",
+      "datatype": "object",
+      "value": [{ "portType": "INPUT", "datatype": "object", "maxConnections": 1 }],
+      "implicit": true,
+      "mapping": [{ "graphKey": "inputPorts" }]
+    },
+    {
+      "name": "outputPorts",
+      "datatype": "object",
+      "value": [{ "portType": "OUTPUT", "datatype": "string", "maxConnections": 1 }],
+      "implicit": true,
+      "mapping": [{ "graphKey": "outputPorts" }]
+    },
+    {
+      "name": "setValueField",
+      "label": "Select field",
+      "datatype": "composite",
+      "defaultValue": null,
+      "helpSummary": "Set a field or a temporary variable to be used later in the pipeline execution.",
+      "mapping": [{ "graphKey": "configuration.setValueField" }],
+      "renderType": "setValueField",
+      "required": false,
+      "readOnly": false,
+      "attributeValues": [
+        {
+          "value": "63d143a4c4e73b0ca8c2b479",
+          "label": "6827Remove (X6827Remove__c)",
+          "type": "variable",
+          "datatype": "picklist",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a3c4e73b0ca8c2b478",
+          "label": "6827_Test (X6827_Test__c)",
+          "type": "variable",
+          "datatype": "picklist",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a4c4e73b0ca8c2b47a",
+          "label": "6827reverse (X6827reverse__c)",
+          "type": "variable",
+          "datatype": "picklist",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a4c4e73b0ca8c2b47b",
+          "label": "6827sort (X6827sort__c)",
+          "type": "variable",
+          "datatype": "picklist",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a0c4e73b0ca8c2b468",
+          "label": "Account Description (Description)",
+          "type": "variable",
+          "datatype": "textarea",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439bc4e73b0ca8c2b44d",
+          "label": "Account ID (Id)",
+          "type": "variable",
+          "datatype": "id",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439bc4e73b0ca8c2b450",
+          "label": "Account Name (Name)",
+          "type": "variable",
+          "datatype": "string",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439fc4e73b0ca8c2b463",
+          "label": "Account Phone (Phone)",
+          "type": "variable",
+          "datatype": "string",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a3c4e73b0ca8c2b474",
+          "label": "Account Source (AccountSource)",
+          "type": "variable",
+          "datatype": "picklist",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439bc4e73b0ca8c2b451",
+          "label": "Account Type (Type)",
+          "type": "variable",
+          "datatype": "picklist",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439cc4e73b0ca8c2b454",
+          "label": "Billing City (BillingCity)",
+          "type": "variable",
+          "datatype": "string",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439dc4e73b0ca8c2b457",
+          "label": "Billing Country (BillingCountry)",
+          "type": "variable",
+          "datatype": "string",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439dc4e73b0ca8c2b45a",
+          "label": "Billing Geocode Accuracy (BillingGeocodeAccuracy)",
+          "type": "variable",
+          "datatype": "picklist",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439dc4e73b0ca8c2b458",
+          "label": "Billing Latitude (BillingLatitude)",
+          "type": "variable",
+          "datatype": "double",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439dc4e73b0ca8c2b459",
+          "label": "Billing Longitude (BillingLongitude)",
+          "type": "variable",
+          "datatype": "double",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439cc4e73b0ca8c2b455",
+          "label": "Billing State/Province (BillingState)",
+          "type": "variable",
+          "datatype": "string",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439cc4e73b0ca8c2b453",
+          "label": "Billing Street (BillingStreet)",
+          "type": "variable",
+          "datatype": "textarea",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439dc4e73b0ca8c2b456",
+          "label": "Billing Zip/Postal Code (BillingPostalCode)",
+          "type": "variable",
+          "datatype": "string",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a1c4e73b0ca8c2b46b",
+          "label": "Created By ID (CreatedById)",
+          "type": "variable",
+          "datatype": "reference",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a1c4e73b0ca8c2b46a",
+          "label": "Created Date (CreatedDate)",
+          "type": "variable",
+          "datatype": "datetime",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a3c4e73b0ca8c2b476",
+          "label": "DanTest (DanTest__c)",
+          "type": "variable",
+          "datatype": "string",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a3c4e73b0ca8c2b477",
+          "label": "DanTest2 (DanTest2__c)",
+          "type": "variable",
+          "datatype": "string",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a2c4e73b0ca8c2b472",
+          "label": "Data.com Key (Jigsaw)",
+          "type": "variable",
+          "datatype": "string",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a4c4e73b0ca8c2b47d",
+          "label": "Datetimefield (datetimefield__c)",
+          "type": "variable",
+          "datatype": "string",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439bc4e73b0ca8c2b44e",
+          "label": "Deleted (IsDeleted)",
+          "type": "variable",
+          "datatype": "boolean",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a0c4e73b0ca8c2b467",
+          "label": "Employees (NumberOfEmployees)",
+          "type": "variable",
+          "datatype": "integer",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a0c4e73b0ca8c2b466",
+          "label": "Industry (Industry)",
+          "type": "variable",
+          "datatype": "picklist",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a2c4e73b0ca8c2b473",
+          "label": "Jigsaw Company ID (JigsawCompanyId)",
+          "type": "variable",
+          "datatype": "string",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a2c4e73b0ca8c2b46f",
+          "label": "Last Activity (LastActivityDate)",
+          "type": "variable",
+          "datatype": "date",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a1c4e73b0ca8c2b46d",
+          "label": "Last Modified By ID (LastModifiedById)",
+          "type": "variable",
+          "datatype": "reference",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a1c4e73b0ca8c2b46c",
+          "label": "Last Modified Date (LastModifiedDate)",
+          "type": "variable",
+          "datatype": "datetime",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a2c4e73b0ca8c2b471",
+          "label": "Last Referenced Date (LastReferencedDate)",
+          "type": "variable",
+          "datatype": "datetime",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a2c4e73b0ca8c2b470",
+          "label": "Last Viewed Date (LastViewedDate)",
+          "type": "variable",
+          "datatype": "datetime",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439bc4e73b0ca8c2b44f",
+          "label": "Master Record ID (MasterRecordId)",
+          "type": "variable",
+          "datatype": "reference",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a0c4e73b0ca8c2b469",
+          "label": "Owner ID (OwnerId)",
+          "type": "variable",
+          "datatype": "reference",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439cc4e73b0ca8c2b452",
+          "label": "Parent Account ID (ParentId)",
+          "type": "variable",
+          "datatype": "reference",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a0c4e73b0ca8c2b465",
+          "label": "Photo URL (PhotoUrl)",
+          "type": "variable",
+          "datatype": "url",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a3c4e73b0ca8c2b475",
+          "label": "SIC Description (SicDesc)",
+          "type": "variable",
+          "datatype": "string",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439ec4e73b0ca8c2b45c",
+          "label": "Shipping City (ShippingCity)",
+          "type": "variable",
+          "datatype": "string",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439ec4e73b0ca8c2b45f",
+          "label": "Shipping Country (ShippingCountry)",
+          "type": "variable",
+          "datatype": "string",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439fc4e73b0ca8c2b462",
+          "label": "Shipping Geocode Accuracy (ShippingGeocodeAccuracy)",
+          "type": "variable",
+          "datatype": "picklist",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439fc4e73b0ca8c2b460",
+          "label": "Shipping Latitude (ShippingLatitude)",
+          "type": "variable",
+          "datatype": "double",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439fc4e73b0ca8c2b461",
+          "label": "Shipping Longitude (ShippingLongitude)",
+          "type": "variable",
+          "datatype": "double",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439ec4e73b0ca8c2b45d",
+          "label": "Shipping State/Province (ShippingState)",
+          "type": "variable",
+          "datatype": "string",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439ec4e73b0ca8c2b45b",
+          "label": "Shipping Street (ShippingStreet)",
+          "type": "variable",
+          "datatype": "textarea",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439ec4e73b0ca8c2b45e",
+          "label": "Shipping Zip/Postal Code (ShippingPostalCode)",
+          "type": "variable",
+          "datatype": "string",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a1c4e73b0ca8c2b46e",
+          "label": "System Modstamp (SystemModstamp)",
+          "type": "variable",
+          "datatype": "datetime",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a4c4e73b0ca8c2b47c",
+          "label": "Test Datetime (Test_Datetime__c)",
+          "type": "variable",
+          "datatype": "datetime",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d1439fc4e73b0ca8c2b464",
+          "label": "Website (Website)",
+          "type": "variable",
+          "datatype": "url",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a5c4e73b0ca8c2b47e",
+          "label": "booleantest2 (booleantest2__c)",
+          "type": "variable",
+          "datatype": "boolean",
+          "picklistGroup": "Account (Salesforce)"
+        },
+        {
+          "value": "63d143a5c4e73b0ca8c2b47f",
+          "label": "booleantest4 (booleantest4__c)",
+          "type": "variable",
+          "datatype": "string",
+          "picklistGroup": "Account (Salesforce)"
+        }
+      ]
+    },
+    {
+      "name": "newValue",
+      "datatype": "string",
+      "label": "New Value",
+      "defaultValue": "",
+      "helpSummary": null,
+      "mapping": [{ "graphKey": "configuration.newValue" }],
+      "dependsOn": {
+        "dependantType": "datatype",
+        "dependantField": "configuration.setValueField.dataType"
+      },
+      "required": false,
+      "readOnly": false
+    },
+    {
+      "name": "useEmpty",
+      "datatype": "boolean",
+      "label": "Use Empty",
+      "defaultValue": false,
+      "helpSummary": "Do not convert to null in case new value evaluates to empty string",
+      "mapping": [{ "graphKey": "configuration.useEmpty" }],
+      "required": false,
+      "readOnly": false
+    }
+  ],
+  "dynamicConfig": true,
+  "hidden": false,
+  "renderer": { "renderType": "form", "steps": null }
+}

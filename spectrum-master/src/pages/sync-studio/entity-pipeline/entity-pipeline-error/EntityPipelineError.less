@@ -1,0 +1,36 @@
+@import '~styles/index.less';
+
+.entity-pipeline-error {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: @gray-900;
+  font-size: @spacings[md];
+
+  &__icon {
+    margin-bottom: @spacings[md];
+    color: @red-500;
+    font-size: @fontSizes[3xl];
+  }
+
+  &__title {
+    font-size: @spacings[md];
+    font-weight: @fontWeights[semibold];
+  }
+
+  &__error {
+    font-size: @spacings[md];
+  }
+
+  &__navigation {
+    margin-top: @spacings[md];
+    display: flex;
+
+    button {
+      margin-right: @spacings[md];
+    }
+  }
+}

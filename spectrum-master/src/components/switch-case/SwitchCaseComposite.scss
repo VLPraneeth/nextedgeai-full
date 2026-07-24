@@ -1,0 +1,21 @@
+@import 'styles';
+
+.switch-case-composite {
+  .synri-filter-condition-group {
+    padding-left: $spacings-xxsm !important;
+  }
+
+  .synri-condition-right-overflow-auto {
+    .tokens-input-container {
+      line-height: 22px;
+    }
+  }
+
+  .tokens-input-container {
+    line-height: 24px;
+
+    .token-selector-trigger {
+      display: none;
+    }
+  }
+}

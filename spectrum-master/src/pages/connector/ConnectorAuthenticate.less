@@ -1,0 +1,32 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+@import '~styles/index.less';
+
+.synri-redirect-url-container {
+  display: flex;
+
+  .ant-form-item {
+    flex-grow: 1;
+  }
+
+  button:not(.skip-margin) {
+    margin-top: 4px;
+  }
+
+  &.synri-redirect-url-error button {
+    border-color: @validation-error;
+  }
+
+  .ant-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+  }
+
+  .ant-btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: #eceff2;
+  }
+}

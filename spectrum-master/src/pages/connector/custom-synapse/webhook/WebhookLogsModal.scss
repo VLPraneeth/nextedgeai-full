@@ -1,0 +1,10 @@
+.webhook_custom_synapse_modal {
+  transform: translateX(0px) !important;
+}
+.webhook_logs_modal {
+  height: 100%;
+  > div {
+    // 90px is the height of the pagination and export button in the top
+    height: calc(100% - 90px);
+  }
+}

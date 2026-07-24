@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <g id="UI-Elements" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Iconography" transform="translate(-1091.000000, -729.000000)">
+            <g id="Node-Check" transform="translate(1092.000000, 730.000000)">
+                <circle id="Oval" fill="#3AB5E3" cx="11.3333333" cy="11" r="11"></circle>
+                <g id="check" transform="translate(6.333333, 7.000000)" fill="#FFFFFF">
+                    <path d="M9.83125,0.2 L3.4375,6.4 L1.16875,4.2 C0.89375,3.93333333 0.48125,3.93333333 0.20625,4.2 C-0.06875,4.46666667 -0.06875,4.86666667 0.20625,5.13333333 L2.95625,7.8 C3.09375,7.93333333 3.23125,8 3.4375,8 C3.64375,8 3.78125,7.93333333 3.91875,7.8 L10.79375,1.13333333 C11.06875,0.866666667 11.06875,0.466666667 10.79375,0.2 C10.51875,-0.0666666667 10.10625,-0.0666666667 9.83125,0.2 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

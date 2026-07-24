@@ -1,0 +1,63 @@
+@import '~styles/index.less';
+
+@antd-input-border-color: #d9d9d9;
+@synri-label-height: 32px;
+
+.tokens-input-container {
+  position: relative;
+
+  .token-selector-trigger {
+    position: absolute;
+    top: -@synri-label-height;
+    right: @spacings[xs];
+    line-height: @synri-label-height;
+  }
+
+  &.synri-tokens-readonly {
+    .tokens-textarea-container {
+      background-color: @gray-200;
+    }
+  }
+}
+
+.tokens-textarea-container {
+  background-color: @white;
+  border: 1px solid @antd-input-border-color;
+  border-radius: @borderRadius[md];
+  color: rgba(0, 0, 0, 0.65);
+  padding: @spacings[xxs] @spacings[xs];
+  margin: @spacings[xxs] 0;
+  overflow: auto;
+  position: relative;
+
+  &--disabled {
+    background-color: @gray-200;
+    color: @gray-800;
+  }
+
+  &__spinner {
+    color: @gray-700 !important;
+    position: absolute !important;
+    right: @spacings[sm];
+    bottom: @spacings[xxs];
+  }
+
+  &:focus-within {
+    border-color: @syncari-blue;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  }
+
+  .tokens-textarea-unstyled {
+    display: inline-block;
+    align-items: center;
+  }
+
+  &.synri-tokens-textarea .tokens-textarea-unstyled {
+    display: block;
+  }
+
+  // Targeting the top div rendered by the Slate editor
+  &.synri-tokens-textarea > div[role='textbox'] {
+    min-height: 120px;
+  }
+}

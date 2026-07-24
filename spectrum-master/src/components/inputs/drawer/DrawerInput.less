@@ -1,0 +1,35 @@
+@import '~styles/index.less';
+
+.side-drawer {
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+  }
+  &__checkbox-label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    padding-left: @spacings[xs];
+  }
+  &__checkbox {
+    margin-bottom: @spacings[xxs];
+  }
+
+  &__label-action {
+    color: @blue-500;
+    cursor: pointer;
+    &--disabled {
+      color: @gray-300;
+      cursor: default;
+    }
+  }
+
+  &__upload-box {
+    width: 100%;
+  }
+
+  &__select {
+    width: 100%;
+  }
+}

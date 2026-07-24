@@ -1,0 +1,33 @@
+@import '~styles/index.less';
+
+.empty-state-container {
+  padding: @spacings[sm] @spacings[md];
+}
+
+.empty-state-stack {
+  border: @gray-300 1px solid;
+  border-radius: @borderRadius[lg];
+  box-shadow: @boxShadows[sm];
+  padding: @spacings[sm];
+}
+
+.empty-state-title {
+  color: @gray-1000;
+  font-size: @fontSizes[lg];
+  font-weight: @fontWeights[semibold];
+}
+
+.empty-state-description {
+  color: @gray-800;
+}
+
+.empty-state-icon-container {
+  height: @fontSizes[3xl];
+  width: @fontSizes[3xl];
+
+  .synri-inline-svg,
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,81 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+.authentication-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  & > div {
+    margin: 18px;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
+
+    .logo {
+      height: 42px;
+      width: 230px;
+    }
+  }
+
+  .authentication-content {
+    height: auto;
+    width: 432px;
+    border-radius: 6px;
+    box-shadow: 1px 2px 24px 0 rgba(0, 0, 0, 0.17);
+    padding: 40px;
+  }
+
+  a {
+    color: @color-label;
+    text-decoration: underline;
+  }
+
+  .authentication-title {
+    color: @color-label;
+    font-size: @font-size-authentication-title;
+    font-weight: @font-weight-label;
+    line-height: 21px;
+  }
+
+  .description {
+    color: @color-label;
+    font-size: @font-size-label;
+    line-height: 16px;
+    margin-top: 12px;
+  }
+
+  .forgot-password-button {
+    width: 100%;
+    font-size: @font-size-authentication-action;
+    font-weight: @font-weight-label;
+    height: 40px;
+  }
+
+  .action-container {
+    margin-top: 18px;
+
+    &--input-screen {
+      margin-top: 0px;
+    }
+  }
+
+  .back-to-login {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .input-layout-container {
+    input {
+      height: 40px;
+    }
+  }
+}

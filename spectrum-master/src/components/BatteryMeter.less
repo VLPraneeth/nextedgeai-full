@@ -1,0 +1,83 @@
+@import '~styles/index.less';
+
+.battery-meter-container {
+  display: inline-flex;
+  border-radius: @borderRadius[md];
+  padding: 1px;
+  transition: background-color 0.25s @easings[easeInOut];
+
+  &.small {
+    .battery-meter {
+      padding: 2px 5px;
+    }
+
+    .battery-bar {
+      min-height: 2px;
+      width: 7px;
+    }
+
+    .battery-bar-spacer {
+      flex: 1 2 auto;
+      min-height: 1px;
+    }
+
+    .label {
+      /* shrink the border radius so it looks right next to the outer radius */
+      border-radius: 0 (@borderRadius[md] - 1px) (@borderRadius[md] - 1px) 0;
+      padding: 0 3px;
+      /* keep single digit scores similar to double digit scores in width */
+      min-width: @spacings[lg];
+    }
+  }
+
+  &.large {
+    .battery-meter {
+      padding: @spacings[xxsm];
+    }
+
+    .battery-bar {
+      min-height: 2px;
+      width: @spacings[sm];
+    }
+
+    .battery-bar-spacer {
+      flex: 1 2 auto;
+      min-height: 2px;
+    }
+
+    .label {
+      /* shrink the border radius so it looks right next to the outer radius */
+      border-radius: 0 (@borderRadius[md] - 1px) (@borderRadius[md] - 1px) 0;
+      padding: 0 @spacings[xs];
+      /* keep single digit scores similar to double digit scores in width */
+      min-width: @spacings[lg];
+    }
+  }
+
+  .battery-meter {
+    display: flex;
+    flex-flow: column nowrap;
+
+    .battery-bar {
+      background-color: @white;
+      opacity: 0.25;
+      transition: opacity 0.25s @easings[easeInOut];
+
+      &.filled {
+        opacity: 1;
+      }
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: @white;
+    opacity: 0.8;
+  }
+}

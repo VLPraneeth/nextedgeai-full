@@ -1,0 +1,26 @@
+.realtime-pipeline-modal__content {
+  .ant-form-item {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .realtime-pipeline-modal__webhook {
+    width: 100%;
+  }
+
+  .synri-select {
+    width: 100%;
+  }
+
+  .ant-select-selection-selected-value {
+    .synri-inline-svg.non-svg {
+      img {
+        vertical-align: baseline;
+      }
+    }
+  }
+
+  .synri-inline-message {
+    margin-bottom: 0;
+  }
+}

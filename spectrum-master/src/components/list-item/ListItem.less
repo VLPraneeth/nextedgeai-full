@@ -1,0 +1,84 @@
+@import '~styles/index.less';
+
+.synri-list-item + .synri-list-item {
+  margin-top: @spacings[sm];
+}
+
+.synri-list-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid @gray-400;
+  border-radius: @borderRadius[lg];
+  padding-right: @spacings[xs];
+  min-height: 48px;
+
+  .synri-list-item-content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    min-width: 0;
+  }
+
+  &.synri-list-item-clickable {
+    cursor: pointer;
+    border-radius: @borderRadius[lg];
+    transition: all 200ms @easings[easeInOut];
+    &:hover {
+      background-color: @gray-200;
+    }
+  }
+
+  .synri-list-item-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .synri-list-item-text-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: @spacings[xs] 0;
+    margin-left: @spacings[sm];
+    min-width: 0;
+
+    .synri-list-item-title,
+    .synri-list-item-description {
+      .ellipsis-text();
+      margin-right: @spacings[xs];
+    }
+
+    .synri-list-item-description-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .synri-list-item-title {
+      color: @gray-900;
+      font-size: @fontSizes[md];
+      font-weight: @fontWeights[semibold];
+    }
+
+    .synri-list-item-description {
+      font-size: 11px;
+      color: @gray-700;
+    }
+  }
+
+  // Styles based on ListItemStatus
+  &.synri-list-item-disabled {
+    background-color: @gray-200;
+
+    .synri-list-item-text-container {
+      .synri-list-item-title {
+        color: @light-gray;
+      }
+
+      .synri-list-item-description {
+        color: @light-gray;
+      }
+    }
+  }
+}

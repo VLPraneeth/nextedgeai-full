@@ -1,0 +1,24 @@
+@import '~styles/index.less';
+
+.trend-badge {
+  border-radius: @borderRadius[md];
+  font-weight: @fontWeights[bold];
+  padding: @spacings[xs] @spacings[lg];
+
+  transition: all 0.25s @easings[easeInOut];
+
+  &.trend-badge-up {
+    background-color: @green-100;
+    color: @green-400;
+  }
+
+  &.trend-badge-neutral {
+    background-color: @gray-300;
+    color: @gray-1000;
+  }
+
+  &.trend-badge-down {
+    background-color: @red-200;
+    color: @red-500;
+  }
+}

@@ -1,0 +1,233 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import 'styles';
+
+.pipeline-versions {
+  background-color: $white;
+  display: flex;
+  padding: 30px;
+
+  &__title {
+    font-size: $font-size-xxl !important;
+    color: $gray-800;
+  }
+
+  &__table {
+    min-height: 200px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 140px;
+
+    svg:hover {
+      cursor: pointer;
+      fill: $syncari-blue !important;
+      transition: fill 300ms ease;
+    }
+  }
+}
+
+.pipeline-dropdown {
+  width: 100%;
+  display: none;
+  &.show {
+    display: initial;
+  }
+}
+
+.compare-versions-container {
+  background-color: $white;
+  flex: 1;
+  padding: $spacings-lg $spacings-xl;
+
+  &__back_link {
+    display: flex;
+    margin-bottom: $spacings-lg;
+    align-self: flex-start;
+    width: 180px;
+    align-items: center;
+  }
+}
+
+.compare-versions {
+  padding-bottom: $spacings-xl;
+
+  &__select-pipeline {
+    margin: $spacings-lg 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--left-content {
+      display: flex;
+      flex: 1;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .compare-versions__empty-content {
+    padding: $spacings-lg;
+    border: 1px solid $gray-300;
+    border-radius: $spacings-xxs;
+  }
+
+  .compare-versions-summary {
+    display: inline-block;
+    padding: $spacings-sm;
+    border-radius: $spacings-xs;
+    box-shadow: -1px 1px 6px 0px rgb(228, 228, 228);
+
+    td {
+      padding-right: $spacings-md;
+
+      &:not(:first-of-type) {
+        border-top: $spacings-xxs solid $white;
+        border-left: 2px solid $gray-800;
+        padding-left: $spacings-md;
+      }
+    }
+  }
+
+  .compare-versions-pipeline-picker {
+    width: 300px;
+    margin-left: $spacings-md;
+
+    &.ant-select-open {
+      .ant-select-selection-selected-value {
+        display: none !important;
+      }
+    }
+
+    .ant-select-selection__rendered {
+      display: flex;
+    }
+
+    .ant-select-selection-selected-value {
+      display: flex !important;
+      flex: 1;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 0;
+    }
+  }
+}
+
+// This is not nested because ant mounts the options at the top of the DOM
+.compare-versions-pipeline-picker__option {
+  display: flex;
+  justify-content: space-between;
+}
+
+.compare-versions-diff-container {
+  padding: $spacings-xs $spacings-sm;
+  border-radius: $spacings-xxs;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  background-color: $gray-100;
+  transition: background-color 0.2s cubic-bezier(0.12, 0, 0.39, 0);
+
+  &.is-open {
+    background-color: $white;
+  }
+
+  &__label-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &.is-open {
+      margin-bottom: $spacings-md;
+    }
+
+    &--label-item {
+      display: flex;
+      flex-direction: column;
+      padding-right: $spacings-md;
+      &:not(:first-child) {
+        padding-left: $spacings-md;
+        border-left: 1px solid #ebebeb;
+      }
+    }
+    &--spacer {
+      display: flex;
+      flex: 1;
+    }
+  }
+
+  span {
+    display: inline;
+  }
+
+  span.removed-diff {
+    text-decoration: line-through;
+    background-color: $red-150;
+    padding: 0 2px;
+    margin: 0 1px;
+  }
+
+  span.added-diff {
+    background-color: $blue-250;
+    padding: 0 2px;
+    margin: 0 1px;
+  }
+
+  &__label-arrow {
+    justify-self: flex-end;
+    height: $font-size-sm;
+    width: $font-size-sm;
+
+    transform: rotateZ(-180deg);
+    transition: all 0.15s $easing-easeInOut;
+
+    &.is-open {
+      transform: rotateZ(0deg);
+    }
+  }
+}
+
+.synri-table.version-detail-diff {
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  overflow: hidden;
+
+  .ant-table-small > .ant-table-content > .ant-table-body > table > .ant-table-thead > tr > th,
+  .ant-table-thead > tr > th {
+    color: rgb(137, 145, 150);
+    background-color: #f8fafd !important;
+  }
+
+  .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td {
+    background-color: #ecf0f1;
+  }
+
+  .ant-table-body .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    padding: 6px;
+  }
+
+  .previous-value-column {
+    min-width: 260px;
+  }
+
+  table tr:nth-child(even) {
+    background-color: rgb(252, 253, 254);
+  }
+
+  .ant-table-tbody > tr:last-of-type > td {
+    border-bottom: none;
+  }
+
+  .ant-table-body {
+    color: #000000;
+  }
+}

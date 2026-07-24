@@ -1,0 +1,27 @@
+@import '~styles/index.less';
+
+.ant-tooltip {
+  .ant-tooltip-inner {
+    padding: 0.6rem 1rem;
+    background-color: #191d21;
+  }
+
+  .ant-tooltip-arrow {
+    height: 20px;
+    width: 20px;
+
+    &::before {
+      height: 16px;
+      width: 16px;
+      background-color: #191d21;
+    }
+  }
+
+  .ant-tooltip-placement-right,
+  .ant-tooltip-placement-rightTop,
+  .ant-tooltip-placement-rightBottom {
+    .ant-tooltip-arrow {
+      left: -5px;
+    }
+  }
+}

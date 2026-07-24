@@ -1,0 +1,89 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+@import '~styles/index.less';
+
+.content-inner.transactions-inner-content {
+  overflow-y: auto;
+
+  .main-page-layout-container {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+
+.transaction-title {
+  height: 35px;
+  color: #637079;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 25px;
+  text-align: center;
+  padding-top: 8px;
+  .ellipsis-text();
+}
+
+.transaction-subtitle {
+  height: 15px;
+  color: #899196;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.transaction-icon {
+  text-align: center;
+}
+
+.transaction-stats {
+  height: 145px;
+  width: 100%;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+.transaction-card {
+  margin-left: 0;
+  width: 20%;
+  padding: 0 15px;
+  &:first-child {
+    padding-left: 0px;
+  }
+  &:last-child {
+    padding-right: 0px;
+  }
+}
+
+.transaction-empty-card {
+  width: 200px;
+}
+
+.transactions-changes-table {
+  tbody {
+    overflow-y: scroll !important;
+  }
+}
+
+.transaction-change-field-name {
+  font-weight: @fontWeights[bold];
+}
+
+.source-cell {
+  .ellipsis-text();
+
+  &__external-id {
+    font-family: @font-family-mono;
+    font-size: @fontSizes[sm];
+  }
+}
+
+.export-button-icon {
+  vertical-align: middle;
+  display: inline-flex;
+
+  svg {
+    height: 24px;
+    width: 24px;
+  }
+}

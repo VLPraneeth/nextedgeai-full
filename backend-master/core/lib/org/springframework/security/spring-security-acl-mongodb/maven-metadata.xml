@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.springframework.security</groupId>
+  <artifactId>spring-security-acl-mongodb</artifactId>
+  <versioning>
+    <versions>
+      <version>5.1.5-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20230124053604</lastUpdated>
+  </versioning>
+</metadata>

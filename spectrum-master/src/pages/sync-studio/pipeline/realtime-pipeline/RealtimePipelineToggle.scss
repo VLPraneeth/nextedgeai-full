@@ -1,0 +1,29 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import 'styles';
+
+.realtime-pipeline-toggle {
+  padding-left: $spacings-lg;
+  display: flex;
+  align-items: center;
+
+  .synri-label {
+    font-weight: $font-weights-regular;
+  }
+
+  &__link {
+    color: $gray-700 !important;
+    font-size: $font-size-xl !important;
+  }
+
+  &__switch {
+    margin-left: $spacings-xs;
+  }
+
+  &__help_tooltip a {
+    color: white;
+    text-decoration: underline;
+  }
+}

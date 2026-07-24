@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with sketchtool.</desc>
+    <g id="Kitchen-Sink" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Iconography" transform="translate(-168.000000, -105.000000)" fill="#122D31">
+            <g id="Zendesk" transform="translate(172.000000, 113.000000)">
+                <path d="M15.2448163,0.152816327 C15.2448163,4.19439456 11.9546939,7.47102041 7.89635374,7.47102041 C3.83801361,7.47102041 0.547891156,4.19439456 0.547891156,0.152816327 L15.2448163,0.152816327" id="Fill-15"></path>
+                <path d="M17.666585,24.1647891 C17.666585,20.1232109 20.9567075,16.846585 25.0150476,16.846585 C29.0733878,16.846585 32.3632925,20.1232109 32.3632925,24.1647891 L17.666585,24.1647891" id="Fill-16"></path>
+                <polyline id="Fill-17" points="15.2448163 6.49491156 15.2448163 24.1647891 0.547891156 24.1647891 15.2448163 6.49491156"></polyline>
+                <polyline id="Fill-18" points="17.666585 17.8224762 17.666585 0.152816327 32.3632925 0.152816327 17.666585 17.8224762"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

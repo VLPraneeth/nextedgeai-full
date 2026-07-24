@@ -1,0 +1,42 @@
+FROM node:20.18.3-bookworm-slim AS build
+
+WORKDIR /app
+
+COPY package.json package-lock.json .npmrc ./
+COPY libraries ./libraries
+COPY patches ./patches
+RUN npm ci
+
+COPY proxy/package.json proxy/package-lock.json proxy/.npmrc ./proxy/
+RUN cd proxy && npm ci
+
+COPY . .
+
+ARG NEXTEDGE_BUILD_SHA=source-archive
+ARG NEXTEDGE_BUILD_BRANCH=main
+ENV NEXTEDGE_BUILD_SHA=${NEXTEDGE_BUILD_SHA}
+ENV NEXTEDGE_BUILD_BRANCH=${NEXTEDGE_BUILD_BRANCH}
+
+RUN npm run proxy-build \
+    && npm run build \
+    && npm run prep-deployment
+
+FROM node:20.18.3-bookworm-slim AS runtime
+
+ENV NODE_ENV=production
+ENV SPECTRUM_PORT=8088
+WORKDIR /app
+
+COPY proxy/package.json proxy/package-lock.json proxy/.npmrc ./
+RUN npm ci --omit=dev \
+    && npm cache clean --force
+
+COPY --from=build --chown=node:node /app/proxy/dist ./dist
+
+USER node
+EXPOSE 8088
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=5 \
+  CMD node -e "require('http').get('http://127.0.0.1:8088/version',r=>process.exit(r.statusCode===200?0:1)).on('error',()=>process.exit(1))"
+
+CMD ["node", "dist/index.js"]

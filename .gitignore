@@ -1,0 +1,33 @@
+# VS Code
+.vscode/
+
+# Temp / local junk
+.tmp/
+*.tmp
+
+# Logs
+*.log
+
+# Build outputs (Java + Node)
+target/
+build/
+out/
+
+# Node
+node_modules/
+dist/
+.next/
+
+# Env (VERY IMPORTANT)
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Java build output
+*.class
+**/*.class
+target/
+**/target/

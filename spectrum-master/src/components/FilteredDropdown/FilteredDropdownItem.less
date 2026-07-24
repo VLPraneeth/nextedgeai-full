@@ -1,0 +1,60 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+.synri-filtered-dropdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: @spacings[xs] @spacings[md];
+  min-width: @spacings[6xl];
+  cursor: pointer;
+  // tranparent border is replaced with @syncari-blue on hover
+  border: 1px solid transparent;
+  .unselectable-text();
+
+  transition: all 0.3s @easings[easeInOut];
+
+  &.is-selected {
+    background-color: @syncari-blue;
+
+    .item-title {
+      color: @blue-200;
+    }
+    .item-subtext {
+      color: @gray-400;
+    }
+
+    &:hover,
+    &:focus {
+      .item-title {
+        color: @black;
+      }
+      .item-subtext {
+        color: @gray-700;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: @gray-300;
+  }
+
+  &:focus {
+    outline: none !important;
+    background-color: @gray-300;
+    border-color: @syncari-blue;
+    border-radius: 4px;
+  }
+
+  .item-title {
+    color: @black;
+  }
+
+  .item-subtext {
+    font-size: 12px;
+    color: @gray-700;
+  }
+}

@@ -1,0 +1,31 @@
+@import '~styles/index.less';
+
+.validation-result-container {
+  display: flex;
+  flex-direction: column;
+  padding: @spacings[md] 0;
+  border-bottom: @gray-400 1px solid;
+
+  .validation-result-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .validation-result-title {
+      font-size: @fontSizes[md];
+      font-weight: 600;
+      padding: 0;
+      margin-bottom: @spacings[xxs];
+    }
+  }
+
+  .validation-result-subtitle {
+    font-size: @fontSizes[md];
+    color: @light-gray;
+    padding: 0;
+    margin-bottom: @spacings[xs];
+    .ellipsis-text();
+  }
+}

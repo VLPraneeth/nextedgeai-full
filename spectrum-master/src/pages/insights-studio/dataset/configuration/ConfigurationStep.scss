@@ -1,0 +1,9 @@
+@import 'styles';
+
+.dataset-configuration-step {
+  height: 100%;
+
+  .synri-drawer-panel__footer {
+    z-index: 200;
+  }
+}

@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --text-primary: rgba(0, 0, 0, 0.65);
+}
+
+body {
+  font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', sans-serif !important;
+}
+
+/* Buttons */
+
+.button-module__primary,
+.home-library-module__addLiveboardContainer .button-module__secondary {
+  background: #1890ff !important;
+  border-radius: 4px !important;
+}
+
+.home-library-module__addLiveboardContainer .button-module__secondary p,
+.home-library-module__addLiveboardContainer .button-module__secondary:hover p {
+  color: white !important;
+}
+
+.button-module__tertiary,
+.button-module__tertiary:hover,
+.button-module__tertiary:focus {
+  background: transparent !important;
+}
+
+.button-module__secondary,
+.pinboard-edit-header-module__buttonsContainer .button-module__tertiary {
+  background: white !important;
+  border-radius: 4px !important;
+  border: 1px solid #d9d9d9;
+  padding: 6px 12px;
+  color: var(--text-primary) !important;
+}
+
+.button-module__secondary p,
+.pinboard-edit-header-module__buttonsContainer .button-module__tertiary p {
+  color: var(--text-primary) !important;
+}
+
+.button-module__secondary:hover,
+.button-module__secondary:hover p,
+.pinboard-edit-header-module__buttonsContainer .button-module__tertiary:hover,
+.pinboard-edit-header-module__buttonsContainer .button-module__tertiary:hover p {
+  border-color: #40a9ff !important;
+  color: #40a9ff !important;
+}
+
+.pinboard-edit-header-module__buttonsContainer .button-module__tertiary p {
+  color: var(--text-primary) !important;
+}
+
+.button-module__buttonWithIcon.button-module__secondary:not(.button-module__buttonWithText) {
+  border-radius: 100% !important;
+}
+
+.button-module__buttonWithIcon.button-module__secondary:not(.button-module__buttonWithText) {
+  padding: 0;
+}
+
+.button-module__backgroundColored.button-module__primary {
+  color: #1d232f;
+  background-color: #fff !important;
+}
+
+.pin-button-module__dualIntentPinButton {
+  display: flex;
+  gap: 8px;
+}
+
+/* Menu */
+
+.menu-module__item:hover,
+.sage-completions-dropdown-module__completion:hover,
+.sage-completions-dropdown-module__moreContainer:hover {
+  background: #e6f7ff !important;
+}
+
+.toolbar-module__popover.popover-module__positionable.popover-module__in .menu-module__item:hover {
+  background: rgba(192, 198, 207, 0.12) !important;
+}
+
+.pinboard-edit-header-module__headerLogo {
+  visibility: hidden;
+}
+
+/* Search embed */
+.tokenizer-module__tokenizerContainer .tokenizer-module__token:after {
+  line-height: 15px;
+}
+.data-source-preview-module__dataSourcePreview {
+  margin-right: 16px;
+}
+.tokenizer-module__tokenizerContainer .tokenizer-module__token {
+  padding-bottom: 2px;
+}
+.data-source-preview-module__dataSourcePreview,
+.sage-search-bar-module__undoRedoResetWrapper,
+.sage-search-box-module__bkSageSearchBox {
+  min-height: 42.2px;
+}
+.data-source-preview-module__dataSourcePreview p {
+  padding: 0;
+}
+.sage-search-bar-module__undoRedoResetWrapper button:hover {
+  color: #40a9ff !important;
+}
+.input-number-module__spinnerButtonsWrap {
+  position: relative;
+}
+.input-number-module__spinnerButtonsWrap button {
+  position: absolute;
+  width: 100%;
+}
+.input-number-module__spinnerButtonsWrap button:last-of-type {
+  top: 14px;
+}
+
+/* Dashboard embed */
+.pinboard-header-module__pinboardHeaderContainer,
+.pinboard-header-module__pinboardHeaderCollapsed {
+  background: transparent;
+  box-shadow: none !important;
+  position: relative;
+}
+
+.pinboard-header-module__pinboardHeader {
+  min-height: 0;
+  padding: 0;
+  padding-top: 20px;
+}
+
+.pinboard-edit-header-module__editActionHeader {
+  background: #ffe7be !important;
+}
+
+.pinboard-edit-header-module__buttonsContainer > div:first-child {
+  display: none;
+}
+
+.wizard-module__wizardHeader,
+.pinboard-content-module__emptyAlert button,
+.pinboard-header-module__avatarDiv {
+  display: none !important;
+}
+.liveboards-module__title,
+.answers-module__title {
+  visibility: hidden;
+  margin: 0;
+  height: 16px;
+  padding: 0;
+}
+.home-library-module__actionbarContainer {
+  margin-bottom: 8px;
+}
+.liveboard-container-module__liveboardLibraryContainer .home-library-module__actionItemsContainer {
+  margin-bottom: 20px;
+}
+.answer-container-module__answerLibraryContainer .home-library-module__actionItemsContainer {
+  margin-bottom: 18px;
+}
+.home-library-module__homeLibraryTableContainer {
+  border: 1px solid #bdc3c7;
+}
+.home-library-pagination-module__paginationContainer {
+  margin: 0;
+}
+.home-library-module__homeLibraryTableContainer
+  .title-header-module__titleHeaderView
+  .title-header-module__titleHeaderStyles {
+  font-size: 13px;
+  color: #899196;
+  letter-spacing: normal;
+}
+.home-library-module__homeLibraryTableContainer .ag-header {
+  border-bottom: 1px solid #d7d7d7;
+}
+.home-library-module__homeLibraryTableContainer .object-table-module__objectTableContainer .object-table-row-container {
+  background: #fcfdfe;
+  border-bottom: 1px solid #d9dcde;
+}
+.home-library-module__homeLibraryTableContainer .title-header-module__titleHeaderContainer:hover,
+.home-library-module__homeLibraryTableContainer .object-table-module__objectTableContainer .ag-row.ag-row-hover {
+  background: #ecf0f1;
+}
+.home-library-module__actionItemsContainer > div:first-child button,
+.home-library-module__actionItemsContainer > div:first-child button:hover {
+  border-color: #f7445d !important;
+  padding: auto 0;
+  padding: 6px 0 !important;
+}
+.home-library-module__actionItemsContainer > div:first-child button p {
+  color: #f7445d !important;
+}
+.home-library-module__actionItemsContainer > div:nth-child(2) button {
+  display: none;
+}
+.answer-module__searchCurtain {
+  background: none;
+}
+.ReactModalPortal .ReactModal__Overlay {
+  background: rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Table styles */
+
+/* Left columns */
+.liveboard-container-module__liveboardLibraryContainer .ag-pinned-left-header .ag-header-row > div:nth-of-type(2) {
+  display: none;
+}
+
+/* Right columns */
+.liveboard-container-module__liveboardLibraryContainer .ag-header-viewport .ag-header-row > div:nth-of-type(1),
+.liveboard-container-module__liveboardLibraryContainer .ag-header-viewport .ag-header-row > div:nth-of-type(2),
+.answer-container-module__answerLibraryContainer .ag-header-viewport .ag-header-row > div:nth-of-type(1),
+.answer-container-module__answerLibraryContainer .ag-header-viewport .ag-header-row > div:nth-of-type(2) {
+  display: none;
+}
+
+/* Right rows */
+.liveboard-container-module__liveboardLibraryContainer .ag-center-cols-clipper .ag-row > div:nth-of-type(1),
+.liveboard-container-module__liveboardLibraryContainer .ag-center-cols-clipper .ag-row > div:nth-of-type(2),
+.answer-container-module__answerLibraryContainer .ag-center-cols-clipper .ag-row > div:nth-of-type(1),
+.answer-container-module__answerLibraryContainer .ag-center-cols-clipper .ag-row > div:nth-of-type(2) {
+  display: none;
+}
+/* Remaining column positioning */
+.liveboard-container-module__liveboardLibraryContainer .ag-pinned-left-header,
+.liveboard-container-module__liveboardLibraryContainer .ag-header-viewport,
+.answer-container-module__answerLibraryContainer .ag-pinned-left-header,
+.answer-container-module__answerLibraryContainer .ag-header-viewport {
+  background: #f6f8fa;
+}
+
+/* Dashboard info modal */
+
+.pinboard-info-module__rowContainer
+  .pinboard-info-module__keyValueContainer.flex-layout-module__horizontal:nth-of-type(4),
+.pinboard-info-module__rowContainer
+  .pinboard-info-module__keyValueContainer.flex-layout-module__horizontal:nth-of-type(6) {
+  display: none !important;
+}
+
+/* Empty state */
+.home-library-module__emptyStateSuggestion {
+  text-align: center;
+}
+.home-library-module__emptyStateSuggestion > div {
+  display: block !important;
+}
+
+/* Hide the manage tag button */
+
+.manage-tag-module__manageTagButton {
+  display: none;
+}
+
+/* Don't show title */
+.library-header-module__libraryTitle,
+.library-header-module__liveboardTitle,
+.library-header-module__librarySeperator,
+.library-header-module__liveboardSeperator {
+  display: none;
+}
+
+/* Have the margin after the title is removed */
+
+.library-header-module__libraryHeader {
+  margin-left: 24px;
+}
+
+/* Hide schedule suggestion */
+.autosuggestion-container-module__popoverContentContainer.popover-module__positionable.popover-module__in {
+  display: none !important;
+}

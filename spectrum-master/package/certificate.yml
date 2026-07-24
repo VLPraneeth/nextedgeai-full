@@ -1,0 +1,8 @@
+apiVersion: networking.gke.io/v1beta2
+kind: ManagedCertificate
+metadata:
+  name: spectrum-$IMAGE_TAG
+  namespace: $IMAGE_TAG
+spec:
+  domains:
+    - spectrum.$IMAGE_TAG.syncari.net

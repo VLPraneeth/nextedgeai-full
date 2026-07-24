@@ -1,0 +1,11 @@
+@import 'styles';
+
+.switch-case-composite-input {
+  &__blank-values.synri-checkbox {
+    padding: 0 0 0 $spacings-xxs;
+
+    .ant-form-item {
+      width: 14px !important;
+    }
+  }
+}

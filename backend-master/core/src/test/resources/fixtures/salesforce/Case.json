@@ -1,0 +1,13 @@
+{  
+   "watermark":null,
+   "data":{  
+      "sfdc1":[  
+         {  
+            "name":"Case",
+            "values":{  
+               "CaseNumber":"1234"
+            }
+         }
+      ]
+   }
+}

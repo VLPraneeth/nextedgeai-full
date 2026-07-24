@@ -1,0 +1,7 @@
+Boolean_true,Boolean_false,Boolean_yes,Boolean_no,String_mix_integer,Double,String,Email,Date,Datetime,Decimal,Number,Currency,Url
+,,,,,,,,,,,,,
+true,false,yes,no,12,12.3,Test,test@test.com,01/01/2021,01/01/2021 00:00:00,10.4,20.3,$100,http://
+true,false,yes,no,105171D,12.3,Test,test@test.com,01/01/2021,01/01/2021 00:00:00,10.4,20.3,$100,http://
+true,false,yes,no,105171D,12.3,Test,test@test.com,01/01/2021,01/01/2021 00:00:00,10.4,20.3,$100,http://
+true,false,yes,no,105171,12.3,Test,test@test.com,01/01/2021,01/01/2021 00:00:00,10.4,20.3,$100,http://
+true,false,yes,no,105171,12,Test,test@test.com,01/01/2021,01/01/2021 00:00:00,10.4,20.3,$100,http://

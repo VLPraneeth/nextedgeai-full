@@ -1,0 +1,28 @@
+@import 'styles';
+
+.pipeline-details-subheader-message-container {
+  &__error-warning {
+    padding-top: $spacings-xxs;
+    padding-bottom: $spacings-md;
+  }
+}
+
+.sync-details-refresh {
+  &__refresh-button {
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 18px;
+      height: 18px;
+
+      #Icon {
+        fill: $gray-750;
+      }
+    }
+
+    &:hover svg #Icon {
+      fill: $syncari-blue;
+    }
+  }
+}

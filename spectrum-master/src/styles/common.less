@@ -1,0 +1,21 @@
+/* Utility classes for Syncari */
+
+@import '~styles/index.less';
+
+/* Box Shadows */
+each(@boxShadows, {
+  .box-shadow-@{key} {
+    box-shadow: @value;
+  }
+});
+
+/* Border Radius */
+each(@borderRadius, {
+  .rounded-@{key} {
+    border-radius: @value;
+  }
+});
+
+.full-width {
+  width: 100%;
+}

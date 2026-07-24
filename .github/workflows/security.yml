@@ -1,0 +1,51 @@
+name: Security
+
+on:
+  push:
+    branches:
+      - main
+      - "codex/**"
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  secret-scan:
+    name: Gitleaks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Scan tracked history for secrets
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  production-dependencies:
+    name: Production dependency critical audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.18.3
+          cache: npm
+          cache-dependency-path: |
+            spectrum-master/package-lock.json
+            spectrum-master/proxy/package-lock.json
+
+      - name: Audit browser production dependencies
+        working-directory: spectrum-master
+        run: npm audit --omit=dev --audit-level=critical
+
+      - name: Audit proxy production dependencies
+        working-directory: spectrum-master/proxy
+        run: npm audit --omit=dev --audit-level=critical

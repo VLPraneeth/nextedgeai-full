@@ -1,0 +1,208 @@
+{
+  "configuration": [
+    {
+      "id": "quickStartBasicSettingsDescription",
+      "datatype": "infoBox",
+      "message": "Set up your basic Quick Start settings",
+      "description": "Configure how your Quick Start will appear to users who run it, including display name and descriptive text.",
+      "name": "quickStartBasicSettingsDescription",
+      "showIcon": false
+    },
+    {
+      "id": "displayName",
+      "datatype": "string",
+      "helpSummary": "Name of your quick start",
+      "name": "displayName",
+      "label": "Display Name"
+    },
+    {
+      "datatype": "richtext",
+      "helpSummary": "Description of your Quick Start.",
+      "id": "description",
+      "label": "Description",
+      "name": "description",
+      "placeholder": ""
+    },
+    {
+      "datatype": "tag",
+      "helpSummary": "Do not sync back the merged record to the synapse.",
+      "id": "tags",
+      "label": "Tags",
+      "name": "tags"
+    },
+    {
+      "datatype": "richtext",
+      "helpSummary": "Message displayed at the end of the installation",
+      "id": "postInstallationInstruction",
+      "label": "Post Installation Message",
+      "placeholder": "",
+      "name": "postInstallationInstruction"
+    },
+    { "renderType": "pipelinePicker", "id": "pipelines", "name": "pipelines" },
+    {
+      "datatype": "infoBox",
+      "message": "Select all required pipelines",
+      "description": "If you select any pipelines with dependant pipelines, make sure to select the dependant pipelines as well.",
+      "id": "pipelinePickerSelectionWarning",
+      "name": "pipelinePickerSelectionWarning",
+      "type": "warning",
+      "showIcon": false
+    },
+    {
+      "datatype": "infoBox",
+      "message": "Review your Quick Start settings",
+      "description": "Make sure that your settings and pipeline selections are correct before proceeding to the publish stage.",
+      "id": "reviewSettingsDescription",
+      "name": "reviewSettingsDescription",
+      "showIcon": false
+    },
+    {
+      "datatype": "infoBox",
+      "message": "Configure your publish settings",
+      "description": "Specify which instances you would like to make this Quick Start available to.",
+      "id": "publishSettingsDescription",
+      "name": "publishSettingsDescription",
+      "showIcon": false
+    },
+    {
+      "renderType": "skullColumns",
+      "id": "reviewSelections",
+      "name": "reviewSelections",
+      "columns": [
+        {
+          "items": [
+            {
+              "buttonText": "Edit",
+              "id": "settingsHeader",
+              "name": "settingsHeader",
+              "renderType": "jumpToStepLabel",
+              "stepNumber": 0,
+              "text": "Basic settings"
+            },
+            {
+              "datatype": "string",
+              "displayMode": "readonly",
+              "id": "displayNamePreview",
+              "label": "Display name",
+              "name": "displayNamePreview",
+              "tooltip": "Name visible for installer",
+              "value": ""
+            },
+            {
+              "datatype": "richtext",
+              "displayMode": "readonly",
+              "id": "descriptionPreview",
+              "label": "Description",
+              "name": "descriptionPreview",
+              "tooltip": "Name visible for installer",
+              "value": ""
+            },
+            {
+              "datatype": "tag",
+              "displayMode": "readonly",
+              "id": "tagPreview",
+              "label": "Tags",
+              "name": "tagPreview",
+              "tooltip": "Tags are used to improve search results",
+              "value": []
+            },
+            {
+              "datatype": "richtext",
+              "displayMode": "readonly",
+              "id": "postInstallMessagePreview",
+              "label": "Post-installation message",
+              "name": "postInstallMessagePreview",
+              "tooltip": "Name visible for installer",
+              "value": ""
+            }
+          ],
+          "span": 14
+        },
+        {
+          "items": [
+            {
+              "buttonText": "Edit",
+              "id": "pipelineSettingsHeader",
+              "name": "pipelineSettingsHeader",
+              "renderType": "jumpToStepLabel",
+              "stepNumber": 1,
+              "text": "Pipeline settings"
+            },
+            { "id": "pipelinesPreview", "name": "pipelinesPreview", "renderType": "pipelinePickerPreview" }
+          ],
+          "span": 10
+        }
+      ]
+    },
+    {
+      "datatype": "picklist",
+      "helpSummary": "Publish to Quick Start Library (Admin only)",
+      "id": "publishToQuickStartLibrary",
+      "label": "Publish to Quick Start Library (Admin only)",
+      "name": "publishToQuickStartLibrary",
+      "defaultValue": "publish",
+      "values": [
+        { "label": "Yes, publish to Library", "value": "publish" },
+        { "label": "No, do not publish to the library", "value": "dontPublish" }
+      ]
+    },
+    {
+      "renderType": "instancePicker",
+      "id": "shareWithInstances",
+      "label": "Share with instances",
+      "name": "shareWithInstances",
+      "values": []
+    },
+    {
+      "datatype": "confirmationInfoBox",
+      "description": "We’ll send you a notification when this Quick Start has been published. You can safely close this panel.",
+      "id": "quickStartConfirmation",
+      "message": "We’ll notify you when published",
+      "name": "quickStartConfirmation"
+    }
+  ],
+  "description": "Quick start wizard",
+  "displayName": "Quick start wizard",
+  "helpLink": "https://syncari.helpdocs.io/quickstart",
+  "helpSummary": "Quick start help",
+  "iconPath": null,
+  "name": "quick_start",
+  "renderer": {
+    "renderType": "fullContentPanel",
+    "title": "New Quickstart",
+    "steps": [
+      {
+        "stepName": "Basic Settings",
+        "fields": [
+          "quickStartBasicSettingsDescription",
+          "displayName",
+          "description",
+          "tags",
+          "postInstallationInstruction"
+        ],
+        "layout": { "type": "stack", "className": "synri-skull-stack-container-md" }
+      },
+      {
+        "stepName": "Pipeline Settings",
+        "dynamicSteps": true,
+        "fields": ["pipelinePickerSelectionWarning", "pipelines"],
+        "layout": { "type": "stack", "className": "synri-skull-stack-container-lg" }
+      },
+      {
+        "stepName": "Review",
+        "dynamicSteps": true,
+        "fields": ["reviewSettingsDescription", "reviewSelections"],
+        "layout": { "type": "stack", "className": "synri-skull-stack-container-lg" }
+      },
+      {
+        "stepName": "Publish",
+        "dynamicSteps": true,
+        "applyStep": true,
+        "fields": ["publishSettingsDescription", "shareWithInstances"],
+        "layout": { "type": "stack", "className": "synri-skull-stack-container-md" }
+      },
+      { "stepName": "Confirmation", "fields": ["quickStartConfirmation"], "closeStep": true }
+    ]
+  },
+  "steps": null
+}

@@ -1,0 +1,74 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+@import '~styles/index.less';
+
+.synri-sync-status {
+  margin-top: 4px;
+  padding: 0 18px;
+
+  .synri-sync-current-status {
+    display: inline-flex;
+    align-items: center;
+
+    .synri-sync-status-badge {
+      display: inline-flex;
+      border-radius: @borderRadius[md];
+      color: @white;
+      padding-right: @spacings[xs];
+      align-items: center;
+
+      .sync-status-text {
+        line-height: @lineHeights[regloose];
+      }
+
+      &.synri-sync-status-paused,
+      &.synri-sync-status-pausing,
+      &.synri-sync-status-queued {
+        background-color: @light-gray;
+      }
+
+      &.synri-sync-status-stalled {
+        background-color: @orange-600;
+      }
+
+      &.synri-sync-status-running,
+      &.synri-sync-status-resyncing {
+        background-color: @green-400;
+      }
+
+      &.synri-sync-status-unpublished {
+        color: @gray-800;
+      }
+
+      &.synri-sync-status-test {
+        background-color: @purple-400;
+      }
+
+      &.synri-sync-status-error {
+        background-color: @red-500;
+      }
+    }
+
+    .synri-sync-status-time {
+      font-size: @fontSizes[sm];
+      color: @gray-600;
+      white-space: nowrap;
+    }
+  }
+
+  .synri-sync-status-error-details {
+    margin-top: 6px;
+    color: @gray-900;
+  }
+
+  .synri-sync-status-sources,
+  .synri-sync-status-destination {
+    font-weight: 600;
+    margin-top: 16px;
+  }
+
+  &__warning {
+    padding-top: @spacings[xs];
+  }
+}

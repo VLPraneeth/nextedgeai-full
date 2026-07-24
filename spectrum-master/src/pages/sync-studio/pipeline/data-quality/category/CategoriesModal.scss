@@ -1,0 +1,33 @@
+@import 'styles';
+
+$table-max-height: 315px;
+
+.manage-categories-modal {
+  .ant-modal-body {
+    height: 400px;
+  }
+
+  &__table {
+    margin-bottom: $spacings-mmlg;
+    .ag-layout-auto-height,
+    .ag-center-cols-clipper,
+    .ag-center-cols-viewport,
+    .ag-center-cols-container {
+      min-height: 0px !important;
+    }
+
+    .ag-layout-auto-height {
+      max-height: $table-max-height;
+      overflow-y: auto;
+    }
+
+    &.empty {
+      .ag-layout-auto-height,
+      .ag-center-cols-clipper,
+      .ag-center-cols-viewport,
+      .ag-center-cols-container {
+        min-height: $ag-table-empty-min-height !important;
+      }
+    }
+  }
+}

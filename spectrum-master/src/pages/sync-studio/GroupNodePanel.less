@@ -1,0 +1,33 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+.group-node-panel {
+  legend {
+    color: @gray-800;
+  }
+
+  &__actions-container {
+    padding: 0px @spacings[sm];
+  }
+
+  &__action-button {
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.075);
+    font-size: @fontSizes[md];
+    font-weight: @fontWeights[semibold];
+    margin-top: @spacings[sm];
+    width: 100%;
+
+    &.ant-btn {
+      text-align: left;
+    }
+  }
+
+  &__icon-container {
+    margin-left: @spacings[xs];
+  }
+}

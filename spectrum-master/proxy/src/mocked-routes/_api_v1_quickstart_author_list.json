@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "name": "My Custom Quick Start 1",
+    "author": "Dan",
+    "description": "A great quickstart",
+    "status": "draft",
+    "tags": [],
+    "configuration": {},
+    "snapshotedAt": "date"
+  },
+  {
+    "id": "3",
+    "name": "My Custom Quick Start 3",
+    "author": "Amber",
+    "description": "A great quickstart",
+    "status": "draft",
+    "tags": [],
+    "configuration": {},
+    "snapshotedAt": "date"
+  },
+  {
+    "id": "2",
+    "name": "My Custom Quick Start 2",
+    "author": "Justin",
+    "description": "A great quickstart",
+    "status": "published",
+    "tags": [],
+    "configuration": {},
+    "snapshotedAt": "date"
+  }
+]

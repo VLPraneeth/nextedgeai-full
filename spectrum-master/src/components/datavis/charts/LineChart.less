@@ -1,0 +1,34 @@
+@import '~styles/index.less';
+
+.syncari-datavis-tooltip-wrapper {
+  box-shadow: @boxShadows[lg];
+}
+
+.syncari-datavis-tooltip {
+  font-family: @font-family;
+  padding: @spacings[sm];
+
+  .title {
+    color: @gray-800;
+    font-size: @fontSizes[sm];
+    font-weight: @fontWeights[regular];
+  }
+
+  .series-item {
+    color: @black;
+    font-size: @fontSizes[md];
+    font-weight: @fontWeights[regular];
+
+    &.nearest {
+      .datum-label {
+        font-weight: @fontWeights[bold];
+        text-decoration: underline;
+      }
+    }
+
+    .datum-label {
+    }
+    .datum-value {
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import 'styles';
+
+.insights-sharing {
+  &__radio {
+    margin-top: $spacings-xxs;
+  }
+  &__emails {
+    margin-top: $spacings-md;
+    width: 50%;
+  }
+  &__save-button {
+    margin-top: $spacings-md;
+  }
+}

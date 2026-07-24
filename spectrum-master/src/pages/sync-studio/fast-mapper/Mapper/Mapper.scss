@@ -1,0 +1,227 @@
+@import 'styles';
+@import '../FastMapperModal.scss';
+
+$option-max-width: 270px;
+
+.mapper {
+  height: 100%;
+
+  @include button-overrides();
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    span {
+      margin: 0 !important;
+    }
+  }
+
+  &__empty {
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__header-button {
+    margin-right: 13px;
+
+    &--first {
+      margin-left: auto;
+    }
+
+    &--first-add {
+      margin-left: $spacings-xxs;
+    }
+
+    &--second {
+      margin-left: auto;
+    }
+  }
+
+  &__button-spinner {
+    margin-right: $spacings-xs;
+
+    svg {
+      fill: $gray-600 !important;
+    }
+  }
+
+  &__table-container {
+    height: 100%;
+
+    .ag-table-wrapper,
+    .ag-root-wrapper {
+      height: 100%;
+
+      .ag-root-wrapper-body {
+        height: 100%;
+
+        .ag-cell-inline-editing {
+          border: none;
+          border-bottom: 1px solid $gray-400 !important;
+        }
+
+        .ag-cell-inline-editing:focus-within {
+          border: 2px solid $syncari-blue;
+          border-bottom: 2px solid $syncari-blue !important;
+          border-radius: 0;
+
+          .ant-select-selection {
+            border-radius: 0;
+          }
+        }
+      }
+    }
+
+    .ag-react-container {
+      span:last-of-type {
+        @include ellipsis-text;
+      }
+    }
+
+    .ag-body-viewport {
+      // Max height of the table to it will grow beyond the
+      // the desired height and will not push the add button out of the modal
+      max-height: calc(100vh - 322px);
+    }
+
+    .ag-center-cols-viewport {
+      overflow-x: hidden;
+    }
+  }
+
+  &__row {
+    &--error {
+      border: 1px solid $red-300 !important;
+    }
+
+    &--edited {
+      background-color: $blue-250 !important;
+    }
+  }
+
+  &__dropdown-header {
+    pointer-events: none;
+    color: $gray-700;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+
+    :last-child {
+      margin-left: $spacings-xs;
+      flex-grow: 1;
+      height: 1px;
+      background-color: $gray-400;
+    }
+  }
+}
+
+.cell-action {
+  padding-left: $spacings-xs;
+  padding-right: $spacings-xs;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    .anticon-exclamation-circle {
+      margin-right: $spacings-xxs;
+      color: $red-300;
+    }
+  }
+
+  &__icon {
+    &--disabled {
+      color: $gray-500;
+      pointer-events: none;
+    }
+  }
+}
+
+// This override fixes styles for the "Draft" tag showing inside the selected
+// cell justified to the right.
+.ant-select-selection-selected-value {
+  width: 100%;
+  padding-right: 0;
+}
+
+.mapping-options {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .synri-inline-svg {
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .anticon-arrow-right,
+  .anticon-arrow-left {
+    color: $light-gray;
+  }
+
+  span:not(.synri-text-tag-label) {
+    padding-left: $spacings-xxs;
+    @include ellipsis-text();
+  }
+
+  &__option {
+    font-size: $font-size-md;
+    font-weight: $font-weights-regular;
+    color: $gray-1000;
+    max-width: $option-max-width;
+    flex: 1;
+  }
+}
+
+.synri-field-option {
+  font-size: $font-size-md;
+  font-weight: $font-weights-regular;
+  color: $gray-1000;
+}
+
+.ag-react-container {
+  .synri-field-option {
+    width: 100%;
+  }
+
+  .synri-tooltip-container {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.cell-renderer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &__tooltip-container {
+    flex-grow: 1;
+    display: inline-block;
+    width: 100%;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    transition: all 0.1s $easing-easeInOut;
+  }
+
+  &__icon:hover {
+    color: $syncari-blue;
+  }
+}
+
+.synri-cell-picklist {
+  width: 100%;
+}

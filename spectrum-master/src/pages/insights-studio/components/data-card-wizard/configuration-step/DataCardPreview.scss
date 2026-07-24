@@ -1,0 +1,22 @@
+@import 'styles';
+
+.data-card-preview {
+  &__header {
+    margin-bottom: $spacings-xl;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 200px;
+
+    &--wrapper {
+      border: 1px solid $gray-300;
+      border-radius: $border-radius-lg;
+      width: 100%;
+      padding: $spacings-xs $spacings-lg $spacings-md $spacings-lg;
+    }
+  }
+}

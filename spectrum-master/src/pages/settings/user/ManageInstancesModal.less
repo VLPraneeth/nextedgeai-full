@@ -1,0 +1,25 @@
+@import '~styles/index.less';
+
+.manage-instances-modal {
+  .ant-modal-body .synri-spacer:first-child {
+    height: 0;
+  }
+
+  ul.instance-permissions-well {
+    border: 1px solid @gray-400;
+    border-radius: @borderRadius[md];
+
+    // 177 px used to offset `top: 100px` from ant modal and
+    // and modal footer to keep from extending below the screen
+    max-height: calc(80vh - 177px);
+    overflow-y: auto;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .permissions-section-header {
+    font-weight: @fontWeights[semibold];
+    font-size: @fontSizes[md];
+  }
+}

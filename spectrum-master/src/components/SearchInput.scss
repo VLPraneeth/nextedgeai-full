@@ -1,0 +1,35 @@
+@import 'styles';
+
+.search-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid $gray-400;
+  border-radius: 4px;
+  transition: all 0.3s;
+
+  &:hover {
+    border-color: $antd-blue;
+  }
+
+  &:focus-within {
+    border-color: $antd-blue;
+    border-right-width: 1px !important;
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba($antd-blue, 0.2);
+  }
+
+  &__icon {
+    margin-left: $spacings-sm;
+    width: $spacings-md;
+    height: $spacings-md;
+  }
+
+  &__search {
+    width: 260px;
+    border: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}

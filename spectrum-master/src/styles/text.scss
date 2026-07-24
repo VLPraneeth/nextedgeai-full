@@ -1,0 +1,17 @@
+@mixin unselectable-text() {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+}
+
+@mixin ellipsis-text() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin font-dm-sans() {
+  font-weight: 500;
+}

@@ -1,0 +1,19 @@
+@import '~styles/index.less';
+
+.synri-image-placeholder() {
+  color: transparent;
+  background-color: @gray-200;
+  border: 1px solid @gray-300;
+  border-radius: @borderRadius[md];
+}
+
+.synri-image {
+  transition: all 0.1s @easings[easeInOut];
+
+  &.synri-image-loading {
+    .synri-image-placeholder();
+  }
+  &.synri-image-error {
+    .synri-image-placeholder();
+  }
+}

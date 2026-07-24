@@ -1,0 +1,88 @@
+pipeline {
+  agent any
+
+  tools {nodejs "NodeJS 10.16"}
+
+  environment { 
+    NAME = 'spectrum'
+  }
+
+  stages {
+    stage('Clone repo') {
+      steps {
+        git branch: 'master',
+        credentialsId: 'bc911d31-2e29-4bc6-bd86-559cf4991b3a',
+        url: 'git@gitlab.com:syncari/product/web.git'
+      }
+    }
+    stage('Install dependencies') {
+      steps {
+        sh 'npm install'
+      }
+    }
+    stage('Test') {
+      steps {
+        sh 'npm run test-ci'
+      }
+    }
+    stage('Build') {
+      steps {
+        sh 'npm run build'
+      }
+    }
+  }
+  post { 
+    unstable {
+      notifyBuild('Unstable')
+    }
+    success { 
+      echo 'Build Success'
+    }
+    failure {
+      notifyBuild('Failure')
+    }
+    fixed {
+      notifyBuild('Fixed')
+    }
+  }
+}
+
+def notifyBuild(String buildStatus = 'Success') {
+  // build status of null means successful
+  buildStatus =  buildStatus ?: 'Success'
+
+  // Default values
+  def colorName = 'RED'
+  def colorCode = '#A31200'
+
+  // Override default values based on build status
+  if (buildStatus == 'Unstable') {
+    color = 'YELLOW'
+    colorCode = '#DAA038'
+  } else if (buildStatus == 'Success') {
+    color = 'GREEN'
+    colorCode = '#2FB886'
+  } else if (buildStatus == 'Fixed') {
+    color = 'GREEN'
+    colorCode = '#2FB886'
+  } else {
+    color = 'RED'
+    colorCode = '#A31200'
+  }
+
+  def subject = "${env.NAME} - #${env.BUILD_NUMBER} ${buildStatus}"
+  def summary = "${subject} (<${env.BUILD_URL}|Open>)"
+  def log = "${colorCode} - ${summary}"
+  echo log
+
+  // https://support.cloudbees.com/hc/en-us/articles/226419147-How-can-I-check-previous-build-status-in-a-Pipeline-Script-
+  // if (currentBuild?.getPreviousBuild()?.result == 'FAILURE') {
+  //   if (currentBuild.resultIsBetterOrEqualTo(
+  //   currentBuild.getPreviousBuild().result)) {
+  //     echo 'build has been fixed'
+  //   }
+  // }
+
+  // Send notifications
+  slackSend (channel: 'jenkins', color: colorCode, message: summary)
+}

@@ -1,0 +1,22 @@
+@import 'styles';
+
+.pipeline-details-summary {
+  padding: $spacings-md $spacings-lg;
+  border-bottom: 1px solid $gray-300;
+
+  &__header {
+    font-weight: $font-weights-semibold;
+    color: $gray-850;
+    padding-bottom: $spacings-md;
+  }
+
+  &__stats {
+    display: flex;
+
+    & * {
+      span:last-of-type {
+        padding-right: $spacings-md;
+      }
+    }
+  }
+}

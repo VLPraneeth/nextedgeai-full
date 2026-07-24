@@ -1,0 +1,5 @@
+package com.syncari.core.model.abac;
+
+public enum Permission {
+  READ, CREATE, UPDATE, DELETE, APPROVE_DRAFT, CREATE_DRAFT, DELETE_DRAFT, EXECUTE, PURGE, CREATE_ENTITY, CREATE_DATASET
+}

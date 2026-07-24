@@ -1,0 +1,13 @@
+.copy-to-clipboard-tooltip {
+  &.ant-tooltip-placement-top,
+  &.ant-tooltip-placement-bottom {
+    .ant-tooltip-inner {
+      padding: 0.6rem 1.4rem 0.6rem 1rem !important;
+    }
+  }
+
+  &__container {
+    align-items: start;
+    overflow: auto;
+  }
+}

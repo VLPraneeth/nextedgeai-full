@@ -1,0 +1,66 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+@tableHeight: 200px;
+
+.dataset-sample-output {
+  z-index: 100;
+  position: absolute;
+  height: 330px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 265px;
+    overflow: auto;
+    flex: 1;
+    padding: @spacings[xs] @spacings[xxl];
+
+    &__error {
+      margin-top: @spacings[sm];
+
+      .synri-inline-message {
+        line-height: @lineHeights[regular];
+        margin-bottom: 0;
+      }
+    }
+
+    .synri-empty-graph-panel {
+      .icon-container {
+        margin-top: @spacings[md];
+      }
+    }
+  }
+
+  &__table {
+    // TODO: Temporary height till we
+    // get the updated sample record design
+    height: @tableHeight;
+  }
+
+  &__loading {
+    min-height: @tableHeight;
+  }
+
+  &__refresh-icon {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+
+    &.with-changes {
+      #Icon {
+        fill: @orange-400;
+      }
+    }
+
+    #Icon {
+      fill: @blue-700;
+    }
+  }
+}

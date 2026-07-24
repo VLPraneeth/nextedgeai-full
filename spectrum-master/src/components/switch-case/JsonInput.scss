@@ -1,0 +1,36 @@
+@import 'styles';
+
+.json-input-popup {
+  padding: $spacings-xxs 0 $spacings-xxs $spacings-xs !important;
+
+  &__preview {
+    cursor: pointer;
+  }
+
+  &__text {
+    @include ellipsis-text();
+  }
+
+  &__input {
+    padding: 0 $spacings-sm;
+
+    &--not-empty {
+      @include box-bordered-no-shadow();
+    }
+  }
+}
+
+.json-input-editor {
+  .ant-popover-inner-content {
+    width: 600px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      margin-left: $spacings-xs;
+    }
+  }
+}

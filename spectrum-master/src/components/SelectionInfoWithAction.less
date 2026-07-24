@@ -1,0 +1,28 @@
+@import '~styles/index.less';
+
+.selection-info-with-action {
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+  background-color: @gray-300;
+  border-radius: 5px;
+  padding: @spacings[sm];
+  margin-bottom: 14px;
+
+  span {
+    cursor: text;
+  }
+
+  &__text {
+    color: @gray-800;
+  }
+
+  a {
+    padding-left: 2px;
+    padding-right: 2px;
+    span {
+      cursor: pointer;
+    }
+  }
+}

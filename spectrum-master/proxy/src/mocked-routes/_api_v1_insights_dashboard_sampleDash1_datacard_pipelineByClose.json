@@ -1,0 +1,64 @@
+{
+  "id": "pipelineByClose",
+  "displayName": "Pipeline By Close Date",
+  "description": "Open opportunity pipeline grouped by close date",
+  "layout": {
+    "h": 2
+  },
+  "contents": {
+    "configuration": {
+      "vizType": "COLUMN",
+      "stacking": "normal",
+      "series": [{ "name": "oppType" }],
+      "xaxis": {
+        "name": "quarter",
+        "displayName": "Quarter",
+        "displayFormat": "text"
+      },
+      "yaxis": [
+        {
+          "name": "amount",
+          "displayName": "Amount",
+          "displayFormat": "currency"
+        }
+      ]
+    },
+    "data": {
+      "series": [
+        { "displayName": "Proposal", "color": "purple-900" },
+        { "displayName": "Qualification", "color": "purple-500" },
+        { "displayName": "Prospecting", "color": "purple-100" }
+      ],
+      "rows": [
+        { "amount": 554004, "oppType": "Prospecting", "quarter": "2021 Q1" },
+        { "amount": 352548, "oppType": "Qualification", "quarter": "2021 Q1" },
+        { "amount": 100728, "oppType": "Proposal", "quarter": "2021 Q1" },
+
+        { "amount": 599699.65, "oppType": "Prospecting", "quarter": "2021 Q2" },
+        { "amount": 381627.05, "oppType": "Qualification", "quarter": "2021 Q2" },
+        { "amount": 109036.3, "oppType": "Proposal", "quarter": "2021 Q2" },
+
+        { "amount": 644163.85, "oppType": "Prospecting", "quarter": "2021 Q3" },
+        { "amount": 409922.45, "oppType": "Qualification", "quarter": "2021 Q3" },
+        { "amount": 117120.7, "oppType": "Proposal", "quarter": "2021 Q3" },
+
+        { "amount": 725983.5, "oppType": "Prospecting", "quarter": "2021 Q4" },
+        { "amount": 461989.5, "oppType": "Qualification", "quarter": "2021 Q4" },
+        { "amount": 131997, "oppType": "Proposal", "quarter": "2021 Q4" },
+
+        { "amount": 870865.6, "oppType": "Prospecting", "quarter": "2022 Q1" },
+        { "amount": 554187.2, "oppType": "Qualification", "quarter": "2022 Q1" },
+        { "amount": 158339.2, "oppType": "Proposal", "quarter": "2022 Q1" },
+
+        { "amount": 923450, "oppType": "Prospecting", "quarter": "2022 Q2" },
+        { "amount": 587650, "oppType": "Qualification", "quarter": "2022 Q2" },
+        { "amount": 167900, "oppType": "Proposal", "quarter": "2022 Q2" },
+
+        { "amount": 1402500, "oppType": "Prospecting", "quarter": "2022 Q3" },
+        { "amount": 892500, "oppType": "Qualification", "quarter": "2022 Q3" },
+        { "amount": 255000, "oppType": "Proposal", "quarter": "2022 Q3" }
+      ]
+    },
+    "contents": null
+  }
+}

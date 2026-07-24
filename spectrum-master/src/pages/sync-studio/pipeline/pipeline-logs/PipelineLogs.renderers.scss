@@ -1,0 +1,5 @@
+@import 'styles/index';
+
+.input-output-renderer {
+  @include ellipsis-text();
+}

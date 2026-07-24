@@ -1,0 +1,19 @@
+{
+  "id": "mqlCount",
+  "displayName": "MQL Count",
+  "description": "Count of Marketing Qualified Leads in current fiscal quarter",
+  "layout": { "h": 2 },
+  "contents": {
+    "configuration": {
+      "columns": [
+        { "column": "amount", "name": "Total", "displayName": "Total", "color": null, "displayFormat": "number" }
+      ],
+      "vizType": "METRIC",
+      "series": null,
+      "yaxis": null,
+      "xaxis": null
+    },
+    "data": { "series": null, "rows": [{ "Total": 1300 }] },
+    "contents": null
+  }
+}

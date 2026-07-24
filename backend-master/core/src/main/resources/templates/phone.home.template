@@ -1,0 +1,41 @@
+A user experienced a hard crash in the browser, details below.
+
+## Error
+{{errorMessage}}
+
+{{originalStack}}
+
+
+Crash data: {{blackboxUrl}}
+
+## User
+User Id: {{userId}}
+User Name: {{fromUser}}
+
+## Instance
+Org Id: {{orgId}}
+Org Name: {{OrgName}}
+Instance Id: {{instanceId}}
+Instance Name: {{InstanceName}}
+
+
+## Environment
+Browser Info: {{browserInfo}}
+Error Message: {{errorMessage}}
+Host: {{host}}
+URL: {{url}}
+Browser Info: {{browserInfo}}
+
+## Crash Context
+Error Message: {{errorMessage}}
+Error Stack Trace (unpacked from sourcemaps):
+{{originalStack}}
+
+Error Stack Trace (from minified assets) (base64 encoded):
+{{errorStack}}
+
+Dispatched Actions (base64 encoded JSON):
+{{actions}}
+
+State Snapshot (base64 encoded JSON):
+{{state}}

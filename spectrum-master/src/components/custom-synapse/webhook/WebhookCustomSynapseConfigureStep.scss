@@ -1,0 +1,22 @@
+@import 'styles';
+
+.webhook_custom_synapse_config_step {
+  .synri-image-upload {
+    margin-top: $spacings-xxs;
+    .synri-image-upload-image-container {
+      margin: 0 !important;
+      img {
+        width: 32px !important;
+        height: 32px !important;
+      }
+    }
+  }
+  .ant-radio-group {
+    .ant-radio-button-wrapper {
+      min-width: fit-content !important;
+    }
+  }
+  .synri-action-header {
+    padding: $spacings-xxs 0;
+  }
+}

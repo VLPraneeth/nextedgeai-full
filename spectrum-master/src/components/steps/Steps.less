@@ -1,0 +1,54 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+// Note: Positions and sizes needs to be precise
+// TODO: Colors are off our color swatch
+.synri-steps {
+  &.ant-steps-vertical {
+    height: 100%;
+    background-color: #f6f6f6;
+    border-right: 1px solid #eaeaea;
+    padding: 16px;
+    // Size for common screen size.
+    // It would be beter to make this relative in the future.
+    flex: 0 0 220px;
+
+    .ant-steps-item-process .ant-steps-item-title {
+      font-weight: @fontWeights[semibold];
+    }
+
+    > .ant-steps-item {
+      > .ant-steps-item-tail {
+        left: 11px;
+        top: -11px;
+        height: 122%;
+      }
+    }
+    .ant-steps-item-tail::after {
+      background-color: #d6d6d6;
+    }
+
+    .ant-steps-icon,
+    .ant-steps-item-title {
+      font-size: 14px;
+      line-height: 22px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .ant-steps-item-icon {
+      width: 22px;
+      height: 22px;
+      margin-right: 8px;
+
+      > .ant-steps-icon {
+        top: -7px;
+      }
+    }
+  }
+}

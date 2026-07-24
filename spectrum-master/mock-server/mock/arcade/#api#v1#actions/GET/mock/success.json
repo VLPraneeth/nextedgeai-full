@@ -1,0 +1,54 @@
+[
+  {
+    "id": "5d7191e70609c0110ecbc537",
+    "name": "sendEmail",
+    "displayName": "Send Email",
+    "iconPath": "/icons/capitalize.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "value",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "ACTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc538",
+    "name": "callRestApi",
+    "displayName": "Call Rest API",
+    "iconPath": "/icons/concatenate.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "first",
+        "datatype": "string"
+      },
+      {
+        "name": "second",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "ACTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  },
+  {
+    "id": "5d7191e70609c0110ecbc539",
+    "name": "invokeFlow",
+    "displayName": "Invoke Flow",
+    "iconPath": "/icons/decode.jpg",
+    "outputType": "string",
+    "positionalParams": [
+      {
+        "name": "text",
+        "datatype": "string"
+      }
+    ],
+    "engineType": "ACTION",
+    "scope": "ATTRIBUTE",
+    "type": "BUILT_IN"
+  }
+]

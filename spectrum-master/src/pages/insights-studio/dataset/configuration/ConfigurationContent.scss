@@ -1,0 +1,53 @@
+@import 'styles';
+
+.configuration-content {
+  height: 100%;
+
+  .synri-fieldset {
+    margin-top: $spacings-xs;
+    margin-bottom: 0;
+
+    legend.collapsible {
+      color: $gray-900;
+      padding-left: $spacings-lg;
+    }
+  }
+
+  &__fieldset-wrapper {
+    width: 75%;
+  }
+
+  &__fieldset-container {
+    padding-left: $spacings-lg;
+  }
+
+  .synri-composite {
+    .synri-composite-row {
+      height: 58px;
+      background-color: $gray-100;
+
+      .synri-composite-input {
+        padding-top: 6px;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__config-mode {
+    padding: $spacings-xs 0;
+    .ant-radio-button-wrapper {
+      border-color: $gray-300;
+      color: $gray-600;
+    }
+    .ant-radio-button-wrapper:hover {
+      border-color: $blue-750;
+      color: $blue-750;
+      background-color: white;
+    }
+    .ant-radio-button-wrapper-checked {
+      border-color: $blue-750;
+      color: $blue-750;
+      background-color: $blue-200;
+    }
+  }
+}

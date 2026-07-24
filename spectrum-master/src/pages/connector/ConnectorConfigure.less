@@ -1,0 +1,58 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+.sync-rate-config {
+  margin-top: @spacings[md];
+}
+
+.sync-rate-input-container {
+  // get rid of weird spacing
+  .ant-row.ant-form-item,
+  .ant-form-item-control {
+    &:before,
+    &:after {
+      content: initial;
+      display: none;
+      background-color: purple;
+    }
+  }
+}
+
+.sync-rate-tooltip-container {
+  margin-left: @spacings[xxs];
+  color: @light-gray;
+}
+
+.sync-rate-input-label {
+  margin-top: @spacings[sm];
+  // push the container down so that we can see our error if there is one
+  margin-bottom: @spacings[xl];
+  display: flex;
+  align-items: baseline;
+
+  & > span {
+    color: @gray-800;
+
+    &:first-child {
+      margin-right: @spacings[xs];
+    }
+
+    &:last-child {
+      margin-left: @spacings[xs];
+    }
+  }
+
+  // pull the error mesage out of flow so that our input label
+  // doesn't get pushed over
+  .ant-form-explain {
+    position: absolute;
+    min-width: 500px;
+  }
+}
+
+.sync-rate-input-control {
+  max-width: 5rem;
+}

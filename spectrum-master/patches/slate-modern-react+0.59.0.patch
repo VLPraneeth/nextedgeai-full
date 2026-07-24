@@ -1,0 +1,191 @@
+diff --git a/node_modules/slate-modern-react/dist/components/children.d.ts b/node_modules/slate-modern-react/dist/components/children.d.ts
+index e7d65f0..9735380 100644
+--- a/node_modules/slate-modern-react/dist/components/children.d.ts
++++ b/node_modules/slate-modern-react/dist/components/children.d.ts
+@@ -1,4 +1,4 @@
+-import { Range, NodeEntry, Ancestor } from 'slate';
++import { Range, NodeEntry, Ancestor } from 'slate-modern';
+ import { RenderElementProps, RenderLeafProps } from './editable';
+ /**
+  * Children.
+diff --git a/node_modules/slate-modern-react/dist/components/editable.d.ts b/node_modules/slate-modern-react/dist/components/editable.d.ts
+index 84020bb..04ff0de 100644
+--- a/node_modules/slate-modern-react/dist/components/editable.d.ts
++++ b/node_modules/slate-modern-react/dist/components/editable.d.ts
+@@ -1,5 +1,5 @@
+ import React from 'react';
+-import { Element, NodeEntry, Range, Text } from 'slate';
++import { Element, NodeEntry, Range, Text } from 'slate-modern';
+ /**
+  * `RenderElementProps` are passed to the `renderElement` handler.
+  */
+diff --git a/node_modules/slate-modern-react/dist/components/element.d.ts b/node_modules/slate-modern-react/dist/components/element.d.ts
+index 071fa0d..b5465c5 100644
+--- a/node_modules/slate-modern-react/dist/components/element.d.ts
++++ b/node_modules/slate-modern-react/dist/components/element.d.ts
+@@ -1,5 +1,5 @@
+ import React from 'react';
+-import { Node, Range, NodeEntry, Element as SlateElement } from 'slate';
++import { Node, Range, NodeEntry, Element as SlateElement } from 'slate-modern';
+ import { RenderElementProps, RenderLeafProps } from './editable';
+ declare const MemoizedElement: React.MemoExoticComponent<(props: {
+     decorate: (entry: NodeEntry<Node>) => Range[];
+diff --git a/node_modules/slate-modern-react/dist/components/leaf.d.ts b/node_modules/slate-modern-react/dist/components/leaf.d.ts
+index 751e354..ed76c1d 100644
+--- a/node_modules/slate-modern-react/dist/components/leaf.d.ts
++++ b/node_modules/slate-modern-react/dist/components/leaf.d.ts
+@@ -1,5 +1,5 @@
+ import React from 'react';
+-import { Text, Element } from 'slate';
++import { Text, Element } from 'slate-modern';
+ import { RenderLeafProps } from './editable';
+ declare const MemoizedLeaf: React.MemoExoticComponent<(props: {
+     isLast: boolean;
+diff --git a/node_modules/slate-modern-react/dist/components/slate.d.ts b/node_modules/slate-modern-react/dist/components/slate.d.ts
+index 6513733..f5746f5 100644
+--- a/node_modules/slate-modern-react/dist/components/slate.d.ts
++++ b/node_modules/slate-modern-react/dist/components/slate.d.ts
+@@ -1,5 +1,5 @@
+ import React from 'react';
+-import { Node } from 'slate';
++import { Node } from 'slate-modern';
+ import { ReactEditor } from '../plugin/react-editor';
+ /**
+  * A wrapper around the provider to handle `onChange` events, because the editor
+diff --git a/node_modules/slate-modern-react/dist/components/string.d.ts b/node_modules/slate-modern-react/dist/components/string.d.ts
+index 33d29ea..d7a24da 100644
+--- a/node_modules/slate-modern-react/dist/components/string.d.ts
++++ b/node_modules/slate-modern-react/dist/components/string.d.ts
+@@ -1,4 +1,4 @@
+-import { Text, Element } from 'slate';
++import { Text, Element } from 'slate-modern';
+ /**
+  * Leaf content strings.
+  */
+diff --git a/node_modules/slate-modern-react/dist/components/text.d.ts b/node_modules/slate-modern-react/dist/components/text.d.ts
+index 90acace..f79cff5 100644
+--- a/node_modules/slate-modern-react/dist/components/text.d.ts
++++ b/node_modules/slate-modern-react/dist/components/text.d.ts
+@@ -1,5 +1,5 @@
+ import React from 'react';
+-import { Range, Element, Text as SlateText } from 'slate';
++import { Range, Element, Text as SlateText } from 'slate-modern';
+ import { RenderLeafProps } from './editable';
+ declare const MemoizedText: React.MemoExoticComponent<(props: {
+     decorations: Range[];
+diff --git a/node_modules/slate-modern-react/dist/index.es.js b/node_modules/slate-modern-react/dist/index.es.js
+index 267c4df..9cd6036 100644
+--- a/node_modules/slate-modern-react/dist/index.es.js
++++ b/node_modules/slate-modern-react/dist/index.es.js
+@@ -1,5 +1,5 @@
+ import React, { createContext, useContext, useState, useMemo, useCallback, useEffect, useLayoutEffect, useRef } from 'react';
+-import { Editor, Transforms, Range, Path, Node as Node$1, Text as Text$1, Element as Element$1 } from 'slate';
++import { Editor, Transforms, Range, Path, Node as Node$1, Text as Text$1, Element as Element$1 } from 'slate-modern';
+ import throttle from 'lodash/throttle';
+ import scrollIntoView from 'scroll-into-view-if-needed';
+ import getDirection from 'direction';
+@@ -1556,14 +1556,30 @@ var Editable = props => {
+     } // If the DOM selection is in the editor and the editor selection is already correct, we're done.
+ 
+ 
+-    if (hasDomSelection && hasDomSelectionInEditor && selection && Range.equals(ReactEditor.toSlateRange(editor, domSelection), selection)) {
++    try {
++      if (hasDomSelection && hasDomSelectionInEditor && selection && Range.equals(ReactEditor.toSlateRange(editor, domSelection), selection)) {
++        return;
++      } // Otherwise the DOM selection is out of sync, so update it.
++    } catch(e) {
++      // It looks like the the find and range functions seems to be failing
++      // on batch updates but it doesn't appear to have effect on functionality
++      // when we ignore the error. It could be its working on a stale tree?
++      // Need to keep an eye on this while not crashing the UI. Downgrading this
++      // to a console error.
++      console.error(e);
+       return;
+-    } // Otherwise the DOM selection is out of sync, so update it.
++    }
+ 
++    try {
++      var el = ReactEditor.toDOMNode(editor, editor);
++      var newDomRange = selection && ReactEditor.toDOMRange(editor, selection);
++    } catch(e) {
++      // See above try catch exception note
++      console.error(e);
++      return;
++    }
+ 
+-    var el = ReactEditor.toDOMNode(editor, editor);
+     state.isUpdatingSelection = true;
+-    var newDomRange = selection && ReactEditor.toDOMRange(editor, selection);
+ 
+     if (newDomRange) {
+       if (Range.isBackward(selection)) {
+@@ -1795,7 +1811,14 @@ var Editable = props => {
+       var focusNodeSelectable = hasEditableTarget(editor, focusNode) || isTargetInsideVoid(editor, focusNode);
+ 
+       if (anchorNodeSelectable && focusNodeSelectable) {
+-        var range = ReactEditor.toSlateRange(editor, domSelection);
++        try {
++          var range = ReactEditor.toSlateRange(editor, domSelection);
++        } catch(e) {
++          // Downgrade this to error as well since this is on throttle and
++          // could be dealing with stale tree
++          console.error(e);
++          return;
++        }
+         Transforms.select(editor, range);
+       } else {
+         Transforms.deselect(editor);
+diff --git a/node_modules/slate-modern-react/dist/index.js b/node_modules/slate-modern-react/dist/index.js
+index 5b6e9bb..c88d6d7 100644
+--- a/node_modules/slate-modern-react/dist/index.js
++++ b/node_modules/slate-modern-react/dist/index.js
+@@ -3,7 +3,7 @@
+ Object.defineProperty(exports, '__esModule', { value: true });
+ 
+ var React = require('react');
+-var slate = require('slate');
++var slate = require('slate-modern');
+ var throttle = require('lodash/throttle');
+ var scrollIntoView = require('scroll-into-view-if-needed');
+ var getDirection = require('direction');
+diff --git a/node_modules/slate-modern-react/dist/plugin/react-editor.d.ts b/node_modules/slate-modern-react/dist/plugin/react-editor.d.ts
+index 807b540..9e4a766 100644
+--- a/node_modules/slate-modern-react/dist/plugin/react-editor.d.ts
++++ b/node_modules/slate-modern-react/dist/plugin/react-editor.d.ts
+@@ -1,4 +1,4 @@
+-import { Editor, Node, Path, Point, Range } from 'slate';
++import { Editor, Node, Path, Point, Range } from 'slate-modern';
+ import { Key } from '../utils/key';
+ import { DOMNode, DOMPoint, DOMRange, DOMSelection, DOMStaticRange } from '../utils/dom';
+ /**
+diff --git a/node_modules/slate-modern-react/dist/plugin/with-react.d.ts b/node_modules/slate-modern-react/dist/plugin/with-react.d.ts
+index 5a97dd9..3e1524e 100644
+--- a/node_modules/slate-modern-react/dist/plugin/with-react.d.ts
++++ b/node_modules/slate-modern-react/dist/plugin/with-react.d.ts
+@@ -1,4 +1,4 @@
+-import { Editor } from 'slate';
++import { Editor } from 'slate-modern';
+ import { ReactEditor } from './react-editor';
+ /**
+  * `withReact` adds React and DOM specific behaviors to the editor.
+diff --git a/node_modules/slate-modern-react/dist/slate-react.js b/node_modules/slate-modern-react/dist/slate-react.js
+index 3123f39..e4ccace 100644
+--- a/node_modules/slate-modern-react/dist/slate-react.js
++++ b/node_modules/slate-modern-react/dist/slate-react.js
+@@ -1,5 +1,5 @@
+ (function (global, factory) {
+-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('slate')) :
++  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('slate-modern')) :
+   typeof define === 'function' && define.amd ? define(['exports', 'react', 'slate'], factory) :
+   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.SlateReact = {}, global.React, global.Slate));
+ }(this, (function (exports, React, slate) { 'use strict';
+diff --git a/node_modules/slate-modern-react/dist/utils/weak-maps.d.ts b/node_modules/slate-modern-react/dist/utils/weak-maps.d.ts
+index 3245d46..c65525e 100644
+--- a/node_modules/slate-modern-react/dist/utils/weak-maps.d.ts
++++ b/node_modules/slate-modern-react/dist/utils/weak-maps.d.ts
+@@ -1,4 +1,4 @@
+-import { Node, Ancestor, Editor } from 'slate';
++import { Node, Ancestor, Editor } from 'slate-modern';
+ import { Key } from './key';
+ /**
+  * Two weak maps that allow us rebuild a path given a node. They are populated

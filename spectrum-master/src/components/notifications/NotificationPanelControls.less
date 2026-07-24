@@ -1,0 +1,30 @@
+@import '~styles/index.less';
+
+.notification-panel-controls {
+  display: flex;
+
+  &__mark-unread {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+  }
+
+  &__control {
+    .transition();
+    .clear-button-styles();
+    &:first-child {
+      border-right: 2px solid @gray-300;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+
+    &:hover {
+      color: @gray-800;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+The "go.sum" file is automatically generated and should not be manually edited.

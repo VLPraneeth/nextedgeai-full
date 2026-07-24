@@ -1,0 +1,11 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: arcade-ingress-$ENVIRONMENT_NAME
+  namespace: $ENVIRONMENT_NAME
+spec:
+  defaultBackend:
+    service:
+      name: arcade-service-$ENVIRONMENT_NAME
+      port:
+        number: 8080

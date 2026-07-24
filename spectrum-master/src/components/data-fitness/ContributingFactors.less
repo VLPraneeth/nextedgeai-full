@@ -1,0 +1,40 @@
+@import '~styles/index.less';
+
+.contributing-factors-list {
+  .contributing-factors-title {
+    color: @light-gray;
+    font-size: @fontSizes[md];
+    font-weight: @fontWeights[bold];
+    margin-bottom: @spacings[sm];
+  }
+
+  .contributing-factor-container {
+    .contributing-factor-title {
+      color: @gray-1000;
+      font-size: @fontSizes[sm];
+      font-weight: @fontWeights[bold];
+    }
+
+    .contributing-factor-description {
+      color: @gray-700;
+      font-size: @fontSizes[sm];
+    }
+
+    .contributing-factor-records-link {
+      color: @syncari-blue;
+      font-size: @fontSizes[sm];
+      padding: 0;
+      height: initial;
+    }
+
+    .contributing-factory-battery-meter {
+      /* scoot the meter down just a touch to line
+         up with the factors */
+      margin-top: @spacings[xxxs];
+    }
+  }
+}
+
+.contributing-factors-empty-state {
+  font-size: @fontSizes[sm];
+}

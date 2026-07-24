@@ -1,0 +1,20 @@
+@import '../../../styles/index.less';
+
+.synri-flex-spacer {
+  flex-grow: 1;
+}
+
+.synri-spacer {
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  each(@spacings, {
+    &.synri-spacer-x-@{key} {
+      width: @value;
+    }
+
+    &.synri-spacer-y-@{key} {
+      height: @value;
+    }
+  });
+}

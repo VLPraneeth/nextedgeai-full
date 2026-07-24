@@ -1,0 +1,174 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+@import '~styles/index.less';
+
+.synri-test-result-details {
+  .ant-drawer-header {
+    background-color: @gray-300;
+    height: 39px;
+    border-bottom-color: @gray-400;
+
+    .ant-drawer-title {
+      margin-left: 10px;
+      color: @gray-800;
+      font-size: 14px;
+      font-weight: @fontWeights[semibold];
+    }
+  }
+
+  .ant-drawer-body {
+    padding-top: 16px;
+    overflow-x: auto;
+
+    .synri-tab-panel-spin {
+      min-height: 28vh;
+    }
+  }
+
+  .synri-test-result-container {
+    display: flex;
+    flex-direction: column;
+
+    .synri-test-result-summary {
+      display: flex;
+      align-content: space-between;
+      width: 100%;
+
+      .synri-test-result-summary-overview {
+        flex-grow: 1;
+        color: @gray-900;
+
+        .synri-test-result-status i {
+          margin-right: 8px;
+        }
+        .synri-test-result-status-success {
+          color: @green-400;
+        }
+        .synri-test-result-status-failed {
+          color: @red-500;
+        }
+        .synri-test-result-status-queued {
+          color: @orange-600;
+        }
+      }
+    }
+
+    .synri-test-result-input-output {
+      display: flex;
+      width: 100%;
+      padding-top: 16px;
+
+      .syncari-modal-table-tr,
+      .syncari-modal-table-td {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .syncari-modal-table-td {
+          &:not(:first-child) {
+            border-left: 1px solid @gray-400;
+            padding-left: 8px;
+          }
+
+          padding-top: 8px;
+          padding-bottom: 8px;
+          align-items: center;
+        }
+
+        // Add a thick border to separate the input and output data sets
+        .syncari-modal-table-th:nth-child(3),
+        .syncari-modal-table-td:nth-child(3) {
+          border-left: 4px solid @gray-400;
+        }
+      }
+
+      .synri-test-result-input {
+        flex-grow: 1;
+      }
+
+      .synri-test-result-output {
+        flex-grow: 1;
+        padding-right: 10px;
+      }
+
+      .synri-test-field-empty {
+        background-color: @gray-200;
+      }
+
+      .synri-test-field-empty:nth-child(2),
+      .synri-test-field-empty:nth-child(4) {
+        border: none !important;
+      }
+
+      .synri-field-name {
+        display: flex;
+        align-items: center;
+
+        .synri-connector-field-badge {
+          height: 17px;
+        }
+
+        .synri-field-display-name {
+          .ellipsis-text();
+        }
+      }
+
+      .syncari-modal-table {
+        table-layout: fixed;
+      }
+
+      .syncari-modal-table-tbody {
+        max-height: 11rem;
+      }
+
+      // This style block makes the the table headers stick to the top while scrolling
+      .synri-test-result-table-wrapper {
+        overflow-y: auto;
+        max-height: 220px;
+        border-radius: @borderRadius[md];
+        border: 1px solid @gray-400;
+
+        table {
+          border: none;
+        }
+
+        th {
+          position: sticky;
+          top: 0;
+          background-color: @gray-200;
+          box-shadow: inset 0px 0px @gray-400, 0 1px @gray-400;
+        }
+      }
+
+      td,
+      table.syncari-modal-table .syncari-modal-table-thead th.syncari-modal-table-th {
+        color: @gray-900;
+      }
+
+      .synri-field-value-error {
+        color: @red-500;
+
+        .field-data-type,
+        div,
+        .anticon-exclamation-circle {
+          color: @red-500;
+        }
+
+        .anticon-exclamation-circle {
+          margin-left: 4px;
+        }
+
+        .synri-inline-message.error {
+          padding: 4px;
+          margin: 0;
+          height: 32px;
+        }
+      }
+    }
+
+    .center-layout-container {
+      height: 200px;
+      color: @gray-800;
+    }
+  }
+}

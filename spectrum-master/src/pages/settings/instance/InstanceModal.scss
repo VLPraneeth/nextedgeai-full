@@ -1,0 +1,21 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import 'styles';
+
+.instance-modal {
+  &__button {
+    &--submitting {
+      transition: none;
+
+      :first-child {
+        margin-right: $spacings-xxs;
+      }
+
+      svg {
+        color: $gray-400;
+      }
+    }
+  }
+}

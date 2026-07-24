@@ -1,0 +1,204 @@
+@import '~styles/index.less';
+
+/* specified by Justin as non-standard */
+@token-selector-trigger-height: 18px;
+
+.token-selector-info-container {
+  display: flex;
+  align-items: center;
+  background-color: @white;
+  border: 1px solid @gray-400;
+  border-radius: @borderRadius[md];
+  color: @gray-700;
+  cursor: pointer;
+  font-size: @fontSizes[xs];
+  height: @token-selector-trigger-height;
+  padding: 0 @spacings[xs];
+  margin: 0 @spacings[xs];
+
+  &--unselectable {
+    pointer-events: none;
+  }
+}
+
+.token-selector-trigger {
+  &:hover,
+  &:active,
+  &.active {
+    color: @syncari-blue;
+    border-color: @syncari-blue;
+  }
+
+  &:active,
+  &.active {
+    background-color: @gray-200;
+  }
+
+  svg {
+    height: @fontSizes[xxs];
+    width: @fontSizes[xxs];
+  }
+}
+
+.token-selector-popover-overlay {
+  .ant-popover-content {
+    background: transparent;
+  }
+
+  .ant-popover-inner {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .ant-popover-arrow {
+    display: none;
+  }
+}
+
+.token-option {
+  color: @gray-1000;
+  font-size: @fontSizes[sm];
+}
+
+.data-card-wizard__content {
+  .data-card-config-step {
+    .token-selector-trigger {
+      // Precise location of trigger
+      top: -28px;
+      right: -6px;
+    }
+  }
+}
+
+.empty-token-popover {
+  height: 100px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  color: @gray-600;
+  background-color: @white;
+  box-shadow: @boxShadows[md];
+  border-radius: @borderRadius[md];
+  border: 1px solid @gray-400;
+}
+
+.synri-token-selector-popover {
+  position: relative;
+  display: grid;
+  background-color: @white;
+  overflow: hidden;
+  box-shadow: @boxShadows[md];
+  border-radius: @borderRadius[md];
+  border: 1px solid @gray-400;
+  grid-template-columns: minmax(min-content, 200px) 1fr;
+  grid-template-rows: minmax(min-content, max-content) 1fr;
+  grid-template-areas:
+    'header header'
+    'tokens tokens';
+
+  &.show-categories {
+    grid-template-areas:
+      'header header'
+      'categories tokens';
+  }
+
+  height: 500px;
+  width: 600px;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .synri-token-selector-search-input-container {
+    grid-area: header;
+    border-bottom: 1px solid @gray-400;
+
+    input {
+      border: 0;
+      border-radius: 0;
+    }
+  }
+
+  .synri-token-selector-categories {
+    grid-area: categories;
+    overflow-y: auto;
+    padding: @spacings[xxs] 0;
+    background-color: @gray-200;
+
+    .synri-token-category-item {
+      padding: @spacings[xxs] @spacings[xs];
+      font-weight: @fontWeights[semibold];
+      cursor: pointer;
+
+      &:hover {
+        background-color: @gray-300;
+      }
+
+      &.active {
+        background-color: @gray-400;
+      }
+
+      &.disabled {
+        color: @gray-700;
+      }
+    }
+  }
+
+  .synri-token-selector-tokens-list {
+    grid-area: tokens;
+    overflow-y: auto;
+    padding: @spacings[xxs];
+
+    li + li {
+      margin-top: @spacings[xs];
+    }
+
+    .synri-token-selector-item {
+      .synri-token-selector-highlighted {
+        box-shadow: @syncari-blue 0 0 0 2px;
+      }
+    }
+  }
+}
+
+/* TODO: remove */
+/* ANT autocomplete stuff below */
+.token-selector-control {
+  .ant-input.ant-select-search__field,
+  .ant-select-selection.ant-select-selection--single {
+    border-radius: @borderRadius[md] @borderRadius[md] 0 0;
+  }
+}
+
+.token-selector-dropdown.ant-select-dropdown {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.34);
+  border-radius: 0 0 @borderRadius[md] @borderRadius[md];
+  border: 1px solid #d9d9d9;
+
+  .ant-select-dropdown-menu {
+    border-radius: 0 0 @borderRadius[md] @borderRadius[md];
+  }
+
+  .ant-select-dropdown-menu-item-group-title {
+    text-transform: uppercase;
+    padding-left: @spacings[sm];
+    padding-right: @spacings[sm];
+    color: @light-gray;
+    font-size: @fontSizes[xs];
+    font-weight: @fontWeights[bold];
+    height: @spacings[xl];
+    line-height: @spacings[xl];
+  }
+
+  .ant-select-dropdown-menu-item-group-list {
+    .token-option {
+      padding-left: @spacings[sm];
+      padding-right: @spacings[sm];
+    }
+  }
+}

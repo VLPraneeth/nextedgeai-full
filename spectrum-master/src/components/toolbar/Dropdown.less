@@ -1,0 +1,118 @@
+@import '~styles/index.less';
+
+.toolbar-dropdown-selector-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border: 1px solid @gray-400;
+  border-radius: @borderRadius[md];
+  padding-right: @spacings[xxl];
+  padding: @spacings[xs] @spacings[md];
+  background-color: @white;
+  height: 32px; // match toolbar button height
+
+  .transition();
+
+  &:hover {
+    background-color: @gray-300;
+  }
+
+  .toolbar-dropdown-selector-placeholder {
+    margin-left: @spacings[sm];
+    padding: @spacings[xs] @spacings[z];
+  }
+}
+
+.dropdown-selector-item {
+  .clear-button-styles();
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+  &__left-content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &.is-selected {
+    background-color: @blue-200;
+  }
+
+  .option-icon {
+    height: @fontSizes[xl];
+    width: @fontSizes[xl];
+    margin-right: @spacings[sm];
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .option-name {
+    color: @gray-800;
+    margin-right: @spacings[xs];
+  }
+
+  .option-subtitle {
+    color: @gray-700;
+  }
+}
+
+.toolbar-dropdown-selector-dropdown {
+  .ant-popover-arrow {
+    display: none;
+  }
+
+  .ant-popover-inner {
+    overflow: auto;
+  }
+
+  .ant-popover-inner-content {
+    padding: 0;
+  }
+
+  .dropdown-selector-item {
+    width: 100%;
+    padding: @spacings[xs] @spacings[md];
+
+    &__left-content {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &:hover {
+      background-color: @gray-300;
+      color: @syncari-blue;
+    }
+
+    &:disabled {
+      background-color: @gray-200;
+      cursor: default;
+
+      &:hover {
+        background-color: @gray-200;
+      }
+
+      span {
+        color: @gray-600;
+      }
+    }
+  }
+}
+
+.toolbar-dropdown.disabled {
+  .dropdown-selector-item:hover {
+    cursor: initial;
+    background-color: @white;
+    color: @light-gray;
+  }
+
+  .toolbar-dropdown-selector-control:hover {
+    cursor: initial;
+    background-color: @white;
+  }
+}

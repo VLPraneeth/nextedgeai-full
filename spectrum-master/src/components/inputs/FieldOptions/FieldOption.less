@@ -1,0 +1,97 @@
+@import '~styles/index.less';
+
+.entity-item {
+  display: flex;
+  align-items: center;
+
+  &--disabled {
+    cursor: not-allowed;
+    color: @gray-600;
+  }
+
+  &__datatype-tooltip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  &__tooltip {
+    display: flex;
+    align-items: center;
+    .ellipsis-text();
+  }
+
+  &__display-name {
+    flex-shrink: 0;
+    margin-right: @spacings[xxs];
+    .ellipsis-text();
+  }
+
+  &__api-name {
+    flex-grow: 0;
+    flex-shrink: 1;
+    font-size: @fontSizes[sm];
+    margin-right: @spacings[xxs];
+    color: @gray-600;
+    .ellipsis-text();
+  }
+
+  &__readonly-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    color: @gray-600;
+    flex-shrink: 0;
+
+    div {
+      margin-right: 0;
+    }
+  }
+}
+
+// NOTE: Keeping these styles as some other components still rely on these.
+.synri-field-option {
+  display: flex;
+  align-items: center;
+
+  &.synri-entity-item {
+    cursor: pointer;
+    .synri-entity-option-tooltip {
+      display: flex;
+      align-items: center;
+    }
+    .synri-field-option-display-name {
+      .ellipsis-text();
+    }
+
+    &--disabled {
+      cursor: not-allowed;
+      color: @gray-600;
+    }
+  }
+
+  .synri-field-option-display-name {
+    .ellipsis-text();
+  }
+
+  span:nth-child(2) {
+    .ellipsis-text();
+  }
+
+  .synri-field-option-datatype-tooltip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .synri-field-option-api-name {
+    display: flex;
+    align-items: center;
+    .ellipsis-text();
+    font-size: @fontSizes[sm];
+    margin-left: @spacings[xxs];
+    color: @gray-600;
+  }
+}

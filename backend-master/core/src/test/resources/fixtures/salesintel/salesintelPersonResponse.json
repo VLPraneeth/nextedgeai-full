@@ -1,0 +1,66 @@
+{
+  "search_results": [
+    {
+      "match_id": "1848036-2a2f6c1100fa434ecbd1b8d7d6ed6c8d-1325103-0-0",
+      "first_name": "Caroline",
+      "last_name": "Abney",
+      "display_name": "Caroline Abney",
+      "company": {
+        "name": "King & Spalding",
+        "id": 1325103,
+        "revenue_range": "$200M - $1B",
+        "size_range": "1,000 - 5,000",
+        "domains": [
+          "kslaw.com"
+        ],
+        "naics_codes": [
+          "541110"
+        ],
+        "revenue": 393,
+        "size": 2347
+      },
+      "job_title": "Director, Human Resources & Diversity / Inclusion",
+      "job_level": "Director",
+      "job_department": "HR",
+      "email": "cabney@kslaw.com",
+      "personal_email": "",
+      "phone_numbers": [
+        {
+          "value": "4045724643",
+          "type": "work"
+        },
+        {
+          "value": "4045724600",
+          "type": "work_hq"
+        }
+      ],
+      "addresses": [
+        {
+          "street_1": "1180 Peachtree St NE",
+          "city": "Atlanta",
+          "state": "GA",
+          "zip": "30309-3531",
+          "country": "USA",
+          "type": "work",
+          "is_hq": false
+        }
+      ],
+      "social_profiles": [
+        {
+          "url": "linkedin.com/in/carolineabney",
+          "type": "linkedin"
+        }
+      ],
+      "dates": {
+        "last_modified_date": "20200327_015825",
+        "created_date": "20190811_103353"
+      },
+      "tier": 0,
+      "is_international": false,
+      "location_type": "hq",
+      "request_id": "1"
+    }
+  ],
+  "no_matches": [],
+  "batch_id": "67"
+}

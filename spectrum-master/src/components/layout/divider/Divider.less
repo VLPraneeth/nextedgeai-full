@@ -1,0 +1,21 @@
+@import '/src/styles/index.less';
+
+@divider-height: 1px;
+@divider-color: @gray-300;
+
+.synri-divider {
+  // prettier-ignore
+  each(@spacings, {
+    &.synri-divider-@{key} {
+      display: flex;
+      align-items: center;
+      height: @value;
+
+      .divider {
+        height: @divider-height;
+        width: 100%;
+        background-color: @divider-color;
+      }
+    }
+  });
+}

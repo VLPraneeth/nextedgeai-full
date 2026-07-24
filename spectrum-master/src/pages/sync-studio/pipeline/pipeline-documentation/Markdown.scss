@@ -1,0 +1,62 @@
+// Based on: https://github.com/raycon/vscode-markdown-style/blob/master/preview/light-default.css
+
+@import 'styles';
+
+// Note: colors here are base on vscode MD color theme and not part of our color variables.
+.markdown-view {
+  line-height: 1.5;
+  color: $gray-1000;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+
+  a {
+    color: #2980b9;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+  }
+
+  .vscode-light,
+  pre code {
+    color: #333;
+  }
+
+  code {
+    color: #c0392b;
+  }
+
+  pre:not(.hljs),
+  code > div {
+    color: #333;
+    background-color: #f8f8f8;
+    font-weight: normal;
+  }
+
+  table > thead > tr > th {
+    border-color: #ddd;
+  }
+
+  h1,
+  hr,
+  table > tbody > tr + tr > td {
+    border-color: #eee;
+  }
+
+  blockquote {
+    padding: 0 1em;
+    color: #777;
+    border-left: 0.25em solid #ddd;
+    background: transparent;
+  }
+}

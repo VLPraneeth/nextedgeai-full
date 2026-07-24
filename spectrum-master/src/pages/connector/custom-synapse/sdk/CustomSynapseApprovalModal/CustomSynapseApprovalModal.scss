@@ -1,0 +1,10 @@
+@import 'styles';
+
+.custom-synapse-approval-modal {
+  &__approve-button {
+    :first-child {
+      margin-right: $spacings-xxs;
+      color: $gray-500;
+    }
+  }
+}

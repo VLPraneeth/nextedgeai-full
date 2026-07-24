@@ -1,0 +1,37 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+@label-width: 400px;
+@selection-width: 90%;
+
+.synri-qs-pipeline-matcher-entity {
+  width: @label-width;
+  overflow-x: clip;
+}
+
+.synri-qs-pipeline-matcher-field-stack {
+  margin: @spacings[xs] 0;
+}
+
+// Shrink the Select component
+.synri-qs-pipeline-matcher-select {
+  font-size: @fontSizes[md];
+
+  .ant-select-selection__rendered {
+    width: @selection-width;
+    line-height: 21px;
+  }
+
+  .ant-select-selection {
+    height: 23px;
+  }
+}
+
+.synri-install-pipeline-gray-box {
+  background-color: @gray-250;
+  border-radius: @spacings[xxs];
+  padding: @spacings[sm];
+}

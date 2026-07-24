@@ -1,0 +1,22 @@
+@import '~styles/index.less';
+
+.syncari-popover-overlay {
+  .ant-popover-arrow {
+    display: none;
+  }
+
+  .ant-popover-title {
+    font-size: @fontSizes[lg];
+    font-weight: @fontWeights[bold];
+  }
+
+  .ant-popover-content {
+    background-color: @white;
+    border-radius: @borderRadius[lg];
+    box-shadow: @boxShadows[md];
+
+    .ant-popover-inner-content {
+      padding: @spacings[xxs] @spacings[md] @spacings[xs] @spacings[md];
+    }
+  }
+}

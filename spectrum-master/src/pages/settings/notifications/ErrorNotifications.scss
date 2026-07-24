@@ -1,0 +1,164 @@
+@import 'styles';
+
+.error-notifications {
+  .synri-inline-tab:first-child {
+    margin-left: 0px;
+  }
+  .synri-inline-tab {
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    padding-bottom: $spacings-sm;
+
+    &.is-current {
+      color: $title-color;
+      font-weight: $font-weights-medium;
+
+      &:after {
+        border-width: $spacings-xxs;
+      }
+    }
+  }
+
+  &__tags {
+    border-radius: $border-radius-full;
+  }
+
+  &__tab-title {
+    margin: 0 $spacings-xxsm;
+  }
+
+  &__add-button {
+    margin-top: $spacings-md;
+  }
+
+  &__list {
+    margin-top: $spacings-md;
+
+    .ag-layout-auto-height,
+    .ag-center-cols-clipper,
+    .ag-center-cols-viewport,
+    .ag-center-cols-container {
+      min-width: 100% !important;
+      min-height: 0px !important;
+    }
+
+    &.empty {
+      .ag-layout-auto-height,
+      .ag-center-cols-clipper,
+      .ag-center-cols-viewport,
+      .ag-center-cols-container {
+        min-height: $ag-table-empty-min-height !important;
+      }
+    }
+
+    &__delete-icon,
+    &__edit-icon {
+      cursor: pointer;
+      margin-right: $spacings-lg;
+    }
+  }
+
+  &__form {
+    width: $form-width;
+    .synri-label {
+      margin: $spacings-sm 0;
+      line-height: $line-height-single;
+    }
+    &__cadence-radio {
+      display: block;
+      margin-bottom: $spacings-xs;
+    }
+    &__status-switch {
+      margin-bottom: $spacings-mxl;
+      .switch-label-text {
+        color: $title-color;
+        font-weight: 400;
+      }
+    }
+    &--collapse {
+      margin-left: 0px;
+      color: black;
+    }
+    &__cancel-button {
+      margin-right: $spacings-md;
+    }
+    &__notification-type-selection {
+      width: auto !important;
+      min-width: 130px;
+      margin-bottom: $spacings-md;
+    }
+    &__footer {
+      border-top: 1px solid $s-light-gray;
+      padding-top: $spacings-md;
+      text-align: end;
+    }
+    &__email-alert {
+      margin-bottom: $spacings-md;
+    }
+    &__test-email-button {
+      margin-bottom: $spacings-md;
+    }
+    pre {
+      padding-top: $spacings-md;
+    }
+  }
+
+  &__email-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__manage_subscribers {
+    display: flex;
+    align-items: center;
+    gap: $spacings-xxsm;
+    color: $blue-750;
+    text-decoration: underline;
+    font-size: $font-size-sm;
+    cursor: pointer;
+  }
+
+  &__email-modal {
+    &__title {
+      font-family: 'Hanken Grotesk';
+      font-size: $font-size-xl;
+      font-weight: $font-weights-bold;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .ant-input-affix-wrapper {
+        width: 200px;
+      }
+    }
+
+    &__header-buttons,
+    &__email-status {
+      display: flex;
+      align-items: center;
+      gap: $spacings-xs;
+    }
+
+    &__header-buttons {
+      .active {
+        color: $blue-750;
+        border-color: $blue-750;
+      }
+    }
+
+    &__email-status {
+      .resend-email-trigger {
+        color: $blue-750;
+        text-decoration: underline;
+        font-size: $font-size-sm;
+        cursor: pointer;
+      }
+    }
+  }
+}

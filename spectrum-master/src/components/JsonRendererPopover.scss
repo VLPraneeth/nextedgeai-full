@@ -1,0 +1,19 @@
+@import 'styles';
+
+.popover-footer {
+  border-top: 1px solid $gray-400;
+  padding: $spacings-md $spacings-mmlg 0 $spacings-mmlg;
+  margin: ($spacings-sm) (-$spacings-mmlg) 0 (-$spacings-mmlg);
+  display: flex;
+  justify-content: flex-end;
+}
+.popover-table-renderer {
+  display: flex;
+  flex-direction: column;
+  gap: $spacings-xs;
+  width: 450px;
+  min-height: 300px;
+  .ag-root-wrapper {
+    max-height: 300px;
+  }
+}

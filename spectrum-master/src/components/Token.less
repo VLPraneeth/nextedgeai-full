@@ -1,0 +1,70 @@
+@import '~styles/index.less';
+
+.synri-token-container {
+  position: relative;
+  background-color: @gray-200;
+  border-radius: @borderRadius[md];
+  border: 1px solid @gray-400;
+  display: inline-flex;
+  align-items: center;
+  justify-content: stretch;
+  padding: @spacings[xxs] @spacings[xs];
+  margin: 0 @spacings[xxs];
+  line-height: 1;
+
+  &.highlighted,
+  &:hover {
+    border-color: @gray-400;
+  }
+
+  .synri-token-data-type {
+    line-height: 1;
+  }
+
+  &.active {
+    box-shadow: @syncari-blue 0 0 0 2px;
+  }
+
+  &.can-delete {
+    padding-right: @spacings[lg] + @spacings[sm];
+  }
+}
+
+.synri-token {
+  color: @gray-800;
+  font-size: @fontSizes[sm];
+  white-space: nowrap;
+  user-select: none;
+}
+
+.synri-token-remove {
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  cursor: pointer;
+  padding: 0 @spacings[xs];
+  padding-top: 2px; // this is to fix antd icon alignment
+  margin-left: @spacings[xs];
+  border-radius: 0 @borderRadius[md] @borderRadius[md] 0;
+
+  i {
+    font-size: @fontSizes[xs];
+    line-height: 1;
+  }
+
+  &:hover {
+    background-color: @gray-400;
+  }
+}
+
+.synri-token-tooltip.ant-tooltip {
+  .ellipsis-text();
+
+  max-width: 800px;
+  font-size: @fontSizes[sm];
+}

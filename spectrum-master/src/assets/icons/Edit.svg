@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    
+    <desc>Created with sketchtool.</desc>
+    <g id="Draft-Mode-Adjustments" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Draft-Mode-Popup" transform="translate(-1733.000000, -103.000000)">
+            <g id="Edit-Icon" transform="translate(1730.000000, 100.000000)">
+                <g id="Icon" fill="#D7E1E8" fill-rule="nonzero">
+                    <path d="M8.053125,23.5 C8.115625,23.5 8.178125,23.49375 8.240625,23.484375 L13.496875,22.5625 C13.559375,22.55 13.61875,22.521875 13.6625,22.475 L26.909375,9.228125 L21.715625,3.590625 C21.65625,3.53125 21.578125,3.5 21.49375,3.5 C21.409375,3.5 21.33125,3.53125 21.271875,3.590625 L8.025,16.8375 C7.978125,16.884375 7.95,16.940625 7.9375,17.003125 L7.015625,22.259375 C7.221875,22.459375 7.48125,22.56875 7.759375,22.56875 L8.053125,23.5 Z M10.159375,18.05 L21.49375,6.71875 L23.784375,9.009375 L12.45,20.340625 L9.671875,20.83125 L10.159375,18.05 Z M27.5,26.125 L4.5,26.125 C3.946875,26.125 3.5,26.571875 3.5,27.125 L3.5,28.25 C3.5,28.3875 3.6125,28.5 3.75,28.5 L28.25,28.5 C28.3875,28.5 28.5,28.3875 28.5,28.25 L28.5,27.125 C28.5,26.571875 28.053125,26.125 27.5,26.125 Z" id="Icon-Shape"></path>
+                </g>
+                <rect id="ViewBox" x="0" y="0" width="32" height="32"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

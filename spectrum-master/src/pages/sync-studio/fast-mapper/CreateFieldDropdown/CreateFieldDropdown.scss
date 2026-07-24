@@ -1,0 +1,48 @@
+@import 'styles';
+
+@keyframes expand {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.create-field-dropdown {
+  position: fixed;
+
+  &--expanding {
+    animation: expand;
+    animation-duration: 150ms;
+    transform-origin: top center;
+    transition-timing-function: $easing-easeInOut;
+  }
+
+  &__content {
+    padding-bottom: 0;
+
+    .ant-form-item {
+      margin-bottom: $spacings-sm;
+    }
+
+    .synri-select {
+      width: 100%;
+    }
+  }
+
+  &__checkbox {
+    .ant-row.ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+
+  &__datatype-option {
+    display: flex;
+    align-items: center;
+  }
+
+  .ant-modal-body {
+    padding: $spacings-sm $spacings-mmlg;
+  }
+}

@@ -1,0 +1,109 @@
+@import '~styles/index.less';
+
+.table-error-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .table-error-content {
+    background-color: @red-300;
+    border-radius: @borderRadius[md];
+    box-shadow: @boxShadows[md];
+    padding: @spacings[md] @spacings[lg];
+  }
+}
+
+.ag-table-wrapper {
+  position: relative;
+  flex: 1 0 auto;
+  overflow: hidden;
+
+  --ag-border-color: @gray-400;
+  --ag-header-background-color: @gray-200;
+  --ag-selected-row-background-color: @blue-200;
+  --ag-secondary-foreground-color: @gray-700;
+}
+
+.ag-react-container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  color: @gray-1000;
+  font-weight: @fontWeights[regular];
+}
+
+.ag-theme-balham {
+  font-family: @font-family;
+  font-size: 13px; // 13px specified from https://syncari.atlassian.net/browse/SYN-3511
+  font-weight: @fontWeights[regular];
+
+  .ag-tooltip {
+    color: @gray-100;
+    padding: @spacings[sm] @spacings[md];
+    .box-bordered(@gray-800, @gray-1000, @borderRadius[md]);
+  }
+}
+
+.ag-header-cell,
+.system-field-header {
+  font-weight: @fontWeights[bold];
+}
+
+.system-field-header {
+  color: var(--ag-secondary-foreground-color);
+}
+
+// Hide the last resize handle per design
+.ag-header-row .ag-header-cell:last-child::after {
+  display: none;
+}
+
+// Make the container with 100% to have consistent row lines
+.ag-center-cols-container {
+  min-width: 100%;
+}
+
+/*
+  ag-grid variables
+
+--ag-background-color, white;
+--ag-balham-active-color, #0091ea;
+--ag-border-color, #bdc3c7;
+--ag-checkbox-unchecked-color, #7f8c8d;
+--ag-chip-background-color, #dddede;
+--ag-control-panel-background-color, #f5f7f7;
+--ag-disabled-foreground-color, rgba(0, 0, 0, 0.38);
+--ag-foreground-color, #000;
+--ag-header-background-color, #f5f7f7;
+--ag-header-column-separator-color, rgba(189, 195, 199, 0.5);
+--ag-input-border-color, #95a5a6;
+--ag-input-disabled-background-color, #ebebeb;
+--ag-input-disabled-border-color, rgba(149, 165, 166, 0.3);
+--ag-input-focus-border-color, #719ECE;
+--ag-modal-overlay-background-color, rgba(255, 255, 255, 0.66);
+--ag-odd-row-background-color, #fcfdfe;
+--ag-range-selection-background-color, rgba(0, 145, 234, 0.2));
+--ag-range-selection-background-color, rgba(0, 145, 234, 0.2);
+--ag-range-selection-background-color-2, rgba(0, 145, 234, 0.36);
+--ag-range-selection-background-color-3, rgba(0, 145, 234, 0.488);
+--ag-range-selection-background-color-4, rgba(0, 145, 234, 0.5904);
+--ag-range-selection-chart-background-color, rgba(0, 88, 255, 0.1);
+--ag-range-selection-chart-category-background-color, rgba(0, 255, 132, 0.1);
+--ag-row-border-color, #d9dcde;
+--ag-row-hover-color, #ecf0f1;
+--ag-secondary-foreground-color, rgba(0, 0, 0, 0.54);
+--ag-selected-row-background-color, #b7e4ff;
+--ag-subheader-background-color, #e2e9eb;
+--ag-subheader-toolbar-background-color, rgba(226, 233, 235, 0.5);
+--ag-value-change-delta-down-color, #e53935;
+--ag-value-change-delta-up-color, #43a047;
+--ag-value-change-value-highlight-background-color, rgba(22, 160, 133, 0.5);
+
+*/

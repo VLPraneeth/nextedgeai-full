@@ -1,0 +1,39 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+.synri-config-wizard {
+  .ant-drawer-body {
+    overflow: hidden;
+    padding: 0;
+
+    .synri-inline-message {
+      margin-bottom: 6px;
+    }
+  }
+
+  .synri-drawer-modal-footer {
+    bottom: 0 !important;
+  }
+
+  .filter-group-groups {
+    width: initial;
+  }
+
+  // Special style for the dedupe field merge policy
+  .composite-group-input-fieldMergePredicate {
+    .synri-condition-left {
+      flex: 0 1 25%;
+    }
+    .synri-condition-right {
+      flex: 1 1 50%;
+      .synri-multi-value-text-picklist {
+        .ant-select {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

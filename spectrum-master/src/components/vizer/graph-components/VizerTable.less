@@ -1,0 +1,45 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+.vizer-table {
+  height: 100%;
+  display: flex;
+  display: flex;
+  flex-flow: column;
+
+  .ag-cell-value,
+  .ag-react-container {
+    width: 100%;
+  }
+
+  .ag-overlay-no-rows-wrapper {
+    .ag-react-container {
+      justify-content: center;
+    }
+  }
+
+  &__currency-cell {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+
+    &--accounting {
+      justify-content: space-between;
+    }
+  }
+
+  &__currency-value {
+    &--accounting {
+      text-align: right;
+      flex: 1 0 initial;
+      min-width: 66px;
+    }
+  }
+}
+
+.vizer-table-cell-value {
+  .ellipsis-text();
+}

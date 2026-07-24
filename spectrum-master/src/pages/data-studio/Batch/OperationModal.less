@@ -1,0 +1,106 @@
+@import '~styles/index.less';
+
+.synri-batch-operation-modal {
+  .ant-modal-body {
+    padding: 0;
+  }
+}
+
+.synri-operation-modal-body {
+  max-height: 65vh;
+  overflow: auto;
+  padding: 0 @spacings[xl] @spacings[lg];
+}
+
+.entity-filter-preview {
+  .filter-scope-container {
+    background-color: @gray-200;
+    border: 1px solid @gray-400;
+    border-radius: @borderRadius[md];
+    padding: @spacings[xs] @spacings[xs];
+
+    .synri-condition-readonly {
+      color: @gray-800;
+    }
+
+    .synri-filter-condition {
+      border: none;
+    }
+  }
+
+  .group-filter-container.root-group {
+    background-color: @gray-200;
+    border: 1px solid @gray-400;
+    border-radius: @borderRadius[md];
+    padding: @spacings[xs] @spacings[xs];
+
+    .synri-readonly-operator {
+      color: @gray-800;
+      padding-top: @spacings[xs];
+      padding-bottom: @spacings[xs];
+    }
+
+    .filter-scope-container {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+    }
+  }
+}
+
+.synri-inline-message-no-bottom-margin {
+  margin-bottom: 0;
+}
+
+.delete-type-radio-group {
+  label {
+    display: block;
+  }
+}
+
+.record-update-field-select {
+  .ant-select-selection,
+  .ant-select-selection__rendered {
+    min-width: 14rem;
+    max-width: 14rem;
+  }
+
+  .ant-select-selection__rendered {
+    padding-right: @spacings[xs] + @spacings[xl];
+  }
+}
+
+.record-update-fields-container {
+  padding-bottom: @spacings[lg];
+}
+
+.record-update-field-rows-container {
+  margin: -@spacings[xs];
+}
+
+.record-update-field-row {
+  padding: @spacings[xs];
+
+  &:hover {
+    background-color: @gray-100;
+  }
+}
+
+.record-update-field-row-content {
+  flex: 1;
+}
+
+.synri-batch-update-modal {
+  width: 50rem;
+}
+
+.record-update-field-input {
+  &:not(.record-update-field-input-boolean) {
+    flex: 1;
+  }
+
+  &.record-update-field-input-boolean {
+    display: inline-flex;
+    align-self: center;
+  }
+}

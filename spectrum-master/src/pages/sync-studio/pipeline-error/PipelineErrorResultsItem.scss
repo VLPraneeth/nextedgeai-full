@@ -1,0 +1,26 @@
+@import 'styles';
+
+.pipeline-error-result-item {
+  display: flex;
+  flex-direction: column;
+  padding: $spacings-md 0;
+  border-bottom: $gray-400 1px solid;
+
+  &--header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &--title {
+    font-size: $font-size-md;
+    padding: 0;
+    margin-bottom: $spacings-xxs;
+    width: 90%;
+    text-wrap: wrap;
+    max-height: 400px;
+    overflow: auto;
+  }
+}

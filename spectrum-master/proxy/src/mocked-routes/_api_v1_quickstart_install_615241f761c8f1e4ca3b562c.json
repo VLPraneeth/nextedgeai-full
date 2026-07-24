@@ -1,0 +1,202 @@
+{
+  "id": "615241f761c8f1e4ca3b562c",
+  "displayName": "matching test",
+  "requiredSynapses": ["Salesforce"],
+  "config": {
+    "configuration": [
+      {
+        "renderType": "displayText",
+        "id": "quickStartTitle",
+        "name": "quickStartTitle",
+        "defaultValue": "dummy",
+        "textProps": { "children": "matching test", "as": "h3", "size": "xl" }
+      },
+      {
+        "renderType": "displayText",
+        "id": "requiredSynapsesText",
+        "name": "requiredSynapsesText",
+        "textProps": {
+          "children": "Published by Syncari Admin<br />Requires Salesforce",
+          "as": "span",
+          "size": "md",
+          "color": "gray-750",
+          "beDangerous": true
+        }
+      },
+      {
+        "renderType": "displayText",
+        "id": "overviewDescription",
+        "name": "overviewDescription",
+        "textProps": { "children": null, "as": "p", "size": "md", "color": "black", "beDangerous": true }
+      },
+      {
+        "renderType": "quickStartInstallErrorResolution",
+        "id": "matchSynapses",
+        "name": "matchSynapses",
+        "resolutionData": {
+          "type": "match_synapses",
+          "matches": [
+            { "synapseName": "Marketo", "options": [{ "label": "Marketo-1", "value": "value" }] },
+            { "synapseName": "Salesforce", "options": [{ "label": "Salesforce", "value": "value" }] },
+            { "synapseName": "ZenDesk", "options": [{ "label": "ZenDesk", "value": "value" }] }
+          ]
+        }
+      },
+      {
+        "renderType": "quickStartInstallErrorResolution",
+        "id": "resolveServiceCredentials",
+        "name": "resolveServiceCredentials",
+        "resolutionData": { "type": "service_credentials", "serviceProvider": "" }
+      },
+      {
+        "datatype": "infoBox",
+        "id": "quickStartReview",
+        "name": "quickStartReview",
+        "message": "Review the changes this Quick Start will make",
+        "description": "Carefully review all of the changes that will be made to your instance below before running the Quick Start.",
+        "showIcon": false
+      },
+      {
+        "renderType": "quickStartInstallReview",
+        "id": "quickStartInstallReview",
+        "name": "quickStartInstallReview",
+        "message": "Review the changes this Quick Start will make",
+        "reviewItems": []
+      },
+      {
+        "renderType": "schemaMatcher",
+        "id": "schemaMatcher",
+        "name": "schemaMatcher",
+
+        "synapseName": "Yellowstone Synapse",
+        "items": [
+          {
+            "entityName": "Account",
+            "entityId": "123",
+            "fields": [
+              {
+                "id": "1",
+                "displayName": "FieldName 1",
+                "apiName": "fieldname1",
+                "dataType": "id"
+              },
+              {
+                "id": "2",
+                "displayName": "FieldName 3",
+                "apiName": "fieldname3",
+                "dataType": "list"
+              }
+            ],
+            "entityOptions": [
+              {
+                "label": "Account",
+                "value": "456",
+                "fieldOptions": [
+                  {
+                    "id": "Account Field 1",
+                    "displayName": "Account Field 1",
+                    "apiName": "accountField_1",
+                    "dataType": "id"
+                  },
+                  {
+                    "id": "Account Field 2",
+                    "displayName": "Account Field 2",
+                    "apiName": "accountField_2",
+                    "dataType": "string"
+                  }
+                ]
+              },
+              {
+                "label": "Opportunity",
+                "value": "987",
+                "fieldOptions": [
+                  {
+                    "id": "opp1",
+                    "displayName": "Opp Field 1",
+                    "apiName": "oppField_1",
+                    "dataType": "id"
+                  },
+                  {
+                    "id": "opp2",
+                    "displayName": "Opp Field 2",
+                    "apiName": "oppField_2",
+                    "dataType": "integer"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "entityName": "Opportunity",
+            "entityId": "234",
+            "fields": [
+              {
+                "id": "3",
+                "displayName": "FieldName 2",
+                "apiName": "fieldname2",
+                "dataType": "double"
+              },
+              {
+                "id": "4",
+                "displayName": "FieldName 4",
+                "apiName": "fieldname4",
+                "dataType": "double"
+              }
+            ],
+            "entityOptions": [
+              {
+                "label": "Opportunity match",
+                "value": "567",
+                "fieldOptions": [
+                  {
+                    "id": "d",
+                    "displayName": "FieldName 4 match",
+                    "apiName": "fieldname4",
+                    "dataType": "double"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "renderType": "quickStartPostInstallation",
+        "id": "confirmQuickStart",
+        "postInstallMessage": null,
+        "name": "confirmQuickStart"
+      }
+    ],
+    "renderer": {
+      "renderType": "fullContentPanel",
+      "steps": [
+        {
+          "fields": ["quickStartTitle", "publishedByText", "requiredSynapsesText", "overviewDescription"],
+          "layout": { "type": "stack", "className": "synri-skull-stack-container-md" },
+          "stepName": "Overview"
+        },
+        {
+          "dynamicSteps": true,
+          "applyStep": true,
+          "fields": ["schemaMatcher"],
+          "layout": { "type": "stack", "className": "synri-skull-stack-container-md" },
+          "stepName": "Resolve matches"
+        },
+        {
+          "dynamicSteps": true,
+          "applyStep": true,
+          "fields": ["quickStartReview", "quickStartInstallReview"],
+          "layout": { "type": "stack", "className": "synri-skull-stack-container-md" },
+          "stepName": "Review"
+        },
+        {
+          "closeStep": true,
+          "fields": ["confirmQuickStart"],
+          "layout": { "type": "stack", "className": "synri-skull-stack-container-md" },
+          "stepName": "Confirm"
+        }
+      ],
+      "title": "Install Quickstart"
+    }
+  }
+}

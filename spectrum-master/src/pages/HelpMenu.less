@@ -1,0 +1,99 @@
+/**
+ * Copyright (c) 2019-Present Syncari - All rights reserved.
+ */
+
+@import '~styles/index.less';
+
+.header-menu .help-menu.header-menu-item {
+  display: flex;
+  align-items: center;
+
+  .header-icon {
+    font-size: 24px;
+    cursor: pointer;
+
+    &.active {
+      svg {
+        color: @black;
+
+        &:hover {
+          color: @syncari-blue;
+        }
+      }
+    }
+  }
+}
+
+.help-menu {
+  .ant-popover-arrow {
+    display: none;
+  }
+
+  /* this is the popover container */
+  .ant-popover-inner {
+    padding: 0;
+    border-radius: @borderRadius[lg];
+    box-shadow: @boxShadows[md];
+  }
+
+  /* this is the content inside the container */
+  .ant-popover-inner-content {
+    padding: 0;
+  }
+
+  /* control offset when positioned on the bottom */
+  &.ant-popover-placement-bottom,
+  &.ant-popover-placement-bottomLeft,
+  &.ant-popover-placement-bottomRight {
+    padding-top: @spacings[xxs];
+  }
+}
+
+.help-dropdown-menu {
+  min-width: @spacings[5xl];
+  padding: @spacings[xs] 0;
+
+  .help-dropdown-menu-item {
+    display: flex;
+  }
+
+  .help-dropdown-menu-item {
+    a,
+    button {
+      padding: @spacings[xxs] @spacings[md];
+      flex: 1;
+      text-align: start;
+      color: @gray-900;
+      font-weight: @fontWeights[medium];
+      line-height: @lineHeights[loose];
+    }
+
+    button {
+      appearance: none;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+        color: @syncari-blue;
+      }
+
+      &:disabled,
+      &[disabled] {
+        color: @gray-500;
+        cursor: not-allowed;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: @gray-300;
+
+      a,
+      button {
+        color: @syncari-blue;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+.custom-synapse-upload-container {
+  .synri-image-upload {
+    margin-top: @spacings[xxs];
+    .synri-image-upload-image-container {
+      margin: 0 !important;
+      img {
+        width: 32px !important;
+        height: 32px !important;
+      }
+    }
+  }
+}
+
+.synri-custom-synapse-upload-box-dragger {
+  width: 350px;
+  margin-right: @spacings[lg];
+
+  .ant-upload.ant-upload-drag {
+    background-color: @white;
+  }
+}
+
+.synri-custom-synapse-upload-box-file {
+  border: 1px solid @gray-300;
+  border-radius: @spacings[xs];
+  padding: @spacings[sm];
+  padding-right: @spacings[xs];
+  padding-left: @spacings[md];
+}
+
+.synri-custom-synapse-upload-box-content {
+  max-width: calc(100% - 60px);
+}
+
+.synri-custom-synapse-file-remove {
+  padding: @spacings[md];
+  cursor: pointer;
+}
+
+.synri-reupload-link {
+  padding: 0 !important;
+}

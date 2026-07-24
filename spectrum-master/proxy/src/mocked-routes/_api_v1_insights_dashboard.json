@@ -1,0 +1,22 @@
+[
+  {
+    "id": "dash1",
+    "displayName": "Dash 1",
+    "description": "",
+    "tags": [],
+    "draftStatus": "APPROVED",
+    "draft": {
+      "id": "dash1Draft",
+      "displayName": "Dash 1",
+      "description": "",
+      "tags": [],
+      "draftStatus": "NEW",
+      "draft": null
+    }
+  },
+  {
+    "id": "dash2",
+    "displayName": "Dash 2",
+    "description": "This dashboard doesn't exist, it shows an error"
+  }
+]

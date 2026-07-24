@@ -1,0 +1,60 @@
+@import '~styles/index.less';
+
+.logs-container {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0px;
+  height: 100%;
+
+  .logs-sidebar {
+    max-width: fit-content;
+    flex: 0 0 16.667%;
+
+    & > .ant-menu {
+      height: 100%;
+      min-height: initial;
+    }
+  }
+
+  .logs-content {
+    min-width: fit-content;
+    flex: 1 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: @spacings[lg];
+    overflow: scroll;
+    background-color: @white;
+  }
+
+  .syncari-ag-table-pagination-container {
+    padding-bottom: 0px;
+  }
+}
+
+.sync-errors {
+  &--filters-container {
+    &--filter-text {
+      display: inline-block;
+      .ellipsis-text();
+    }
+    &--clear-filter {
+      color: white;
+    }
+    &--syncari-record-id {
+      // specific with for syncari record id
+      min-width: 20rem;
+    }
+    &--apply-filter {
+      margin-left: auto;
+    }
+  }
+
+  &__table-actions {
+    display: flex;
+    justify-content: end;
+  }
+}
+
+.full-height {
+  min-height: 100vh;
+}

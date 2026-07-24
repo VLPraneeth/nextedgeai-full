@@ -1,0 +1,35 @@
+.disabled() {
+  opacity: 0.7;
+}
+
+// Picked up from:
+// http://nicolasgallagher.com/micro-clearfix-hack/
+
+.clear-fix() {
+  &:before,
+  &:after {
+    content: ' '; /* 1 */
+    display: table; /* 2 */
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+//
+// Transition Mixins
+//
+.transition(@target: all) {
+  transition: @target 300ms @easings[easeInOut];
+}
+
+.right-sidebar() {
+  background-color: white;
+
+  width: 350px;
+
+  border-left-color: #dee3e7;
+  border-left-style: solid;
+  border-left-width: 1px;
+}

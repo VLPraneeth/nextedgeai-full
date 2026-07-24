@@ -1,0 +1,32 @@
+@import 'styles';
+
+.shared-dashboard {
+  width: 100%;
+  &__header {
+    width: 100%;
+    padding: 0 $spacings-xl;
+    border-bottom: 1px solid $gray-400;
+  }
+  &__toolbar {
+    width: 100%;
+    display: flex;
+  }
+  &__expiry {
+    border-left: 1px solid $gray-700;
+    color: $gray-700;
+    padding-left: $spacings-md;
+    font-size: $font-size-md;
+    font-style: italic;
+  }
+  &__dashboardName {
+    color: black;
+    font-weight: $font-weights-bold;
+    font-size: $font-size-lgr;
+  }
+  &__dashboardSelect {
+    min-width: 200px;
+  }
+  &__exit-button {
+    margin-right: $spacings-mxl;
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "id": "sampleDash1",
+  "isExample": true,
+  "displayName": "Sample Dashboard",
+  "description": "",
+  "dataCards": [
+    {
+      "id": "arrByQuarter",
+      "layout": {
+        "resizable": false,
+        "w": 4,
+        "h": 2,
+        "x": 0,
+        "y": 0
+      },
+      "displayName": "Sales by Quarter"
+    },
+    {
+      "id": "arrByType",
+      "layout": {
+        "resizable": false,
+        "w": 4,
+        "h": 2,
+        "x": 4,
+        "y": 0
+      },
+      "displayName": "Sales by Type"
+    },
+    {
+      "id": "currentArr",
+      "layout": {
+        "resizable": false,
+        "w": 4,
+        "h": 2,
+        "x": 8,
+        "y": 0
+      },
+      "displayName": "Current Year Sales"
+    },
+
+    {
+      "id": "topTenCustomers",
+      "layout": {
+        "resizable": false,
+        "w": 4,
+        "h": 2,
+        "x": 0,
+        "y": 2
+      },
+      "displayName": "Top 10 Accounts by Sales"
+    },
+    {
+      "id": "pipelineByClose",
+      "layout": {
+        "resizable": false,
+        "w": 8,
+        "h": 2,
+        "x": 4,
+        "y": 2
+      },
+      "displayName": "Pipeline By Close Date"
+    },
+
+    {
+      "id": "mqlCount",
+      "layout": {
+        "resizable": false,
+        "w": 4,
+        "h": 2,
+        "x": 0,
+        "y": 4
+      },
+      "displayName": "MQL Count"
+    },
+    {
+      "id": "userGrowth",
+      "layout": {
+        "resizable": false,
+        "w": 4,
+        "h": 2,
+        "x": 4,
+        "y": 4
+      },
+      "displayName": "User Growth"
+    },
+    {
+      "id": "salesFunnel",
+      "layout": {
+        "resizable": false,
+        "w": 4,
+        "h": 2,
+        "x": 8,
+        "y": 4
+      },
+      "displayName": "Sales Funnel"
+    },
+
+    {
+      "id": "issuesIn7Days",
+      "layout": {
+        "resizable": false,
+        "w": 8,
+        "h": 2,
+        "x": 0,
+        "y": 6
+      },
+      "displayName": "Trend of % Issues Resolved in 7 Days"
+    },
+    {
+      "id": "mqlToSqlRatio",
+      "layout": {
+        "resizable": false,
+        "w": 4,
+        "h": 2,
+        "x": 8,
+        "y": 6
+      },
+      "displayName": "MQL to SQL Ratio"
+    }
+  ]
+}

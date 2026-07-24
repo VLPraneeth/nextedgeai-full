@@ -1,0 +1,18 @@
+@import 'styles';
+
+.add-email-box {
+  display: flex;
+  flex-direction: column;
+  gap: $spacings-md;
+  padding: $spacings-md;
+  border-radius: $border-radius-md;
+  border: 1px solid $gray-400;
+  margin: $spacings-md 0;
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: $spacings-xs;
+    margin-left: auto;
+  }
+}

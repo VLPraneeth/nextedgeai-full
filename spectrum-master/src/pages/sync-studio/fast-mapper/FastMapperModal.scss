@@ -1,0 +1,48 @@
+@import 'styles';
+
+@mixin button-overrides() {
+  &__button {
+    &--primary {
+      border-color: transparent !important;
+    }
+
+    &--primary:focus {
+      box-shadow: 0 0 0 2px white, 0 0 0 4px #40a9ff;
+    }
+
+    &--secondary {
+      border-color: $gray-500 !important;
+    }
+
+    &--secondary:hover {
+      border-color: $syncari-blue !important;
+    }
+
+    &--secondary:disabled {
+      border-color: $gray-500 !important;
+      color: $gray-500;
+    }
+
+    &--secondary:focus {
+      box-shadow: 0 0 0 2px white, 0 0 0 4px $syncari-blue;
+    }
+  }
+}
+
+.fast-mapper-modal {
+  @include button-overrides();
+
+  &__footer {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+
+    button {
+      margin-right: $spacings-md !important;
+    }
+  }
+
+  .ant-drawer-body {
+    padding: $spacings-lg;
+  }
+}

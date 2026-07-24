@@ -1,0 +1,134 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+@import '~styles/index.less';
+
+.flow-item {
+  padding-bottom: 10px;
+  cursor: move;
+
+  /* this is necessary so that the click events don't start a text range select event
+   * but instead allow us to track a drag event for moving to the canvas */
+  user-select: none;
+
+  .flow-item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+    border-radius: 6px;
+    border: 1px solid @border-color;
+    box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 1px @white;
+    transition: 0.05s;
+    width: 100% !important;
+    border-left: 6px solid @border-color;
+
+    &:hover {
+      border-color: @syncari-blue;
+    }
+
+    .synri-inline-svg,
+    .flow-item-title {
+      cursor: move;
+    }
+
+    height: 50px;
+    width: 290px;
+
+    .synri-inline-svg {
+      margin-left: 8px;
+
+      svg[width] {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &.selected {
+      height: 50px;
+      width: 290px;
+    }
+
+    .flow-item-prefix {
+      margin-left: 8px !important;
+    }
+
+    .flow-item-title {
+      flex-grow: 1;
+      margin-left: 8px;
+      color: @gray-900;
+      font-size: @fontSizes[lg];
+      font-weight: @fontWeights[semibold];
+      width: 238px;
+      .ellipsis-text();
+    }
+
+    .flow-item-suffix {
+      margin-right: 16px;
+    }
+
+    .synri-graph-item-content-container {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
+      margin-left: @spacings[sm];
+
+      .flow-item-title {
+        margin-left: 0;
+        line-height: @lineHeights[regular];
+      }
+
+      .flow-item-sub-label {
+        line-height: @lineHeights[regular];
+        font-size: @fontSizes[sm];
+        color: @gray-700;
+      }
+    }
+  }
+
+  &.synri-graph-item-disabled {
+    filter: grayscale(100%);
+    opacity: 0.8;
+
+    .flow-item-container:hover {
+      border-color: @border-color;
+    }
+
+    .flow-item-container,
+    .synri-inline-svg,
+    .flow-item-title {
+      cursor: default;
+    }
+  }
+}
+
+.synri-functions {
+  .synri-inline-svg {
+    #Iconography {
+      fill: @color-function-icons;
+    }
+  }
+}
+
+.synri-node-dragging {
+  border: 1px dashed @gray-300 !important;
+
+  .synri-inline-svg {
+    display: none;
+  }
+
+  .flow-item-title {
+    display: none;
+  }
+}
+
+.synri-node-dragging-v2 {
+  border: 1px dashed @gray-300 !important;
+
+  .flow-item-container {
+    border: none !important;
+    box-shadow: none !important;
+  }
+}

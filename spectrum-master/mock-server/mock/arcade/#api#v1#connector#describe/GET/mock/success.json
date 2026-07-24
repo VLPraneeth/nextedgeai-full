@@ -1,0 +1,250 @@
+[
+  {
+    "id": "5d7191cf0609c010fda6f62d",
+    "name": "syncari",
+    "implementationClassName": "",
+    "displayName": null,
+    "description": null,
+    "category": null,
+    "iconUri": null,
+    "idFieldName": null,
+    "watermarkFieldName": null,
+    "createdAtFieldName": null,
+    "updatedAtFieldName": null,
+    "supportedAuthTypes": [],
+    "oauthUri": null
+  },
+  {
+    "id": "5d7191cf0609c010fda6f62e",
+    "name": "salesforce",
+    "implementationClassName": "com.syncari.connector.service.SalesforceService",
+    "displayName": "Salesforce",
+    "description": null,
+    "category": "CRM",
+    "iconUri": "/icons/salesforce.jpg",
+    "idFieldName": null,
+    "watermarkFieldName": "CreatedDate",
+    "createdAtFieldName": null,
+    "updatedAtFieldName": null,
+    "supportedAuthTypes": [
+      {
+        "authType": "UserPasswordToken",
+        "fields": [
+          {
+            "name": "User Name",
+            "dataType": "text"
+          },
+          {
+            "name": "Password",
+            "dataType": "password"
+          },
+          {
+            "name": "Token",
+            "dataType": "password"
+          }
+        ]
+      }
+    ],
+    "oauthUri": null
+  },
+  {
+    "id": "5d7191cf0609c010fda6f62f",
+    "name": "hubspot",
+    "implementationClassName": "com.syncari.connector.service.HubspotService",
+    "displayName": "Hubspot",
+    "description": null,
+    "category": "Marketing",
+    "iconUri": "/icons/hubbspot.jpg",
+    "idFieldName": null,
+    "watermarkFieldName": "hs_lastmodifieddate",
+    "createdAtFieldName": null,
+    "updatedAtFieldName": "hs_lastmodifieddate",
+    "supportedAuthTypes": [
+      {
+        "authType": "ApiKey",
+        "fields": [
+          {
+            "name": "Api Key",
+            "dataType": "password"
+          },
+          {
+            "name": "Password",
+            "dataType": "password"
+          },
+          {
+            "name": "Token",
+            "dataType": "password"
+          }
+        ]
+      },
+      {
+        "authType": "Oauth",
+        "fields": [
+          {
+            "name": "Client Id",
+            "dataType": "password"
+          },
+          {
+            "name": "Client Secret",
+            "dataType": "password"
+          }
+        ]
+      }
+    ],
+    "oauthUri": "/oauth/authorize?redirect_uri={{redirect_uri}}&client_id={{client_id}}&scope=contacts oauth integration-sync"
+  },
+  {
+    "id": "5d7191cf0609c010fda6f630",
+    "name": "zendesk",
+    "implementationClassName": "com.syncari.connector.service.ZendeskService",
+    "displayName": "Zendesk",
+    "description": null,
+    "category": "Customer Success",
+    "iconUri": "/icons/zendesk.jpg",
+    "idFieldName": null,
+    "watermarkFieldName": "created_at",
+    "createdAtFieldName": null,
+    "updatedAtFieldName": "updated_at",
+    "supportedAuthTypes": [
+      {
+        "authType": "ApiKey",
+        "fields": [
+          {
+            "name": "Api Key",
+            "dataType": "password"
+          },
+          {
+            "name": "Password",
+            "dataType": "password"
+          },
+          {
+            "name": "Token",
+            "dataType": "password"
+          }
+        ]
+      },
+      {
+        "authType": "Oauth",
+        "fields": [
+          {
+            "name": "Client Id",
+            "dataType": "password"
+          },
+          {
+            "name": "Client Secret",
+            "dataType": "password"
+          }
+        ]
+      },
+      {
+        "authType": "UserPasswordToken",
+        "fields": [
+          {
+            "name": "User Name",
+            "dataType": "text"
+          },
+          {
+            "name": "Password",
+            "dataType": "password"
+          }
+        ]
+      }
+    ],
+    "oauthUri": "/oauth/authorizations/new?response_type=code&redirect_uri={{redirect_uri}}&client_id={{client_id}}&scope=read write"
+  },
+  {
+    "id": "5d7191cf0609c010fda6f631",
+    "name": "marketo",
+    "implementationClassName": "com.syncari.connector.service.MarketoService",
+    "displayName": "Marketo",
+    "description": null,
+    "category": "Marketing",
+    "iconUri": "/icons/marketo.jpg",
+    "idFieldName": null,
+    "watermarkFieldName": null,
+    "createdAtFieldName": null,
+    "updatedAtFieldName": null,
+    "supportedAuthTypes": [
+      {
+        "authType": "ApiKey",
+        "fields": [
+          {
+            "name": "Api Key",
+            "dataType": "password"
+          },
+          {
+            "name": "Password",
+            "dataType": "password"
+          },
+          {
+            "name": "Token",
+            "dataType": "password"
+          }
+        ]
+      }
+    ],
+    "oauthUri": null
+  },
+  {
+    "id": "5d7191cf0609c010fda6f632",
+    "name": "gainsightcs",
+    "implementationClassName": "com.syncari.connector.service.GainsightService",
+    "displayName": "Gainsight CS",
+    "description": null,
+    "category": "Product Usage",
+    "iconUri": "/icons/gainsightcs.jpg",
+    "idFieldName": null,
+    "watermarkFieldName": null,
+    "createdAtFieldName": null,
+    "updatedAtFieldName": null,
+    "supportedAuthTypes": [
+      {
+        "authType": "ApiKey",
+        "fields": [
+          {
+            "name": "Api Key",
+            "dataType": "password"
+          },
+          {
+            "name": "Password",
+            "dataType": "password"
+          },
+          {
+            "name": "Token",
+            "dataType": "password"
+          }
+        ]
+      }
+    ],
+    "oauthUri": null
+  },
+  {
+    "id": "5d7191cf0609c010fda6f633",
+    "name": "redshift",
+    "implementationClassName": "com.syncari.connector.service.RedshiftService",
+    "displayName": "Amazon Redshift",
+    "description": null,
+    "category": "Datawarehouse",
+    "iconUri": "/icons/redshift.jpg",
+    "idFieldName": null,
+    "watermarkFieldName": null,
+    "createdAtFieldName": null,
+    "updatedAtFieldName": null,
+    "supportedAuthTypes": [
+      {
+        "authType": "UserPasswordToken",
+        "fields": [
+          {
+            "name": "User Name",
+            "dataType": "text"
+          },
+          {
+            "name": "Password",
+            "dataType": "password"
+          }
+        ]
+      }
+    ],
+    "oauthUri": null
+  }
+]

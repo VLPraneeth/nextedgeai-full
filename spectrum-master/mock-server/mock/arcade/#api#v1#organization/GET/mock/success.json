@@ -1,0 +1,19 @@
+[ 
+  { 
+    "id":"5d7191d00609c010fda6f829",
+    "name":"syncari_admin",
+    "instances":[ 
+      { 
+        "name":null,
+        "syncariId":"syncari_admin",
+        "type":"production",
+        "status":null,
+        "planName":null,
+        "features":[ 
+
+        ]
+      }
+    ],
+    "users":null
+  }
+]

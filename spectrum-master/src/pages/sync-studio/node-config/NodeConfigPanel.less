@@ -1,0 +1,31 @@
+//
+// Copyright (c) 2019-Present Syncari - All rights reserved.
+//
+
+@import '~styles/index.less';
+
+.synri-drawer-panel.synri-node-config-form-drawer {
+  .synri-auto-complete {
+    width: 100%;
+  }
+
+  .filter-group-groups {
+    flex-shrink: 1;
+    padding-right: 0;
+  }
+}
+
+.synri-node-config-form-drawer {
+  .node-config-input-container {
+    &--checkbox {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      justify-content: start;
+
+      .ant-checkbox-wrapper {
+        padding-right: 8px;
+      }
+    }
+  }
+}
