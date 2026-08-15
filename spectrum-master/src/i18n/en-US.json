@@ -2105,12 +2105,12 @@
   "MarketingFallbackContent": {
     "header": "Welcome Back to NextEdge AI",
     "sub_heading": "Your trusted data and AI control center—unify, govern, and optimize your enterprise data seamlessly.",
-    "bullet_1": "🔹 Securely access your account",
-    "bullet_2": "🔹 Monitor and manage AI-ready data",
-    "bullet_3": "🔹 Ensure real-time governance and observability",
-    "bullet_4": "🔹 Sync and master data across all connected systems",
-    "bullet_5": "🔹 Empower AI agents with trusted, context-rich data",
-    "learn_more": "👉 New to NextEdge AI? <a href=\"{{link}}\" rel=\"noopener noreferrer\" target=\"_blank\">Learn more.</a>"
+    "bullet_1": "Securely access your governed workspace",
+    "bullet_2": "Monitor and manage AI-ready data",
+    "bullet_3": "Keep governance and operations observable",
+    "bullet_4": "Sync trusted data across connected systems",
+    "bullet_5": "Give AI workflows reliable business context",
+    "learn_more": "New to NextEdge AI? <a href=\"{{link}}\">Return to the product overview.</a>"
   },
   "MergeOptions": {
     "AFTER_CORE": "Add nodes immediately after NextEdge AI node",

@@ -95,6 +95,7 @@ public class SyncariSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .exceptionHandling().authenticationEntryPoint(unauthorized).and()
                 .authorizeRequests()
+                .antMatchers("/api/v1/auth/google", "/api/v1/auth/google/**").permitAll()
                 .antMatchers("/api/v1/oauth/**").permitAll()
                 .antMatchers("/api/v1/oauth2/register").permitAll()
                 .antMatchers("/api/v1/oauth2/token").permitAll()

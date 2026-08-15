@@ -4,7 +4,7 @@ import './MarketingFallbackContent.scss';
 
 const tn = tNamespaced('MarketingFallbackContent');
 
-const introUrl = '/help';
+const introUrl = '/';
 
 export const MarketingFallbackContent = () => {
   return (

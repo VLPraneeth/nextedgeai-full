@@ -13,7 +13,7 @@ Resources:
         ExcludePunctuation: true
         GenerateStringKey: password
         PasswordLength: 24
-        SecretStringTemplate: '{"username":"tenant-admin@nextedge.ai"}'
+        SecretStringTemplate: '{"username":"demo@nextedge.ai"}'
       Tags:
         - Key: Project
           Value: NextEdgeAI

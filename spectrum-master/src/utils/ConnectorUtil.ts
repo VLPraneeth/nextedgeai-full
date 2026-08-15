@@ -5,11 +5,9 @@
 
 import { each, filter, find, isEmpty, keyBy, map, sortBy } from 'lodash';
 
-import SycariLogo from 'assets/images/connectors/syncari-logo.svg';
 import { FILE_DATA_CONNECTOR_LABEL } from 'pages/imported-files/constants';
 import { ConnectorMetadata } from 'reducers/connectorReducer';
 import AppConstants from 'utils/AppConstants';
-import { tc } from 'utils/i18nUtil';
 
 export const SYNCARI_CENTER_ID = 'syncari-entity';
 export const DEFAULT_SYNCARI_CENTER_X = 788;
@@ -18,6 +16,7 @@ export const SYNCARI_CIRCLE_RADIUS = 60;
 
 const DEFAULT_CONNECTOR_X = 678;
 const DEFAULT_CONNECTOR_Y = 132;
+const NEXTEDGE_MARK = '/assets/icons/nextedge-mark.svg';
 
 export const PANEL_ALLOWED_CONNECTOR_STATUS = [AppConstants.CONNECTOR_STATUS.ACTIVE];
 
@@ -93,8 +92,8 @@ export function getConnectorGraph(connectors, connectorMetadata) {
       if (isSyncariConnector(connector)) {
         const syncariNodeUpdated = {
           ...syncariNode,
-          icon: connector?.iconUri,
-          label: connector?.displayName,
+          icon: NEXTEDGE_MARK,
+          label: 'NextEdge AI',
         };
         nodes.push(syncariNodeUpdated);
       } else {
@@ -129,8 +128,8 @@ export function getDefaultSyncariNode(withIntro = false) {
       : AppConstants.GRAPH_NODE_SHAPES.SYNCARI_CIRCLE,
     x: DEFAULT_SYNCARI_CENTER_X,
     y: DEFAULT_SYNCARI_CENTER_Y,
-    icon: SycariLogo,
-    label: tc('syncari'),
+    icon: NEXTEDGE_MARK,
+    label: 'NextEdge AI',
   };
 }
 

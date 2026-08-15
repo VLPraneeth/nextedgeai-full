@@ -1,8 +1,10 @@
-<svg width="230" height="40" viewBox="0 0 230 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="nextedge-logo-title">
+<svg width="230" height="44" viewBox="0 0 230 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="nextedge-logo-title">
   <title id="nextedge-logo-title">NextEdge AI</title>
-  <rect x="1" y="1" width="38" height="38" rx="11" fill="#1E40AF"/>
-  <path d="M10 29V11L29 29V11" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M29 11H36V18" stroke="#D97706" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="50" y="27" fill="#172554" font-family="Fira Sans, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="-0.4">NextEdge</text>
-  <text x="161" y="27" fill="#1E40AF" font-family="Fira Sans, Arial, sans-serif" font-size="24" font-weight="700"> AI</text>
+  <g transform="translate(1 2) scale(.625)">
+    <path d="M14 3H50L61 14V50L50 61H14L3 50V14L14 3Z" fill="#1C1917"/>
+    <path d="M47 3H50L61 14V25L39 3H47Z" fill="#C69B48"/>
+    <path d="M15 47V17H23L41 37V17H49V47H41L23 27V47H15Z" fill="#F7F4EC"/>
+  </g>
+  <text x="51" y="29" fill="#1C1917" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="-0.6">NextEdge</text>
+  <text x="162" y="29" fill="#9A5B05" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="0.2">AI</text>
 </svg>

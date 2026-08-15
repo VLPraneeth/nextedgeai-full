@@ -22,22 +22,22 @@
 
 html {
   font-size: 14px;
-  color: #172554;
-  background: #f8fafc;
-  font-family: 'Fira Sans', Arial, sans-serif;
+  color: #1c1917;
+  background: #f7f4ec;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 :root {
-  --color-primary: #1e40af;
+  --color-primary: #1c1917;
   --color-on-primary: #ffffff;
-  --color-secondary: #3b82f6;
-  --color-accent: #d97706;
-  --color-background: #f8fafc;
-  --color-foreground: #172554;
-  --color-muted: #e9eef6;
-  --color-border: #dbeafe;
+  --color-secondary: #44403c;
+  --color-accent: #9a5b05;
+  --color-background: #f7f4ec;
+  --color-foreground: #1c1917;
+  --color-muted: #eee9df;
+  --color-border: #d6d3d1;
   --color-destructive: #dc2626;
-  --color-ring: #1e40af;
+  --color-ring: #9a5b05;
 }
 
 *:focus-visible {

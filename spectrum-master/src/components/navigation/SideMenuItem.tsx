@@ -28,6 +28,7 @@ type SideMenuItemProps = {
   isCollapsed: boolean;
   permission?: AllPermissions | AllPermissions[];
   isForbiddenToastVisibleRef?: MutableRefObject<boolean | null>;
+  tourTarget?: string;
 };
 
 function SideMenuItem({
@@ -41,6 +42,7 @@ function SideMenuItem({
   isCollapsed,
   isForbiddenToastVisibleRef,
   permission,
+  tourTarget,
 }: SideMenuItemProps) {
   const cxMenuItem = classNames(
     `main-nav-menu-item__container`,
@@ -63,7 +65,8 @@ function SideMenuItem({
           overlayStyle={{ display: !isCollapsed ? 'none' : '' }}
           placement="right"
           ref={tooltipRef}
-          title={title}>
+          title={title}
+        >
           <div data-testid={`nav-menu-item-${title}`} className={cxMenuItem}>
             <Icon className="main-nav-menu-item__icon" component={selected ? activeIcon : inactiveIcon} />
             <span
@@ -71,7 +74,8 @@ function SideMenuItem({
                 'main-nav-menu-item__title',
                 `main-nav-menu-item__title--${navigationStatus}`,
                 selected && 'main-nav-menu-item__title--selected'
-              )}>
+              )}
+            >
               {!isCollapsed && title}
             </span>
           </div>
@@ -81,7 +85,7 @@ function SideMenuItem({
   }
 
   return (
-    <div data-testid={`nav-menu-item-${title}`} aria-label={title}>
+    <div data-testid={`nav-menu-item-${title}`} aria-label={title} data-tour-target={tourTarget}>
       <Link
         title={title}
         tooltipRef={tooltipRef}
@@ -91,14 +95,16 @@ function SideMenuItem({
         permissionOperator={PermissionsComparisonOperator.AND}
         onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => navigateTo(path!, e)}
         className={cxMenuItem}
-        to={path!}>
+        to={path!}
+      >
         <Icon className="main-nav-menu-item__icon" component={selected ? activeIcon : inactiveIcon} />
         <span
           className={cx(
             'main-nav-menu-item__title',
             `main-nav-menu-item__title--${navigationStatus}`,
             selected && 'main-nav-menu-item__title--selected'
-          )}>
+          )}
+        >
           {title}
         </span>
       </Link>

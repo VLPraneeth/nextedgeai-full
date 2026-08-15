@@ -41,6 +41,9 @@ import RouteConstants from 'utils/RouteConstants';
 import { makeUrl } from 'utils/UrlUtil';
 import { UserflowTags } from 'utils/UserflowTags';
 import { checkCustomRuleAssignmentExists } from 'store/data-quality/thunks';
+import { selectUserEmail } from 'store/user/selectors';
+import { useEnhancedSelector } from 'hooks/redux';
+import { isGuidedDemoAccount } from 'utils/GuidedDemo';
 
 // import 'antd/dist/antd.css';
 import './Navigation.scss';
@@ -60,6 +63,7 @@ type MenuItemType = {
   title: string;
   userflowTag?: string;
   permission?: AllPermissions | AllPermissions[];
+  tourTarget?: string;
 };
 
 export const EXPANDED_WIDTH = 220;
@@ -81,7 +85,8 @@ export const SyncariLogo = ({ isCollapsed, onClick, isBrandingEnabled }: Syncari
         'main-nav__logo-container',
         `main-nav__logo-container--${isCollapsed ? COLLAPSED : EXPANDED}`,
         `main-nav__logo-container--branding-${isBrandingEnabled ? ENABLED : DISABLED}`
-      )}>
+      )}
+    >
       <div className={isBrandingEnabled ? 'logo-custom' : 'logo'}>
         {isBrandingEnabled ? (
           <>
@@ -122,6 +127,8 @@ function SideNavigationMenu() {
   const [isCollapsed, setCollapsed] = usePersistedState(PERSISTED_NAVIGATION_COLLAPSED, false);
   const [showDataQuality, setShowDataQuality] = useState(true);
   const dispatch = useDispatch<ThunkDispatch<any, any, AnyAction>>();
+  const userEmail = useEnhancedSelector(selectUserEmail);
+  const isGuidedDemo = isGuidedDemoAccount(userEmail);
 
   const isBrandingEnabled = useBrandingEnabled();
 
@@ -160,6 +167,13 @@ function SideNavigationMenu() {
 
   const MenuItemData: MenuItemType[] = [
     {
+      path: RouteConstants.V1_WORKSPACE,
+      title: 'V1 Workspace',
+      inactiveIcon: DashboardIconInactive,
+      activeIcon: DashboardIconActive,
+      tourTarget: 'workspace',
+    },
+    {
       path: RouteConstants.INSIGHTS_STUDIO,
       title: tn('insights_studio'),
       inactiveIcon: DashboardIconInactive,
@@ -174,6 +188,7 @@ function SideNavigationMenu() {
       activeIcon: SynapseIconActive,
       userflowTag: UserflowTags.SideNav.Synapse,
       permission: AllPermissions.READ_CONNECTOR,
+      tourTarget: 'synapses',
     },
     {
       path: RouteConstants.SCHEMA_STUDIO_ROOT,
@@ -182,6 +197,7 @@ function SideNavigationMenu() {
       activeIcon: SchemaStudioIconActive,
       userflowTag: UserflowTags.SideNav.Schema,
       permission: [AllPermissions.READ_STUDIO, AllPermissions.READ_CONNECTOR],
+      tourTarget: 'schema',
     },
     {
       path: makeUrl(RouteConstants.SYNC_STUDIO),
@@ -190,6 +206,7 @@ function SideNavigationMenu() {
       inactiveIcon: SyncStudioIconInactive,
       userflowTag: UserflowTags.SideNav.Sync,
       permission: AllPermissions.READ_STUDIO,
+      tourTarget: 'sync',
     },
     {
       path: RouteConstants.DATA_STUDIO_ROOT,
@@ -198,6 +215,7 @@ function SideNavigationMenu() {
       activeIcon: DataStudioIconActive,
       userflowTag: UserflowTags.SideNav.Data,
       permission: [AllPermissions.READ_DATA_STUDIO],
+      tourTarget: 'data',
     },
     ...(showDataQuality
       ? [
@@ -208,6 +226,7 @@ function SideNavigationMenu() {
             activeIcon: DataQualityStudioIconActive,
             userflowTag: UserflowTags.SideNav.DataQuality,
             permission: AllPermissions.ANALYTICS,
+            tourTarget: 'data-quality',
           },
         ]
       : []),
@@ -218,6 +237,7 @@ function SideNavigationMenu() {
       activeIcon: ImportedFilesIconActive,
       userflowTag: UserflowTags.SideNav.ImportedFiles,
       permission: AllPermissions.READ_FILE_DATA,
+      tourTarget: 'imported-files',
     },
     {
       path: RouteConstants.LOGS,
@@ -226,6 +246,7 @@ function SideNavigationMenu() {
       activeIcon: TransactionsIconActive,
       userflowTag: UserflowTags.SideNav.Logs,
       permission: AllPermissions.VIEW_TRANSACTIONS,
+      tourTarget: 'logs',
     },
   ];
 
@@ -233,7 +254,8 @@ function SideNavigationMenu() {
     <div
       className={cx('main-nav__container', `main-nav__container--${navigationStatus}`)}
       data-userflow-tag={UserflowTags.SideNav.Container}
-      ref={measurementRef}>
+      ref={measurementRef}
+    >
       <Sider
         className={cx('main-nav__sidebar')}
         data-testid="main-nav-menu-container"
@@ -242,11 +264,12 @@ function SideNavigationMenu() {
         collapsible
         collapsed={isCollapsed}
         onCollapse={setCollapsed}
-        trigger={null}>
+        trigger={null}
+      >
         <SyncariLogo isCollapsed={isCollapsed} onClick={navigateHome} isBrandingEnabled={isBrandingEnabled} />
         {!isBrandingEnabled && <Separator isCollapsed={isCollapsed} />}
         <div className={cx('main-nav__menu-items')} data-testid="main-nav-items-container">
-          {MenuItemData.map((item) => (
+          {MenuItemData.filter((item) => !isGuidedDemo || item.path !== RouteConstants.INSIGHTS_STUDIO).map((item) => (
             <SideMenuItem
               key={item.title}
               isCollapsed={isCollapsed}
@@ -258,22 +281,25 @@ function SideNavigationMenu() {
               inactiveIcon={item.inactiveIcon}
               activeIcon={item.activeIcon}
               permission={item.permission}
+              tourTarget={item.tourTarget}
             />
           ))}
         </div>
         <Separator isCollapsed={isCollapsed} />
         <div className="main-nav__trigger-icons-container">
-          <div aria-label={tn('settings')} data-userflow-tag={UserflowTags.SideNav.Settings}>
-            <SideMenuItem
-              selected={location.pathname.includes(RouteConstants.SETTINGS)}
-              isCollapsed={isCollapsed}
-              path={RouteConstants.SETTINGS}
-              navigationStatus={navigationStatus}
-              inactiveIcon={SettingsIconInactive}
-              activeIcon={SettingsIconActive}
-              title={tn('settings')}
-            />
-          </div>
+          {!isGuidedDemo && (
+            <div aria-label={tn('settings')} data-userflow-tag={UserflowTags.SideNav.Settings}>
+              <SideMenuItem
+                selected={location.pathname.includes(RouteConstants.SETTINGS)}
+                isCollapsed={isCollapsed}
+                path={RouteConstants.SETTINGS}
+                navigationStatus={navigationStatus}
+                inactiveIcon={SettingsIconInactive}
+                activeIcon={SettingsIconActive}
+                title={tn('settings')}
+              />
+            </div>
+          )}
           <div data-testid="main-nav-expand" data-userflow-tag={UserflowTags.SideNav.Expand} onClick={toggleSidebar}>
             <SideMenuItem
               className={isCollapsed ? 'flip' : 'flip--flipped'}

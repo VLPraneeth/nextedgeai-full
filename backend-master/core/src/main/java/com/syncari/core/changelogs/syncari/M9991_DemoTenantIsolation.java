@@ -21,7 +21,7 @@ public class M9991_DemoTenantIsolation {
     public static final String TENANT_ID = "nextedge_tenant_b";
     public static final String TENANT_ORG = "NextEdge AI Isolation Demo";
     public static final String TENANT_EMAIL = System.getenv().getOrDefault(
-            "NEXTEDGE_TENANT_ADMIN_EMAIL", "tenant-admin@nextedge.ai");
+            "NEXTEDGE_TENANT_ADMIN_EMAIL", "demo@nextedge.ai");
 
     @ChangeSet(order = "001", id = "nextEdgeIsolationDemoTenant", author = "nextedge")
     public void createIsolationDemoTenant(MongoTemplate template) {
@@ -48,15 +48,16 @@ public class M9991_DemoTenantIsolation {
         Document tenantUserFields = new Document("email", TENANT_EMAIL)
                 .append("password", new BCryptPasswordEncoder().encode(requiredTenantPassword()))
                 .append("status", Status.ACTIVE.name())
-                .append("isAdmin", true)
+                .append("isAdmin", false)
                 .append("isSuperAdmin", false)
                 .append("systemUser", false)
-                .append("firstName", "Tenant")
-                .append("lastName", "Administrator")
+                .append("firstName", "Guided")
+                .append("lastName", "Demo")
                 .append("orgId", organization.getObjectId("_id").toHexString())
                 .append("currentInstanceId", TENANT_ID)
                 .append("availableInstances", Set.of(TENANT_ID))
                 .append("restrictedFromLogin", false)
+                .append("guidedDemo", true)
                 .append("seeded", true);
         users.updateOne(eq("email", TENANT_EMAIL), new Document("$set", tenantUserFields), new UpdateOptions().upsert(true));
     }

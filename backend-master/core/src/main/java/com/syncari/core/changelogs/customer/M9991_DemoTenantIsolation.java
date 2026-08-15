@@ -21,7 +21,7 @@ import com.syncari.core.model.misc.RoleConstants;
 public class M9991_DemoTenantIsolation {
     private static final String TENANT_ID = "nextedge_tenant_b";
     private static final String TENANT_EMAIL = System.getenv().getOrDefault(
-            "NEXTEDGE_TENANT_ADMIN_EMAIL", "tenant-admin@nextedge.ai");
+            "NEXTEDGE_TENANT_ADMIN_EMAIL", "demo@nextedge.ai");
 
     @ChangeSet(order = "001", id = "nextEdgeIsolationDemoTenantAdminV2", author = "nextedge", runAlways = true)
     public void seedIsolationDemoTenantAdmin(MongoTemplate template) {
@@ -34,9 +34,9 @@ public class M9991_DemoTenantIsolation {
         Document bootstrapAdmin = requiredUser(systemUsers, M0004_InitialUsers.SUPER_ADMIN_EMAIL);
 
         MongoCollection<Document> roles = template.getCollection("role");
-        Document adminRole = roles.find(eq("name", RoleConstants.ORG_ADMIN)).first();
-        if (adminRole == null) {
-            throw new IllegalStateException("The tenant Org Admin role was not migrated");
+        Document viewerRole = roles.find(eq("name", RoleConstants.VIEWER)).first();
+        if (viewerRole == null) {
+            throw new IllegalStateException("The tenant Viewer role was not migrated");
         }
 
         String tenantUserId = tenantAdmin.getObjectId("_id").toHexString();
@@ -44,7 +44,7 @@ public class M9991_DemoTenantIsolation {
         MongoCollection<Document> userRoles = template.getCollection("userRole");
         userRoles.deleteOne(eq("userId", bootstrapUserId));
         userRoles.updateOne(eq("userId", tenantUserId), new Document("$set", new Document(
-                "roleIds", Set.of(adminRole.getObjectId("_id").toHexString())).append("seeded", true)),
+                "roleIds", Set.of(viewerRole.getObjectId("_id").toHexString())).append("seeded", true)),
                 new UpdateOptions().upsert(true));
 
         MongoCollection<Document> inboxes = template.getCollection("inbox");

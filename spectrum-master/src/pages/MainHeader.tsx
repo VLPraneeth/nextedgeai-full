@@ -93,7 +93,7 @@ function MainHeader() {
             ) : (
               <animated.span className="header-help-profile-items-container" style={animStyles}>
                 <HelpMenu />
-                <LaunchTourButton /> {/* only appears for trial instances*/}
+                <LaunchTourButton />
                 <HeaderProfileMenu />
               </animated.span>
             )

@@ -52,6 +52,9 @@ const lessRegex = /\.less$/;
 const lessModuleRegex = /\.module\.(less|less)$/;
 
 const syncariCdn = process.env.SYNCARI_ASSET_CDN ? process.env.SYNCARI_ASSET_CDN : '';
+const GOOGLE_IDENTITY_BASE = 'https://accounts.google.com/gsi/';
+const GOOGLE_IDENTITY_SCRIPT = 'https://accounts.google.com/gsi/client';
+const GOOGLE_IDENTITY_STYLE = 'https://accounts.google.com/gsi/style';
 
 // Default SRC seems to be ignored by some browser. We are adding it manually through this const
 const DEFAULT_SRC = [
@@ -554,6 +557,10 @@ module.exports = function (webpackEnv) {
             templateParameters: {
               // This looks weird, does it? The proxy will replace it with the real value.
               token: '<%= token %>',
+              demoAdminEmail: '<%- demoAdminEmail %>',
+              demoAdminPassword: '<%- demoAdminPassword %>',
+              demoGuidedEmail: '<%- demoGuidedEmail %>',
+              demoGuidedPassword: '<%- demoGuidedPassword %>',
             },
           }
         )
@@ -562,11 +569,12 @@ module.exports = function (webpackEnv) {
         new CspHtmlWebpackPlugin(
           {
             // nonce still checks for eval :(
-            'script-src': ["'self'", "'unsafe-eval'", ...DEFAULT_SRC, syncariCdn],
+            'script-src': ["'self'", "'unsafe-eval'", GOOGLE_IDENTITY_SCRIPT, ...DEFAULT_SRC, syncariCdn],
             'style-src': [
               "'self'",
               "'unsafe-inline'",
               'fonts.googleapis.com',
+              GOOGLE_IDENTITY_STYLE,
               'https://p20.zdassets.com/',
               ...DEFAULT_SRC,
               syncariCdn,
@@ -593,7 +601,14 @@ module.exports = function (webpackEnv) {
               ...DEFAULT_SRC,
               syncariCdn,
             ],
-            'connect-src': ["'self'", 'https://click.botco.ai/', 'wss://webchat.botco.ai/', ...DEFAULT_SRC],
+            'connect-src': [
+              "'self'",
+              GOOGLE_IDENTITY_BASE,
+              'https://click.botco.ai/',
+              'wss://webchat.botco.ai/',
+              ...DEFAULT_SRC,
+            ],
+            'frame-src': ["'self'", GOOGLE_IDENTITY_BASE],
           },
           {
             enabled: true,

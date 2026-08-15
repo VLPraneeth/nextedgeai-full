@@ -96,6 +96,11 @@ app.use((req, res, next) => {
   if (req.path.startsWith('/arcade')) {
     return next();
   }
+  // Google Identity popups need to communicate with their opener when FedCM
+  // is unavailable, while the referrer policy keeps cross-origin requests
+  // limited to the site origin.
+  res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
   helmet({
     hsts: {
       maxAge: 31536000, // 1 year

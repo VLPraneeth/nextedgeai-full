@@ -613,6 +613,16 @@ export function logout(skipRedirect: boolean = false): PromiseThunkAction {
 /**
  * Log in the user
  */
+function redirectAfterAuthentication(userData: any, redirectTo?: string) {
+  if (userData.passwordExpired) {
+    window.location.href = `${RouteConstants.PASSWORD_RESET}/${redirectTo || ''}`;
+  } else if (redirectTo && RELATIVE_URL.test(redirectTo)) {
+    window.location.href = redirectTo;
+  } else {
+    window.location.href = RouteConstants.HOME;
+  }
+}
+
 export function login(username: string, password: string, redirectTo?: string): PromiseThunkAction {
   const csrfToken = LoginUtil.getCsrfToken();
 
@@ -631,24 +641,50 @@ export function login(username: string, password: string, redirectTo?: string): 
 
         dispatch(getProfile()).then((result) => {
           const userData = result.payload.user;
-          let redirect = '';
-          if (redirectTo) {
-            redirect = redirectTo;
-          }
-          // Use window.location.href to force reload and ensure latest assets are loaded
-          if (userData.passwordExpired) {
-            window.location.href = `${RouteConstants.PASSWORD_RESET}/${redirect}`;
-          } else {
-            if (redirectTo && RELATIVE_URL.test(redirectTo)) {
-              window.location.href = redirectTo;
-            } else {
-              window.location.href = RouteConstants.HOME;
-            }
-          }
+          // Use window.location.href to force reload and ensure latest assets are loaded.
+          redirectAfterAuthentication(userData, redirectTo);
         });
       })
       .catch((err) => {
-        const loginError: LoginError = err.response.data;
+        const loginError: LoginError = err.response?.data || {
+          error: 'Unauthorized',
+          message: 'Unable to sign in. Check your email and password.',
+          status: 401,
+          timestamp: new Date().toISOString(),
+        };
+        dispatch(loginFailed(loginError));
+      });
+  };
+}
+
+/**
+ * Exchange a verified Google Identity credential for the existing NextEdge AI JWT session.
+ * Google accounts must already be provisioned so tenant membership cannot be self-assigned.
+ */
+export function googleLogin(credential: string, redirectTo?: string): PromiseThunkAction {
+  const csrfToken = LoginUtil.getCsrfToken();
+
+  return (dispatch: SyncariThunkDispatch) => {
+    dispatch({
+      type: ActionTypeConstants.LOGIN_PENDING,
+    });
+
+    return post(DataUrlConstants.GOOGLE_AUTH, { credential })
+      .then(() => {
+        dispatch(loginFulfilled(csrfToken, ''));
+        dispatch(getProfile()).then((result) => {
+          const userData = result.payload.user;
+          dispatch(loginFulfilled(csrfToken, userData.email));
+          redirectAfterAuthentication(userData, redirectTo);
+        });
+      })
+      .catch((err) => {
+        const loginError: LoginError = err.response?.data || {
+          error: 'Unauthorized',
+          message: 'This Google account is not authorized for NextEdge AI.',
+          status: 401,
+          timestamp: new Date().toISOString(),
+        };
         dispatch(loginFailed(loginError));
       });
   };

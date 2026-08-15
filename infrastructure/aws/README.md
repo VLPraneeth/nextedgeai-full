@@ -31,6 +31,14 @@ AWS_REGION=ap-south-1 ./infrastructure/aws/scripts/deploy-demo.sh /opt/nextedge-
 
 The script writes a mode-`0600` environment file, keeps MongoDB and Redis on the private Docker network, starts prebuilt images, verifies both health endpoints, and performs a password-login smoke test without printing credentials.
 
+## Google sign-in
+
+Google sign-in uses Google Identity Services to exchange a browser ID token for the existing NextEdge AI JWT session. Accounts are never self-provisioned: the verified Google email must already belong to an active NextEdge user and tenant.
+
+1. Add `https://d1btvl7l2kals2.cloudfront.net` as an authorized JavaScript origin on the Google OAuth web client.
+2. Store only the public client ID in AWS Secrets Manager as `nextedge-ai/demo/google-auth` with JSON shape `{ "client_id": "...apps.googleusercontent.com" }`.
+3. Redeploy. The login page discovers the public client ID from `/arcade/api/v1/auth/google/config`; no Google client secret is sent to the browser or required by the ID-token flow.
+
 ## Emergency re-enable procedure
 
 Only after reviewing Bedrock spend, remove the `NextEdgeAIBedrockEmergencyDeny` inline policy from `nextedge-ai-ec2-role` and set `/nextedge-ai/llm/enabled` back to `true`.

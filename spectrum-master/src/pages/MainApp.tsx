@@ -13,6 +13,7 @@ import './MainApp.less';
 
 // load our likely routes concurrently, lazy load the rest
 const Home = EnhancedReactLazy(() => import('containers/HomeContainer'), { loadConcurrently: true });
+const LandingPage = EnhancedReactLazy(() => import('pages/landing/LandingPage'), { loadConcurrently: true });
 const Login = EnhancedReactLazy(() => import('containers/LoginContainer'), { loadConcurrently: true });
 const Errors = EnhancedReactLazy(() => import('pages/errors/ErrorContainer'), { loadConcurrently: true });
 const Error404 = EnhancedReactLazy(() => import('pages/errors/Error404'), { loadConcurrently: true });
@@ -35,8 +36,8 @@ const MainApp = () => {
   return (
     <React.Suspense fallback={<RouteSpin />}>
       <Router className="main-app-route-container">
+        <LandingPage path="/" />
         <Home path="/*" />
-        <Login path="/login" />
         <Login path="/login" />
         <SwitchInstance path="/switch-instance/:instanceId" />
         {/* This will be rendered if the user pasted the url on the browser */}

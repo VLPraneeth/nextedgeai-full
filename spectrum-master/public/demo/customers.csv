@@ -1,0 +1,4 @@
+customer_id,name,email,status,updated_at
+CUST-001,Ada Lovelace,ada@example.com,active,2026-07-20T00:00:00Z
+CUST-002,Alan Turing,alan@example.com,active,2026-07-20T00:00:00Z
+CUST-003,Grace Hopper,grace@example.com,trial,2026-07-20T00:00:00Z

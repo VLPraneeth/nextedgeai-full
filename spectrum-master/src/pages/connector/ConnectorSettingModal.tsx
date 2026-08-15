@@ -162,7 +162,8 @@ class ConnectorSettingModal extends Component {
             onChange={changeHandler}
             placeholder={tn('select_entity')}
             style={fixedWidthStyle}
-            defaultValue={record.fromEntityId}>
+            defaultValue={record.fromEntityId}
+          >
             {fromEntitiesOptions()}
           </Select>
         ),
@@ -183,13 +184,14 @@ class ConnectorSettingModal extends Component {
             onChange={changeHandler}
             placeholder={tn('select_entity')}
             style={fixedWidthStyle}
-            defaultValue={record.toConnectorId}>
+            defaultValue={record.toConnectorId}
+          >
             {connectorOptions()}
           </Select>
         ),
       },
       {
-        title: 'Syncari Entity',
+        title: 'NextEdge Entity',
         dataIndex: 'syncariEntityId',
         width: 240,
         editable: true,
@@ -204,7 +206,8 @@ class ConnectorSettingModal extends Component {
             onChange={changeHandler}
             placeholder={tn('select_entity')}
             style={fixedWidthStyle}
-            defaultValue={record.syncariEntityId}>
+            defaultValue={record.syncariEntityId}
+          >
             {sEntitiesOptions()}
           </Select>
         ),
@@ -401,7 +404,8 @@ class ConnectorSettingModal extends Component {
         onOk={this.close}
         className="connector-modal"
         width={1100}
-        onCancel={this.close}>
+        onCancel={this.close}
+      >
         <div>
           <Button onClick={this.handleAdd} type="primary" style={{ marginBottom: 16 }}>
             Add Setting

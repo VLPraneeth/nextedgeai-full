@@ -11,7 +11,10 @@ const getProxyUrl = (url: string) => `${url}`;
 // prettier-ignore
 const DataUrlConstants = {
   LOGIN                : getArcadeUrl('/api/v1/authenticate'),
+  GOOGLE_AUTH_CONFIG   : getArcadeUrl('/api/v1/auth/google/config'),
+  GOOGLE_AUTH          : getArcadeUrl('/api/v1/auth/google'),
   LOGOUT               : getArcadeUrl('/logout'),
+  NEXTEDGE_AI_MAPPING  : getArcadeUrl('/api/v1/nextedge-ai/mapping-suggestions'),
 
   // Connector
   CONNECTOR            : getArcadeUrl('/api/v1/connector/'),

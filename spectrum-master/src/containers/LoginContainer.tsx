@@ -7,7 +7,7 @@ import { bindActionCreators, Dispatch } from 'redux';
 
 import Login from 'pages/authentication/Login';
 import { RootState } from 'store/types';
-import { getCsrfToken, login, logout } from 'store/user/thunks';
+import { getCsrfToken, googleLogin, login, logout } from 'store/user/thunks';
 
 export type LoginContainerProps = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps>;
 
@@ -30,6 +30,7 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
       login,
       logout,
       getCsrfToken,
+      googleLogin,
     },
     dispatch
   );

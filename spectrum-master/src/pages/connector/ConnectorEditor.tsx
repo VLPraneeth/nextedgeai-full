@@ -37,6 +37,7 @@ import { applyUserPref, extractNodesFromGraph, extractUserPref, generateNewId, g
 import { tc, tNamespaced } from 'utils/i18nUtil';
 import { AllPermissions } from 'utils/PermissionsConstants';
 import { updateGraph } from 'utils/PipelineUtil';
+import { isGuidedDemoAccount, isGuidedDemoConnector } from 'utils/GuidedDemo';
 
 import { ConnectorDefaultMappings } from './ConnectorDefaultMappings';
 import { ConnectorDetails } from './ConnectorDetails';
@@ -88,7 +89,8 @@ class ConnectorEditor extends Component {
     });
 
     return filter(newMeta, (meta) => {
-      return meta.type === AppConstants.CONNECTOR_METADATA_TYPE.SYNAPSE;
+      const isSynapse = meta.type === AppConstants.CONNECTOR_METADATA_TYPE.SYNAPSE;
+      return isSynapse && (!this.props.isGuidedDemo || isGuidedDemoConnector(meta));
     });
   };
 
@@ -528,7 +530,8 @@ class ConnectorEditor extends Component {
           <Menu.Item onClick={this.autoArrange}>{tn('auto_arrange_synapse')}</Menu.Item>
         </Menu>
       }
-      trigger={['click']}>
+      trigger={['click']}
+    >
       <Icon type="setting" className="settings-btn" theme="filled" />
     </Dropdown>
   );
@@ -550,7 +553,8 @@ class ConnectorEditor extends Component {
                 <EmptyGraphContent
                   className="synri-full-width-content"
                   icon={<InlineSVG title="Pipeline icon" src={SynapseIcon} />}
-                  onActionClick={() => {}}>
+                  onActionClick={() => {}}
+                >
                   <DataCardError
                     error={{ title: tn('connections_loading_error'), body: tc('unexpected_error') }}
                     tooltip={errorMessage}
@@ -632,6 +636,7 @@ const mapStateToProps = (state: RootState, props) => ({
   createdConnectorId: state.connector.createdConnectorId,
   addConnectorNode: state.connector.addConnectorNode,
   instanceId: state.user.currentInstanceNextEdgeId,
+  isGuidedDemo: isGuidedDemoAccount(state.user.email),
   preferenceErrorMessage: state.user.preferenceErrorMessage,
   preferenceSaving: state.user.preferenceSaving,
 });

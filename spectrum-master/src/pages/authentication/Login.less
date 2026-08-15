@@ -29,6 +29,9 @@
 
 .login-container {
   display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: #f7f4ec;
 }
 
 .marketing-content {
@@ -53,6 +56,137 @@
 .login-content {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  height: 100vh;
+  justify-content: flex-start;
+  overflow-y: auto;
+  padding: 24px 0;
+
+  .demo-access {
+    margin-bottom: 24px;
+    padding: 18px;
+    border: 1px solid #d6d3d1;
+    background: #f7f4ec;
+
+    &__heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    &__eyebrow {
+      margin: 0 0 4px;
+      color: #9a5b05;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      color: #1c1917;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    &__status {
+      display: inline-flex;
+      min-height: 24px;
+      align-items: center;
+      padding: 2px 9px;
+      border: 1px solid #b8a16a;
+      border-radius: 999px;
+      color: #66511f;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    &__description {
+      margin: 12px 0 14px;
+      color: #57534e;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    &__selector-label {
+      display: block;
+      margin: 16px 0 6px;
+      color: #57534e;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    &__selector {
+      width: 100%;
+      height: 42px;
+      padding: 0 36px 0 12px;
+      border: 1px solid #b8a16a;
+      border-radius: 4px;
+      background: #fff;
+      color: #1c1917;
+      font-size: 14px;
+      font-weight: 600;
+
+      &:focus-visible {
+        outline: 3px solid fade(#9a5b05, 20%);
+        outline-offset: 2px;
+      }
+    }
+
+    &__credentials {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+
+      > div {
+        display: grid;
+        grid-template-columns: 72px minmax(0, 1fr);
+        align-items: baseline;
+        gap: 12px;
+        padding: 8px 10px;
+        border: 1px solid #e7e2d7;
+        background: #fff;
+      }
+
+      dt {
+        color: #78716c;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      dd {
+        min-width: 0;
+        margin: 0;
+        color: #1c1917;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+      }
+    }
+
+    &__warning {
+      margin: 12px 0 0;
+      padding: 9px 10px;
+      border-left: 3px solid #9a5b05;
+      background: #fff8e8;
+      color: #66511f;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  }
 
   .input-password {
     margin-top: 24px;
@@ -90,8 +224,70 @@
     justify-content: space-between;
   }
 
+  .authentication-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 24px 0 18px;
+    color: #78716c;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    &::before,
+    &::after {
+      content: '';
+      height: 1px;
+      flex: 1;
+      background: #d6d3d1;
+    }
+  }
+
+  .google-sign-in {
+    position: relative;
+    display: flex;
+    min-height: 46px;
+    align-items: center;
+    justify-content: center;
+
+    &__button {
+      display: flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+
+      &--disabled {
+        pointer-events: none;
+        opacity: 0.58;
+      }
+    }
+
+    &__loading,
+    &__error {
+      color: #57534e;
+      font-size: 13px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    &__error {
+      color: #991b1b;
+    }
+
+    &--ready .google-sign-in__loading,
+    &--error .google-sign-in__button {
+      display: none;
+    }
+  }
+
   .ant-btn-primary {
-    background-color: @syncari-blue-v2;
+    border-color: #1c1917;
+    background-color: #1c1917;
+
+    &:hover,
+    &:focus {
+      border-color: #9a5b05;
+      background-color: #3b342f;
+    }
   }
   .privacy-policy-agreement {
     margin-top: 40px;

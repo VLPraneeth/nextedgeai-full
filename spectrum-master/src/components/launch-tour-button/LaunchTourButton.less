@@ -7,19 +7,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding: 0 @spacings[md];
+  gap: 7px;
+  min-height: 34px;
+  margin: 0 6px;
+  padding: 0 12px;
+  border: 1px solid #d6d3d1;
+  border-radius: 5px;
+  color: #57534e;
+  font-size: 12px;
+  font-weight: 600;
 
   &:hover {
     svg {
-      color: @syncari-blue;
+      color: #9a5b05;
     }
+
+    border-color: #b8a16a;
+    color: #1c1917;
   }
 
   &__icon {
-    height: 24px;
-    width: 24px;
+    height: 18px;
+    width: 18px;
 
-    color: @gray-700;
+    color: #78716c;
   }
 }

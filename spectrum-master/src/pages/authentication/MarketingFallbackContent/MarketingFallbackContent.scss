@@ -6,36 +6,72 @@ li.marketing-fallback-content__blurb {
 
 .marketing-fallback-content {
   @include font-dm-sans;
+  position: relative;
   padding: $spacings-lg $spacings-3xl 0 $spacings-3xl;
   height: 100vh;
   width: 100%;
   overflow: auto;
-  background-image: url('../../../assets/images/marketing-content-bg.png');
-  background-size: 50% 100vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: #1c1917;
   display: grid;
   place-items: center;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    border: 1px solid rgba(198, 155, 72, 0.28);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  &::before {
+    width: 420px;
+    height: 420px;
+    top: -180px;
+    right: -140px;
+    box-shadow: 0 0 0 60px rgba(198, 155, 72, 0.025), 0 0 0 120px rgba(198, 155, 72, 0.018);
+  }
+
+  &::after {
+    width: 280px;
+    height: 280px;
+    bottom: -140px;
+    left: -100px;
+  }
+
+  aside {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+  }
 
   .margin-bottom {
     margin-bottom: $spacings-xxl;
   }
 
   &__header {
-    font-size: $font-size-4xl;
-    font-weight: $font-weights-bold;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.7rem, 5vw, 4.7rem);
+    font-weight: 500;
     line-height: $line-height-single;
     color: $white;
+    letter-spacing: -0.04em;
   }
 
   &__blurb {
     font-size: $font-size-xl;
-    color: $white;
+    color: #d6d3d1;
+    line-height: 1.7;
 
     &--emphasis {
       font-size: $font-size-xl + 0.42rem; //~6px;
-      font-weight: $font-weights-bold;
-      color: $white;
+      font-weight: $font-weights-regular;
+      color: #d2aa5b;
+      line-height: 1.45;
+    }
+
+    a {
+      color: #e0bd77;
     }
   }
 

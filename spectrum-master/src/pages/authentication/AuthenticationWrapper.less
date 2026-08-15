@@ -7,6 +7,7 @@
 .authentication-wrapper {
   display: flex;
   flex-direction: column;
+  background: #f7f4ec;
 
   & > div {
     margin: 18px;
@@ -27,14 +28,16 @@
   .authentication-content {
     height: auto;
     width: 432px;
-    border-radius: 6px;
-    box-shadow: 1px 2px 24px 0 rgba(0, 0, 0, 0.17);
+    border: 1px solid #d6d3d1;
+    border-radius: 8px;
+    box-shadow: 0 22px 54px rgba(41, 37, 36, 0.12);
     padding: 40px;
+    background: #fff;
   }
 
   a {
-    color: @color-label;
-    text-decoration: underline;
+    color: #7c5205;
+    text-decoration-color: rgba(124, 82, 5, 0.45);
   }
 
   .authentication-title {
@@ -76,6 +79,19 @@
   .input-layout-container {
     input {
       height: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .authentication-wrapper {
+    .authentication-content {
+      width: calc(100vw - 32px);
+      padding: 30px 24px;
+    }
+
+    & > div {
+      margin: 12px;
     }
   }
 }

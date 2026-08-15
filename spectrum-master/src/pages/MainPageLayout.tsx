@@ -9,6 +9,7 @@ import { Suspense, useEffect, useMemo } from 'react';
 
 import { getConnectorsMetadata } from 'actions/connectorActions';
 import GhostUserBanner from 'components/GhostUserBanner';
+import GuidedProductTour from 'components/guided-product-tour/GuidedProductTour';
 import Navigation from 'components/navigation/Navigation';
 import Redirect from 'components/Redirect';
 import RouteSpin from 'components/RouteSpin';
@@ -18,6 +19,8 @@ import { useEnhancedDispatch, useEnhancedSelector } from 'hooks/redux';
 import useMountUnmountEffect from 'hooks/useMountUnmountEffect';
 import { getEntities } from 'store/entity/actions';
 import { getEntityState } from 'store/entity/selectors';
+import { selectUserEmail } from 'store/user/selectors';
+import { isGuidedDemoAccount, isGuidedDemoRoute } from 'utils/GuidedDemo';
 import { tNamespaced } from 'utils/i18nUtil';
 import { EnhancedReactLazy } from 'utils/ModuleUtils';
 import RouteConstants from 'utils/RouteConstants';
@@ -35,6 +38,7 @@ import './MainPageLayout.less';
 // load InitialRoute and Dashboard concurrently since they're most likely
 const Error404 = EnhancedReactLazy(() => import('pages/errors/Error404'), { loadConcurrently: true });
 
+const V1Workspace = EnhancedReactLazy(() => import('pages/v1-workspace/V1Workspace'), { loadConcurrently: true });
 const SynapseMain = EnhancedReactLazy(() => import('pages/connector/SynapseMain'));
 const SchemaStudio = EnhancedReactLazy(() => import('pages/schema-studio'));
 const SyncStudio = EnhancedReactLazy(() => import('pages/sync-studio/SyncStudio'));
@@ -98,6 +102,8 @@ const MainPageLayout = ({ location }: RouteComponentProps) => {
   const dispatch = useEnhancedDispatch();
   const { entitiesFetching, entities } = useEnhancedSelector(getEntityState);
   const changed = useEnhancedSelector((state) => state.pipeline.changed);
+  const userEmail = useEnhancedSelector(selectUserEmail);
+  const isGuidedDemo = isGuidedDemoAccount(userEmail);
 
   useEffect(() => {
     // It needs to overwrite the onbeforeunload when the changed changes
@@ -126,9 +132,14 @@ const MainPageLayout = ({ location }: RouteComponentProps) => {
     return [getContentClassName(paths), getInnerContentClassName(paths)];
   }, [location]);
 
+  if (isGuidedDemo && location && !isGuidedDemoRoute(location.pathname)) {
+    return <Redirect redirectTo={RouteConstants.V1_WORKSPACE} replace />;
+  }
+
   return (
     <LayoutContextProvider>
       <Userflow />
+      <GuidedProductTour autoStart={isGuidedDemo} />
       <Layout style={LayoutStyle}>
         <BreadcrumbContextProvider>
           <GhostUserBanner />
@@ -141,7 +152,8 @@ const MainPageLayout = ({ location }: RouteComponentProps) => {
                 <InsightsViewContextProvider>
                   <Suspense fallback={<RouteSpin />}>
                     <Router className="main-page-layout-container">
-                      <Redirect path="/" redirectTo="/synapses" />
+                      <Redirect path="/" redirectTo={RouteConstants.HOME} />
+                      <V1Workspace path={RouteConstants.V1_WORKSPACE} />
                       <SynapseMain path="/synapses/*" />
 
                       <SchemaStudio path="/schema-studio/*" />
