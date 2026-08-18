@@ -4,7 +4,7 @@
 import { Button, Modal, Tooltip } from 'antd';
 import { useEffect } from 'react';
 
-import LogoGray from 'assets/images/Logo.svg';
+import BrandLogo from 'components/brand/BrandLogo';
 import useUserLocalMoment from 'hooks/moment';
 import { useEnhancedDispatch, useEnhancedSelector } from 'hooks/redux';
 import { showAboutPage } from 'store/user/actions';
@@ -51,9 +51,10 @@ const AboutModal = () => {
         </div>
       }
       onOk={close}
-      onCancel={close}>
+      onCancel={close}
+    >
       <div>
-        <img className="login-logo" src={LogoGray} alt="NextEdge AI" />
+        <BrandLogo className="login-logo" />
       </div>
       <p>
         <b>{`${tn('build_date')} `}</b>
@@ -67,7 +68,8 @@ const AboutModal = () => {
             isSyncariUser && versionMetadata?.branchName
               ? tn('branch_name', { branchName: versionMetadata.branchName })
               : ''
-          }>
+          }
+        >
           <b>{`${tn('commit_sha1')} `}</b>
           {versionMetadata?.gitSha1 ? versionMetadata.gitSha1 : ''}
         </Tooltip>

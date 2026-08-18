@@ -4,7 +4,7 @@
 import cx from 'classnames';
 import { ReactNode } from 'react';
 
-import Logo from 'assets/images/Logo.svg';
+import BrandLogo from 'components/brand/BrandLogo';
 import CenterLayout from 'components/layout/CenterLayout';
 
 import 'antd/dist/antd.css';
@@ -22,7 +22,7 @@ function AuthenticationWrapper({ className, children, footer }: AuthenticationPr
   return (
     <CenterLayout className={cls}>
       <div className="logo-container">
-        <img className="logo" src={Logo} alt="NextEdge AI" />
+        <BrandLogo className="logo" />
       </div>
       <div className="authentication-content">{children}</div>
       {footer}

@@ -19,7 +19,6 @@ import { ReactComponent as SchemaStudioIconActive } from 'assets/syncari-icons/c
 import { ReactComponent as SettingsIconActive } from 'assets/syncari-icons/color/settings.svg';
 import { ReactComponent as SynapseIconActive } from 'assets/syncari-icons/color/synapse-studio.svg';
 import { ReactComponent as SyncStudioIconActive } from 'assets/syncari-icons/color/sync-studio.svg';
-import { ReactComponent as FullLogo } from 'assets/syncari-icons/full-logo.svg';
 import { ReactComponent as CollapseIconInactive } from 'assets/syncari-icons/grayscale/collapse.svg';
 import { ReactComponent as DataQualityStudioIconInactive } from 'assets/syncari-icons/grayscale/data-quality-studio.svg';
 import { ReactComponent as DataStudioIconInactive } from 'assets/syncari-icons/grayscale/data-studio.svg';
@@ -31,6 +30,7 @@ import { ReactComponent as SettingsIconInactive } from 'assets/syncari-icons/gra
 import { ReactComponent as SynapseIconInactive } from 'assets/syncari-icons/grayscale/synapse-studio.svg';
 import { ReactComponent as SyncStudioIconInactive } from 'assets/syncari-icons/grayscale/sync-studio.svg';
 import SideMenuItem from 'components/navigation/SideMenuItem';
+import BrandLogo from 'components/brand/BrandLogo';
 import useDimensions from 'hooks/useDimensions';
 import usePersistedState from 'hooks/usePersistedState';
 import { useLayoutContext } from 'pages/LayoutContext';
@@ -112,7 +112,7 @@ export const SyncariLogo = ({ isCollapsed, onClick, isBrandingEnabled }: Syncari
             )}
           </>
         ) : (
-          <FullLogo aria-labelledby={tn('logo')} onClick={onClick} />
+          <BrandLogo variant={isCollapsed ? 'mark' : 'lockup'} aria-label={tn('logo')} onClick={onClick} />
         )}
       </div>
     </div>

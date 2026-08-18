@@ -34,7 +34,7 @@ export const selectCurrentConnector = createSelector([getCurrentConnectorId, get
 
 const SYNCARI_CONNECTOR_METADATA = {
   displayName: 'NextEdge AI',
-  icon: '/assets/icons/syncari-square.svg',
+  icon: '/assets/brand/nextedge-mark.svg',
 };
 
 // TODO: rename to `selectDervConnectors` so that all selectors start with `select`
@@ -46,8 +46,8 @@ export const getDervConnectors = createSelector([getConnectors, selectConnectors
         connector.name.toLowerCase() === AppConstants.SYNCARI_CONNECTOR_NAME
           ? SYNCARI_CONNECTOR_METADATA
           : connector?.metadataId in connMeta
-          ? connMeta[connector.metadataId]
-          : undefined;
+            ? connMeta[connector.metadataId]
+            : undefined;
 
       if (meta) {
         return {

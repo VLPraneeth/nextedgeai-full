@@ -99,7 +99,7 @@ export const getExtraDataForNode = (node: PipelineNodeV2, data: any): ReactFlowN
 
     const extraData: ExtraDataCoreEntityNode = {
       nodeType: node.nodeType,
-      icon: '/assets/icons/syncari-square.svg',
+      icon: '/assets/brand/nextedge-mark.svg',
       fieldsSummary: getFieldsSummary(fields),
     };
 
@@ -113,7 +113,7 @@ export const getExtraDataForNode = (node: PipelineNodeV2, data: any): ReactFlowN
 
     const extraData: ExtraDataCoreAttributeNode = {
       nodeType: node.nodeType,
-      icon: '/assets/icons/syncari-square.svg',
+      icon: '/assets/brand/nextedge-mark.svg',
       dataType: config.dataType?.defaultValue,
       isMultivalued: config.multiValue?.defaultValue,
     };

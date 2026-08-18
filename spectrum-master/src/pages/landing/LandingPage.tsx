@@ -1,5 +1,7 @@
 import { Link, RouteComponentProps } from '@reach/router';
 
+import BrandLogo from 'components/brand/BrandLogo';
+
 import './LandingPage.less';
 
 const AUTH_ROUTE = '/login';
@@ -14,14 +16,6 @@ const ArrowIcon = () => (
       strokeLinejoin="round"
       strokeWidth="1.8"
     />
-  </svg>
-);
-
-const BrandMark = () => (
-  <svg className="landing-brand__mark" aria-hidden="true" viewBox="0 0 64 64" focusable="false">
-    <path d="M14 3H50L61 14V50L50 61H14L3 50V14L14 3Z" fill="currentColor" />
-    <path d="M47 3H50L61 14V25L39 3H47Z" fill="#C69B48" />
-    <path d="M15 47V17H23L41 37V17H49V47H41L23 27V47H15Z" fill="#F7F4EC" />
   </svg>
 );
 
@@ -63,10 +57,7 @@ const LandingPage = (_props: RouteComponentProps) => {
       <header className="landing-header">
         <nav className="landing-nav" aria-label="Primary navigation">
           <a className="landing-brand" href="/" aria-label="NextEdge AI home">
-            <BrandMark />
-            <span>
-              NextEdge <strong>AI</strong>
-            </span>
+            <BrandLogo className="landing-brand__lockup" />
           </a>
           <div className="landing-nav__links">
             <a href="#capabilities">Capabilities</a>
@@ -130,7 +121,7 @@ const LandingPage = (_props: RouteComponentProps) => {
             <div className="landing-product__frame">
               <div className="landing-product__toolbar">
                 <span className="landing-product__wordmark">
-                  <BrandMark /> NextEdge AI
+                  <BrandLogo variant="mark" className="landing-brand__mark" /> NextEdge AI
                 </span>
                 <span className="landing-product__status">
                   <i aria-hidden="true" /> Workspace healthy
@@ -286,10 +277,7 @@ const LandingPage = (_props: RouteComponentProps) => {
 
       <footer className="landing-footer">
         <a className="landing-brand" href="/" aria-label="NextEdge AI home">
-          <BrandMark />
-          <span>
-            NextEdge <strong>AI</strong>
-          </span>
+          <BrandLogo className="landing-brand__lockup" />
         </a>
         <p>Intelligent data operations, built for control.</p>
         <Link to={AUTH_ROUTE}>Secure login</Link>

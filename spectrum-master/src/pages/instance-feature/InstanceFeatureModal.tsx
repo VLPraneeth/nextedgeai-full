@@ -4,7 +4,7 @@
 
 import React, { useCallback, useEffect, useState } from 'react';
 
-import { ReactComponent as SycariLogo } from 'assets/images/connectors/syncari-logo.svg';
+import BrandLogo from 'components/brand/BrandLogo';
 import Button from 'components/Button';
 import DrawerPanel from 'components/DrawerPanel';
 import { useI18nContext, withI18n } from 'components/I18nProvider';
@@ -90,7 +90,8 @@ const InstanceFeatureModal = ({ visible, show }: InstanceFeatureModalProps) => {
       onClose={closeHandler}
       title={tn('title')}
       visible={visible}
-      width="standard">
+      width="standard"
+    >
       <TabPanelSpin spinning={featuresLoading}>
         <Stack>
           <InlineMessage type={InlineMessageTypes.ERROR} title={errorMessage}>
@@ -115,7 +116,7 @@ const InstanceFeatureModal = ({ visible, show }: InstanceFeatureModalProps) => {
               );
             })
           ) : (
-            <EmptyPanelContent icon={<SycariLogo width={48} height={48} />}>
+            <EmptyPanelContent icon={<BrandLogo variant="mark" width={48} height={48} />}>
               <TranslatedText text="no_available_features" size="xl" />
             </EmptyPanelContent>
           )}

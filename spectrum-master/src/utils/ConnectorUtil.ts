@@ -16,7 +16,7 @@ export const SYNCARI_CIRCLE_RADIUS = 60;
 
 const DEFAULT_CONNECTOR_X = 678;
 const DEFAULT_CONNECTOR_Y = 132;
-const NEXTEDGE_MARK = '/assets/icons/nextedge-mark.svg';
+const NEXTEDGE_MARK = '/assets/brand/nextedge-mark.svg';
 
 export const PANEL_ALLOWED_CONNECTOR_STATUS = [AppConstants.CONNECTOR_STATUS.ACTIVE];
 

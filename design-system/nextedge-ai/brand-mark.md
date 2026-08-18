@@ -2,19 +2,19 @@
 
 ## Concept
 
-The faceted tile represents a precise system boundary. The solid `N` is readable at favicon size, while the single brass facet represents the intelligent edge where governed data becomes action.
+The custom cut `N` is both the first letter of the primary wordmark and the standalone small-size mark. Its single brass edge represents the controlled transition where connected data becomes action. The identity is deliberately wordmark-first: no app tile, AI cliché, gradient, or decorative container.
 
 ## Canonical colors
 
 - Ink: `#1C1917`
-- Warm ivory: `#F7F4EC`
-- Brass accent: `#C69B48`
-- Wordmark AI accent: `#9A5B05`
+- Warm ivory: `#FAFAF9`
+- Brass accent: `#A16207`
 
 ## Usage rules
 
-- Use the full wordmark when at least 130 px of horizontal space is available.
+- Use the full wordmark when at least 110 px of horizontal space is available.
 - Use the standalone mark for favicons, collapsed navigation, connectors, and system fields.
 - Preserve at least one quarter of the mark width as clear space.
-- Do not add shadows, gradients, outlines, or additional accent colors.
-- Do not recolor, rotate, stretch, crop, or separate the brass facet from the tile.
+- Use the reverse assets on dark backgrounds and the mono asset for one-color reproduction.
+- Do not add a container, shadow, gradient, glow, outline, or additional accent color.
+- Do not recolor, rotate, stretch, crop, or separate the brass edge from the `N`.

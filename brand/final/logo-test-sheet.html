@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>NextEdge AI logo test sheet</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 40px; color: #1c1917; background: #eeece8; font: 14px/1.5 Inter, Arial, sans-serif; }
+      main { max-width: 1040px; margin: 0 auto; }
+      h1 { margin: 0 0 8px; font-size: 24px; }
+      p { margin: 0 0 24px; color: #57534e; }
+      .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+      .card { min-height: 190px; padding: 24px; border: 1px solid #d6d3d1; border-radius: 12px; background: #fafaf9; }
+      .card.dark { border-color: #292524; background: #1c1917; color: #fff; }
+      h2 { margin: 0 0 20px; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+      .lockup { display: block; width: 288px; max-width: 100%; height: auto; }
+      .sizes { display: flex; min-height: 82px; align-items: end; gap: 22px; }
+      .size { display: grid; justify-items: center; gap: 8px; color: #78716c; font-size: 11px; }
+      .dark .size { color: #d6d3d1; }
+      .browser { overflow: hidden; border: 1px solid #d6d3d1; border-radius: 8px; background: #fff; }
+      .browser-bar { height: 28px; background: #f5f5f4; border-bottom: 1px solid #e7e5e4; }
+      .browser-header { height: 68px; padding: 18px 22px; display: flex; align-items: center; }
+      .browser-header img { height: 32px; width: auto; }
+      @media (max-width: 720px) { body { padding: 20px; } .grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>NextEdge AI logo test sheet</h1>
+      <p>Production lockup, reverse treatment, small-size mark, one-color mark, and header context.</p>
+      <div class="grid">
+        <section class="card">
+          <h2>Primary on warm ivory</h2>
+          <img class="lockup" src="nextedge-lockup.svg" alt="NextEdge AI" />
+        </section>
+        <section class="card dark">
+          <h2>Reverse on ink</h2>
+          <img class="lockup" src="nextedge-lockup-reverse.svg" alt="NextEdge AI" />
+        </section>
+        <section class="card">
+          <h2>Small-size mark</h2>
+          <div class="sizes">
+            <span class="size"><img src="nextedge-mark.svg" width="16" height="16" alt="" />16</span>
+            <span class="size"><img src="nextedge-mark.svg" width="24" height="24" alt="" />24</span>
+            <span class="size"><img src="nextedge-mark.svg" width="32" height="32" alt="" />32</span>
+            <span class="size"><img src="nextedge-mark.svg" width="48" height="48" alt="" />48</span>
+            <span class="size"><img src="nextedge-mark.svg" width="64" height="64" alt="" />64</span>
+          </div>
+        </section>
+        <section class="card dark">
+          <h2>Reverse and one-color</h2>
+          <div class="sizes">
+            <span class="size"><img src="nextedge-mark-reverse.svg" width="24" height="24" alt="" />reverse</span>
+            <span class="size" style="padding:8px;background:#fff;border-radius:4px"><img src="nextedge-mark-mono.svg" width="32" height="32" alt="" />mono</span>
+          </div>
+        </section>
+        <section class="card" style="grid-column:1/-1">
+          <h2>Web header context</h2>
+          <div class="browser"><div class="browser-bar"></div><div class="browser-header"><img src="nextedge-lockup.svg" alt="NextEdge AI" /></div></div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

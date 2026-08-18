@@ -10,7 +10,7 @@ import { useI18nContext, withI18n } from 'components/I18nProvider';
 import { getProfile } from 'store/user/thunks';
 import { useEnhancedDispatch } from 'hooks/redux';
 import RouteConstants from 'utils/RouteConstants';
-import { ReactComponent as FullLogo } from 'assets/syncari-icons/full-logo.svg';
+import BrandLogo from 'components/brand/BrandLogo';
 
 const { Title, Text } = Typography;
 
@@ -65,10 +65,13 @@ const MCPConsent = (props: MCPConsentProps) => {
 
     const otherParams = Array.from(urlParams.entries())
       .filter(([key]) => key !== 'redirect_uri')
-      .reduce((acc, [key, value]) => {
-        acc[key] = value;
-        return acc;
-      }, {} as Record<string, string>);
+      .reduce(
+        (acc, [key, value]) => {
+          acc[key] = value;
+          return acc;
+        },
+        {} as Record<string, string>
+      );
 
     const redirectUriWithParams = new URL(redirectUri);
     Object.entries(otherParams).forEach(([key, value]) => {
@@ -93,7 +96,8 @@ const MCPConsent = (props: MCPConsentProps) => {
           style={{ marginTop: '8px' }}
           onClick={() => {
             window.location.href = RouteConstants.LOGIN;
-          }}>
+          }}
+        >
           {tn('return_to_login')}
         </Button>
       </div>,
@@ -119,7 +123,7 @@ const MCPConsent = (props: MCPConsentProps) => {
     <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto' }}>
       <Card>
         <div style={{ textAlign: 'center', marginBottom: '24px' }}>
-          <FullLogo style={{ height: '40px' }} />
+          <BrandLogo style={{ height: '40px', width: 'auto' }} />
         </div>
         <Title level={3}>{tn('title')}</Title>
         <Text>{tn('permissions_requested')}</Text>

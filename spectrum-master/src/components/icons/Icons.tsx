@@ -35,8 +35,8 @@ export const SELECTED_ENTITY_ICON_MAP = {
   User: '/assets/icons/user-entity-selected.svg',
 } as const;
 
-export const SYNCARI_ICON = '/assets/icons/logos/syncari.svg';
-export const SYNCARI_CORE_NODE_INTRO = '/assets/icons/syncari-core-node-with-introduction.svg';
+export const SYNCARI_ICON = '/assets/brand/nextedge-mark.svg';
+export const SYNCARI_CORE_NODE_INTRO = '/assets/brand/nextedge-core-node-intro.svg';
 export const SETTINGS_ICON = '/assets/icons/settings-cog.svg';
 export const SETTINGS_KEBAB_ICON = '/assets/icons/kebab.svg';
 export const COLLAPSE_GROUP_ICON = '/assets/icons/groups/collapse_group.svg';

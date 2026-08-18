@@ -1,4 +1,3 @@
-@use "./SideMenuItem.scss" as SideMenuVars;
 @import 'styles';
 
 // approximate width of the NextEdge AI mark
@@ -12,7 +11,7 @@ $separator-width-expanded: 200px;
 $trigger-container-height: 114px;
 
 //heights
-$logo-height: 22px;
+$logo-height: 32px;
 $separator-height: 1px;
 
 //misc
@@ -54,37 +53,26 @@ $default-margin: 10px;
 
     .logo {
       height: $logo-height;
-      overflow: hidden;
+      display: flex;
+      align-items: center;
       svg {
-        height: fit-content;
+        display: block;
+        height: $logo-height;
+        width: auto;
         opacity: 1;
         padding-left: 5px;
-
-        .nextedge-text {
-          opacity: 0;
-        }
       }
     }
 
     &--expanded {
-      .logo {
-        svg {
-          .nextedge-text {
-            opacity: 1;
-            transition: SideMenuVars.$opacity-transition-text-expand;
-          }
-        }
+      .logo svg {
+        max-width: 154px;
       }
     }
 
     &--collapsed {
-      .logo {
-        svg {
-          .nextedge-text {
-            opacity: 0;
-            transition: SideMenuVars.$opacity-transition-text-collapse;
-          }
-        }
+      .logo svg {
+        max-width: $nextedge-logo-mark-width;
       }
     }
 
