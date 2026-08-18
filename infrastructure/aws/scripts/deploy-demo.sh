@@ -27,6 +27,7 @@ mongo_password="$(jq -r '.password' <<<"$mongo_json")"
 connector_username="$(jq -r '.username' <<<"$connector_json")"
 connector_password="$(jq -r '.password' <<<"$connector_json")"
 google_client_id="$(jq -r '.client_id // empty' <<<"$google_auth_json")"
+google_demo_email="$(jq -r '.demo_email // empty' <<<"$google_auth_json")"
 
 test "$admin_email" != "null"
 test "${#admin_password}" -ge 16
@@ -53,6 +54,7 @@ printf '%s\n' \
   "NEXTEDGE_CONNECTOR_DB_USERNAME=$connector_username" \
   "NEXTEDGE_CONNECTOR_DB_PASSWORD=$connector_password" \
   "NEXTEDGE_GOOGLE_CLIENT_ID=$google_client_id" \
+  "NEXTEDGE_GOOGLE_DEMO_EMAIL=$google_demo_email" \
   "NEXTEDGE_JWT_SECURITY_SECRET=$jwt_secret" \
   "NEXTEDGE_RELEASE_TAG=$release_tag" \
   "NEXTEDGE_BUILD_SHA=$release_tag" \
@@ -73,6 +75,7 @@ export NEXTEDGE_REDIS_PASSWORD="$redis_secret"
 export NEXTEDGE_CONNECTOR_DB_USERNAME="$connector_username"
 export NEXTEDGE_CONNECTOR_DB_PASSWORD="$connector_password"
 export NEXTEDGE_GOOGLE_CLIENT_ID="$google_client_id"
+export NEXTEDGE_GOOGLE_DEMO_EMAIL="$google_demo_email"
 export NEXTEDGE_JWT_SECURITY_SECRET="$jwt_secret"
 export NEXTEDGE_RELEASE_TAG="$release_tag"
 export NEXTEDGE_BUILD_SHA="$release_tag"

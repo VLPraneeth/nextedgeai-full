@@ -29,6 +29,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.ArgumentMatchers.anyList;
 import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -83,6 +84,28 @@ public class GoogleAuthControllerTest {
         assertTrue((Boolean) response.getBody().get("success"));
         assertEquals(SecurityConstants.TOKEN_PREFIX + "nextedge-jwt",
                 servletResponse.getHeader(SecurityConstants.TOKEN_HEADER));
+    }
+
+    @Test
+    public void configuredGoogleDemoAccountUsesGuidedDemoTenant() throws Exception {
+        controller.googleDemoEmail = "presenter@example.com";
+        controller.guidedDemoEmail = "demo@nextedge.ai";
+        GoogleAuthController.GoogleAuthRequest authRequest = new GoogleAuthController.GoogleAuthRequest();
+        authRequest.setCredential("verified-google-token");
+        User user = new User("demo@nextedge.ai", "unused-password", Status.ACTIVE, "tenant-a");
+        user.addAvailableInstance("tenant-a");
+        when(googleIdentityVerifier.verifyEmail("verified-google-token"))
+                .thenReturn(Optional.of("presenter@example.com"));
+        when(userService.findActiveUserByEmail("demo@nextedge.ai")).thenReturn(Optional.of(user));
+        when(authzService.listPrivileges("demo@nextedge.ai")).thenReturn(Stream.of("READ_PROFILE"));
+        when(util.getTokenAndPersistLoginDetails(any(User.class), anyList(), anyBoolean(), anyString(), anyString()))
+                .thenReturn("nextedge-jwt");
+
+        ResponseEntity<Map<String, Object>> response = controller.authenticate(
+                authRequest, new MockHttpServletRequest(), new MockHttpServletResponse());
+
+        assertEquals(200, response.getStatusCodeValue());
+        verify(userService).findActiveUserByEmail("demo@nextedge.ai");
     }
 
     @Test

@@ -96,7 +96,6 @@ public class ConnectorServiceTest extends AbstractSyncariTest {
 		saved = null;
 		resetRepos(attributeProxyRepo, syncRepo, entityProxyRepo, connectorRepo);
 	}
-
 	@Test
 	public void checkConnectorNameRequired() {
 		try {

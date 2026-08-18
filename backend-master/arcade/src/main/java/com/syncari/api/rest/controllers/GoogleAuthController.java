@@ -11,6 +11,7 @@ import com.syncari.core.service.authz.AuthzService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -41,6 +42,10 @@ public class GoogleAuthController {
     SyncariContextHandler syncariContextHandler;
     @Autowired
     Util util;
+    @Value("${NEXTEDGE_GOOGLE_DEMO_EMAIL:}")
+    String googleDemoEmail;
+    @Value("${NEXTEDGE_TENANT_ADMIN_EMAIL:}")
+    String guidedDemoEmail;
 
     @GetMapping("/config")
     public Map<String, Object> config() {
@@ -57,9 +62,10 @@ public class GoogleAuthController {
                                                              HttpServletRequest request,
                                                              HttpServletResponse response) {
         try {
-            String email = googleIdentityVerifier.verifyEmail(authRequest == null ? null : authRequest.getCredential())
+            String verifiedEmail = googleIdentityVerifier.verifyEmail(authRequest == null ? null : authRequest.getCredential())
                     .orElseThrow(() -> new IllegalArgumentException("Google credential validation failed"));
-            User user = userService.findActiveUserByEmail(email)
+            String provisionedEmail = resolveProvisionedEmail(verifiedEmail);
+            User user = userService.findActiveUserByEmail(provisionedEmail)
                     .orElseThrow(() -> new IllegalArgumentException("Google account is not provisioned"));
             if (user.isRestrictedFromLogin() || StringUtils.isBlank(user.getCurrentInstanceId())) {
                 throw new IllegalArgumentException("Google account cannot access a workspace");
@@ -76,7 +82,7 @@ public class GoogleAuthController {
             user.setLastLoggedIn(Instant.now());
             userService.saveUser(user);
 
-            var permissions = authzService.listPrivileges(email).collect(Collectors.toList());
+            var permissions = authzService.listPrivileges(user.getEmail()).collect(Collectors.toList());
             Optional<String> previousToken = Optional.ofNullable(request.getHeader(SecurityConstants.TOKEN_HEADER));
             String tokenId = previousToken.map(token -> {
                 TokenAttributes attributes = util.parseTokenExpiredOrNot(token.replace(SecurityConstants.TOKEN_PREFIX, ""));
@@ -94,6 +100,15 @@ public class GoogleAuthController {
         } finally {
             syncariContextHandler.resetSyncariContext();
         }
+    }
+
+    private String resolveProvisionedEmail(String verifiedEmail) {
+        if (StringUtils.isNotBlank(googleDemoEmail)
+                && StringUtils.isNotBlank(guidedDemoEmail)
+                && googleDemoEmail.equalsIgnoreCase(verifiedEmail)) {
+            return guidedDemoEmail;
+        }
+        return verifiedEmail;
     }
 
     public static class GoogleAuthRequest {
