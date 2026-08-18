@@ -338,6 +338,7 @@ public class ConnectorServiceTest extends AbstractSyncariTest {
 
 
 	}
+
 	@Test
 	public void activateConnectorValidations() {
 	    saveWithAllRequiredFieldsSucceeds();

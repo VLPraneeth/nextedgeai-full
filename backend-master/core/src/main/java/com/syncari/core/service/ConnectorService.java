@@ -879,7 +879,10 @@ public class ConnectorService {
                 connector.getMetaConfig().keySet().stream().forEach(key -> {
                     // get the type of key
                     if (authFields.stream().anyMatch(a -> a.getName().equals(key) && a.getDataType().equals("password"))) {
-                        connector.getMetaConfig().put(key, keyFunction.apply((String)connector.getMetaConfig().get(key)));
+                        Object value = connector.getMetaConfig().get(key);
+                        if (value instanceof String && StringUtils.isNotBlank((String) value)) {
+                            connector.getMetaConfig().put(key, keyFunction.apply((String) value));
+                        }
                     }
                 });
             }
