@@ -30,7 +30,7 @@ CI fails on critical production npm advisories. The runtime proxy currently has 
 Before deployment:
 
 ```bash
-gitleaks detect --source . --no-banner --redact
+gitleaks detect --source . --no-banner --redact.
 cd spectrum-master && npm audit --omit=dev --audit-level=critical
 cd proxy && npm audit --omit=dev --audit-level=critical
 cd ../../backend-master && mvn clean test
